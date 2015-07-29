@@ -7,10 +7,17 @@ prose:
         field:
           element: 'text'
           label: 'title'
+      - name: 'author'
+        field:
+          element: 'text'
+          label: 'Blog post author'
+          help: "Please enter the author's full name."
+          placeholder: 'Graham McCubbin'
       - name: 'hero_image_url'
         field:
           element: 'text'
           label: 'URL for hero image'
+          help: 'If you want a large image to be displayed in the header, please enter the image URL.'
       - name: 'date'
         field:
           element: 'hidden'

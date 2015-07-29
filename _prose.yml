@@ -11,6 +11,10 @@ prose:
         field:
           element: 'hidden'
           value: CURRENT_DATETIME
+      - name: 'layout'
+        field:
+          element: 'hidden'
+          value: 'blog'
       - name: 'published'
         field:
           element: 'checkbox'

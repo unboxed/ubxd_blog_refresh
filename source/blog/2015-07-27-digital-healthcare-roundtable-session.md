@@ -1,12 +1,13 @@
 ---
-date: "2015-07-29 15:22 +0100"
+layout: blog
+date: "2015-07-27 15:22 +0100"
 published: true
 title: Digital Healthcare Roundtable Session
+hero_image: "http://i1291.photobucket.com/albums/b548/grammccram/DSC01779_zpsd4fmmo16.jpg"
+author: 'Graham McCubbin'
 ---
 
 Wednesday 18th February saw the Digital Healthcare Roundtable Session take place at Unboxed Consulting.
-
-![healthcare0](http://i1291.photobucket.com/albums/b548/grammccram/DSC01779_zpsd4fmmo16.jpg)
 
 The session brought together a handpicked and diverse group of healthcare experts and leaders, with the aim to start a revolution in digital healthcare. Ideas were explored and exchanged about how we can do more to improve public health with digital technology, in this one-off discussion.
 
@@ -16,20 +17,20 @@ The session brought together a handpicked and diverse group of healthcare expert
 
 With everyone comfortably seated, the discussion was opened, addressing the initial questions:
 
-- _Why is healthcare still so clunky?_
-- _How can we dramatically improve the patient experience and the patient outcomes using the power of technology?_
+1. _Why is healthcare still so clunky?_
+2. _How can we dramatically improve the patient experience and the patient outcomes using the power of technology?_
 
 The session's three speakers each presented:
 
-## Presenter 1: Kumar Jacob MBE, Principal Consultant at KJx
+### Presenter 1: Kumar Jacob MBE, Principal Consultant at KJx
 
 Kumar is currently leading an initiative to bring to life the innovative use of technology in mental healthcare.
 
-## Presenter 2: Thomas Whicher, Co-Founder at DrDoctor
+### Presenter 2: Thomas Whicher, Co-Founder at DrDoctor
 
 With a background in operational improvement, Tom worked in several hospitals delivering multimillion-pound savings, before setting up DrDoctor.
 
-## Presenter 3: Ian Drysdale, CTO at GoodGym
+### Presenter 3: Ian Drysdale, CTO at GoodGym
 
 As CTO of GoodGym, Ian is using software and design to address problems associated with ageing.
 

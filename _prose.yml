@@ -7,6 +7,10 @@ prose:
         field:
           element: 'text'
           label: 'title'
+      - name: 'hero_image_url'
+        field:
+          element: 'text'
+          label: 'URL for hero image'
       - name: 'date'
         field:
           element: 'hidden'

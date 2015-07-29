@@ -15,5 +15,5 @@ prose:
         field:
           element: 'checkbox'
           label: 'Published?'
-          help: 'Unpublished by default'
-          value: false
+          help: 'Published by default'
+          value: true

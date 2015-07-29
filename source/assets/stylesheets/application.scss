@@ -1,20 +1,6 @@
 @import 'reset';
-@import 'vendor/*';
-
-$tablet: 660px;
 
 html {
   font-size: 16px;
   font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
-}
-
-strong {
-  font-weight: 400;
-}
-
-@import 'shared/*';
-@import 'styles/*';
-
-body {
-  background: $body-background-color;
 }

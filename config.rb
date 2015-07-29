@@ -21,17 +21,6 @@ configure :development do
   activate :livereload
 end
 
-helpers do
-  def retina_src(path)
-    retina_path = path.gsub(/\./, '@2x.')
-    %(src="#{path}" srcset="#{retina_path} 2x")
-  end
-
-  def markdown(text)
-    Markdown.new(text).to_html
-  end
-end
-
 page 'blog/*'
 ignore '/templates/*'
 ignore '/**/README.md'

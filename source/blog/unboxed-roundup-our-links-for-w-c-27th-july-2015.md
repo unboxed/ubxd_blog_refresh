@@ -6,3 +6,8 @@ tags:
   - Unboxed Roundup
 ---
 
+## A clear view through future nonsense - [Martyn E](http://www.unboxedconsulting.com/people/martyn-evans)
+
+http://idlewords.com/talks/web_design_first_100_years.htm
+
+Rather than waiting passively for technology to change the world, let's see how much we can do with what we already have.

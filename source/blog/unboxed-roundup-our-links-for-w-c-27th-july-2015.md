@@ -11,3 +11,9 @@ tags:
 http://idlewords.com/talks/web_design_first_100_years.htm
 
 Rather than waiting passively for technology to change the world, let's see how much we can do with what we already have.
+
+## Choose Boring Technology - [Tadas T](https://twitter.com/tadas_t)
+
+https://speakerdeck.com/mcfunley/choose-boring-technology
+
+Dan McKinley talks about focus on product, and what does it actually mean to choose the right tool for the job (sneak peek: it's not what's trending on Hacker News).

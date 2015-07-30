@@ -4,6 +4,9 @@ date: 2015-07-31 13:30:00 UTC
 tags:
   - blog
   - Unboxed Roundup
+layout: blog
+published: true
+author: "Murray Steele"
 ---
 
 ## A clear view through future nonsense - [Martyn E](http://www.unboxedconsulting.com/people/martyn-evans)

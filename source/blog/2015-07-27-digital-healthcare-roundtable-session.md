@@ -2,6 +2,9 @@
 layout: blog
 date: "2015-07-27 15:22 +0100"
 published: true
+tags:
+    - healthcare
+    - roundtable
 title: Digital Healthcare Roundtable Session
 hero_image: "http://i1291.photobucket.com/albums/b548/grammccram/DSC01779_zpsd4fmmo16.jpg"
 author: 'Graham McCubbin'

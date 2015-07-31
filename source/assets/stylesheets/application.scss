@@ -5,7 +5,7 @@ html {
   font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
-.blog-article, .blog-author {
+.blog-article, .blog-author, .blog-tags {
   background-color: #E0E0E0;
   padding: 30px 0;
 }
@@ -141,3 +141,20 @@ html {
   height: 80px;
   width: 80px;
 }
+
+.blog-tags__container {
+  margin: 0 auto;
+  max-width: 660px;
+  color: #999999;
+}
+
+.blog-tags ul {
+  display: inline;
+}
+
+.blog-tags__links {
+  display: inline;
+  color: #FFBA05;
+  font-weight: bold;
+}
+

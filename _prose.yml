@@ -26,9 +26,3 @@ prose:
         field:
           element: 'hidden'
           value: 'blog'
-      - name: 'published'
-        field:
-          element: 'checkbox'
-          label: 'Published?'
-          help: 'Published by default'
-          value: true

@@ -4,8 +4,9 @@ date: "2015-07-27 15:22 +0100"
 published: true
 title: Digital Healthcare Roundtable Session
 hero_image: "http://i1291.photobucket.com/albums/b548/grammccram/DSC01779_zpsd4fmmo16.jpg"
-author: 'Graham McCubbin'
+author: Graham McCubbin
 ---
+
 
 Wednesday 18th February saw the Digital Healthcare Roundtable Session take place at Unboxed Consulting.
 

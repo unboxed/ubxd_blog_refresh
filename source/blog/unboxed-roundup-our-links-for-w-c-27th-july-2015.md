@@ -32,3 +32,11 @@ Software Engineering Radio talks to Eric Evans 10 years after his Domain Driven 
 http://slack.birdly.fr
 
 File expenses via direct message on Slack. (Beta)
+
+## Track of the Week - [Gavin](http://www.unboxedconsulting.com/people/gavin-van-lelyveld)
+
+Even though like _Rick_ I'm going to be _Rolling_ on soon, I will never give you lot up.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+["Never gonna give you up" by Rick Astley](https://www.youtube.com/watch?v=dQw4w9WgXcQ)

@@ -26,3 +26,7 @@ prose:
         field:
           element: 'hidden'
           value: 'blog'
+      - name: 'published'
+        field:
+          element: 'hidden'
+          value: true

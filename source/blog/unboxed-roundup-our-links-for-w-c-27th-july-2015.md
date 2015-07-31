@@ -26,3 +26,9 @@ Dan McKinley talks about focus on product, and what does it actually mean to cho
 http://www.se-radio.net/2015/05/se-radio-episode-226-eric-evans-on-domain-driven-design-at-10-years/
 
 Software Engineering Radio talks to Eric Evans 10 years after his Domain Driven Design book was released.  There is an interesting discussion on how the community has grown and the architectural evolutions that have grown out of DDD and contribute to how it is perceived today.  I particularly enjoy the opening description of DDD which is what Eric intended by DDD but so many people didn't read far enough into the book to read and hence fully understand.
+
+## Birdly for Slack - [Charlie E](http://www.unboxedconsulting.com/people/charlie-egan)
+
+http://slack.birdly.fr
+
+File expenses via direct message on Slack. (Beta)

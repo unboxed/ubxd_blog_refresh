@@ -33,6 +33,12 @@ http://slack.birdly.fr
 
 File expenses via direct message on Slack. (Beta)
 
+## Address forms - [Murray S](http://www.unboxedconsulting.com/people/murray-steele)
+
+https://alpha.openaddressesuk.org/blog/2015/05/13/free-format-user-research
+
+Some user research on how best to present forms for requesting address information from your users.  In one particularly egregious case I had to enter my home address as: `<number and street>, London, London, London, United Kingdom, <postcode>`, so it came as no surprise to me that a single textbox is a better option than splitting up the address into several mandatory fields.  I was surprised to read the downsides to that approach are that people expect to split their address up, even when doing so confuses them!.  It's really good to see this sort of research being done, and being published for all.
+
 ## Track of the Week - [Gavin](http://www.unboxedconsulting.com/people/gavin-van-lelyveld)
 
 Even though like _Rick_ I'm going to be _Rolling_ on soon, I will never give you lot up.

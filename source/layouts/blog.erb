@@ -41,7 +41,7 @@
       </div>
 
       <aside class="blog-info">
-        <section class="blog-author">
+        <section class="blog-info__section blog-author">
           <div class="blog-author__header">
             <img class="blog-author__image" src="<%= data.people.graeme.image %>" alt="blog author"/>
             <p class="blog-author__name">
@@ -53,14 +53,14 @@
           </div>
         </section>
 
-        <section class="blog-tags">posted in
+        <section class="blog-tags__list">posted in
           <ul><% current_page.data.tags.each do |t| %>
               <li class="blog-tags__links">#<%= t %></li>
             <% end %>
           </ul>
         </section>
 
-        <section class="blog-related">
+        <section class="blog-info__section blog-related">
           <p class="blog-related__header">Related reading</p>
           <ul>
             <li class="blog-related__links"></li>

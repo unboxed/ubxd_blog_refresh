@@ -62,8 +62,9 @@
 
         <section class="blog-info__section blog-related">
           <p class="blog-related__header">Related reading</p>
-          <ul>
-            <li class="blog-related__links"></li>
+          <ul><% current_article.similar_articles.first(4).each do |a| %>
+            <li class="blog-related__links"><%= a.title %></li>
+            <% end %>
           </ul>
         </section>
       </aside>

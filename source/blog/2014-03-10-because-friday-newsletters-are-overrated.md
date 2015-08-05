@@ -1,23 +1,21 @@
 ---
 layout: "blog"
-date: "2014-03-10 07:21:00 +0000"
+date: "2014-03-10 07:21:00 UTC"
 published: true
 title: "Because Friday newsletters are overrated"
 author: "Richard Archer"
 
 ---
 
-## I’ve been ``git``-ing it wrong! - [Murray Steele](https://www.unboxedconsulting.com/people/murray-steele)
-
-I was helping someone on my team prepare a deploy recently and noticed they tagged the release with ``git -a tag <sha> -m “tagging for release”``.  I was mostly confused by the ``-m``, as I didn’t know you could add a message to a tag, but I couldn’t recall seeing the ``-a`` either.  I did some research, and it turns out [I’ve been creating lightweight tags](http://www.rockstarprogrammer.org/post/2008/oct/16/git-tag-does-wrong-thing-default/) all along.  How embarrassing!
+## I’ve been ``git``-ing it wrong! - [Murray Steele](https://www.unboxedconsulting.com/people/murray-steele)  I was helping someone on my team prepare a deploy recently and noticed they tagged the release with ``git -a tag <sha> -m “tagging for release”``. I was mostly confused by the ``-m``, as I didn’t know you could add a message to a tag, but I couldn’t recall seeing the ``-a`` either. I did some research, and it turns out [I’ve been creating lightweight tags](http://www.rockstarprogrammer.org/post/2008/oct/16/git-tag-does-wrong-thing-default/) all along. How embarrassing!
 
 ## Plain Javascript - [Murray Steele](http://www.unboxedconsulting.com/people/murray-steele)
 
-There’s definitely a push back on using jQuery for everything in JS.  I’ve been aware of the idea, but I’ve never really thought about it much, so found [this article about plain javascript alternatives to jQuery methods](http://blog.adtile.me/2014/01/16/a-dive-into-plain-javascript/) really useful.  New DOM APIs are supported in most modern browsers, but of course, modern browsers aren’t the problem.  Libraries like jQuery provide standard APIs and polyfills for old browsers too, but if we use a site like [Can I Use](http://caniuse.com/) we can find out the full range of browsers that support an API and can decide if we want the overhead of using jQuery or not for a particular project.
+There’s definitely a push back on using jQuery for everything in JS. I’ve been aware of the idea, but I’ve never really thought about it much, so found [this article about plain javascript alternatives to jQuery methods](http://blog.adtile.me/2014/01/16/a-dive-into-plain-javascript/) really useful. New DOM APIs are supported in most modern browsers, but of course, modern browsers aren’t the problem. Libraries like jQuery provide standard APIs and polyfills for old browsers too, but if we use a site like [Can I Use](http://caniuse.com/) we can find out the full range of browsers that support an API and can decide if we want the overhead of using jQuery or not for a particular project.
 
 ## On stupid classes - [Murray Steele](http://www.unboxedconsulting.com/people/murray-steele)
 
-I can’t remember how I found [this article about controller patterns and stupid classes](http://me.veekun.com/blog/2013/03/03/the-controller-pattern-is-awful-and-other-oo-heresy/), but the arguments about object design, and MVC controllers in particular, are very interesting.  Some of the stuff is particular to Python (e.g. method annotations, which we don’t have in Ruby, although there’s [plenty of discussion if you’re interested](https://www.google.co.uk/search?q=ruby+method+annotations)), but the main point is that objects should have state and behaviour and from that you can talk about what they are.  Controllers are stupid classes because they’re don’t really represent anything other than the mechanics of MVC.  My *tl;dr* isn’t very good, so you should just read it.
+I can’t remember how I found [this article about controller patterns and stupid classes](http://me.veekun.com/blog/2013/03/03/the-controller-pattern-is-awful-and-other-oo-heresy/), but the arguments about object design, and MVC controllers in particular, are very interesting. Some of the stuff is particular to Python (e.g. method annotations, which we don’t have in Ruby, although there’s [plenty of discussion if you’re interested](https://www.google.co.uk/search?q=ruby+method+annotations)), but the main point is that objects should have state and behaviour and from that you can talk about what they are. Controllers are stupid classes because they’re don’t really represent anything other than the mechanics of MVC. My *tl;dr* isn’t very good, so you should just read it.
 
 ## Ruby implementation of Bitcoin - [Henry Turner](http://www.unboxedconsulting.com/people/henry-turner)
 
@@ -40,7 +38,7 @@ We recently had a sprint which was very heavy on system administration and comma
 
 ### Tools to test load
 
-We used [the excellent httperf](https://www.hospitalrecords.com/shop/release/various-artists/nhs243-hospital-we-are-18) to pre-test load management on  a web cluster by replaying production nginx log file data with various concurrency and step-increment models.
+We used [the excellent httperf](https://www.hospitalrecords.com/shop/release/various-artists/nhs243-hospital-we-are-18) to pre-test load management on a web cluster by replaying production nginx log file data with various concurrency and step-increment models.
 
 The vast and powerful [Apache Jmeter](https://jmeter.apache.org) is a massive multi-protocol load and performance testing application. Not good for emergencies. Excellent for planning and research.
 
@@ -53,5 +51,7 @@ The [Enterprise version of Passenger](http://vimeo.com/45923773) has some debugg
 ### Tools to stay focussed with
  
 [Hospital Records](https://www.hospitalrecords.com/shop/release/hospital-records/nhs243-hospital-we-are-18) - simply brilliant Drum n Bass to while away those 8pm debugging sessions ;)
+
+</sha>
 
 

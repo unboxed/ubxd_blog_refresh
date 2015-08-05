@@ -1,5 +1,7 @@
 require 'pry'
 
+Time.zone = "Europe/London"
+
 set :relative_links, true
 set :layout, 'application'
 set :css_dir, 'assets/stylesheets'

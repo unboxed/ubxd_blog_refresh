@@ -28,7 +28,9 @@
             </script>
           </div>
 
-          <img class="blog-article__hero-image" src="<%= current_page.data.hero_image %>" alt="">
+          <% if current_page.data.hero_image %>
+            <img class="blog-article__hero-image" src="<%= current_page.data.hero_image %>" alt="">
+          <% end %>
 
           <h1 class="blog-article__title">
             <%= current_page.data.title %>

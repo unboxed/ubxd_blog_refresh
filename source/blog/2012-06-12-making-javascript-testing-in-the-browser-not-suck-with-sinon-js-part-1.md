@@ -27,22 +27,24 @@ In my examples I'm going to use QUnit simply because it's the framework I'm most
 
 Here's my test runner; I've included jQuery too because it makes it much easier to test the DOM.
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <title>Test Suite</title>
-        <link rel="stylesheet" href="qunit.css" />
-        <script src="jquery.min.js"></script>
-        <script src="qunit.js"></script>
-        <script src="sinon-1.3.4.js"></script>
-        <script src="sinon-qunit.js"></script>
-      </head>
-      <body>
-        <div id="qunit"></div>
-        <div id="qunit-fixture"></div>
-      </body>
-    </html>
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Suite</title>
+    <link rel="stylesheet" href="qunit.css" />
+    <script src="jquery.min.js"></script>
+    <script src="qunit.js"></script>
+    <script src="sinon-1.3.4.js"></script>
+    <script src="sinon-qunit.js"></script>
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+  </body>
+</html>
+```
 
 If we run that in a browser we should see this:
 
@@ -52,23 +54,25 @@ If we run that in a browser we should see this:
 
 Lets start with something very basic. We're going to write something that will let us build up a list of values and render them to a page. We could start with a test like this:
 
-    module('listView');
-    
-    test('The user is presented with a list of added items', function () {
-      document.getElementById('qunit-fixture').innerHTML = '<div id="list"></div>';
-      var domList = document.getElementById('list'),
-          list = listView(domList);
-    
-      list.addOne('javascript');
-      list.render();
-    
-      equal(domList.innerHTML, 'javascript', 'A single value should be rendered');
-    
-      list.addOne('ftw');
-      list.render();
-    
-      equal(domList.innerHTML, 'javascript ftw', 'A list of values should be rendered');
-    });
+```
+module('listView');
+
+test('The user is presented with a list of added items', function () {
+  document.getElementById('qunit-fixture').innerHTML = '<div id="list"></div>';
+  var domList = document.getElementById('list'),
+      list = listView(domList);
+
+  list.addOne('javascript');
+  list.render();
+
+  equal(domList.innerHTML, 'javascript', 'A single value should be rendered');
+
+  list.addOne('ftw');
+  list.render();
+
+  equal(domList.innerHTML, 'javascript ftw', 'A list of values should be rendered');
+});
+```
 
 Here we're creating a fixture element and instantiating our new module. We're then exercising a function called addOne with a string and asserting that each time we call render the expected string is inserted into our element. Lets run our test and see it fail:
 
@@ -76,17 +80,19 @@ Here we're creating a fixture element and instantiating our new module. We're th
 
 Now lets write some code to get this test to pass:
 
-    var listView = function (domEl) {
-      var items = [];
-      return {
-        addOne: function (value) {
-          items.push(value);
-        },
-        render: function () {
-          domEl.innerHTML = items.join(' ');
-        }
-      };
-    };
+```
+var listView = function (domEl) {
+  var items = [];
+  return {
+    addOne: function (value) {
+      items.push(value);
+    },
+    render: function () {
+      domEl.innerHTML = items.join(' ');
+    }
+  };
+};
+```
 
 ![Passing test](/uploaded_assets/inline-images/000/000/018/display_size_pass.png?1339519663)
 
@@ -105,60 +111,64 @@ Sinon is a collection of utterly essential testing tools that among other things
 
 Lets write a new test:
 
-    var xhr,
-        requests,
-        domList;
-    
-    module('listView', {
-      setup: function () {
-        xhr = sinon.useFakeXMLHttpRequest()
-        requests = [];
-        xhr.onCreate = function (r) {
-          requests.push(r);
-        };
-        document.getElementById('qunit-fixture').innerHTML = '<div id="list"></div>';
-        domList = document.getElementById('list');
-      },
-      teardown: function () {
-        xhr.restore();
-      }
-    });
-    
-    test('The list is populated from the server', function () {
-      var list = listView(domList);
-      list.fetch();
-    
-      equal(requests.length, 1, 'One XHR request should be made');
-    
-      requests[0].respond(200, {'Content-Type': 'application/json'}, '["XHR", "INNIT"]');
-    
-      equal(requests[0].url, '/path/to/list.json', 'A request to the correct URL should be made');
-    
-      list.render();
-    
-      equal(domList.innerHTML, 'XHR INNIT', 'The retrieved values should be rendered');
-    });
+```
+var xhr,
+    requests,
+    domList;
+
+module('listView', {
+  setup: function () {
+    xhr = sinon.useFakeXMLHttpRequest()
+    requests = [];
+    xhr.onCreate = function (r) {
+      requests.push(r);
+    };
+    document.getElementById('qunit-fixture').innerHTML = '<div id="list"></div>';
+    domList = document.getElementById('list');
+  },
+  teardown: function () {
+    xhr.restore();
+  }
+});
+
+test('The list is populated from the server', function () {
+  var list = listView(domList);
+  list.fetch();
+
+  equal(requests.length, 1, 'One XHR request should be made');
+
+  requests[0].respond(200, {'Content-Type': 'application/json'}, '["XHR", "INNIT"]');
+
+  equal(requests[0].url, '/path/to/list.json', 'A request to the correct URL should be made');
+
+  list.render();
+
+  equal(domList.innerHTML, 'XHR INNIT', 'The retrieved values should be rendered');
+});
+```
 
 We've now defined a setup function for our test suite which replaces the native XMLHttpRequest with a fake one. This will intercept any attempt to communicate over XHR and allow us to define our own responses. Even better it will make our request synchronous since we're responding to our fake request immediately from inside our test; pretty cool.
 
 Lets update listView and get that test to pass:
 
-    var listView = function (domEl) {
-      var items = [];
-      return {
-        addOne: function (value) {
-          items.push(value);
-        },
-        render: function () {
-          domEl.innerHTML = items.join(' ');
-        },
-        fetch: function () {
-          $.getJSON('/path/to/list.json', function (response) {
-            items = response;
-          });
-        }
-      };
-    };
+```
+var listView = function (domEl) {
+  var items = [];
+  return {
+    addOne: function (value) {
+      items.push(value);
+    },
+    render: function () {
+      domEl.innerHTML = items.join(' ');
+    },
+    fetch: function () {
+      $.getJSON('/path/to/list.json', function (response) {
+        items = response;
+      });
+    }
+  };
+};
+```
 
 Run the tests
 
@@ -174,59 +184,63 @@ Sinon.js solves this for you with fake timers. Sinon will replace the browsers' 
 
 Lets write a test to animate a simple cube:
 
-    test('cube is animated for 1 second', function () {
-      document.getElementById('qunit-fixture').innerHTML = '<div id="cube"></div>';
-    
-      var domCube = document.getElementById('cube'),
-          cube = animatedCube(domCube),
-          clock = sinon.useFakeTimers();
-    
-      cube.animate();
-    
-      clock.tick(100);
-    
-      equal(domCube.style.left, '10px', 'Cube has moved 10px left after 100ms');
-    
-      clock.tick(100);
-    
-      equal(domCube.style.left, '20px', 'Cube has moved 20px left after 200ms');
-    
-      clock.tick(800);
-    
-      equal(domCube.style.left, '100px', 'Cube has moved 100px left after 1000ms');
-    
-      clock.tick(100);
-    
-      equal(domCube.style.left, '100px', 'Cube has stopped moving');
-    
-      clock.restore();
-    });
+```
+test('cube is animated for 1 second', function () {
+  document.getElementById('qunit-fixture').innerHTML = '<div id="cube"></div>';
+
+  var domCube = document.getElementById('cube'),
+      cube = animatedCube(domCube),
+      clock = sinon.useFakeTimers();
+
+  cube.animate();
+
+  clock.tick(100);
+
+  equal(domCube.style.left, '10px', 'Cube has moved 10px left after 100ms');
+
+  clock.tick(100);
+
+  equal(domCube.style.left, '20px', 'Cube has moved 20px left after 200ms');
+
+  clock.tick(800);
+
+  equal(domCube.style.left, '100px', 'Cube has moved 100px left after 1000ms');
+
+  clock.tick(100);
+
+  equal(domCube.style.left, '100px', 'Cube has stopped moving');
+
+  clock.restore();
+});
+```
 
 In this test we're telling Sinon to replace the browsers timers and then incrementally advancing the timer to interesting points in our animation and asserting that the cube is where we expect it to be.
 
 And now lets make the test pass:
 
-    var animatedCube = function (domEl) {
-      var x = 0,
-          start,
-          diff,
-          interval,
-          loop = function () {
-            diff = Date.now() - start;
-            x = Math.round((100 / 1000) * diff);
-            domEl.style.left = x + 'px';
-            if (x >= 100) clearInterval(interval);
-          };
-    
-      domEl.style = 'width:10px;height:10px;background-color:red;position:relative';
-    
-      return {
-        animate: function () {
-          start = Date.now();
-          interval = setInterval(loop, 10);
-        }
+```
+var animatedCube = function (domEl) {
+  var x = 0,
+      start,
+      diff,
+      interval,
+      loop = function () {
+        diff = Date.now() - start;
+        x = Math.round((100 / 1000) * diff);
+        domEl.style.left = x + 'px';
+        if (x >= 100) clearInterval(interval);
       };
-    };
+
+  domEl.style = 'width:10px;height:10px;background-color:red;position:relative';
+
+  return {
+    animate: function () {
+      start = Date.now();
+      interval = setInterval(loop, 10);
+    }
+  };
+};
+```
 
 And now to run the tests.
 

@@ -15,10 +15,12 @@ It has come to my attention of late that there is some clear separation in the t
 
 - The second group prefers a slightly more loose approach to testing; they favour the approach of testing components of their application less in isolation, comparable in some sense to integration testing alone. Let’s take an example of a simple Cucumber approach to testing to demonstrate what I mean:
 
-    Feature: Viewing a blog post:
-      Given A blog post "post 1" exists with title: "Testing is for winners!"
-      And I am on the page for blog post "post 1"
-      Then I should see "Testing is for winners"
+```
+Feature: Viewing a blog post:
+  Given A blog post "post 1" exists with title: "Testing is for winners!"
+  And I am on the page for blog post "post 1"
+  Then I should see "Testing is for winners"
+```
 
 Some of you may consider this subtle, but by testing at this level we have already tested other components of our application implicitly. The above example already means that our application is testing that we not only have a model on which we can store the details of our post, but also that the model has a title attribute, controller show action and a corresponding view.
 
@@ -26,13 +28,15 @@ In the real world we all know that this kind of testing works, and by cutting ou
 
 However I do see a major flaw in this kind of testing; using the above example as a starting point. Imagine these are the only tests we have and 6 months down the line we decide to add some new models and relationships, such as a category. We may also decide to add some conditional logic in the views around displaying the category to the user. &nbsp;So, to make sure I test this logic I extend my feature as follows:
 
-    Background:
-      Given a category "cat 1" exists with name: "TDD"
-    Feature: Viewing a blog post:
-      Given A blog post "post 1" exists with title: "Testing is for winners!"
-      And I am on the page for blog post "post 1"
-      Then I should see "Testing is for winners"
-      And I should see "TDD"
+```
+Background:
+  Given a category "cat 1" exists with name: "TDD"
+Feature: Viewing a blog post:
+  Given A blog post "post 1" exists with title: "Testing is for winners!"
+  And I am on the page for blog post "post 1"
+  Then I should see "Testing is for winners"
+  And I should see "TDD"
+```
 
 Now, those of you with a keen eye will already notice that our post has not been related to the category. Without writing any code, we run our tests and sure enough it fails, but where? First of all, nothing fails at the creation stage, but instead our tests fail at the stage where we expect to see the category name on the page. So immediately we jump to the conclusion that our view logic is incorrect. We continue to spend time working out that this is not the root of the issue, but is merely a problem elsewhere.
 

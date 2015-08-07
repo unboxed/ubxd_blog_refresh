@@ -33,4 +33,6 @@ author: "Graeme McCubbin"
 > It’s important to bring a developer along to these first meetings. [@pixeltrix](https://twitter.com/pixeltrix) [#AgileDevIdeas](https://twitter.com/hashtag/AgileDevIdeas?src=hash)
 > 
 > — Unboxed Consulting (@Ubxd) [March 4, 2015](https://twitter.com/Ubxd/status/573153187890401280) <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
-  Tweet Andrew at [@Pixeltrix](https://twitter.com/pixeltrix) or us at [@Ubxd](https://twitter.com/Ubxd) with the hashtag _#AgileDevIdeas_ if you have any questions or put them into the comment box below, where Andrew will be able to answer them.
+
+
+Tweet Andrew at [@Pixeltrix](https://twitter.com/pixeltrix) or us at [@Ubxd](https://twitter.com/Ubxd) with the hashtag _#AgileDevIdeas_ if you have any questions or put them into the comment box below, where Andrew will be able to answer them.

@@ -7,7 +7,31 @@ author: "Alan Thomas"
 
 ---
 
-I’ve recently been on a project, where for various reasons, we didn’t have a test/staging/QA server available. The lack of this environment caused a slight blocker for QA and UAT/sign off. I decided to configure my own local development server to be available to the rest of the team, whilst we waited for the test environment to become available. Please note that this guide is for a Ruby on Rails project and assumes your local machine is a Mac.  ## Sharing your server locally  When you run your server, you probably use the command:  > ``bundle exec rails s``  With the above command if you try and share that with someone else via your local IP address, e.g. ``http://192.168.0.6:3000``, you’ll find that they are blocked.  Instead you need to use:  > ``bundle exec rails s -b 0.0.0.0``  This happens, as of Rails 4, by default it only binds to localhost, asking it to bind to ``0.0.0.0`` means listen on all network interfaces.  ## Sharing your server over the internet  The above solution works just fine if you and everybody who needs to see the server are on the same network. This is clearly not often the case, and therefore you probably want to have your server available over the internet.  If you do share your local machine over the internet, you probably only want to do this as a temporary solution. A laptop doesn't make for the best infrastructure....  Firstly, you’ll need to ascertain your external IP address (http://www.whatsmyip.org/ should work just fine) and then you need to setup port forwarding on the router you’re connected to. The majority of routers are accessible via ``http://192.168.0.1``, but that may not be the case and if you are in a managed environment you might need to ask someone.  Once you are in the router configuration, you can update the settings for port forwarding. The settings for this are commonly found in firewall rules. Set port ``3000`` to direct to your local IP (the ``192.168`` one) and then you can access the website externally, e.g. ``http://<external-ip>:3000``
+I’ve recently been on a project, where for various reasons, we didn’t have a test/staging/QA server available. The lack of this environment caused a slight blocker for QA and UAT/sign off. I decided to configure my own local development server to be available to the rest of the team, whilst we waited for the test environment to become available. Please note that this guide is for a Ruby on Rails project and assumes your local machine is a Mac.
+
+## Sharing your server locally
+
+When you run your server, you probably use the command:
+
+> ``bundle exec rails s``
+
+With the above command if you try and share that with someone else via your local IP address, e.g. ``http://192.168.0.6:3000``, you’ll find that they are blocked.
+
+Instead you need to use:
+
+> ``bundle exec rails s -b 0.0.0.0``
+
+This happens, as of Rails 4, by default it only binds to localhost, asking it to bind to ``0.0.0.0`` means listen on all network interfaces.
+
+## Sharing your server over the internet
+
+The above solution works just fine if you and everybody who needs to see the server are on the same network. This is clearly not often the case, and therefore you probably want to have your server available over the internet.
+
+If you do share your local machine over the internet, you probably only want to do this as a temporary solution. A laptop doesn't make for the best infrastructure....
+
+Firstly, you’ll need to ascertain your external IP address (http://www.whatsmyip.org/ should work just fine) and then you need to setup port forwarding on the router you’re connected to. The majority of routers are accessible via ``http://192.168.0.1``, but that may not be the case and if you are in a managed environment you might need to ask someone.
+
+Once you are in the router configuration, you can update the settings for port forwarding. The settings for this are commonly found in firewall rules. Set port ``3000`` to direct to your local IP (the ``192.168`` one) and then you can access the website externally, e.g. ``http://<external-ip>:3000``
 
 If you can't change router settings, then you may want to consider a service such as https://ngrok.com
 

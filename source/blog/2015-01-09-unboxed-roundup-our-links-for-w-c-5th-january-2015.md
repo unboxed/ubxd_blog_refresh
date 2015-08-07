@@ -7,7 +7,19 @@ author: "Murray Steele"
 
 ---
 
-Welcome to 2015! Here's what we've been thinking about over the festive period:  ## Interviewing Scrum Masters - [Carlo](http://www.unboxedconsulting.com/people/carlo-kruger)  http://news.dice.com/2014/09/04/3-interview-questions-scrum-masters/  A nice article on what to ask Scrum Masters in an interview and why you should ask those questions.  ## This. Is. Just. Crazy. - [Attila](https://www.unboxedconsulting.com/people/attila-gyorffy)  https://github.com/geelen/djgif  A DJ using Ableton Live, a huge bundle of MaxMSP emitting a UDP stream of beat information (courtesy of the immensely pro Cade), a UDP ➝ WebSockets server, and DJGif pulling hundreds of GIFs off various Tumblrs to beatmatch <x-gif> on two projectors makes for a hell of a good show.
+Welcome to 2015! Here's what we've been thinking about over the festive period:
+
+## Interviewing Scrum Masters - [Carlo](http://www.unboxedconsulting.com/people/carlo-kruger)
+
+http://news.dice.com/2014/09/04/3-interview-questions-scrum-masters/
+
+A nice article on what to ask Scrum Masters in an interview and why you should ask those questions.
+
+## This. Is. Just. Crazy. - [Attila](https://www.unboxedconsulting.com/people/attila-gyorffy)
+
+https://github.com/geelen/djgif
+
+A DJ using Ableton Live, a huge bundle of MaxMSP emitting a UDP stream of beat information (courtesy of the immensely pro Cade), a UDP ➝ WebSockets server, and DJGif pulling hundreds of GIFs off various Tumblrs to beatmatch <x-gif> on two projectors makes for a hell of a good show.
 
 There’s also an image at: http://glenmaddern.com/articles/javascript-in-2015
 

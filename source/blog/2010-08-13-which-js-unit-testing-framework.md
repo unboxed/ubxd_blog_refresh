@@ -153,9 +153,11 @@ JSpec written by TJ Holowaychuk is different from previous frameworks. Firstly y
 
 After installing gem, create you directory for project
 
-    jspec init name_of_project
-      Jspec contains one test by default so after command
-      jspec run
+```
+jspec init name_of_project
+  Jspec contains one test by default so after command
+  jspec run
+```
 
 you should see:
 
@@ -165,7 +167,9 @@ but if you don't have Safari set as a default browser than you can see this erro
 
 to fix that just run
 
-    jspec run --browser Safari
+```
+jspec run --browser Safari
+```
 
 The test code is located at spec/spec.js or at unit/spec.js - depends on the version you have installed. JSPEC syntax is very clean and Rspec like.
 
@@ -274,12 +278,16 @@ Test template: <script src="http://gist.github.com/520783.js?file=gistfile1.js" 
 
 After installation of Gem:
 
-    gem install jasmine
-     script/generate jasmine
+```
+gem install jasmine
+ script/generate jasmine
+```
 
 You can run test in browser by:
 
-    rake jasmine
+```
+rake jasmine
+```
 
 This will start the Jasmin server on http://localhost:8888/ where the output is the same as above.
 

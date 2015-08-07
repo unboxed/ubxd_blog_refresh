@@ -8,7 +8,9 @@ author: "Graeme McCubbin"
 ---
 
 [Richard Stobart](http://www.unboxedconsulting.com/people/richard-stobart) held the second instalment of our current Digital Webinar Series, titled: _'Communication Ceremonies: why, what and how to communicate to increase the pace at early stage digital product development’_.  
-  ![webinar1](http://i1291.photobucket.com/albums/b548/grammccram/fdd183d1-fc48-45c4-a2b7-e27e26c84e20\_zps11e39c22.png)
+
+
+![webinar1](http://i1291.photobucket.com/albums/b548/grammccram/fdd183d1-fc48-45c4-a2b7-e27e26c84e20\_zps11e39c22.png)
 
 ## Topics covered included:
  • How to put the audience at ease  

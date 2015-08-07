@@ -48,4 +48,6 @@ author: "Graeme McCubbin"
 > — Clean Communication (@cleancomms) [March 18, 2015](https://twitter.com/cleancomms/status/578227792506167296) <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>> The design of a meeting must take both sides of the team into consideration. [#OffshoringAgile](https://twitter.com/hashtag/OffshoringAgile?src=hash) [@ironicbuddha](https://twitter.com/ironicbuddha)
 > 
 > — Unboxed Consulting (@Ubxd) [March 18, 2015](https://twitter.com/Ubxd/status/578229692467163137) <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
-  Tweet us at [@Ubxd](https://twitter.com/Ubxd) with the hashtag _#OffshoringAgile_ to get in on the conversation, or tweet Carlo at [@ironicbuddha](https://twitter.com/ironicbuddha) who would be happy to answer any questions on the topic.
+
+
+Tweet us at [@Ubxd](https://twitter.com/Ubxd) with the hashtag _#OffshoringAgile_ to get in on the conversation, or tweet Carlo at [@ironicbuddha](https://twitter.com/ironicbuddha) who would be happy to answer any questions on the topic.

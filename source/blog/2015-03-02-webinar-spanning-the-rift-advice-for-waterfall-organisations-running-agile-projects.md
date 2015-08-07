@@ -35,4 +35,6 @@ author: "Graeme McCubbin"
 > — Unboxed Consulting (@Ubxd) [February 25, 2015](https://twitter.com/Ubxd/status/570618364768464897) <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>> One of the worst things you can hear a constant mantra of "that's how it is" [#WaterfallToAgile](https://twitter.com/hashtag/WaterfallToAgile?src=hash)
 > 
 > — Unboxed Consulting (@Ubxd) [February 25, 2015](https://twitter.com/Ubxd/status/570617608413818880) <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>  
-  Tweet us at [@Ubxd](https://twitter.com/Ubxd) with the hashtag _#WaterfallToAgile_ if you have any questions or you’d like to get in on the conversation.
+
+
+Tweet us at [@Ubxd](https://twitter.com/Ubxd) with the hashtag _#WaterfallToAgile_ if you have any questions or you’d like to get in on the conversation.

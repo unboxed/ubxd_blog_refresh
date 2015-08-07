@@ -27,7 +27,7 @@ The issue can be addressed manually by disabling this functionality in Safari’
 
 ![](/uploads/Image/1qoIaJ.safari-autofill.png)
 
-This issue affects Safari version 4 and 5, with about 4% of combined market share (~83 million internet users) and has already been reported to Apple. We are hoping that they are going to release a new official version very soon that contains a fix. Given the relatively aggressive automatic system update feature built into OS X, the patch should spread across most users’ computers. Apple recently released an update to Safari (version 5.0.1) that has fixed the security issue.
+This issue affects Safari version 4 and 5, with about 4% of combined market share (~83 million internet users) and has already been reported to Apple. ~~We are hoping that they are going to release a new official version very soon that contains a fix. Given the relatively aggressive automatic system update feature built into OS X, the patch should spread across most users’ computers.~~ Apple recently released an update to Safari (version 5.0.1) that has fixed the security issue.
 
 &nbsp;
 

@@ -17,7 +17,7 @@ This week I went along to the [freshbusinessthinking.com](http://www.freshbusine
   
  THAT IS until I saw that ex-supermodel and business entrepeneur Caprice Bourret was on the bill, talking about her lingerie business and the tough road from clothes horse to clothes designer. She sells her wares (underwares- geddit?) on [debenhams.com](http://www.debenhams.com/), [figleaves.com](http://www.figleaves.com/uk/home.asp) and [asos.com](http://www.asos.com/), but still has no website of her own, whether it be a full ecommerce website or just an online catalogue of her range.  
   
- Eureka! I design websites + she needs a website = I should go and speak to her. So there I was, I thrust my salmon bagel and black coffee to the nearest fellow and said, “hold on to these baby... I’m going to go and chat up Caprice!” I hadn’t felt so stupid since I was 16 years old in the school playground, but I did get a moment of her time, gave her my card and she said, “awww thanks Tooooooommmm, I’ll check out ur stuff,” in a very ex-model, big in the nineties, Californian celeb type way. And then she was gone. \*sigh\*  
+ Eureka! I design websites + she needs a website = I should go and speak to her. So there I was, I thrust my salmon bagel and black coffee to the nearest fellow and said, “hold on to these baby... I’m going to go and chat up Caprice!” I hadn’t felt so stupid since I was 16 years old in the school playground, but I did get a moment of her time, gave her my card and she said, “awww thanks Tooooooommmm, I’ll check out ur stuff,” in a very ex-model, big in the nineties, Californian celeb type way. And then she was gone.*sigh*  
   
  Well, I’m still waiting and the phone hasn’t rung. But I guess there are plenty more fish in the sea...
 

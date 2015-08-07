@@ -12,7 +12,9 @@ At our recent event, we discovered the 'new rules' of outsourcing. I opened the 
 ## **When does outsourcing work really well? What are your top tips for making outsourcing work efficiently?**
  ![outsource1](http://i1291.photobucket.com/albums/b548/grammccram/ScreenShot2014-10-31at165614\_zps04b1e59c.png)  
 _"Outsourcing is a partnership and partnerships work well when they are based on trust and constantly nurtured by frequent, open communication. I would focus on making outsourcing “effective” rather than “efficient”.  
-  For example efficiency might suggest cutting down on travel between sites because it costs money whereas I would say that forming strong collaborative relationships with each other is really important for working together through future challenges."_    
+
+
+For example efficiency might suggest cutting down on travel between sites because it costs money whereas I would say that forming strong collaborative relationships with each other is really important for working together through future challenges."_    
   
 
 ## **Does the Product Owner need to be from the client company?**
@@ -20,12 +22,16 @@ _"Outsourcing is a partnership and partnerships work well when they are based on
   
 
 ## **How do you find the right Product Owner and keep them sane through an agile development?**
- ![outsource1](http://i1291.photobucket.com/albums/b548/grammccram/ScreenShot2014-10-31at165557\_zpsdc74de01.png) _"First and foremost a good Product Owner really \*owns\* the product. They are passionate about it and can articulate a clear vision for its future direction. They need to have the respect and trust of a wider stakeholder group and at the same time be able to take on a wide range of view and needs and incorporate into a clear future roadmap.  
-  For me, this is the single most important role and so the best advice I can give is take it really seriously. Don’t pick somebody because they are “familiar” or have some free time. If the person best suited has too much other work on then seriously consider whether you are taking the product seriously enough if you don’t free up their time to give it some real focus. It can be hard to fine one person who has all the characteristics of a great product owner and sometimes having a full-time proxy product owner or business analyst to work with the team on a more detailed level can be a useful complementary role if the Product Owner isn’t particularly analytical."_    
+ ![outsource1](http://i1291.photobucket.com/albums/b548/grammccram/ScreenShot2014-10-31at165557\_zpsdc74de01.png) _"First and foremost a good Product Owner really*owns* the product. They are passionate about it and can articulate a clear vision for its future direction. They need to have the respect and trust of a wider stakeholder group and at the same time be able to take on a wide range of view and needs and incorporate into a clear future roadmap.  
+
+
+For me, this is the single most important role and so the best advice I can give is take it really seriously. Don’t pick somebody because they are “familiar” or have some free time. If the person best suited has too much other work on then seriously consider whether you are taking the product seriously enough if you don’t free up their time to give it some real focus. It can be hard to fine one person who has all the characteristics of a great product owner and sometimes having a full-time proxy product owner or business analyst to work with the team on a more detailed level can be a useful complementary role if the Product Owner isn’t particularly analytical."_    
   
 
 ## **How do you manage the business' expectations from a service level standpoint?**
-  ![outsource1](http://i1291.photobucket.com/albums/b548/grammccram/62169893-b205-4710-a62d-e2c5f8d6348b\_zpsad715299.png)  
+
+
+![outsource1](http://i1291.photobucket.com/albums/b548/grammccram/62169893-b205-4710-a62d-e2c5f8d6348b\_zpsad715299.png)  
 _"Quality shouldn’t be a variable. A good partnership will result in a robust product that is resilient. Once you are managing the relationship through service level monitoring and service credits, something has already gone wrong. Hold a drains-up meeting and discuss where each other’s expectations are not being met. What often happens is that during the build technical debt is built up and short-cuts are taken then this is forgotten when the product goes into producing and the chickens come home to roost."_  
   
 
@@ -40,7 +46,9 @@ _"Quality shouldn’t be a variable. A good partnership will result in a robust 
  1. The outsourced partner is not in your industry and are unlikely to compete  
  2. You have an IP clause in the contract that clearly delineates who owns what IP  
  3. That the outsourcer has IP clauses in their employee and supplier contracts  
-  Use a solicitor who has IP experience to review the contract."_    
+
+
+Use a solicitor who has IP experience to review the contract."_    
   
 
 ## **Why when you outsource do you not always get what you want?**
@@ -67,7 +75,7 @@ _"I don’t see uncertainty itself as a benefit - more an inevitability. It’s 
 ## **If you outsource overseas, what considerations should you make about time zone and language?  
  What is best practice for geographical and timezone distributed teams?**  
  ![outsource11](http://i1291.photobucket.com/albums/b548/grammccram/ScreenShot2014-10-31at165529\_zps096fff02.png) ![outsource12](http://i1291.photobucket.com/albums/b548/grammccram/57f7fdb6-4f54-4f47-9b4e-0a549044d94c\_zps51f394d5.png)  
-_"Every thing that doesn’t make communication easier and gets in the way of a continuous flow of work is another obstacle to productivity that \*will\* slow you down. I think that geographically distributed teams can work if you invest in getting to know each other and make communication a central theme of how you operate. My personal view is that if you additionally introduce language barriers or time zones where the over-lap in the working day is small then you lose the ability to effectively work together in an Agile way and so I wouldn’t recommend going this far."_  
+_"Every thing that doesn’t make communication easier and gets in the way of a continuous flow of work is another obstacle to productivity that*will* slow you down. I think that geographically distributed teams can work if you invest in getting to know each other and make communication a central theme of how you operate. My personal view is that if you additionally introduce language barriers or time zones where the over-lap in the working day is small then you lose the ability to effectively work together in an Agile way and so I wouldn’t recommend going this far."_  
   
 
 ## **How do you find new partners to work / outsource to?**
@@ -88,7 +96,9 @@ _"This area is a great example of where thinking that you know or can “plan”
   
 
 ## **Multiple teams working on the same product. The product owners are shared across teams. Is there a way to make this work efficiently? The teams are not in the same office.**
-  ![outsource15](http://i1291.photobucket.com/albums/b548/grammccram/ScreenShot2014-10-31at165453\_zps62a5665e.png)  
+
+
+![outsource15](http://i1291.photobucket.com/albums/b548/grammccram/ScreenShot2014-10-31at165453\_zps62a5665e.png)  
 _"I've seen this work and scale best when different teams are focussed on different functional components of the product. This limits the coverage of the product that any one developer needs to have and reduces the overlap between teams. It can sometimes be useful to add proxy-product owners or business analysts for each team who are able to take a more detailed view and make quick local decisions if the Product Owner is spread quite thinly across a larger product."_  
   
 
@@ -107,6 +117,12 @@ _"Any investment in understanding the other’s environment is worth the money. 
 
 ## **Where did you get that crazy shirt from?!**
  ![outsource4](http://i1291.photobucket.com/albums/b548/grammccram/e0e95824-63ad-4ee0-8a27-ca294afb2fff\_zpscdb49fb3.png)  
-  ![outsource4](http://i1291.photobucket.com/albums/b548/grammccram/0824761b-1e2e-4f19-9e3f-14b32f7599db\_zps89af43f7.jpg)  [Hawes and Curtis](http://www.hawesandcurtis.co.uk/menswear/london\_fashion\_shirts\_collection)  
+
+
+![outsource4](http://i1291.photobucket.com/albums/b548/grammccram/0824761b-1e2e-4f19-9e3f-14b32f7599db\_zps89af43f7.jpg)
+
+[Hawes and Curtis](http://www.hawesandcurtis.co.uk/menswear/london\_fashion\_shirts\_collection)  
   
-  If these questions have sparked any queries and you'd like them answered, feel free to tweet me [@richardstobart](https://twitter.com/richardstobart) with the hashtag #agileteams.
+
+
+If these questions have sparked any queries and you'd like them answered, feel free to tweet me [@richardstobart](https://twitter.com/richardstobart) with the hashtag #agileteams.

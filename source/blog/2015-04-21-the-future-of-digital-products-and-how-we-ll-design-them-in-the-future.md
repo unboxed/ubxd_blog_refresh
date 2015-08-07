@@ -8,7 +8,9 @@ author: "Leon Odey-Knight"
 ---
 
 What will digital trends change about the digital product design process – it’s a hard question to answer. So I’ll start by unpicking how we currently design for digital…  
-  Whilst I’ve always had a process of sorts it’s never been the same every time. The high level framework is always there, but how each goal is reached has varied from one client to the next. But ultimately I begin each time by asking myself these same three questions:  
+
+
+Whilst I’ve always had a process of sorts it’s never been the same every time. The high level framework is always there, but how each goal is reached has varied from one client to the next. But ultimately I begin each time by asking myself these same three questions:  
   
 <font size="3"><font color="#91278f">1.</font> Is there a need?</font>  
   
@@ -22,7 +24,9 @@ What will digital trends change about the digital product design process – it�
  Devices have, in many ways become a commodity, most of us have at least one and they are about as powerful as we need them to be for us to get things done. Whether you need a 7.5” screen to do those things on is another matter. Whatever size you go for there is no doubt that they are our lifeline to the _'world within the world’_.  
   
  ![image1](http://i1291.photobucket.com/albums/b548/grammccram/cfad3e2f-62a8-40d5-8255-d132ac395ebf\_zpshowlh5gh.png)  
-  But what of the digital products that we view this world through? Are they, too, being commoditised? Do we need _another_ social channel, music player, news feed or inaccurate fitness tracker?  
+
+
+But what of the digital products that we view this world through? Are they, too, being commoditised? Do we need _another_ social channel, music player, news feed or inaccurate fitness tracker?  
   
 
 ## Back to digital products and services – where will they fit?

@@ -1,0 +1,21 @@
+.site-header {
+  background-color: $white;
+}
+
+.site-header__container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 16px;
+}
+
+.site-header__brand {
+  color: $purple;
+  text-align: right;
+}
+
+.site-header__page-title {
+  font-size: 2em;
+  font-weight: 100;
+  padding-top: 32px;
+}

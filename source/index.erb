@@ -1,10 +1,18 @@
 ---
 ---
 
-<ul>
-  <% sitemap.order_by(date: :desc).all.each_with_index do |resource, index| %>
-    <li>
-      <%= resource.data.date %> <%= link_to resource.data.title, resource %>
-    </li>
+<div class="grid">
+  <% sitemap.order_by(date: :desc).all.each do |resource| %>
+    <a class="grid-item" href="<%= resource.url %>">
+      <div class="grid-item__type">
+        blog
+      </div>
+      <div class="grid-item__text">
+        <%= resource.data.title %>
+      </div>
+      <span class="grid-item__date">
+        <%= Time.parse(resource.data.date).strftime("%e %b %Y") %>
+      </span>
+    </a>
   <% end %>
-</ul>
+</div>

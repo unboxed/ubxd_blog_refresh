@@ -1,0 +1,61 @@
+.grid-item {
+  background-color: $white;
+  box-sizing: border-box;
+  border: 1px solid $light-gray;
+  display: block;
+  float: left;
+  margin: 8px 0;
+  padding: 16px;
+  position: relative;
+  width: 33.33%;
+  min-height: 180px;
+
+  text-decoration: none;
+
+  &:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    background-color: $blue;
+    content: "";
+    display: block;
+    height: 5px;
+  }
+
+  &:visited:before {
+    background-color: darken($white, 4%);
+  }
+
+  &:hover {
+    background-color: darken($white, 4%);
+  }
+}
+
+.grid-item__type {
+  color: $blue;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+
+  &:after {
+    content: "//"
+  }
+}
+
+.grid-item__text {
+  color: lighten($black, 5%);
+  font-weight: 100;
+}
+
+.grid-item__date {
+  color: lighten($black, 10%);
+  font-size: 0.8em;
+  font-weight: 100;
+  text-transform: uppercase;
+
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}

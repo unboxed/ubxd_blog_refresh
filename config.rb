@@ -44,6 +44,3 @@ activate :deploy do |deploy|
 
   deploy.commit_message = commit_message
 end
-
-# Word frequency sort:
-activate :similar # , :algorithm => :word_frequency by default.

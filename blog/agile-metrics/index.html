@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Agile metrics</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_agile-metrics blog_agile-metrics_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Richard Stobart
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-05-10 09:00:00 UTC">
+              <span>
+                10 May 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Agile metrics
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I have been asked recently about what metrics we would use to measure an organisation&rsquo;s key delivery metrics. Several PMOs are keen on metrics and measures - it gives them a reason to exist.</p>
+
+<p>When we deliver training or try to explain Agile Delivery we talk about &ldquo;The Sausage Machine&rdquo;. Try to make your delivery organisation like a very efficient sausage machine where high-value raw business requirements are fed in at the top and the sausages - working software in production - is delivered as efficiently as possible.</p>
+
+<p>I would argue that the two most critical measures are<em>cycle time</em> - the time from a requirement entering the machine to making it into production and the<em>value throughput</em> of the machine - how much business benefit it delivers per period. Focusing on these two metrics eliminates waste and drives the right behaviours and decisions. </p>
+
+<p>Let&rsquo;s address each of these. </p>
+
+<h1>Cycle time</h1>
+
+<p>It may be obvious but the longer it takes to get a feature into production, the longer it will be before that feature will start generating benefit. Measuring this should drive all sorts of good behaviours. If you have read Tom and Mary&rsquo;s <a href="http://www.amazon.co.uk/Lean-Software-Development-Agile-Toolkit/dp/0321150783/ref=la_B001IGNU3O_1_1?ie=UTF8&amp;qid=1368103973&amp;sr=1-1">Lean Software Development, an Agile Toolkit</a> you will have covered the process mapping chapters that explain in detail how to identify <a href="http://www.emsstrategies.com/dm090203article2.html">waste</a> and eliminate it. The obvious basics that need to be in place are small features, automation of tests, <a href="https://learnchef.opscode.com">environment builds</a> and deployments, delivery of working software, not comprehensive documentation, maximise the amount not delivered, <a href="http://www.bigvisible.com/2011/06/the-waterfall-sandwich/">don&rsquo;t have a long requirements gathering phase, a few Agile sprints followed by long cycles of preproduction testing before a big release</a>, streamline your release processes and focus on delivering the highest benefit first. </p>
+
+<h1>Value Throughput</h1>
+
+<p>The important emphasis is<em>value</em> throughput, not<em>volume</em> throughput. I don&rsquo;t have an easy answer for measuring value, but our business strategy work tries to assign a t-shirt sized value to each epic being delivered. If this is done (or at least baselined) at the programme management level then it is possible to get an estimate of relative benefit delivery. Doing this puts the emphasis on choosing the highest value, small items first.</p>
+
+<p>It is easy to convince senior managers that these are the most imperative measures to measure. You can then challenge the stalwarts with their &ldquo;plan the work, work the plan&rdquo; mantras.</p>
+
+<p>Secondary measures worth measuring are quality and return on investment (ROI). I&rsquo;m sure you are fuming at why I have categorised quality and ROI as secondary? You may actively choose to put services into production, if you are following a Lean Startup methodology that is testing hypotheses then you want to get that into production ASAP, even if it&rsquo;s a bit rough around the edges. In fact, <a href="http://blog.mattwynne.net/2013/05/09/two-ways-to-react/">polishing is waste</a>. Even if you are not doing Lean Startup you may also not want to fix known bugs but prefer to leave them in and deliver a high value feature. (Don&rsquo;t leave them in too long - remember the <a href="http://www.codinghorror.com/blog/2005/06/the-broken-window-theory.html">Broken Window Theory</a>.) </p>
+
+<p>And ROI, surely cost is important, why are you only worrying about benefit? The reason is two-fold, firstly, by implication the throughput metric ensures highest benefit for a time period and time is analogous to money. The second reason is that what is measure is what gets gamed. Tom DeMarco in <a href="http://www.amazon.co.uk/Slack-Getting-Burnout-Busywork-Efficiency/dp/0932633617">Slack</a> reiterates the increase in flow by introducing slack into a team&rsquo;s time. The other reason that I discount (not disregard) ROI is that not all costs are measured. If you can measure the present value of support, infrastructure run costs, product run costs and development costs feature by feature then by all means ROI. Often the simpler maths is to look at costs as a fixed cost for the product and include cost reduction in the benefit side of the equation. If the throughput is maintained after the cost reduction then the reduction is beneficial.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/agile-metrics';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-1st-june-2015/">Unboxed Roundup: Our links for w/c 1st June 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/categorising-workarounds/">Categorising Workarounds</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-9th-february-2015/">Unboxed Roundup: our links for w/c 9th February 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-dev-o-nine-tails/">The dev o' nine tails</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

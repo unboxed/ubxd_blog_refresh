@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>You only dev twice</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_you-only-dev-twice blog_you-only-dev-twice_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-06-13 11:42:00 UTC">
+              <span>
+                13 Jun 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            You only dev twice
+          </h1>
+
+          <div class="blog-article__content">
+            <h3>JS Library Detection - <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom S</a></h3>
+
+<p><a href="https://chrome.google.com/webstore/detail/library-detector/cgaocdmhkmfnkdkbnckgmpopcbpaaejo">https://chrome.google.com/webstore/detail/library-detector/cgaocdmhkmfnkdkbnckgmpopcbpaaejo</a></p>
+
+<p>A useful Chrome extension to find out what JS libraries are being used on the website you are browsing.</p>
+
+<h3>Git 2.0 - <a href="http://www.unboxedconsulting.com/people/gavin-van-lelyveld">Gavin</a></h3>
+
+<p><a href="http://blogs.atlassian.com/2014/06/happened-git-2-0-full-goodies/">http://blogs.atlassian.com/2014/06/happened-git-2-0-full-goodies/</a></p>
+
+<p><code>git log --show-linear-break</code> is pretty cool. From the man page: </p>
+
+<blockquote>
+<p>When &ndash;graph is not used, all history branches are flattened which can make it hard to 
+see that the two consecutive commits do not belong to a linear branch. This option puts
+a barrier in between them in that case.</p>
+</blockquote>
+
+<h3>Why Docker? Why not Chef? - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h3>
+
+<p><a href="http://blog.relateiq.com/why-docker-why-not-chef/">http://blog.relateiq.com/why-docker-why-not-chef/</a></p>
+
+<p>Recently I&rsquo;ve been doing a lot of sysadmin work on our infrastructure. Which means I&rsquo;ve been <a href="http://gettingstartedwithchef.com/">learning chef</a> as that&rsquo;s what we use chef to manage it. I would say that, at best, it&rsquo;s been a bit of a frustrating process. I&rsquo;m sure a large part of that is that I&rsquo;m learning both chef the tool and our own chef application at the same time.</p>
+
+<p>I don&rsquo;t know that I&rsquo;m quite ready to throw chef in the bin and use a different tool, but the arguments in this article certainly resonate with me. Particularly the idea of never upgrading a server, just creating a new one and swapping it with the old one. I don&rsquo;t know enough about docker to say if it&rsquo;s something I&rsquo;d like any more than chef, but this article certainly has me interested.</p>
+
+<h3>A first person game-engine in JS - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h3>
+
+<p><a href="http://www.playfuljs.com/a-first-person-engine-in-265-lines/">http://www.playfuljs.com/a-first-person-engine-in-265-lines/</a></p>
+
+<p>This blog post introduces us to a simple 3d game engine in javascript. I like this for a couple of reasons:</p>
+
+<ol>
+<li>The blog post introduces the concepts used in the engine in a clear and understandable way; <a href="https://en.wikipedia.org/wiki/Ray_casting">ray casting</a>, <a href="https://en.wikipedia.org/wiki/Collision_detection">collision detection</a>, lighting effects, etc&hellip;
+
+<ol>
+<li>The code itself is surprisingly simple, even without the blog post to explain the techniques I got a lot out of just reading the code.</li>
+</ol></li>
+</ol>
+
+<p>A while back I wrote a <a href="https://github.com/h-lame/lruggery/tree/master/names_from_a_hat/rogue">terrible rogue game engine</a> to randomise names for <a href="http://lrug.org/meetings/2012/01/24/february-2012-meeting/">an LRUG lightning talk evening</a>. I found implementing the game engine for that surprisingly simple (once I found the right resources), and this article has made me consider writing a 3D engine for wandering around in the generated &ldquo;dungeons&rdquo;.</p>
+
+<h3>The Rails/Merb Merge In Retrospect - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h3>
+
+<p><a href="http://gilesbowkett.blogspot.co.uk/2014/06/the-railsmerb-merge-in-retrospect.html">http://gilesbowkett.blogspot.co.uk/2014/06/the-railsmerb-merge-in-retrospect.html</a></p>
+
+<p>This article about the Rails + Merb merge could seem like it is 4 years too late, especially when you consider that Rails 3, the result of the merge, <a href="http://weblog.rubyonrails.org/2010/8/29/rails-3-0-it-s-done/">was released in August 2010</a>, but it&rsquo;s hard to evaluate if the merge was a success without the benefit of time to see if rails developers are making much use of the features promised by the merge. Giles argues that mostly we aren&rsquo;t, and that the time it took to deliver the merge meant that Rails lost it&rsquo;s edge in other areas. I don&rsquo;t know that I fully buy the argument that Giles presents, but I&rsquo;m definitely sympathetic to it.</p>
+
+<p>Either way, I think it&rsquo;s a useful piece of writing and I&rsquo;d like to see more articles that explore this sort of reflection on technology. So much of the writing about technology we see is just hype about the latest hot! new! cool! thing! that it&rsquo;s refreshing to read about critically evaluating those things much later to see if they delivered on their promises (<em>spoiler</em>: they probably don&rsquo;t).</p>
+
+<h3>My Top RailsConf 2014 Talks - <a href="http://www.unboxedconsulting.com/people/karl-entwistle">Karl</a></h3>
+
+<h4><a href="https://www.youtube.com/watch?v=8bZh5LMaSmE">All the Little Things by Sandi Metz</a></h4>
+
+<p><a href="http://www.sandimetz.com/">Sandi Metz</a> talks you through her refactor of <a href="https://github.com/jimweirich/gilded_rose_kata">Jim Weirichs’ Gilded Rose Code Kata</a>. Sandi’s approach is extremely pragmatic and the talk is mostly focused on object orientation. If you haven’t seen it yet you should watch this talk; if nothing else it&rsquo;s a nice satisfying example of how to approach and conquer some really complicated interwoven logic. </p>
+
+<h4><a href="https://www.youtube.com/watch?v=BTTygyxuGj8">Closing Keynote by Aaron Patterson</a></h4>
+
+<p>“Science is important” says <a href="http://tenderlovemaking.com/">Aaron Patterson</a>. I enjoyed the first part of this talk because it rebutted some of the comments DHH made in his opening speech. Aside from Aarons usual antics he also talks you through his latest creation <a href="http://tenderlovemaking.com/2014/02/19/adequaterecord-pro-like-activerecord.html">AdequateRecord</a>.</p>
+
+<h4><a href="https://www.youtube.com/watch?v=l_Vqp1dPuPo">You are Not an Impostor by Nickolas Means</a></h4>
+
+<p>This one is less about software and more about wetware. <a href="http://nickol.as/">Nickolas Means</a> shows you why your impostor syndrome / status anxiety is so powerful and how you can break free from the grip it has on your life.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/you-only-dev-twice';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/all-of-the-new-shiny-code/">All of the new shiny code</a></li>
+
+            <li class="blog-related__links"><a href="/blog/dev-newsletter-9th-august/">Dev Newsletter, 9th August</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-3-11/">UBXDDEV Vol. 3.11</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-most-anticipated-newsletter-of-the-year/">The most anticipated newsletter of the year</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

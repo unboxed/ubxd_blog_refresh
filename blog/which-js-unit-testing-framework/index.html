@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Which JS Unit Testing Framework?</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_which-js-unit-testing-framework blog_which-js-unit-testing-framework_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Petr Zaparka
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-08-13 00:00:00 UTC">
+              <span>
+                13 Aug 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Which JS Unit Testing Framework?
+          </h1>
+
+          <div class="blog-article__content">
+            <p>As a ruby developer I&rsquo;m used to using testing frameworks like Rspec or Cucumber. I started polishing an old project of mine recently, which is written in Ruby/js and using Sinatra. When I looked at the code I noticed that there is a lot of JS code without any tests and because I&rsquo;m big fan of tests, I decided I would write some. But what JS testing framework is best for my needs? I hope that this post will answer that question.</p>
+
+<p>Summarisation of my ideal Framework follows. I am looking for a browser based JS testing framework. The ideal syntax looks like Rspec. It supports nesting of &ldquo;describe&rdquo; blocks and installation has to be simple. It should be well documented with a lot of examples.</p>
+
+<h3>Assumption:</h3>
+
+<ul>
+<li>browser based</li>
+<li>simple integration</li>
+<li>easy configuration</li>
+<li>simple syntax</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><link href="http://gist.github.com/stylesheets/gist/embed.css" rel="stylesheet"></p>
+
+<h2>FireUnit</h2>
+
+<p><a title="Fireunit" href="http://fireunit.org/">http://fireunit.org/</a></p>
+
+<p>FireUnit is a Firefox / Firebug extension written by John Resig and Jan Odvarko. After you install the extension, all you have to do is to write the test and run it in the HTML file.</p>
+
+<p>Short example of syntax follow:</p>
+
+<style lang="text/css" type="text/css">
+.gist-syntax pre { font-size: 13px; }</style>
+
+<script src="http://gist.github.com/519104.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p><a href="/uploads/Image/fireunit.jpg"><img alt="fireunit" src="../../uploads/Image/fireunit.jpg" /></a></p>
+
+<p>You can also simulate browser events which is great.</p>
+
+<style lang="text/css" type="text/css">
+.gist-syntax pre { font-size: 13px; }</style>
+
+<script src="http://gist.github.com/519129.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>On the other hand FireUnit doesn&rsquo;t have proper documentation for the API. So if you would like to know what you can do with FireUnit you have to look at the code directly. Also the last commit at <a title="FireUnit's github page - http://github.com/jeresig/fireunit" href="http://github.com/jeresig/fireunit">FireUnit&rsquo;s github page</a> is from October 2009 so there is no current developer community.</p>
+
+<h3>Summary:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>easy to configurate / install</li>
+<li>easy to integrate</li>
+<li>browser event emulation</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>Dependency on Firefox/Firebug</li>
+<li>Lack of documentation</li>
+<li>No longer actively being developed</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>QUnit</h2>
+
+<p><a title="QUnit" href="http://docs.jquery.com/QUnit">http://docs.jquery.com/QUnit</a></p>
+
+<p>QUnit is part of the jQuery project, but it can be used without jQuery. QUnit is maintained by Jörn Zaefferer and John Resig. After download quint.js and qunit.css from <a title="Qunit source page" href="http://docs.jquery.com/QUnit">http://docs.jquery.com/QUnit</a> is very easy to start using it. Just link the QUnit js and css files at your HTML test and you can start. The documentation is written in jQuery style, so you can see examples too. If you are looking at the syntax, you will notice that the style is very similar to FireUnit (you can guess why).</p>
+
+<script src="http://gist.github.com/519159.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>Also it allows grouping tests into logical parts, you can use test blocks and module &ldquo;scoping&rdquo;, similar to description at Rspec.</p>
+
+<script src="http://gist.github.com/519177.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>Output in browser:</p>
+
+<p><a href="/uploads/Image/qunit.jpg"><img alt="qunit" src="../../uploads/Image/qunit.jpg" /></a></p>
+
+<h3>Summary Qunit:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>easy to integrate</li>
+<li>well documented</li>
+<li>used for testing jQuery</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>non-Rspec-like syntax</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>QUnit + SpecIt</h2>
+
+<p><a title="QUnit + SpecIt" href="http://github.com/joshuaclayton/specit">http://github.com/joshuaclayton/specit</a></p>
+
+<p>QUnit looks good and the models are fine but what if I would like to use Rspec notation? No problem because there is wrapper called SpecIt written by Joshua Clayton and it looks exactly like Rspec as you can see below. To install SpecIt follow the installation of QUnit. After that, download spec.js from <a title="Github page for SpecIt" href="http://github.com/joshuaclayton/specit">http://github.com/joshuaclayton/specit</a> and include the file into your test.</p>
+
+<script src="http://gist.github.com/519199.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>&nbsp; <a href="/uploads/Image/qunit2.jpg"><img alt="qunit" src="../../uploads/Image/qunit2.jpg" /></a></p>
+
+<p>It looks almost perfect but it&rsquo;s still only wrapper and it&rsquo;s using jQuery. That means that you have to use 4 files to run it. Also some of the matchers are using object type specification for comparing. I just don&rsquo;t understand why I need that. I just want to compare two values and I don&rsquo;t want to specify their type.</p>
+
+<h3>Summary QUnit + SpecIt:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>easy to integrate</li>
+<li>well documented</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>too many dependencies (jQuery, QUnit)</li>
+<li>matchers with object type specification</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>JSSpec</h2>
+
+<p><a title="JSSpec - JavaScript BehaviorDrivenDevelopment Framework" href="http://jania.pe.kr/aw/moin.cgi/JSSpec">http://jania.pe.kr/aw/moin.cgi/JSSpec</a></p>
+
+<p>Alan Kang&rsquo;s JSSpec looks like JS clone of Rspec except that it didn&rsquo;t allow nesting. To install, download zip file from <a title="JSSpec source page" href="http://code.google.com/p/jsspec/downloads/list">http://code.google.com/p/jsspec/downloads/list</a> and unpack jsspec.js, diff_match_patch.js and css file to proper directory. Then just link the files in your HTML and you can start writing tests.</p>
+
+<script src="http://gist.github.com/519203.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p><a href="/uploads/Image/jsspec.jpg"><img alt="jsspec" src="../../uploads/Image/jsspec.jpg" /></a></p>
+
+<p>JSSpec has the handy feature of allowing the re-running only a specific test. Another useful part of JSSpec are predefined constants for rendering engine (JSSpec.Browser.Webkit), platform (JSSpec.Browser.Mac) or browser (JSSpec.Browser.IE6).</p>
+
+<h3>Summary JSSpec:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>easy to integrate</li>
+<li>re-running specific tests</li>
+<li>very Rspec like including matchers</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>Don&rsquo;t allow nesting of descriptions</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>JSpec not a JSSPEC :)</h2>
+
+<p><a title="JSpec JavaScript Testing Framework" href="http://visionmedia.github.com/jspec/">http://visionmedia.github.com/jspec</a></p>
+
+<p><a title="JSpec JavaScript Testing Framework" href="https://rubygems.org/gems/jspec">https://rubygems.org/gems/jspec</a></p>
+
+<p>JSpec written by TJ Holowaychuk is different from previous frameworks. Firstly you can install it as a gem or download as a whole package. These versions are different, while the gem version didn&rsquo;t contain jspec&rsquo;s files because he copied them to /Library/Ruby/Gems/1.8/gems/jspec-4.3.2/ (might be different on your system), the package (zip or tar) version contains everything. Because running JSpec could be little bit tricky I describe the basics here.</p>
+
+<p>After installing gem, create you directory for project</p>
+
+<pre><code>jspec init name_of_project
+  Jspec contains one test by default so after command
+  jspec run
+</code></pre>
+
+<p>you should see:</p>
+
+<p><a href="/uploads/Image/jspec.jpg"><img alt="jspec" src="../../uploads/Image/jspec.jpg" /></a></p>
+
+<p>but if you don&rsquo;t have Safari set as a default browser than you can see this error: NETWORK_ERR: XMLHttpRequest Exception 101</p>
+
+<p>to fix that just run</p>
+
+<pre><code>jspec run --browser Safari
+</code></pre>
+
+<p>The test code is located at spec/spec.js or at unit/spec.js - depends on the version you have installed. JSPEC syntax is very clean and Rspec like.</p>
+
+<script src="http://gist.github.com/519207.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>You can nested &ldquo;describe&rdquo; blocks, use before block just beautiful.</p>
+
+<p><a href="/uploads/Image/jspec2.jpg"><img alt="jspec" src="../../uploads/Image/jspec2.jpg" /></a></p>
+
+<p>There are lot of matchers from JSpec and jQuery. JSpec also allows you to stub methods, mock the XHR object, use Fixtures or JSON Fixtures. You also can add your own matchers. JSpec is the most advanced testing framework that I ever seen before. On the JSpec website there are lots of examples and some screencasts so you can learn more if you are interested.</p>
+
+<h3>Summary JSpec:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>basic support for method stubbing</li>
+<li>XHR mocking</li>
+<li>matchers(jQuery, your own)</li>
+<li>very good documentation with examples</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>maybe to complex?</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>YUI 3: Test</h2>
+
+<p><a title="YUI 3: Test - testing framework for browser-based JavaScript solutions" href="http://developer.yahoo.com/yui/3/test/">http://developer.yahoo.com/yui/3/test/</a></p>
+
+<p>This testing framework is based on YUI 3 library from Yahoo!. First thing that little bit surprised me was that after you include script definition with YUI API URL, the YUI instance will automatically download the Test&rsquo;s source files and any missing dependencies for your test. You can download the source by yourself but you have to satisfied possible dependencies. For this reason YUI provide &ldquo;YUI dependency configurator&rdquo;. Lets assume that you include the YUI API URL, now there is another surprise. You have to create YUI instance. Then everything that you are doing, is inside that instance. So to write a test you need a Test Case instance and inside this instance you can finally create tests. After you are done you have to add the Test Case into Runner object and then call the run method of the Run object. Then just specified how you would like to view the result you can select from options like: console, XML, JUnitXML, JSON, TAP (Test Anything Protocol - <a href="http://testanything.org/wiki/index.php/Main%5C_Page">http://testanything.org/wiki/index.php/Main\_Page</a>). in the following example, I selected output to the console.</p>
+
+<script src="http://gist.github.com/519209.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>And this is result in console:</p>
+
+<p><a href="/uploads/Image/yui.jpg"><img alt="yui" src="../../uploads/Image/yui.jpg" /></a></p>
+
+<p>As you can see it&rsquo;s not really nice. In spite of complicated configuration YUI provide lot of handy features like mocking, errors handling, asynchronous tests, DOM event simulation and various types of handlers.</p>
+
+<h3>Summary YUI 3:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>lot of great functions</li>
+<li>tear down support</li>
+<li>good documentation</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>bad formatting of result</li>
+<li>more complicated syntax / setup</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>JsUnitTest</h2>
+
+<p><a title="JsUnitTest - JavaScript Unit Testing framework" href="http://jsunittest.com/">http://jsunittest.com/</a></p>
+
+<p>This JS framework by Dr Nic Williams is based on unittest.js from prototypejs but it&rsquo;s not dependent on that framework, the whole JsUnitTest is one JS and one css file. You can download &ldquo;getting started package&rdquo; which includes the library files and example HTML with basic test template.</p>
+
+<script src="http://gist.github.com/519212.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>I was unable to find documentation so I looked at the <a title="Github page" href="http://github.com/drnic/jsunittest/tree/master/test">github page</a>) where there are lot of examples. As you can see below JsUnitTest using standard assert syntax for tests.</p>
+
+<script src="http://gist.github.com/519214.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p><a href="/uploads/Image/jsunittest.jpg"><img alt="jsunittest" src="../../uploads/Image/jsunittest.jpg" /></a></p>
+
+<p>JsUnitTest contains all the assert matchers that you would expect and it provide lot of examples how to use them.</p>
+
+<h3>Summary JsUnitTest:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>easy to configure</li>
+<li>tear down support</li>
+<li>lot of useful examples</li>
+<li>TextMate bundle.</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>no documentation - you have to look at the github project page</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Jasmine</h2>
+
+<p><a title="Jasmine - Simple DOM-less JavaScript testing framework" href="http://pivotal.github.com/jasmine/">http://pivotal.github.com/jasmine/</a></p>
+
+<p>Jasmine is written by Pivotal Labs and as authors says they wrote Jasmine because: &ldquo;We needed something that supported asynchronous specs, didn&rsquo;t depend on any one framework, and didn&rsquo;t depend on the request/response cycle of a web application.&rdquo;</p>
+
+<p>You can install Jasmine as a Gem or download standalone version.</p>
+
+<h3>Standalone version</h3>
+
+<p>After unpacking files, open SpecRunner.html in your browser and you should see this screen:</p>
+
+<p><a href="/uploads/Image/jasmine.jpg"><img alt="jasmine" src="../../uploads/Image/jasmine.jpg" /></a></p>
+
+<p>Example test can be found in spec/SpecPlayer.js using customer matcher that you can create in spec/SpecHelper.js</p>
+
+<p>Test template: <script src="http://gist.github.com/520783.js?file=gistfile1.js" type="text/javascript"></script>Example of custom matcher: <script src="http://gist.github.com/520784.js?file=gistfile1.js" type="text/javascript"></script></p>
+
+<h3>Gem version</h3>
+
+<p>After installation of Gem:</p>
+
+<pre><code>gem install jasmine
+ script/generate jasmine
+</code></pre>
+
+<p>You can run test in browser by:</p>
+
+<pre><code>rake jasmine
+</code></pre>
+
+<p>This will start the Jasmin server on <a href="http://localhost:8888/">http://localhost:8888/</a> where the output is the same as above.</p>
+
+<p>&nbsp;</p>
+
+<p>Jasmine looks pretty good, you can write your own matchers, you can use stabbing (createSpyObj method) and mocking (createSpy method), it&rsquo;s well documented but it could have more examples in documentation.</p>
+
+<h3>Summary Jasmine:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>gem or standalone version</li>
+<li>customisable matchers</li>
+<li>describe blocks</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>only few examples</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Screw.Unit</h2>
+
+<p><a title="Behavior-Driven Testing Framework for Javascrip" href="http://github.com/nkallen/screw-unit">http://github.com/nkallen/screw-unit</a></p>
+
+<p>Screw.Unit written by Nick Kallen and it&rsquo;s used by Blue Ridge Rails plugin. Screw.Unit is dependent on jQuery. The test style of Screw.Unit is to use nested describes aka Rspec.</p>
+
+<script src="http://gist.github.com/521013.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>You can write your own matchers and specify their error messages.</p>
+
+<script src="http://gist.github.com/521023.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>Or you can extend functionality of Screw.Unit:</p>
+
+<script src="http://gist.github.com/521026.js?file=gistfile1.js" type="text/javascript"></script>
+
+<p>After running the basic test template you will see the classic result table(but in nice pastel colors):</p>
+
+<p><a href="/uploads/Image/srew-unit.jpg"><img src="../../uploads/Image/srew-unit.jpg" /></a></p>
+
+<p>What is little bit sad is, that you have to download whole source code, because there is no prepared package, also I was unable to find documentation. The biggest thing is that last commit is from 2008 so this means the jQuery is out of date.</p>
+
+<h3>Summary Screw.Unit:</h3>
+
+<h4>Pros:</h4>
+
+<ul>
+<li>customisable matchers</li>
+<li>extendable by subscribing to certain event</li>
+</ul>
+
+<h4>Cons:</h4>
+
+<ul>
+<li>out of date</li>
+<li>missing documentation</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Which one to use?</h2>
+
+<p>It depends very much on what are you looking for. For small simple project I would use QUnit + SpecIt. Because it&rsquo;s very easy to integrate and it offers everything you would expect from basic tests.</p>
+
+<p>For more robust testing I would suggest JSpec or Jasmine. Jspec and Jasmine contain a more extended test environment with mocking, stubbing, etc.</p>
+
+<p>And that&rsquo;s all. You may be asking where Env.js is. Env.js is not JavaScript testing framework but a browser simulation environment. There are lot of other testing frameworks but I select only those major ones and of course this blog post ignores the many non browser based testing frameworks which may will be more suitable for Ruby/Rails projects. If you still think that I should mention your favourite one, be my guest and post a comment.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/which-js-unit-testing-framework';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-22nd-june-2015/">Unboxed Roundup: Our links for w/c 22nd June 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/deciding-how-to-deliver-your-prioritised-project-portfolio/">Deciding how to deliver your prioritised project portfolio</a></li>
+
+            <li class="blog-related__links"><a href="/blog/you-only-dev-twice/">You only dev twice</a></li>
+
+            <li class="blog-related__links"><a href="/blog/plenty-more-fish-in-the-sea/">Plenty more fish in the sea...</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Short and sweet</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_short-and-sweet blog_short-and-sweet_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Pawel Janiak
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-01-25 12:20:00 UTC">
+              <span>
+                25 Jan 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Short and sweet
+          </h1>
+
+          <div class="blog-article__content">
+            <p>This weeks links are mostly front-end and tool related. Enjoy.</p>
+
+<h2>When programmers do laundry (<a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt P</a>)</h2>
+
+<p>Ever wanted to know how to pair socks from a pile efficiently? <a href="http://stackoverflow.com/questions/14415881/how-to-pair-socks-from-a-pile-efficiently">Now you can</a>!</p>
+
+<h2>Kippt (<a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel J</a>)</h2>
+
+<p>Check out <a href="http://www.kippt.com">Kippt</a> - it&rsquo;s a really pretty looking site to help organize all of your links. It also lets you search and archive them and create lists to share amongst teams.</p>
+
+<h2>Pushing CSS to its limits (<a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel J</a>)</h2>
+
+<p>Keith Clark created a <a href="http://keithclark.co.uk/labs/css3-fps/">CSS3 FPS demo</a> that you just have to try (in Safari). It&rsquo;s an incredible CSS powered 3D engine with lighting, shadows and collisions that makes full use of CSS transforms.</p>
+
+<h2>Silly people publishing their RSA keys (<a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt P</a>)</h2>
+
+<p>Top top of the day: do not publish your private RSA key. A tweet doings the rounds recently, highlighted the fact that lots of people have submitted their private key to github repos. &nbsp;Github have since masked the results, but you can still get a plethora of hits in Google.&nbsp;</p>
+
+<p><a href="http://nakedsecurity.sophos.com/2013/01/25/do-programmers-understand-private/">http://nakedsecurity.sophos.com/2013/01/25/do-programmers-understand-private/</a></p>
+
+<h2>Developing a responsive, Retina-friendly site (<a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel J</a>)</h2>
+
+<p><a href="http://paulstamatiou.com/responsive-retina-blog-development-part-1">Here&rsquo;s</a> an extremely in-depth tutorial on how to go about making a responsive and retina ready blog.</p>
+
+<h2>The importance of sections (<a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel J</a>)</h2>
+
+<p>Smashing magazine explored the <a href="http://coding.smashingmagazine.com/2013/01/18/the-importance-of-sections">importance of sections in HTML</a>. It&rsquo;s quite a comprehensive read</p>
+
+<h2>Background tasks with Redis (<a href="http://www.unboxedconsulting.com/people/grant-speelman">Grant S</a>)</h2>
+
+<p>Grant&rsquo;s been exploring the world of background tasks and has come across <a href="http://mperham.github.com/sidekiq/">Sidekiq</a>, an alternative to Resque that uses threading.</p>
+
+<h2>Front-end performance (Steve B)</h2>
+
+<p>The infamous Harry Roberts wrote a not-so-tiny article about <a href="http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/">front end performance</a>. Definitely worth a read during a coffee break.</p>
+
+<h2>All about accessibility (Steve B)</h2>
+
+<p>Here&rsquo;s a handy listing page to a variety of <a href="http://www.interactiveaccessibility.com/blog/accessibility-checkers">accessibility tools</a> that we should all be using when developing.</p>
+
+<h2>An impending disaster (Steve B)</h2>
+
+<p>Some people are of the opinion that there&rsquo;s an impending crisis thanks to Windows XP and IE8. <a href="http://www.troyhunt.com/2013/01/the-impending-crisis-that-is-windows-xp.html">Check it out</a>.</p>
+
+<h2>Open device labs (Steve B)</h2>
+
+<p>Have you heard of <a href="http://opendevicelab.com/">OpenDeviceLab</a>? If not, and you care about testing the many, many different types of devices out there, then you really should. There are also Open Device Labs in Cape Town and in several places in England.</p>
+
+<h2>Typography (Steve B)</h2>
+
+<p>Some more <a href="http://mapbox.com/maki/">fonts</a> that you can use for points of interest.</p>
+
+<h2>Say hola to the future (Steve B)</h2>
+
+<p>Firefox OS is going to take over the world, see why <a href="http://www.geeksphone.com/">here</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/short-and-sweet';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/can-you-digg-it/">Can You Digg It</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-15th-june-2015/">Unboxed Roundup: Our links for w/c 15th June 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/agile-and-angry-birds/">Agile and Angry Birds</a></li>
+
+            <li class="blog-related__links"><a href="/blog/feature-based-benefits/">Feature-based Benefits</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

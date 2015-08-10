@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Native Chrome apps on mobile</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_native-chrome-apps-on-mobile blog_native-chrome-apps-on-mobile_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Henry Turner
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-02-06 08:54:00 UTC">
+              <span>
+                 6 Feb 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Native Chrome apps on mobile
+          </h1>
+
+          <div class="blog-article__content">
+            <p><img alt="Planning Poker" src="http://oi61.tinypic.com/2cs9yr9.jpg" /></p>
+
+<p>At the end of January some <a href="http://blog.chromium.org/2014/01/run-chrome-apps-on-mobile-using-apache.html">big news passed quietly</a> on the Chromium blog. Mobile Chrome apps can now be wrapped up using Cordova to deploy native applications to iOS and Android. Google seems to be pouring money into Chrome like it’s the cold war so I felt this recent release deserved a mini-dive in.</p>
+
+<p>First off, the Chromium-Chrome-ChromiumOS-Chromiumiiumimmm project is pretty terribly named and not particularly self explanatory. A very brief description of my understanding is probably in order.</p>
+
+<p><a href="http://www.chromium.org/">The Chromium Projects</a> are two projects, ‘Chromium OS’ and ‘Chromium’. ‘Chromium OS’ is the operating system on Google Chromebooks. ‘Chromium’ is a browser split into separate projects. Very roughly there are three major sections to the Chromium browser project. There is Blink (once Webkit), the Content module and&hellip; &lsquo;Chrome&rsquo; (really?). Blink is the rendering and javascript engine. The Content API deals with a range of features such as sandboxing, indexedDB and some other HTML5 features. And most of the rest falls into ‘Chrome’. Extensions, Autofill, <a href="https://developers.google.com/native-client/dev/">NaCl</a>, Safe browsing and a<strong>lot</strong> else all lives in Chrome and the Chrome browser.</p>
+
+<p><a href="http://cordova.apache.org/">Cordova</a> is an open source project to wrap html, javascript and css applications up in a shell of native code. The shell exposes hardware functions such as the camera, GPS, storage etc as javascript APIs and let’s you publish apps in Apple’s App Store and the Android stores as though you’d written it in Obj-C or Java. You can’t make 3D games with it but our Mums could probably smash out a todo application without too much bother.</p>
+
+<p>The problem with Cordova was that the browser bit was fairly crippled, slow and buggy. This recent release is a replacement for that browser bit with mobile Chrome. The original Cordova APIs are still there. But now mixed in, or on top of, are the mobile Chrome APIs too. Payments, push notifications, Google Drive sync and even scheduled processing are ready to be used.</p>
+
+<p>I had a crack at making a Planning Poker app with it, failing to use any of the new Chrome features in the process, and really enjoyed producing something inaccessible to me otherwise. The toolchain CLI is quite nice and it certainly seems fast and bug free. I went from pawing over the install notes to a working version in the play store in about 5 hours!</p>
+
+<p>As for the political reasons why Google is pushing so hard for the browser-as-a-platform… That’s a chat for around the kettle :)</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/native-chrome-apps-on-mobile';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/digital-webinar-series-communication-ceremonies/">Digital Webinar Series: Communication Ceremonies</a></li>
+
+            <li class="blog-related__links"><a href="/blog/dev-links/">Dev Links</a></li>
+
+            <li class="blog-related__links"><a href="/blog/pre-summer-dev-newsletter-2-weeks-to-go/">Pre Summer Dev Newsletter (2 weeks to go)</a></li>
+
+            <li class="blog-related__links"><a href="/blog/this-week-in-ruby-19th-october/">This Week in Ruby, 19th October</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dev Newsletter for the week</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_dev-newsletter-for-the-week blog_dev-newsletter-for-the-week_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Leo Cassarani
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-04-02 16:01:00 UTC">
+              <span>
+                 2 Apr 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Dev Newsletter for the week
+          </h1>
+
+          <div class="blog-article__content">
+            <p>An unusually short newsletter for an unusually short week.</p>
+
+<h1>Rails&rsquo; Insecure Defaults (<a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a>)</h1>
+
+<p><a href="http://blog.codeclimate.com/blog/2013/03/27/rails-insecure-defaults/">http://blog.codeclimate.com/blog/2013/03/27/rails-insecure-defaults/</a> </p>
+
+<p>This article starts with some that have recently been fixed or are good defaults and then lists some that still exist. The problem is that a lot of the still existing ones seem quite tenuous. For example two of them are about exploits that exist if you are using WEBrick in production; I&rsquo;m almost certain no-one is. Still, I shouldn&rsquo;t complain as it&rsquo;s good to be reminded of these things, and it did point me at two interesting things I&rsquo;d never heard of:</p>
+
+<ul>
+<li><p><a href="http://rails-sqli.org/">http://rails-sqli.org/</a> - a site dedicated to explaining where<em>by design</em> ActiveRecord allows direct SQL as params. A good resource to make sure we aren&rsquo;t allowing user input to become sql-injection</p></li>
+<li><p><a href="https://github.com/twitter/secureheaders">https://github.com/twitter/secureheaders</a> - a gem to add a bunch of http headers to your app that will make it more secure. We should certainly understand what is going on in this gem, and why the headers help, but it doesn&rsquo;t hurt to have someone else do it for us.</p></li>
+</ul>
+
+<h1>Great breakdown into a DDoS that &ldquo;almost broke the internet&rdquo; (<a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel</a>)</h1>
+
+<p><a href="http://blog.cloudflare.com/the-ddos-that-almost-broke-the-internet">http://blog.cloudflare.com/the-ddos-that-almost-broke-the-internet</a></p>
+
+<h1>A nice way to do split lists with CSS - (<a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andrew M</a>)</h1>
+
+<p>Ever wondered how to split something which semantically is a single list but is visually split into columns? You could use the columns CSS property, however that&rsquo;s not entirely compatible with all browsers yet (yep IE!). Try this instead!
+ <a href="https://coderwall.com/p/etf%5C_ba">https://coderwall.com/p/etf\_ba</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/dev-newsletter-for-the-week';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-24th-november-2014/">Unboxed Roundup: our links for w/c 24th November 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/haskell-at-the-london-code-dojo/">Haskell at the London Code Dojo</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-in-bitesize-chunks/">The Week In Bitesize Chunks</a></li>
+
+            <li class="blog-related__links"><a href="/blog/news-news-news/">News News News</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

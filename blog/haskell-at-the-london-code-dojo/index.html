@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Haskell at the London Code Dojo</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_haskell-at-the-london-code-dojo blog_haskell-at-the-london-code-dojo_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Henry Turner
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-03-05 19:10:00 UTC">
+              <span>
+                 5 Mar 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Haskell at the London Code Dojo
+          </h1>
+
+          <div class="blog-article__content">
+            <p><a href="https://twitter.com/sleepyfox">Sleepy Fox</a> recently ran the London Code Dojo here at the <a href="http://www.unboxedconsulting.com/">Unboxed</a> office. The evening&rsquo;s Dojo was based around a few parts of Day 1 of the Haskell section of <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven languages in seven weeks</a>. It was good fun and I recommend the next Dojo coming up!</p>
+
+<p>One of the problems we attempted was, in my words, the following:</p>
+
+<p>Given the colours black, white, blue, yellow and red, find all unique pair combinations ignoring the order of the colours within each pair.</p>
+
+<p>So, examples of valid pairs are (black, black), (black, white), (yellow, red) etc. As for invalid pairs, we can have (black, blue) __or__ (blue, black) but not both. Ok.</p>
+
+<p>Haskell syntax is pretty mind bending for my mushy human brain but the implementation for the colours problem turned out to be pleasantly readable!</p>
+
+<p>let colours = [&ldquo;black&rdquo;, &ldquo;white&rdquo;, &ldquo;blue&rdquo;, &ldquo;yellow&rdquo;, &ldquo;red&rdquo;]</p>
+
+<p>[(x,y) | x concatMap (\ y -&gt; if x</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/haskell-at-the-london-code-dojo';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-32/">UBXDDEV Vol. 3.2</a></li>
+
+            <li class="blog-related__links"><a href="/blog/post-end-of-the-world-newsletter-yay-were-still-here/">Post-end-of-the-world newsletter - yay we're still here </a></li>
+
+            <li class="blog-related__links"><a href="/blog/road-trip/">Road Trip</a></li>
+
+            <li class="blog-related__links"><a href="/blog/i-m-a-scrummaster-huh/">I'm a ScrumMaster. Huh?</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

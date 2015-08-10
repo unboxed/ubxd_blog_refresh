@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>UBXDDEV Vol. 3.5</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_ubxddev-vol-35 blog_ubxddev-vol-35_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-09-19 13:45:00 UTC">
+              <span>
+                19 Sep 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            UBXDDEV Vol. 3.5
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Holy crap, marketing is scary - <a href="http://www.unboxedconsulting.com/people/tom-russell">Tom R</a></h2>
+
+<p><a href="http://mysocialsherpa.com/the-ultimate-retaliation-pranking-my-roommate-with-targeted-facebook-ads/">http://mysocialsherpa.com/the-ultimate-retaliation-pranking-my-roommate-with-targeted-facebook-ads/</a></p>
+
+<p>A guy uses Facebook to target a single person with an advertising campaign that makes him question his sanity. This is privacy on the internet, peeps!</p>
+
+<h2>A talk about <a href="http://facebook.github.io/react/">React</a> - <a href="http://www.unboxedconsulting.com/people/alex-bobin">Alex</a></h2>
+
+<p><a href="http://2013.jsconf.eu/speakers/pete-hunt-react-rethinking-best-practices.html">http://2013.jsconf.eu/speakers/pete-hunt-react-rethinking-best-practices.html</a></p>
+
+<p>I really enjoyed this conceptual talk on React. The big take away is React&rsquo;s data flow and state structure. They have created a framework which tries to simplify how data and state flows around an application and better suits developers&rsquo; mental models for understanding it. It&rsquo;s much close aligned with traditional server and verb based interactions where a change is sent to the server and a whole page is re-rendered (but smarter).</p>
+
+<p>He also argues that splitting out your views and view-models in modern JS apps is not a real separation of concerns, only a separation of technologies.</p>
+
+<h2>Code shapes - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://www.sandimetz.com/blog/2014/9/9/shape-at-the-bottom-of-all-things">http://www.sandimetz.com/blog/2014/9/9/shape-at-the-bottom-of-all-things</a></p>
+
+<p>This article from <a href="http://www.sandimetz.com/">Sandi Metz</a> really got me thinking. I don&rsquo;t know that I buy the specific refactoring approach in the article (Sandi herself says it&rsquo;s a contrived and simple example), but I do think there&rsquo;s something in the general idea that code tells us more than just what it does. Often I&rsquo;ve worked on some code where there&rsquo;s a missing object but I&rsquo;ve not been able to see it clearly. My normal solution to this problem is to talk through the code with a person not on the project and either their fresh opinion on the code or forcing myself to explain it is usually enough to reveal what&rsquo;s missing. This article has made me keen to try reading the code differently to reveal these missing objects without the intermediate step.</p>
+
+<h2>Responsive web-design - <a href="http://www.unboxedconsulting.com/people/alex-bobin">Alex</a></h2>
+
+<p><a href="http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions</a> </p>
+
+<p>Another case for doing your responsive web design properly. iPhone 6 and iPhone 6 Plus bring new resolutions and pixel densities to the table.</p>
+
+<h2>Ruby 2.1.3 - <a href="http://www.unboxedconsulting.com/people/richard-stobart">Richard S</a></h2>
+
+<p><a href="https://www.ruby-lang.org/en/news/2014/09/19/ruby-2-1-3-is-released/">https://www.ruby-lang.org/en/news/2014/09/19/ruby-2-1-3-is-released/</a></p>
+
+<p>The newest version of our favourite language is out!</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/ubxddev-vol-35';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/webinar-spanning-the-rift-advice-for-waterfall-organisations-running-agile-projects/">Webinar: Spanning the rift - Advice for waterfall organisations running Agile projects</a></li>
+
+            <li class="blog-related__links"><a href="/blog/is-agile-testing-worth-it/">Is agile testing worth it?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-short-and-late-one/">The short and late one</a></li>
+
+            <li class="blog-related__links"><a href="/blog/sa-ux-forum-mobile-ux/">SA UX Forum: Mobile UX</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

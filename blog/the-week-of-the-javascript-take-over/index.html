@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The Week of the JavaScript take over</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-week-of-the-javascript-take-over blog_the-week-of-the-javascript-take-over_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Carl Whittaker
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-26 15:02:00 UTC">
+              <span>
+                26 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The Week of the JavaScript take over
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Sweet.js</h2>
+
+<p>Make a DSL in JavaScript with tidy macros
+ <a href="http://sweetjs.org/">http://sweetjs.org/</a></p>
+
+<h2>Components</h2>
+
+<p>A neat approach to reusable stand alone JS+CSS components from everyones favourite JavaScript hero.
+ <a href="https://github.com/component/component/">https://github.com/component/component/</a></p>
+
+<h2>Creating SVG vector graphics for maximum browser compatibility</h2>
+
+<p>Pixel density is now a thing and SVG is well supported in all major browsers. Give SVG a chance.
+ <a href="http://voormedia.com/blog/2012/10/creating-svg-vector-graphics-for-maximum-browser-compatibility">http://voormedia.com/blog/2012/10/creating-svg-vector-graphics-for-maximum-browser-compatibility</a></p>
+
+<h2>cssConsole</h2>
+
+<p>Create terminal like interfaces in a browser. Because&hellip; why not?
+ <a href="http://www.michalkowalkowski.com/cssConsole/">http://www.michalkowalkowski.com/cssConsole/</a></p>
+
+<h2>A novel, efficient approach to JavaScript loading</h2>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/mGENRKrdoGY" frameborder="0" allowfullscreen></iframe>
+
+<p><strong>More videos of JSConfEU talks can be found here:</strong>
+ <a href="http://www.youtube.com/user/jsconfeu">http://www.youtube.com/user/jsconfeu</a></p>
+
+<h2>JavaScript: Function Invocation Patterns</h2>
+
+<p>Good to know.
+ <a href="http://doctrina.org/Javascript-Function-Invocation-Patterns.html">http://doctrina.org/Javascript-Function-Invocation-Patterns.html</a></p>
+
+<h2>Mozilla to give in on h.264</h2>
+
+<p>Imagine a world where we only have to encode video once.
+ <a href="http://www.webmonkey.com/2012/10/mozilla-plans-h-264-video-for-desktop-firefox/">http://www.webmonkey.com/2012/10/mozilla-plans-h-264-video-for-desktop-firefox/</a></p>
+
+<h2>@supports lands in webkit</h2>
+
+<p>Modernizr&rsquo;s days are numbered
+ <a href="http://trac.webkit.org/changeset/131783">http://trac.webkit.org/changeset/131783</a></p>
+
+<h2>Bifocals</h2>
+
+<p>Asyncronous partials in node
+ <a href="http://bifocalsjs.com/">http://bifocalsjs.com/</a></p>
+
+<h2>Mozilla Event reference</h2>
+
+<p>Event soup
+ <a href="https://developer.mozilla.org/en-US/docs/Mozilla_event_reference">https://developer.mozilla.org/en-US/docs/Mozilla_event_reference</a></p>
+
+<h2>Opal - a Ruby to JavaScript compiler</h2>
+
+<p>Why not?
+ <a href="http://opalrb.org/">http://opalrb.org/</a></p>
+
+<h2>Responsive sausage dog</h2>
+
+<p>Just because
+ <a href="http://rsd.joshemerson.co.uk/">http://rsd.joshemerson.co.uk/</a></p>
+
+<p><strong><em>Matt P has found something questionable over on MSDN</em></strong>
+ ## Tri-state booleans</p>
+
+<p>Ever heard of a tri-state boolean with 5 possible values, 3 of which are unsupported?
+ I hadn&rsquo;t until a few minutes ago. Details located at <a href="http://msdn.microsoft.com/en-us/library/aa432714(office.12).aspx">http://msdn.microsoft.com/en-us/library/aa432714(office.12).aspx</a>. Another one to file under the sick-and-wrong category.</p>
+
+<p><img alt="Nope" src="../../uploads/Image/nope.gif" /></p>
+
+<p>Here&rsquo;s another link - this time one to file under the &ldquo;impressive&rdquo; folder:
+ ## How to Sort One Million 8-digit Numbers in 1MB of RAM</p>
+
+<p><a href="http://preshing.com/20121025/heres-some-working-code-to-sort-one-million-8-digit-numbers-in-1mb-of-ram">http://preshing.com/20121025/heres-some-working-code-to-sort-one-million-8-digit-numbers-in-1mb-of-ram</a></p>
+
+<p><strong><em>Andrew has been performing&hellip; sequel acrobatics</em></strong>
+ ## Renaming indexes in ActiveRecord:</p>
+
+<p>One of the things I found which is available from Rails 3 is the rename_index method.</p>
+
+<p>So if you have changed a column name which you are indexing on simply add the following to your migration</p>
+
+<p>rename_index :table_name, &lsquo;old_name&rsquo;, &#39;new_name&rsquo;</p>
+
+<p>Please note: this may also work with symbols! I haven&rsquo;t a clue!</p>
+
+<p><strong><em>Matt F has been mourning the passing of CEEFAX</em></strong>
+ ## Twefax
+ <a href="http://jonathancresswell.co.uk/twefax/">http://jonathancresswell.co.uk/twefax/</a> has been consoling me in this dark, terrifying post-CEEFAX world. It&rsquo;s built using Fork-A-Twitter-Client
+ <a href="http://fatc.onilabs.com/">http://fatc.onilabs.com/</a></p>
+
+<h2>RubyWeaver</h2>
+
+<p>Sadly <a href="http://rubyweaver.js-designz.net/">http://rubyweaver.js-designz.net/</a> needs some tlc. Any takers?</p>
+
+<p>I think these are self-explanatory:</p>
+
+<h1>Fortran on a Mac</h1>
+
+<p><a href="http://hpc.sourceforge.net/">http://hpc.sourceforge.net/</a>
+ # Spacewar!</p>
+
+<p>1962&rsquo;s hottest game, running on a DEC PDP-1 emulator
+ <a href="http://spacewar.oversigma.com/">http://spacewar.oversigma.com/</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-week-of-the-javascript-take-over';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/why-should-you-have-a-zero-defect-strategy/">Why should you have a zero-defect strategy?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-problem-with-software/">The problem with software</a></li>
+
+            <li class="blog-related__links"><a href="/blog/sa-ux-forum-mobile-ux/">SA UX Forum: Mobile UX</a></li>
+
+            <li class="blog-related__links"><a href="/blog/kanban-in-the-cape-part-1/">Kanban in the Cape - Part 1</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

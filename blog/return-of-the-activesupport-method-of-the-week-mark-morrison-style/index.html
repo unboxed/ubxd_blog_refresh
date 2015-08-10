@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Return Of The ActiveSupport method of the week (Mark Morrison style)</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_return-of-the-activesupport-method-of-the-week-mark-morrison-style blog_return-of-the-activesupport-method-of-the-week-mark-morrison-style_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Carl Whittaker
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-11-23 14:42:00 UTC">
+              <span>
+                23 Nov 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Return Of The ActiveSupport method of the week (Mark Morrison style)
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>ActiveSupport method of the week File#atomic_write (thanks to Leo)</h2>
+
+<p><code>atomic_write(file_name, temp_dir = Dir.tmpdir)</code></p>
+
+<p>Write to a file atomically. Useful for situations where you don’t want other processes or threads to see half-written files.</p>
+
+<p>File.atomic_write(&ldquo;important.file&rdquo;) do |file|
+ file.write(&ldquo;hello&rdquo;)
+ end</p>
+
+<p>If your temp directory is not on the same filesystem as the file you’re trying to write, you can provide a different temporary directory.</p>
+
+<p>File.atomic_write(&ldquo;/data/something.important&rdquo;, &ldquo;/data/tmp&rdquo;) do |file|
+ file.write(&ldquo;hello&rdquo;)
+ end</p>
+
+<p>## A Few New Things Coming To JavaScript
+ Addy Osmani on some of the additions to JavaScript in ES6. Object.observe() *drool*
+ <a href="http://addyosmani.com/blog/a-few-new-things-coming-to-javascript">http://addyosmani.com/blog/a-few-new-things-coming-to-javascript</a></p>
+
+<p><strong><em>Murray found something interesting about Spotify&rsquo;s process.</em></strong>
+ ## Scaling Agile at Spotify
+ Long piece (it&rsquo;s a PDF? why?) about how Spotify have retained small teams and agile culture despite having a large number of employees split across several offices.
+ <a href="https://dl.dropbox.com/u/1018963/Articles/SpotifyScaling.pdf">https://dl.dropbox.com/u/1018963/Articles/SpotifyScaling.pdf</a></p>
+
+<h2>JSFeat: JavaScript Computer Vision Library</h2>
+
+<p>JavaScript image transformation and object detection. Check out the face detection demo which uses WebRTC.
+ <a href="http://inspirit.github.com/jsfeat/">http://inspirit.github.com/jsfeat/</a></p>
+
+<p><strong><em>Lee found some front end goodness (and a trove of Rails 4 bits)</em></strong>
+ ## CSS Comb
+ Not sure if I&rsquo;ve submitted this one before but its quite a nice tool for anyone not so great at CSS to help tidy up after themselves and also has a sublime plugin 
+ <a href="http://csscomb.com">http://csscomb.com</a></p>
+
+<h2>Rails 4 links compilation</h2>
+
+<p>A whole load of Rails 4 links and articles all in one place 
+ <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/</a></p>
+
+<p>An interesting talk by Ilya Grigorik on some of the things we may or may not already know about using Chrome in development 
+ <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/</a></p>
+
+<p><strong><em>Matt P was looking into those pesky cukes</em></strong>
+ ## Scenarios are not Acceptance Criteria
+ A blog post by @chrismdp on not conflating cucumber scenarios with acceptance criteria.
+ <a href="http://chrismdp.com/2012/11/scenarios-are-not-acceptance-criteria">http://chrismdp.com/2012/11/scenarios-are-not-acceptance-criteria</a></p>
+
+<p><strong><em>Leo found</em></strong>
+ ## Hide the ORM like you’re ashamed of it
+ <a href="http://weblog.therealadam.com/2011/10/09/your-frienemy-the-orm/">http://weblog.therealadam.com/2011/10/09/your-frienemy-the-orm/</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/return-of-the-activesupport-method-of-the-week-mark-morrison-style';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-13th-july-2015/">Unboxed Roundup: Our links for w/c 13th July 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/a-dev-s-point-of-view-agile-helps-focus/">A dev's point of view - agile helps focus.</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-cat-experience/">The CAT experience</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-27th-july-2015/">Unboxed Roundup: Our links for w/c 27th July 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

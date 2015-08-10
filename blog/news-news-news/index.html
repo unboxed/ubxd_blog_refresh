@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>News News News</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_news-news-news blog_news-news-news_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Robert Pataki
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-06-07 23:00:00 UTC">
+              <span>
+                 7 Jun 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            News News News
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Tips for successful pair programming (Lee Richmond)</h2>
+
+<p>Lee wrote his first Unboxed blog post about pair programming. I have paired myself with Lee and found his teqhnique working well and very useful. I especially liked the Pomodoro approach for timing. Nice one Lee!</p>
+
+<p>##Custom DNS tool that resolves wildcard DNS (Matt Peperell)
+ <a href="http://xip.io/">http://xip.io/</a></p>
+
+<p>e.g:</p>
+
+<p>10.0.0.1.xip.io resolves to 10.0.0.1
+ something.10.0.0.1.xip.io resolves to 10.0.0.1
+ somethingelse.10.0.0.1.xip.io resolves to 10.0.0.1</p>
+
+<p>There are some caveats though. <a href="http://news.ycombinator.com/item?id=4082017">http://news.ycombinator.com/item?id=4082017</a> has details but the tl;dr version is &ldquo;Fine if you&rsquo;re using it for webservices, probably not fine if you&rsquo;re testing DNS itself&rdquo;</p>
+
+<p>##HTML5 async (Joerg Diekmann)
+ <a href="http://davidwalsh.name/html5-async">http://davidwalsh.name/html5-async</a></p>
+
+<p>HTML5 now supports both<em>defer</em> and<em>async</em> to load javascript source files. Both of these load JS scripts asynchronously. What you may ask does &ldquo;asynchronous&rdquo; mean? Well, let me enlighten…. Kidding. The difference between the two is that a script tags with<em>defer</em> will be guarantee to execute in order as they appear in your document, whereas<em>async</em> executes as soon as it is downloaded.</p>
+
+<p>##gmaps.js (Carl Whittaker)
+ <a href="http://hpneo.github.com/gmaps/">http://hpneo.github.com/gmaps/</a></p>
+
+<p>Using the google maps api is a slog. gmaps.js hides the uglyness giving you a pretty straightforward api so you&rsquo;re not forced to trawl those nasty google api docs.</p>
+
+<p>##Set flash in redirect_to (Joerg Diekmann)
+ <a href="http://archives.ryandaigle.com/articles/2009/12/20/what-s-new-in-edge-rails-set-flash-in-redirect_to">http://archives.ryandaigle.com/articles/2009/12/20/what-s-new-in-edge-rails-set-flash-in-redirect_to</a></p>
+
+<p>Did you know - and please, I hope not everybody knows - that you can pass your flash message along with a redirect all in one sugary sweet line?
+ I also discovered a technique I have longed for for a very long time: Passing a URL with the flash message.</p>
+
+<p>redirect_to posts_path, :alert =&gt; &ldquo;You cannot do that&rdquo;, :flash =&gt; { :url =&gt; post_path(@post) }</p>
+
+<p>You can access the URL with <code>flash[:url]</code> … Obvious really. But elusive.</p>
+
+<p>##Upcoming JavaScript development related HTML5 features (Murray Steele)
+ <a href="http://weblog.bocoup.com/third-party-javascript-development-future/">http://weblog.bocoup.com/third-party-javascript-development-future/</a></p>
+
+<p>A discussion on some upcoming features for html(5?) that relate to javascript development (mostly about scoping and security). Despite the whimsical tone of the blog post, the author pretends to have visited the future and talks about how they use these features there all the time and are better for it, it&rsquo;s a good overview of these features.</p>
+
+<p>##Greensock Animation Platform V12 now supports JavaScript (Robert Pataki)
+ <a href="http://www.greensock.com/">http://www.greensock.com/</a></p>
+
+<p>Greensock has been the most handy and most powerful animation tool for ActionScript. V12 is out and yesssss, it supports JavaScript! Check out the project page, and try that banner demo, pretty impressive!</p>
+
+<p><a href="http://www.snorkl.tv/2012/05/banner-style-animation-with-greensock-powered-javascript/">http://www.snorkl.tv/2012/05/banner-style-animation-with-greensock-powered-javascript/</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/news-news-news';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-blog-post-title/">The blog post title!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/opensslsslsslerror-certificate-verify-failed/">OpenSSL::SSL::SSLError: certificate verify failed </a></li>
+
+            <li class="blog-related__links"><a href="/blog/five-myths-about-smes-and-public-sector-procurement/">Five myths about SMEs and public sector procurement</a></li>
+
+            <li class="blog-related__links"><a href="/blog/deciding-how-to-deliver-your-prioritised-project-portfolio/">Deciding how to deliver your prioritised project portfolio</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

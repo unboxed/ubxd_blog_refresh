@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>When Carlo was in Blighty's Land</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_when-carlo-was-in-blightys-land blog_when-carlo-was-in-blightys-land_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Carlo Kruger
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-09-14 15:59:00 UTC">
+              <span>
+                14 Sep 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            When Carlo was in Blighty's Land
+          </h1>
+
+          <div class="blog-article__content">
+            <p>This week&rsquo;s Dev newsletter comes to you on behalf of Bender, BA Lounge wifi, a pint of wagamama&rsquo;s ramen and the number 7.</p>
+
+<p>Murray kicks off with an interesting article about how people coming down on rails vs. node have it all wrong. It starts out a bit ranty and seems a little defensive; he calls out weak arguments from the other side, but makes plenty weak arguments of his own. Still, the latter half of the article is quite good as it points out that ruby has still plenty of speed in it and there are approaches to programming in multi-core that mean it&rsquo;s only going to get faster.</p>
+
+<p><a href="http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html">http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html</a></p>
+
+<h2><a href="http://blog.railsrumble.com/2012/09/13/registration-dates-competition-details/">Rumble in Jungle</a></h2>
+
+<p>Rails Rumble 2012 has been announced, if you&rsquo;re into this sort of thing the team registration is open from 1st to 7th October with the competition happening on the 13th and 14th.</p>
+
+<p>Tom Ten Thij presents a two fisted wonder with:</p>
+
+<h2>Ruby and it&rsquo;s exit command (what is it good for?):</h2>
+
+<p><a href="http://www.bigfastblog.com/ruby-exit-exit-systemexit-and-at%5C_exit-blunder">http://www.bigfastblog.com/ruby-exit-exit-systemexit-and-at\_exit-blunder</a></p>
+
+<p>And and article from Charles Nutter about how to avoid hashes when using Ruby (which sometimes feels like a contradiction!):</p>
+
+<p><a href="http://blog.headius.com/2012/09/avoiding-hash-lookups-in-ruby.html">http://blog.headius.com/2012/09/avoiding-hash-lookups-in-ruby.html</a></p>
+
+<p>Our esteemed leader has contributed a link to a tool monitoring your sitemap links:</p>
+
+<h2>Simple Site Checker is a command line tool that allows you to run a check over the links in your XML sitemap.</h2>
+
+<p><a href="http://ilian.i-n-i.org/simple-site-checker/">http://ilian.i-n-i.org/simple-site-checker/</a></p>
+
+<p>And if you are building an API (Jolyon@kweekweek) HTTP Status Codes Site
+ During the development of Simple Site Checker he realised that it would be useful for test purposes if there is a website returning all possible HTTP status codes. Thanks to Google App Engine and webapp2 framework building such website was a piece of cake.</p>
+
+<p>The site can be found at </p>
+
+<p><a href="http://httpstatuscodes.appspot.com">http://httpstatuscodes.appspot.com</a>.</p>
+
+<p>The beleaguered Mr Peperell contributes:</p>
+
+<p>In the same vein as RailsCasts is the site VimCasts.org. The episode I found which drew my attention to this site is the episode 
+ <a href="http://vimcasts.org/episodes/vimgolf-prime-numbers/">http://vimcasts.org/episodes/vimgolf-prime-numbers/</a> . </p>
+
+<p>This describes one of the entries (an interesting one, rather than the winning one) for a vimgolf.com challenge entitled &ldquo;How to insert the first 100 prime numbers&rdquo;. 
+ [editor: seriously? can&rsquo;t they use a real language?]</p>
+
+<p>His second link is merely to give prominence to a blog post from a couple of years ago detailing a way to integrate google docs with the editor : <a href="http://blog.milford.io/2010/06/sweet-use-vim-with-google-docs/">http://blog.milford.io/2010/06/sweet-use-vim-with-google-docs/</a></p>
+
+<p>Our man at MBM, the awesome, the only, Mr Pawlyn presents:</p>
+
+<h2>Jenkins and automated deployment for Rails</h2>
+
+<p>I failed to find a simple step by step guide to setting up automated deployments for Jenkins, so here are the list of steps that worked for us:</p>
+
+<p>1) Install the Jenkins plugin <a href="https://wiki.jenkins-ci.org/display/JENKINS/Post+build+task">Post build task</a> (currently at release 1.8) and restart Jenkins</p>
+
+<p>2) For the project that you want to deploy automatically, go to the Jenkins config and add the post build action &lsquo;Post build task&rsquo;</p>
+
+<p>3) If building multiple project branches, click &#39;Add&rsquo; and specify the log text that will trigger a deployment. eg &rsquo;(origin/development)&rsquo; if you want to deploy after a branch named &#39;development&rsquo; has successfully completed running tests </p>
+
+<p>4) In the script box, add &#39;bash -l -e jenkins_deploy.sh&rsquo;. This script should be checked into the root of your Rails app. See example below</p>
+
+<p>5) Check the box &#39;Run script only if all previous steps were successful&rsquo; if you only want to deploy when all tests pass and save the config</p>
+
+<p>6) Add the Jenkins user&rsquo;s public key to the file ~/.ssh/authorized_keys for the user account on the server where the deployment is made</p>
+
+<p>7) Bada bing, bada boom, it should all work. If not, logon to the Jenkins server and run the jenkins_deploy.sh script manually to troubleshoot</p>
+
+<p>The jenkins_deploy.sh should be something like:</p>
+
+<p>eval <code>ssh-agent -s</code>
+ ssh-add
+ rvm use ruby-1.9.3-p194@YOUR_APP_NAME
+ bundle exec cap staging deploy:migrations BRANCH=development</p>
+
+<p>And finally, from our man in Cape Town, Pawel offers a useful link to those of you jumping on the Twitter Bootstrap library for useful design snippets:</p>
+
+<p><a href="http://bootsnipp.com/">http://bootsnipp.com/</a></p>
+
+<p>Till next time, keep your feet in the air and your head on the ground</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/when-carlo-was-in-blightys-land';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/this-week-in-dev/">This Week In Dev</a></li>
+
+            <li class="blog-related__links"><a href="/blog/hello/">There's something in the woodshed</a></li>
+
+            <li class="blog-related__links"><a href="/blog/recipe-for-a-cape-town-office/">Recipe for a Cape Town office</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-27th-july-2015/">Unboxed Roundup: Our links for w/c 27th July 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

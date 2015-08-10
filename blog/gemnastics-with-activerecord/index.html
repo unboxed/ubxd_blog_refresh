@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Gemnastics with ActiveRecord</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_gemnastics-with-activerecord blog_gemnastics-with-activerecord_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Christopher Patuzzo
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-03-11 00:12:00 UTC">
+              <span>
+                11 Mar 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Gemnastics with ActiveRecord
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Recently, I&rsquo;ve been building gems in an attempt to get some content out into the open-source community and learn a thing or two along the way.</p>
+
+<p><img alt="Ruby gems" src="http://i39.tinypic.com/fazklk.jpg" /></p>
+
+<p>There was one in particular that gave rise to some interesting challenges. The bulk of the gem involved parsing a complex data structure, manipulating it in some way, then composing it back to the <strong>fathoms of complexity from whence it came</strong>. In plainer terms; it reads a file, does all the things, then writes a file- still with me? In this instance, the domain of the problem was scheduling. Not particularly enthralling on the surface, but when observed from an architectural disposition, it had some challenging characteristics. The web of associations between data, as well as the fragility of the software pertaining to it meant that a more comprehensive solution would be required.</p>
+
+<p>How would you approach a problem like this? Well, I reached into my toolb0x and pulled out modularity, validation and test-driven development, as well as various ingrained programming patterns. My thinking was that if I decoupled components stringently, <strong>I could deal with the tangled mess of data one piece at a time.</strong> Validation and test-driven development would ensure I didn&rsquo;t break anything along the way. It seemed the ActiveRecord interface would be the way to go. We use ActiveRecord almost every day at Unboxed Consulting as it is an intrinsic component of the Ruby on Rails framework that deals with databases.</p>
+
+<p><strong>It is possible, however, to use ActiveRecord without Rails.</strong> This meant I could make use of the &lsquo;magic&rsquo; functionality it provides, such as the dynamic &#39;find_by&rsquo; methods and scopes- very useful for constructing complex queries. One feature that is often overlooked is the ability to build in-memory databases when utilising the SQLite adapter. This has the advantage of being incredibly fast, and doesn&rsquo;t require much setup. In this scenario, it was perfect because there were fixed end-points to the flow of operations. I didn&rsquo;t need to persist a database on disk once a file had been written.</p>
+
+<p>After a huge amount of reverse engineering, I had a set of models that accurately represented the data structure. I had investigated edge-cases, leading to thorough validations and I was confident in my code as I&rsquo;d undergone TDD for the duration. In isolation, it worked perfectly. I wrote a lengthy Readme and pushed version 0.0.1 to Rubygems. <strong>Job done, or so I thought&hellip;</strong></p>
+
+<p>It was about a week later when showing my gem to Attila, that I realised I hadn&rsquo;t tested it in the context of a Rails application. Rails projects tend to &#39;lock&rsquo; their versions of ActiveRecord to ensure things don&rsquo;t suddenly break one day, due to incompatibilities. I&rsquo;d built my gem on the latest version of ActiveRecord and now needed to test it with a large back-catalogue of different versions. Thankfully, my comprehensive test-suite allowed me to find and fix any problems with relative ease.</p>
+
+<p>The final obstacle was running my gem, or more specifically, my in-memory database side-by-side with a Rails database. The general solution for this is to establish a connection on a subclass of ActiveRecord::Base. This works well for reading from an existing database, but not so well when creating your own tables. This is mostly due to how ActiveRecord determines which connection to build your schema on. Without going into too much detail; one final, relatively simple, subclass was <strong>all that was left on my path to victory!</strong></p>
+
+<p>At the time of writing, my gem is on version 0.0.4, and isn&rsquo;t a whole lot more than a minimum viable product. However, I now have the foundations in place to incorporate new features incrementally. If you&rsquo;d like to read more or contribute, you can find the Github project page <a href="https://github.com/tuzz/xteam_schedule">here</a>.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/gemnastics-with-activerecord';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/spread-to-the-four-corners-of-the-dev/">Spread to the four corners of the dev</a></li>
+
+            <li class="blog-related__links"><a href="/blog/what-s-there-to-know-about-outsourcing/">What is there to know about outsourcing?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/newsletter-of-brevity/">Newsletter of Brevity</a></li>
+
+            <li class="blog-related__links"><a href="/blog/five-cardinal-sins-of-agile-that-the-public-sector-can-learn-from/">Five Cardinal Sins of Agile that the public sector can learn from</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Diving Into the Front End</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_diving-into-the-front-end blog_diving-into-the-front-end_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Neil Van Beinum
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-10-10 10:46:00 UTC">
+              <span>
+                10 Oct 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Diving Into the Front End
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I recently completed my first stretch on a project as a front end developer here at Unboxed. In this article I&rsquo;ll share some basic principles and tools that I&rsquo;ve learnt about along the way with the help of <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom</a> and <a href="http://www.unboxedconsulting.com/people/alex-bobin">Alex</a> in particular.</p>
+
+<h2>CSS Architecture</h2>
+
+<p>Preprocessors such as SASS allow front end developers to split styling rules into multiple &ldquo;partial&rdquo; files which are merged into a single CSS output. It&rsquo;s really nice to have the styling rules compartmentalised in this way and I found it helped me to think of the site as a collection of components which can be reused, instead of a bunch of pages.</p>
+
+<p>We decided on a fairly flat structure for our partials in this project with separate files for typography, variables, mixins and styles for specific pages as well as layout components such as the site footer and header. A nice example architecture is outlined <a href="http://www.sitepoint.com/architecture-sass-project/">here</a>.</p>
+
+<h2>CSS extensions</h2>
+
+<p>The SASS language extends CSS in number of useful ways. Here are a couple of simple things that helped me.</p>
+
+<p>Media queries can be nested in the same rule:</p>
+
+<p>.component {
+ width: 100%;</p>
+
+<p>@media (min-width: 960px) {
+ width: 50%;
+ }
+ }</p>
+
+<p>This nesting wouldn&rsquo;t be possible without a preprocessor. Instead you would need to hunt down the media query and the rule within it. Here it&rsquo;s all under the same rule.</p>
+
+<p>A media query such as the above is painful to type out all the time. We also didn&rsquo;t want to have those magic numbers everywhere so we used SASS variables for the breakpoint widths and a mixin to make the intent clearer. <a href="http://daniel.furzeface.com/blog/my-sass-media-query-mixin/">This post</a> uses a similar approach and provides a very nice shorthand for the above that would look like this:</p>
+
+<p>.component {
+ width: 100%;</p>
+
+<p>@include MQ(L) {
+ width: 50%;
+ }
+ }</p>
+
+<h2>Front End Tooling</h2>
+
+<p>I also discovered a few neat tools while I was working on this project:</p>
+
+<p><a href="http://www.browsersync.io/">Browser Sync</a> is a tool that watches your HTML and CSS for changes and injects them into multiple browsers without requiring a browser reload. It can also be used to synchronise browser scroll position, navigation and form inputs, making it handy for demos of responsive sites.</p>
+
+<p><a href="https://github.com/giakki/uncss">Uncss</a> analyses your HTML and CSS and strips out any unused styling rules. This can useful if you&rsquo;re including a front end framework but only using a few of its rules.</p>
+
+<p><a href="http://bradfrostweb.com/demo/ish">Ish</a> is a site which, given your URL, will display it at “small-ish” to “large-ish” resolutions, as well as slowly moving between them. The idea behind it is that it encourages you to design for all widths, not just the most common device sizes. </p>
+
+<h2>Note on using Bootstrap</h2>
+
+<p>The Bootstrap front end framework includes many styling rules and classes. The admin section of our site is dependent on Bootstrap styling and its grid system. Bootstrap was also useful during the prototyping phase. However the customer-facing &ldquo;front end&rdquo; of the site was styled using very few Bootstrap classes. Most of the elements such as headings, buttons and forms had custom styles. The layout for this section was also relatively simple. My impression is that we gained finer control and cleaner markup for much of this section by using our own styling.</p>
+
+<p>I had an idea that a custom grid is complex but that&rsquo;s not necessarily the case. <a href="http://css-tricks.com/dont-overthink-it-grids/">Don&rsquo;t overthink it grids</a> describes how to create your own simple grid system.</p>
+
+<h2>&ldquo;Got it&rdquo; moments</h2>
+
+<p>Finally, I had a few &ldquo;got it&rdquo; moments which stuck with me when colleagues talked about front end approaches:</p>
+
+<p><em>“All elements are dying to go down and left unless your CSS stops them.”</em><em>“The HTML elements may be nested deeply but that doesn&rsquo;t mean the CSS selectors have to be nested too. Using less specific rules means that the CSS will be easier to manage later.”</em>  </p>
+
+<p>Overall, I enjoyed diving into the world of front end and I&rsquo;m looking forward to applying what I&rsquo;ve learnt to the next project.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/diving-into-the-front-end';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/jquery-uk-conference-2014/">jQuery UK 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/all-of-the-new-shiny-code/">All of the new shiny code</a></li>
+
+            <li class="blog-related__links"><a href="/blog/wikileaks-war-logs-on-rails/">Wikileaks war logs on rails</a></li>
+
+            <li class="blog-related__links"><a href="/blog/fix-your-broken-window-2/">Fix your broken window!</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

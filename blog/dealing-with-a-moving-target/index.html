@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dealing with a moving target</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_dealing-with-a-moving-target blog_dealing-with-a-moving-target_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Alan Thomas
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2011-05-13 21:20:00 UTC">
+              <span>
+                13 May 2011
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Dealing with a moving target
+          </h1>
+
+          <div class="blog-article__content">
+            <p>We recently launched our first Social Media game, <a href="http://www.pinmeifyoucan.com/">www.pinmeifyoucan.com</a> - for Contiki. It&rsquo;s a Google maps integration with YouTube, Facebook and Twitter.</p>
+
+<p>It was a challenging project on tight timescales which presented some unique problems for us. Due to the level of complexity and tight integration between all the components it was never possible for us to have more than two developers working on the project at once. Quite often the two developers would be pairing with each other.</p>
+
+<p><a href="http://www.pinmeifyoucan.com/"><img alt="Pin Me if You Can in game screenshot" src="../../uploaded_assets/inline-images/000/000/005/display_size_display_size_Pin_Me_Screenshot.png?1305321874" /></a></p>
+
+<p>The project would have been impossible to complete using traditional development methods and had to be Agile. Due to changing scope, issues that were only realised after development had started and some late breaking difficulties with video assets; the product we ended up delivering was significantly different to what was originally planned.</p>
+
+<p><img alt="YouTube in play" src="../../uploaded_assets/inline-images/000/000/006/display_size_display_size_Pin_Me_YouTube.png?1305321892" /></p>
+
+<p>Using Kanban techniques we did daily stand-ups, which were more like mini planning games. The developers also ensured that we were only doing one story at a time and always did the most important thing next. This was important as priorities in the backlog changed on a daily basis!</p>
+
+<p>Overall, we managed to deliver the product on time to an extremely happy client, which I don&rsquo;t believe would have been possible without our agile processes.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/dealing-with-a-moving-target';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-20th-july-2015/">Unboxed Roundup: Our links for w/c 20th July 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-11th-may-2015/">Unboxed Roundup: our links for w/c 11th May 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/forcing-facebook-to-update-your-site-s-metadata/">Forcing Facebook to Update Your Site's Metadata</a></li>
+
+            <li class="blog-related__links"><a href="/blog/7-reasons-why-pair-programming-works/">7 reasons why pair programming works</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

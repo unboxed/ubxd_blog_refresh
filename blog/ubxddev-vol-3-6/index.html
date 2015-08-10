@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>UBXDDEV Vol. 3.6</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_ubxddev-vol-3-6 blog_ubxddev-vol-3-6_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-09-26 13:30:00 UTC">
+              <span>
+                26 Sep 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            UBXDDEV Vol. 3.6
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Ruby Kaigi writeups - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<ul>
+<li><a href="http://brewhouse.io/blog/2014/09/18/ruby-kaigi-2014-day-1">http://brewhouse.io/blog/2014/09/18/ruby-kaigi-2014-day-1</a></li>
+<li><a href="http://brewhouse.io/blog/2014/09/19/ruby-kaigi-2014-day-2">http://brewhouse.io/blog/2014/09/19/ruby-kaigi-2014-day-2</a></li>
+<li><a href="http://brewhouse.io/blog/2014/09/26/ruby-kaigi-2014-day-3">http://brewhouse.io/blog/2014/09/26/ruby-kaigi-2014-day-3</a></li>
+</ul>
+
+<p>Write ups of the <a href="http://rubykaigi.org/2014">Ruby Kaigi</a> conference by <a href="https://twitter.com/chancancode">Godfrey Chan</a>. Unlike most of the ruby conferences I read about or attend, Ruby Kaigi seems to be more focussed on the development of ruby itself rather than development with ruby. It&rsquo;s really interesting to see what is coming in future versions of ruby that might make the language more performant. I also liked the sound of Matz&rsquo;s talk from the day 2 write up; it&rsquo;s encouraging to see that ruby is far from stagnant.</p>
+
+<h2>Vertical align CSS property - <a href="http://www.unboxedconsulting.com/people/neil-van-beinum">Neil</a></h2>
+
+<p><a href="http://christopheraue.net/2014/03/05/vertical-align/">http://christopheraue.net/2014/03/05/vertical-align/</a></p>
+
+<p>An in-depth look at the CSS vertical-align property, how it works, and why it might not behave as you expect.</p>
+
+<h2>Overkill - <a href="http://www.unboxedconsulting.com/people/karl-entwistle">Karl</a></h2>
+
+<p><a href="https://www.youtube.com/watch?v=qLpvc5r6Bb0">https://www.youtube.com/watch?v=qLpvc5r6Bb0</a> </p>
+
+<p>This talk by <a href="http://www.kytrinyx.com/">Katrina Owen</a> presents a simple problem that provides a good training exercise for some best practices. She covers: </p>
+
+<ul>
+<li>refactoring</li>
+<li><a href="http://www.sandimetz.com/">Sandi Metz&rsquo;s</a> “squint test”</li>
+<li>single responsibly principle</li>
+<li>race conditions</li>
+<li>code “smells”</li>
+<li>how best to name things for the problem domain and not the primitives they’re represented in.</li>
+</ul>
+
+<p>Overall It’s a nicely paced, smooth and well rehearsed talk. Worth a watch!</p>
+
+<h2>A tuple OVER window functions - <a href="http://www.unboxedconsulting.com/people/pedro-moreira">Pedro</a></h2>
+
+<ol>
+<li><a href="http://robots.thoughtbot.com/postgres-window-functions">http://robots.thoughtbot.com/postgres-window-functions</a>
+
+<ol>
+<li><a href="http://robots.thoughtbot.com/active-record-eager-loading-with-query-objects-and-decorators">http://robots.thoughtbot.com/active-record-eager-loading-with-query-objects-and-decorators</a></li>
+</ol></li>
+</ol>
+
+<p>These two articles go over using Postgres window functions: the first introduces the concept, including useful links to PG docs; and the second is a more practical example of using in the context of a rails app. I created a demo rails to check performance on this, using FactoryGirl to generate thousands of records, and was quite impressed by the performance gain.</p>
+
+<h2>Some new frontend tools - <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom S</a></h2>
+
+<h3><a href="https://github.com/cmpolis/scrollIt.js">ScrollIt.js</a> (jQuery)</h3>
+
+<p>A jQuery plugin for a “sticky” vertical navigation. Works by adding data attributes to an existing navigation rather than building a new using JS (as some other plugins do).</p>
+
+<h3><a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en">PerfectPixel</a> (Chrome extension)</h3>
+
+<p>A chrome extension that allows you to overlay images to a webpage, a perfect addition to the front end toolkit. Best used when trying to match up to design<strong>layouts</strong> (web pages shouldn’t be pixel perfect, a responsive page is much more important!)</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/ubxddev-vol-3-6';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxedis10-anniversary-song-countdown/">Unboxedis10 anniversary song countdown</a></li>
+
+            <li class="blog-related__links"><a href="/blog/cucumber-iphone-icuke/">Cucumber + iPhone = iCuke</a></li>
+
+            <li class="blog-related__links"><a href="/blog/return-of-the-activesupport-method-of-the-week-mark-morrison-style/">Return Of The ActiveSupport method of the week (Mark Morrison style)</a></li>
+
+            <li class="blog-related__links"><a href="/blog/insert-your-own-punny-title-for-the-developer-newsletter-here/">[Insert your own punny title for the Developer newsletter here]</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

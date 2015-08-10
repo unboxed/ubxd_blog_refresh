@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>All of the new shiny code</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_all-of-the-new-shiny-code blog_all-of-the-new-shiny-code_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Andrew Mitchell
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-06-28 16:05:00 UTC">
+              <span>
+                28 Jun 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            All of the new shiny code
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Ruby on Rails 4 is here - <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andy M</a></h2>
+
+<p><a href="http://weblog.rubyonrails.org/2013/6/25/Rails-4-0-final/">http://weblog.rubyonrails.org/2013/6/25/Rails-4-0-final/</a></p>
+
+<p>Yep, that&rsquo;s correct the latest version of RoR is finally here as of Tuesday morning. I&rsquo;m not going to give you all the blurb about new features etc, however, I will link you to a couple of resources about upgrading your application to the latest release. As usual <a href="https://github.com/ryanb">Ryan Bates</a> <a href="http://www.railscasts.com">Railscasts</a> are a great source of information and you can find his upgrade tutorial at <a href="http://railscasts.com/episodes/415-upgrading-to-rails-4">http://railscasts.com/episodes/415-upgrading-to-rails-4</a>. It&rsquo;s also worth reading Rails&rsquo; edge guides which you can find here <a href="http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html">http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html</a></p>
+
+<p>## Concurrent garbage collection lands in Rubinius - <a href="http://www.unboxedconsulting.com/people/leo-cassarani">Leo C</a></p>
+
+<p><a href="http://rubini.us/2013/06/22/concurrent-garbage-collection/">http://rubini.us/2013/06/22/concurrent-garbage-collection/</a></p>
+
+<p>I&rsquo;ve been testing this for a few weeks, and concurrent GC has finally landed in Rubinius master. This excellent, highly technical, writeup by Dirkjan Bussink (one of the developers that are sponsored by Engine Yard to work on Rubinius full time) is a great insight into how to make garbage collection as fast as possible, given Ruby&rsquo;s highly dynamic environment. I encourage you all to try this out when you get a chance.</p>
+
+<h2>Ruby 2.0.0-p247 fixes OpenSSL vulnerability - <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andy M</a></h2>
+
+<p>Ruby 2.0.0-p247 has also been released this week and provides a fix for a vulnerability in the bundled OpenSSL library. You can find details of the release <a href="http://www.ruby-lang.org/en/news/2013/06/27/ruby-2-0-0-p247-is-released">at ruby-lang.org</a> and details of the vulnerability can be found <a href="http://www.ruby-lang.org/en/news/2013/06/27/hostname-check-bypassing-vulnerability-in-openssl-client-cve-2013-4073/">here</a></p>
+
+<p>## EcmaScript Sixth Edition - <a href="http://www.unboxedconsulting.com/people/carl-whittaker">Carl W</a></p>
+
+<p><a href="http://espadrine.github.io/New-In-A-Spec/es6/">http://espadrine.github.io/New-In-A-Spec/es6/</a></p>
+
+<p>A concise summary of the goodies TC39 are sending our way.</p>
+
+<p>## Sublime Text 3 Beta - <a href="https://github.com/j1mr10rd4n">Jim R</a></p>
+
+<p><a href="http://www.sublimetext.com/blog/articles/sublime-text-3-public-beta">http://www.sublimetext.com/blog/articles/sublime-text-3-public-beta</a></p>
+
+<p>… is here. Yep, that&rsquo;s right the latest version of Sublime Text is currently available in beta.</p>
+
+<h2>Wireframing tools - <a href="http://www.unboxedconsulting.com/people/richard-stobart">Richard S</a></h2>
+
+<p><a href="http://www.uistencils.com">http://www.uistencils.com</a> provide great bits of kit for those who need to quickly sketch some wireframes but aren&rsquo;t confident about their drawing skills. For extroverts there are also whiteboard stencils. If you are interested in design, take a look at Dan Barber&rsquo;s <a href="https://speakerdeck.com/danbarber/design-eye-for-the-developer-guy">https://speakerdeck.com/danbarber/design-eye-for-the-developer-guy</a> with further reading here <a href="http://danbarber.me/design-for-developers/">http://danbarber.me/design-for-developers/</a></p>
+
+<h2>A visual tutorial/game for learning about git - <a href="https://github.com/j1mr10rd4n">Jim R</a></h2>
+
+<p><a href="http://pcottle.github.io/learnGitBranching/?demo">http://pcottle.github.io/learnGitBranching/?demo</a></p>
+
+<p>It shows you the results of your actions as you go along and has some
+ nice tutorials to lead you through branching, rebasing and ammending
+ commits. I learned something from it (did you know you could chain
+ parent references?) and it&rsquo;s been useful in training members of the dev
+ team at the client I&rsquo;m working at.</p>
+
+<h2>The Obligatory (Octo)cat Section - <a href="http://www.unboxedconsulting.com/people/benjamin-giffin">Ben G</a></h2>
+
+<p><a href="http://octodex.github.com/">http://octodex.github.com/</a></p>
+
+<p>In place of cat corner this week we have the Octocat corner courtesy of Ben G.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/all-of-the-new-shiny-code';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/what-s-there-to-know-about-outsourcing/">What is there to know about outsourcing?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/because-friday-newsletters-are-overrated/">Because Friday newsletters are overrated</a></li>
+
+            <li class="blog-related__links"><a href="/blog/jquery-uk-2015/">jQuery UK 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-future-of-digital-products-and-how-we-ll-design-them-in-the-future/">The future of digital products and how we’ll design them in the future</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

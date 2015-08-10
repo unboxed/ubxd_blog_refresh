@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Steak vs Cucumber as BDD tools</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_steak-vs-cucumber-as-bdd-tools blog_steak-vs-cucumber-as-bdd-tools_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Petr Zaparka
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2011-03-13 16:08:00 UTC">
+              <span>
+                13 Mar 2011
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Steak vs Cucumber as BDD tools
+          </h1>
+
+          <div class="blog-article__content">
+            <p>When I joined the world of Ruby on Rails development and testing I was quite happy with all the tools and testing frameworks available, I was using a lot of them during development process. Words like Rspec and Cucumber quickly became part of my vocabulary, along with other &lsquo;magic&rsquo; words like Kanban and Scrum. BDD, or &rsquo; <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development">Behaviour Driven Development</a>&rsquo;&nbsp;became a permanent part of my life!</p>
+
+<p>It&rsquo;s crucial for a project, that the features that a customer would like to have implemented into the finished product are captured as well defined stories early on. We&rsquo;ll eventually use these stories as a template for our tests. Cucumber is an especially good tool for using these stories as templates for testing. So what is Cucumber and what does it look like?</p>
+
+<p>Here&rsquo;s the explanation on <a href="https://github.com/cucumber/cucumber/wiki">Cucumber&rsquo;s own wiki</a>.</p>
+
+<p>Cucumber is a tool that executes plain-text functional descriptions as automated tests. The language that Cucumber understands is called Gherkin.</p>
+
+<p>Here is an example:</p>
+
+<script src="https://gist.github.com/868229.js?file=cucumber_feature.feature"></script>
+
+<p>As you can see, Cucumber allows you to easily describe the behaviour of your new feature. In fact, it&rsquo;s that good that some of our customers are using Cucumber descriptions as the acceptance criteria on their project&rsquo;s stories. So where&rsquo;s the catch? Well, not everything in cucumber is as easy as it may look. Even though cucumber has lot of pre-defined &ldquo;phrases&rdquo; to describe the behaviour of an application, you soon find out that sometimes it can be really tricky to preserve the readability of stories that are more complex than just: &ldquo;And I should see &#39;a yellow box&rdquo; for example. When it gets tricky it gets really time consuming. And even if you know that implementing the related functionality is really easy - writing the proper, readable cucumber test that makes sense is sometimes very hard.</p>
+
+<p>I&rsquo;m not complaining about writing tests in general. I&rsquo;m complaining about how hard it is sometimes to achieve basic readability of tests! Does the average customer really have to understand the tests we use? If they do, then ok - I&rsquo;m here and I&rsquo;m prepared to write those nice, readable tests for them.&nbsp;</p>
+
+<p>But what if they don&rsquo;t care? Well there is another way around: the solution is called Steak.&nbsp;</p>
+
+<p>So what is <a href="https://github.com/cavalle/steak">Steak</a>?</p>
+
+<p>Steak is an Acceptance BDD solution (like Cucumber) but in plain ol&rsquo; Ruby. This is how an acceptance spec looks in Steak&hellip;</p>
+
+<script src="https://gist.github.com/868232.js?file=steak.rb"></script>
+
+<p>As you can see, there is a Feature description and a Scenario description, but the rest is Ruby language with Capybara syntax. But why do I think this is so special, and why do I think you should use it? Well it&rsquo;s much, much faster to write those complex, yet readable tests, and it&rsquo;s easy to maintain.</p>
+
+<p>Recently, I was working on a tough project where I was the only back-end developer and there was one front-end developer; let&rsquo;s call him Tom. At the start of this project we were using Cucumber. It took such a long time to write some of the tests, and because there were a lot of front end changes, we had to fix and re-write a lot of these Cucumber tests. Tom found he wasn&rsquo;t that comfortable writing Cucumber scenarios, so it took him longer to fix them. At the start of the new iteration, I decided to use Steak instead of Cucumber. I discussed with Tom how Steak works, and he preferred it immediately. We started implementing new stories and development suddenly went really well and much quicker. I was writing Steak stories much faster, and Tom was faster too. So, by the end of the iteration there was no complaining about fixing Cucumber stories, and there was a lot more delivered functionality; them were some good times.</p>
+
+<p>Is it Steak final solution?</p>
+
+<p>Maybe, maybe not. It really depends on you and your customer&rsquo;s needs, but what you really should do is to try it out yourself. You will see how much faster your development process can became.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/steak-vs-cucumber-as-bdd-tools';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/five-facilitation-techniques-for-promoting-agile-for-government/">Five facilitation techniques for promoting Agile for government</a></li>
+
+            <li class="blog-related__links"><a href="/blog/all-this-has-happened-before-and-all-this-will-happen-again/">All this has happened before, and all this will happen again</a></li>
+
+            <li class="blog-related__links"><a href="/blog/a-ruby-plated-breakfast/">A Ruby-plated breakfast</a></li>
+
+            <li class="blog-related__links"><a href="/blog/this-weeks-dev-newsletter/">This week's Dev Newsletter</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

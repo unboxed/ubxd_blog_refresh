@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The Week In Links</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-week-in-links blog_the-week-in-links_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Luke Randall
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-05-10 23:00:00 UTC">
+              <span>
+                10 May 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The Week In Links
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Welcome to this weeks installment. I - your humble guest editor, Luke R. - submit for your consideration the following lovingly curated selection of internets.</p>
+
+<h2>Ruby</h2>
+
+<h3>Koans of wisdom - Robert P.</h3>
+
+<p>I&rsquo;ve still been learning Ruby and RoR, which is a very interesting learning curve. Amongst the countless screencasts and tutorials I&rsquo;ve found, there are some really nice and effective learning tools.</p>
+
+<p>These are the ones I like the most: You can learn by doing code - and you can do it in your browser. You need to sign up for these (all free), so the system can track your progress and reputation.</p>
+
+<ul>
+<li><a href="http://rubeque.com/problems">http://rubeque.com/problems</a></li>
+<li><a href="http://rubykoans.com/">http://rubykoans.com/</a> (There is a proper local version, which is a proper TDD emulation with 180 errors)</li>
+<li><a href="http://rubymonk.com/">http://rubymonk.com/</a></li>
+</ul>
+
+<p>Check them out, as a newbie I&rsquo;d definitely recommend them all.</p>
+
+<h3>Dumpster diving in the Rails source - Matt P.</h3>
+
+<p>As a newcomer to rails, I was impressed that it knew that the plural of &ldquo;person&rdquo; is &ldquo;people&rdquo;. Then I wondered how it knew. A bit of digging around in the source tree and I found <a href="https://github.com/rails/rails/blob/6c367a0d787705746f262d0bd5ad8c4f13a8c809/activesupport/lib/active_support/inflections.rb">active_support/inflections.rb</a> &ndash; and learned that an acceptable (albeit archaic) plural of the word &ldquo;cow&rdquo; is &ldquo;kine&rdquo;.</p>
+
+<h3>Mixins - a refactoring anti-pattern - Murray S.</h3>
+
+<p>This <a href="http://blog.steveklabnik.com/posts/2012-05-07-mixins--a-refactoring-anti-pattern">http://blog.steveklabnik.com/posts/2012-05-07-mixins&ndash;a-refactoring-anti-pattern</a> was quite an interesting discussion about refactoring and complexity.</p>
+
+<h2>Conferences</h2>
+
+<h3>Ruby Lugundum - Murray S.</h3>
+
+<p><a href="http://rulu.eu">http://rulu.eu</a></p>
+
+<p>The 2nd version of Ruby Lugundum (a 2 day conference in Lyon, France, end of June). I didn&rsquo;t hear anything about their first one last year, I think it was a pretty small affair. This year&rsquo;s looks more professional and interestingly it seems to have <a href="http://2012.rulu.eu/speakers/">a lineup</a> that isn&rsquo;t full of the same old faces spouting the same old talks. Might be worth going to, and it&rsquo;s only 80€.</p>
+
+<h2>Text editing</h2>
+
+<h3>Tmux and the pasteboard - Mark S.</h3>
+
+<p>Do you use tmux? Do you use vim? Does trying to copy and paste between applications within tmux and other OS X apps annoy you? Read <a href="http://robots.thoughtbot.com/post/19398560514/how-to-copy-and-paste-with-tmux-on-mac-os-x">this post</a> by Thoughbot to minimise a small, but daily frustration. I ignored the last bit about the shell script for tmux buffers and instead used <a href="http://unix.stackexchange.com/a/32451">this Unix StackExchange answer</a>.</p>
+
+<p>If you are interested in the details of why the pasteboard is not accessible from within tmux on OS X read <a href="https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard/blob/master/README.md">this</a>.</p>
+
+<h2>Text editing for the less discerning developer</h2>
+
+<h3>Sublime Text 2 - Command-Line Integration That Doesn&rsquo;t Enrage My Inner Pedant - Matt F.</h3>
+
+<p>Risking public shame, Matt F. not only shared that he is a Sublime Text user, but also some command line tips for other Sublime users:</p>
+
+<p>I started using Sublime Text 2 during Blackadder&rsquo;s little vacation last week whilst Krispy, a.k.a. Chris C, a.k.a.<em>not</em> the creator of &lsquo;The X-Files&rsquo; and I groped our way through AppsForGood. (I&rsquo;m pleased to report the groping has continued this week vis a vis the Unboxed Website, albeit on a solo basis&hellip;</p>
+
+<p>Sublime Text 2 ships with a command line tool named <code>subl</code> to work with files <a href="http://www.sublimetext.com/docs/2/osx_command_line.html">on the command line</a>. For some reason continually typing <code>subl</code> enraged my inner pedant. I wanted my invocation of the application to be more meaningful to me as the invoker.</p>
+
+<p>I therefore used the mystifyingly-popular knowledge trough called &#39;the internet&rsquo; to discover this - <a href="https://gist.github.com/1236170">https://gist.github.com/1236170</a>. Now I can invoke sublime on the command line using <code>sublime</code> instead of <code>subl</code>. A few more keystrokes are required but importantly less mental kittens die.</p>
+
+<h2>Know your history</h2>
+
+<h3>Computer Science - History Is Important - Matt F.</h3>
+
+<p>Julian Simpson (a.k.a. <a href="https://twitter.com/builddoctor">@builddoctor</a>) tweeted a link to this web log post a while back - <a href="http://www.blackliszt.com/2012/03/computer-history.html">http://www.blackliszt.com/2012/03/computer-history.html</a>. I&rsquo;ve only just got round to reading it though. The post argues that software is often a predominantly a-historical discipline which is to its detriment. This is interesting to me because on every new project I work on, I feel I forget to remember the lessons I learnt from the mistakes I made during previous projects.</p>
+
+<h2>Attila</h2>
+
+<p>As always, the ever popular Attila section. This week he regales us with Bundler tips, issues with Readability, Alfred searches and the final word on LESS. Like the Macalope, you can wait till the end of the week to read what he has to say, or for the impatient, subscribe to <a href="mailto:developers@ubxd.com">developers@ubxd.com</a> for the early edition.</p>
+
+<h3>Bundler updates</h3>
+
+<p>So you have been using .rvmrc or .rbenv-version files to keep track of what version of Ruby is required for your project, right? Well, maybe there&rsquo;s an even better way coming:</p>
+
+<p>Ruby version dependencies straight in your Gemfile. Coming soon to a Terminal near you:</p>
+
+<p>source &rsquo;<a href="http://rubygems.org">http://rubygems.org</a>&rsquo;</p>
+
+<p>ruby &#39;1.9.3&rsquo;
+ gem &#39;rails&rsquo;, &#39;3.2.3&rsquo;</p>
+
+<p>You can install a prerelease version of Bundler already today:
+ <code>gem install bundler --pre</code></p>
+
+<p>There&rsquo;s an article on the Heroku blog about this, make sure to read <a href="http://blog.heroku.com/archives/2012/5/9/multiple_ruby_version_support_on_heroku">http://blog.heroku.com/archives/2012/5/9/multiple_ruby_version_support_on_heroku</a>
+ I&rsquo;m looking forward to RVM and RBenv to hook into these if possible and provide us a seamless switch between different projects that use different versions of Ruby.</p>
+
+<h2>Readability Article Publishing Guidelines</h2>
+
+<p>It has come to my attention that we might need to shape our markup-fu a little bit. When I tried to save Andrew&rsquo;s recent article from the Unboxed Blog to my Readability account I noticed that the artcle parsing was not quite successful, more precisely Readability picked up &ldquo;Unboxed Blog&rdquo; as the article title as opposed to &ldquo;Code maintainability - is it a test thing?&rdquo;. Find the example <a href="http://www.readability.com/articles/g9qlxgpx">here</a>.</p>
+
+<p>After a tiny bit of googling I found this <a href="http://www.readability.com/publishers/guidelines">helpful article</a> on the Readability website that has reasonable markup crafting suggestions to everybody.</p>
+
+<p>Note that it is not only intended to be used for Readability but the suggestions there are quite reasonable for every day markup crafting. I guess my main point is that rather than just throwing a bunch of `</p>
+
+<p>s` onto the browsers, it has become quite clear that how much additional functionality and data you can get by crafting your markup right.</p>
+
+<h2>Alfred custom searches</h2>
+
+<p>By now you probably know that you can add customised searches to Alfred. I&rsquo;ve been using these for a while and thought that maybe others would make good use of them too:</p>
+
+<p>Search title: Search Github for
+ URL: <a href="http://github.com/search?q=%7Bquery%7D">http://github.com/search?q={query}</a>
+ keyword: gh</p>
+
+<p>Search URL: <a href="https://www.ruby-toolbox.com/search?utf8=%E2%9C%93&amp;q=%7Bquery%7D">https://www.ruby-toolbox.com/search?utf8=%E2%9C%93&amp;q={query}</a>
+ title: Search The Ruby Toolbox for
+ keyword: rtb</p>
+
+<p>Search URL: <a href="http://rubygems.org/search?utf8=%E2%9C%93&amp;query=%7Bquery%7D">http://rubygems.org/search?utf8=%E2%9C%93&amp;query={query}</a>
+ title: Search RubyGems for
+ keyword: gem</p>
+
+<p>In order to add them, go to Alfred&rsquo;s preferences, look for &ldquo;Custom Searches&rdquo; in the sidebar and add them if you want. Happy searching!</p>
+
+<h2>Less is more. Really.</h2>
+
+<p>This one is just for trolling Will and maybe as a response to his latest rants on Less last week. I don&rsquo;t know at this point if it&rsquo;s worth coming up with yet another debate around this subject, I&rsquo;ve had my examples in the past and I started to think that not every single tool fits every person. Less, just like anything else might be your thing or might not be.</p>
+
+<p>However, I think that the same way just like any other tool can be used wisely and could provide huge benefits to your project.</p>
+
+<p>## Diversions</p>
+
+<h3>Wolfenstein 3D - Rich A.</h3>
+
+<p>Since we live in a glorious new age where we ~~no longer have to wait for code to compile~~ have to wait for tests to run, Rich A. wrote in with news of a web-based <a href="http://3d.wolfenstein.com/">Wolfenstein 3D</a> to keep you busy while cucumber is cucumbering.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-week-in-links';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-most-anticipated-newsletter-of-the-year/">The most anticipated newsletter of the year</a></li>
+
+            <li class="blog-related__links"><a href="/blog/agile-newsletter-30-oct/">Agile Newsletter - 30 Oct</a></li>
+
+            <li class="blog-related__links"><a href="/blog/10-attributes-that-make-a-great-product-owner/">10 Attributes that make a great product owner</a></li>
+
+            <li class="blog-related__links"><a href="/blog/developer-newsletter-20th-september/">Developer Newsletter, 20th September</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

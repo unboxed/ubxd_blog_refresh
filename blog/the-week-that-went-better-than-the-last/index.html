@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The Week That Went Better Than The Last</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-week-that-went-better-than-the-last blog_the-week-that-went-better-than-the-last_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Andrew Mitchell
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-08-09 23:00:00 UTC">
+              <span>
+                 9 Aug 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The Week That Went Better Than The Last
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Bender is full of rage. Beware Bender&rsquo;s wrath!</p>
+
+<h2>ActiveSupport Method/Class of the Week: <a href="http://api.rubyonrails.org/classes/ActiveSupport/MessageVerifier.html">MessageVerifier</a></h2>
+
+<p>To follow with last weeks inconsistency. This week we ae back to ActiveSupport. I found myself this week looking into creating signed messages for email unsubscribe links and I came accross the ActiveSupport::MessageVerifier. Not so much of a method but a class for generating signed messages and verifying them.</p>
+
+<p>Create a new verifier</p>
+
+<p>@verifier = ActiveSupport::MessageVerifier.new(Rails.application.config.secret_token)</p>
+
+<p>in your view</p>
+
+<p>signature), :method =&gt; :delete %&gt;</p>
+
+<p>in your controller</p>
+
+<p>def destroy
+ user_id, email_id = @verifier.verify(params[:signature])
+ rescue ActiveSupport::MessageVerifier::InvalidSignature
+ # not verified
+ end</p>
+
+<p>You can also pass options to the MessageVerifier on initialisation. These are the digest which defaults to SHA1 and the serialiser which defaults to Marshal.</p>
+
+<p>##CSS Sprites to optimize websites for retina displays (Robert P)
+ <a href="http://miekd.com/articles/using-css-sprites-to-optimize-your-website-for-retina-displays/">http://miekd.com/articles/using-css-sprites-to-optimize-your-website-for-retina-displays/</a></p>
+
+<p>Using CSS sprites is a very great idea and let&rsquo;s us to optimise sites, so we can save file size, bandwidth and make less http requests which all makes sense to the user.
+ This article explains how to take CSS sprites to the next level and use them to serve retina displays with double pixel ratio images.</p>
+
+<h2>Object#tap (Chris P)</h2>
+
+<p>I&rsquo;ve been using tap more and more in recent weeks and I&rsquo;m finding it surprisingly elegant. It feels a bit like the unix tool &lsquo;tee&rsquo;, if you&rsquo;ve used that before. So how do we use tap?</p>
+
+<p>my_object.tap { |o| do_something_with(my_object) }</p>
+
+<p>So it simply yields &#39;self&rsquo; to the given block. Why is this useful?</p>
+
+<p>Well the cool thing about tap is it always returns the object itself. This means that we can drop tap in a method chain, do some debugging and carry on as if tap weren&rsquo;t there.</p>
+
+<p>@posts = Post.where(:author =&gt; &#39;foo&rsquo;).tap { |posts| puts &ldquo;#{posts.count} posts with author foo&rdquo; }</p>
+
+<p>You can use #tap for other things too. Here&rsquo;s quite a nice refactoring I found.</p>
+
+<p>def client
+ client = HTTPClient.new
+ client.set_auth(base, username, password)
+ client
+ end</p>
+
+<p>refactored to</p>
+
+<p>def client
+ HTTPClient.new.tap { |c| c.set_auth(base, username, password) }
+ end</p>
+
+<p>## The Slow Web (Andrew M)
+ <a href="http://blog.jackcheng.com/post/25160553986/the-slow-web">http://blog.jackcheng.com/post/25160553986/the-slow-web</a></p>
+
+<p>An interesting article about timeline patterns on the web.</p>
+
+<h2>Appliness e magazine (Robert P)</h2>
+
+<p><a href="http://www.appliness.com/">http://www.appliness.com/</a></p>
+
+<p>Developer magazine written by developers for developers. How lovely!
+ There are loads of application dev. tutorials and articles. They also have a free to download magazine for tablets.</p>
+
+<h2>The Unboxed CSS Validator (Jolyon P)</h2>
+
+<p>We have updated the Unboxed CSS validator and made a small change to the <a href="https://github.com/unboxed/be_valid_asset">be_valid_asset gem</a> (version 1.2.2) so that now if vendor specific extensions are used in css files, validation will pass. </p>
+
+<p>To run css validation against all your stylesheets, try something like:</p>
+
+<p>describe &ldquo;css&rdquo; do
+ it &ldquo;should all be valid&rdquo; do
+ Dir[Rails.root.join(&ldquo;app/assets/stylesheets/*<em>/</em>.css&rdquo;)].each do |css_file|
+ puts css_file
+ css = File.read(css_file)
+ css.should be_valid_css3
+ end
+ end
+ end</p>
+
+<p>## Drag and Drop Grids (Andrew M)
+ <a href="http://gridster.net/">http://gridster.net/</a>
+ I have been trying to find some cool and interesting ways to do layouts of late for my own personal portfolio when I came accross Dragster a JQuery Drag and drop grid plugin. <a href="http://gridster.net/">http://gridster.net/</a> Similar thinking, I believe, to some of the original ideas proposed for the Unboxed website a fair while back now.</p>
+
+<p>##Semantic breadcrumb (Robert P)
+ <a href="http://coderwall.com/p/p0nvjw?i=5&amp;p=1&amp;q=">http://coderwall.com/p/p0nvjw?i=5&amp;p=1&amp;q=</a></p>
+
+<p>A quick but very useful tutorial that shows how we can add semantic meaning to our breadcrumbs. Pretty cool to see how Google catches these and puts them in their search results!</p>
+
+<h2>Amazing… (Leo C)</h2>
+
+<p><a href="http://patriciopalladino.com/blog/2012/08/09/non-alphanumeric-javascript.html">http://patriciopalladino.com/blog/2012/08/09/non-alphanumeric-javascript.html</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-week-that-went-better-than-the-last';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-sausage-machine/">The Sausage Machine</a></li>
+
+            <li class="blog-related__links"><a href="/blog/post-halloween-developer-newsletter-4th-october/">Post Halloween Developer Newsletter - 4th October</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-devmas-newsletter/">The Devmas Newsletter </a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-offshoring-agile-make-it-work-in-practice/">Webinar – ‘Offshoring Agile: Make it work in practice’</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

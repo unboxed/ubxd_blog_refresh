@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Pair Programming - Luxury or Necessity?</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_pair-programming-luxury-or-necessity blog_pair-programming-luxury-or-necessity_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Tym Moore
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-04-25 00:00:00 UTC">
+              <span>
+                25 Apr 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Pair Programming - Luxury or Necessity?
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I was recently contacted for advice on how to justify utilising pair programming on a project, as the client was very nervous about the benefits and was seeking some reassurances. It raised all sorts of questions, which I checked against my previous experiences to see if any empirical answers can be found as to the relative benefits.</p>
+
+<p>The very first question is at the heart of this issue is ask what an “agile project” means? To some “agile” means taking parts of the overall philosophy, to others it is embracing all elements. Often the hardest agile question to answer is to pair or not to pair? &nbsp;Over the last three years I have worked intermittently with a company that is agile in all senses and does pair programming, running five teams, each with up to six developers. We continually discuss how to improve productivity (velocity) and are always seeking ways to improve not only development performance but also the interactions with the more “waterfall” parts of the IT organisation, but interestingly we have never questioned whether pairing is justified or not, we just accept that is the way we should work.</p>
+
+<p>My next question is why pair program at all, as it seems, at least on the surface, to be expensive? To me the costs fall into two camps – firstly, and the easier to quantify is the cost of recruitment. Pairing requires not only technical skills but an ability to co-work with another each day and so selecting the right individuals is paramount and requires a good process which is time consuming to administer and you need to accept the ratio of acceptances to rejections will be low. But is this a cost of pairing or just something every software company should do to ensure quality staff? With pair programming you don’t have the luxury of just shunting someone in the corner and either giving them selective work or leaving them alone, as the person is working with someone else so a below par performance means at least 2 days work lost per day, and at best other staff not willing to work with the person or looking to move on. For me this expenditure is no more if you pair or not, getting recruitment right is a cost all good software companies accept as the returns in terms of better delivery significantly outweighs this cost. The second cost I guess is the really contentious one – are two developers working together more or less productive then working alone? As with the most basic development questions there is no empirical evidence to look to, so let’s consider the benefits. The very obvious is the adage “two heads are better than one” and no one can seriously question the benefit of at least bouncing ideas off others. But agile is more than this and one empirical measure you can put in place is the number of bugs founds post development deployment. If you aren’t pairing yet and want to try this then I recommend this as a very easy metric to put in place.</p>
+
+<p>The real killer benefit to me of pairing is that the code has to be well documented and easy to pick up as it is regularly worked on by different developers, and allied to refactoring with automated testing, keeps the code in very good state and avoids legacy code whereby nobody actually knows what the application does and cannot change for fear of breaking what currently works. I agree this can be achieved without pairing but it is a lot harder and you won’t actually know you’re not in that state until one of your key developers leaves. I view pairing as an investment to keep the application in a serviceable condition so that the business is not exposed, if you like, it can be thought of as a very reasonably priced risk mitigation cost.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/pair-programming-luxury-or-necessity';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/pre-summer-dev-newsletter-2-weeks-to-go/">Pre Summer Dev Newsletter (2 weeks to go)</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-15th-december-2014/">Unboxed Roundup: our links for w/c 15th December 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-1st-decemnber-2014/">Unboxed Roundup: our links for w/c 1st December 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/how-dot-voting-can-reveal-the-unexpected/">How dot voting can reveal the unexpected</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

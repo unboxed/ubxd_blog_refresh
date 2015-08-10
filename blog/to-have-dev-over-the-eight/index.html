@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>To have dev over the eight</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_to-have-dev-over-the-eight blog_to-have-dev-over-the-eight_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-07-25 13:30:00 UTC">
+              <span>
+                25 Jul 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            To have dev over the eight
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>markdown_checkboxes - <a href="https://twitter.com/cblunt">Chris B</a></h2>
+
+<p><a href="https://github.com/brightbit/markdown%5C_checkboxes">https://github.com/brightbit/markdown\_checkboxes</a></p>
+
+<p>I found this very handy little gem whilst developing an internal app
+ which might be useful for other projects. markdown_checkboxes renders
+ checkboxes from markdown, Github style, e.g.:</p>
+
+<ul>
+<li>[] Some task to do
+
+<ul>
+<li>[x] A task I&rsquo;ve done already</li>
+</ul></li>
+</ul>
+
+<p>It also lets you update the status of the checkboxes by clicking
+ through a simple PUT/PATCH request. There&rsquo;s <a href="http://brightbit.com/blog/2013/12/09/enhancing-markdown-rendering-with-the-markdown-checkboxes-gem/">more details on the announcement blog post</a></p>
+
+<h2>How RSpec stubs and mocks work - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="https://speakerdeck.com/samphippen/the-anatomy-of-a-mocked-call-rulu-2014">https://speakerdeck.com/samphippen/the-anatomy-of-a-mocked-call-rulu-2014</a></p>
+
+<p>This presentation by <a href="http://samphippen.com/">Sam Phippen</a> is an interesting take on the usual stubs and mocks presentation. Instead of providing arguments for (or against) a stubs and mocks approach to testing Sam instead tells us exactly how the relevant code from the <a href="https://github.com/rspec/rspec-mocks">rspec-mocks</a> library actually works. I quite like this sort of deep dive talk about the design decisions of the libraries we use day-in, day-out as often we treat them like black-boxes, but if we know how they work under-the-hood they&rsquo;ll surprise us less when we use them, and it might even unlock how to use them in a new way we hadn&rsquo;t considered before.</p>
+
+<h2>Design is hard and partitioning is hard - <a href="http://www.unboxedconsulting.com/people/patrick-vine">Patrick V</a></h2>
+
+<p><a href="https://www.facebook.com/notes/kent-beck/bits-clumps-and-just-right/792597974106402">https://www.facebook.com/notes/kent-beck/bits-clumps-and-just-right/792597974106402</a></p>
+
+<p>These are some thoughts on partitioning by <a href="http://www.threeriversinstitute.org/">Kent Beck</a>, which seem to make sense and could be useful to experiment with or to better understand what you might be doing already.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/to-have-dev-over-the-eight';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/how-do-i-make-them-more-self-organising/">How do I make my Agile Team more self-organising?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/five-tv-a-k-a-project-cape-town/">five.tv a.k.a project Cape Town</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-8th-december-2014/">Unboxed Roundup: our links for w/c 8th December 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-6th-april-2015/">Unboxed Roundup: our links for w/c 6th April 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

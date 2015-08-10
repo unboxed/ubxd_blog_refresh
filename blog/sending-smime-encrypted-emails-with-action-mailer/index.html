@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Sending S/MIME encrypted emails with Action Mailer</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_sending-smime-encrypted-emails-with-action-mailer blog_sending-smime-encrypted-emails-with-action-mailer_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Andrew White
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2015-01-26 01:50:00 UTC">
+              <span>
+                26 Jan 2015
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Sending S/MIME encrypted emails with Action Mailer
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Why send encrypted emails?</h2>
+
+<p>Most people are aware now that sending emails is somewhat akin to sending a postcard - pretty much everyone in the delivery chain is able to have a peek at your message. The only way to prevent this is to encrypt your message so that it appears as gobbledygook to anyone who tries to have a look. In addition to encrypting your email you&rsquo;ll also want to sign it as well to make sure that it hasn&rsquo;t been tampered with in transit.</p>
+
+<p>The de-facto standard for encrypting and signing emails is [S/MIME][1], which has been around for well over a decade now and has wide support in email clients - the exception being the Google Mail web client but it does work fine when accessing Google Mail via IMAP with a client that supports S/MIME.</p>
+
+<p>Support for S/MIME in Ruby comes as part of the OpenSSL standard library. It&rsquo;s very lightly documented but fortunately there&rsquo;s an [example of signing and encrypting][4] an email within the Ruby sample code.</p>
+
+<h2>Getting started</h2>
+
+<p>The technique we will be using to send our encrypted emails is a rarely used feature in Action Mailer called [interceptors][2]. This feature allows you to hook into the email delivery before the email is sent, but after the email has been generated. The definition is straightforward with a single singleton method called <code>delivering_email</code>, e.g:</p>
+
+<p>class MessageInterceptor
+ def self.delivering_email(message)
+ message.to = [&rsquo;<a href="mailto:test.user@ubxd.com">test.user@ubxd.com</a>&rsquo;]
+ end
+ end</p>
+
+<p>ActionMailer::Base.register_interceptor(MessageInterceptor)</p>
+
+<p>There are some nifty tricks that can be performed using this feature, one of which is inlining CSS for HTML emails - see [premailer-rails][3] for more information on how to do this.</p>
+
+<h2>Implementing the delivering_email method</h2>
+
+<p>Because of the way interceptors are implemented we have to mutate the message that&rsquo;s passed to our message, therefore we&rsquo;ll create an encrypted version of the message and
+ copy the body back onto the original message along with certain headers. The basic outline looks like this:</p>
+
+<p>require &lsquo;openssl&rsquo;</p>
+
+<p>class MessageEncryptor
+ class &gt; Notifications.send_invoice(order).deliver</p>
+
+<p>Assuming that all the certificates are in place you should receive an email in short order that is both signed and encrypted. If you&rsquo;re having problems it&rsquo;s almost certainly a mismatch with the certificates - either the trust level of a self-signed certificate isn&rsquo;t high enough or the common name doesn&rsquo;t match the email address.</p>
+
+<p>Here&rsquo;s the complete class:</p>
+
+<p>require &#39;openssl&rsquo;</p>
+
+<p>class MessageEncryptor
+ class</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/sending-smime-encrypted-emails-with-action-mailer';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-29th-june-2015/">Unboxed Roundup: Our links for w/c 29th June 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/new-version-of-planning-poker-for-iphone-ipod-touch-and-ipad/">New version of Planning Poker for iPhone, iPod touch and iPad</a></li>
+
+            <li class="blog-related__links"><a href="/blog/something-wicked-this-way-comes/">Something wicked this way comes</a></li>
+
+            <li class="blog-related__links"><a href="/blog/happiness-and-motivation-at-unboxed/">Happiness and motivation</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

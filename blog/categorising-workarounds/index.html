@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Categorising Workarounds</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_categorising-workarounds blog_categorising-workarounds_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Austin Fagan
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-11-15 00:00:00 UTC">
+              <span>
+                15 Nov 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Categorising Workarounds
+          </h1>
+
+          <div class="blog-article__content">
+            <p>You&rsquo;ve just done a new release. The Sales team find when they take a new customer&rsquo;s details and hit &lsquo;save&rsquo; they don&rsquo;t end up on the place new order page, so they can&rsquo;t make a sale! Which means they can&rsquo;t get commission. Which means they are going to stomp down your door, like now!</p>
+
+<p>Heads are going to roll if the issue isn&rsquo;t resolved but after six hours there&rsquo;s a workaround discovered. Everyone breaths a sigh of relief, if there&rsquo;s a workaround it doesn&rsquo;t have to be fixed anytime soon, right? Maybe, maybe not! Depends on the kind of workaround.</p>
+
+<p>Its worthwhile to categorise the workarounds that need to be played in your business. This helps when it comes to prioritising issues. Here&rsquo;s a few classifications I&rsquo;ve used when categorising workarounds.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Normal Manual</strong>  </p>
+
+<p>The workaround involves little effort. Examples of this could be a datafix or a message replay that requires little investigation. These are ideal candidates for automation. The number of orders, customers affected and length of time taken should be recorded.</p>
+
+<p><strong>Crazy Manual</strong>  </p>
+
+<p>The workaround is time-consuming and painful. From the the support team&rsquo;s perspective issues with a crazy manual workaround need to be fixed as soon as dev resource can be allocated. If the team are using a task board they should be setting limits on the number of these in play. Details should be recorded as per a normal manual workaround.  </p>
+
+<p><strong>Automated</strong>  </p>
+
+<p>Both the identification of affected orders and the corrective action are scripted and require no manual intervention from the support team.&nbsp; The more of these in play the flakier the system.</p>
+
+<p><strong>External Action</strong>  </p>
+
+<p>The onus to take corrective action lies outside the team.</p>
+
+<p><strong>No known workaround</strong>  </p>
+
+<p>If these are customer-affecting they need to be fixed as soon as possible.&nbsp;</p>
+
+<p><strong>No workaround needed</strong>  </p>
+
+<p>There&rsquo;s an issue but we don&rsquo;t need to take corrective action.</p>
+
+<p>If the support team use a task-board as their bug-board (aka The Wall of Lame) the different types of workaround in play should be represented with a different colour of sticker and put on the bug card. This will make it easier to impose limits on the number of workarounds the support team are dealing with. If the task board is full of crazy manual stickers the team is about to implode under the strain. If the board is full of automated stickers the devs know the system isn&rsquo;t as robust as it should be.&nbsp;</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/categorising-workarounds';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/road-trip/">Road Trip</a></li>
+
+            <li class="blog-related__links"><a href="/blog/kanban-in-the-cape-part-2/">Kanban in the Cape - Part 2</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-agile-lego-village/">The Agile LEGO village</a></li>
+
+            <li class="blog-related__links"><a href="/blog/digital-leaders-discover-the-new-rules-of-outsourcing-agile-teams-session/">Digital leaders discover the 'new rules' of outsourcing - Agile Teams session</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

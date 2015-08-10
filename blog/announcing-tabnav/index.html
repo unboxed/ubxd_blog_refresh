@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Announcing: Tabnav</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_announcing-tabnav blog_announcing-tabnav_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Alex Tomlins
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-07-30 13:00:00 UTC">
+              <span>
+                30 Jul 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Announcing: Tabnav
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I&rsquo;ve just released a new gem called <a href="http://rubygems.org/gems/tabnav">Tabnav</a>. It&rsquo;s a Rails helper for generating navbars. It allows you to specify highlighting rules for each nav item in a clean way without lots of conditionals in your views.</p>
+
+<p>It is loosely based on the widget from <a href="http://github.com/paolodona/rails-widgets">rails-widgets</a>, and uses a similar DSL. You may ask why I bothered writing this if something similar already exists. Well, simply, there are some things about the rails-widgets implementation that I really don&rsquo;t like. Specifically, it hijacks <tt>javascript<em>include</em>tag</tt> to insert it&rsquo;s own javascript. This sort of thing should be explicit. Also the markup it generates could be cleaner - it has some unnecessary extra tags in it, and repeated class names. I created this to clean up these problems, and add new features. I&rsquo;ve added support for custom partials for tab contents, and I plan to add support for nested menus in the next version.</p>
+
+<p>So how does it work? Well, that&rsquo;s easiest to show with some examples&hellip;</p>
+
+<h3>A Basic Navbar</h3>
+
+<p>In the view:</p>
+
+<p><script src="http://gist.github.com/498861.js?file=gistfile1.erb"></script><noscript>
+<pre><code>&lt;%
+  render<em>tabnav do |n|
+    n.add</em>tab do |t|
+      t.named &quot;Home&quot;
+      t.links<em>to root</em>path
+      t.highlights<em>on :controller =&gt; :home, :action =&gt; :index
+    end
+    n.add</em>tab do |t|
+      t.named &quot;Froobles&quot;
+      t.links<em>to froobles</em>path
+      t.highlights_on :controller =&gt; :froobles
+    end
+  end
+%&gt;</code></pre>
+</noscript></p>
+
+<p>When rendering the home page</p>
+
+<p><script src="http://gist.github.com/498861.js?file=gistfile2.html"></script><noscript>
+<pre><code>&lt;ul&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/froobles&quot;&gt;Froobles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</noscript></p>
+
+<p>It allows lots of control over the generated markup:</p>
+
+<p>In the view:</p>
+
+<p><script src="http://gist.github.com/498861.js?file=gistfile3.erb"></script><noscript>
+<pre><code>&lt;%
+  render<em>tabnav :id =&gt; &quot;main</em>navigation&quot;, :class =&gt; &quot;clearfix&quot; do |n|
+    n.add<em>tab :class =&gt; &quot;home</em>tab&quot; do |t|
+      t.named &quot;Home&quot;
+      t.links<em>to root</em>path
+      t.highlights<em>on :controller =&gt; :home, :action =&gt; :index
+    end
+    n.add</em>tab :class =&gt; &quot;heading&quot; do |t|
+      t.named &quot;Froobles Heading&quot;
+      t.highlights<em>on :controller =&gt; :froobles
+    end
+    n.add</em>tab do |t|
+      t.named &quot;Froobles&quot;
+      t.links<em>to froobles</em>path, :target =&gt; &quot;<em>blank&quot;, :rel =&gt; &quot;<a href="http://foo.bar/">http://foo.bar/</a>&quot;
+      t.highlights</em>on :controller =&gt; :froobles, :action =&gt; :index
+    end
+  end
+%&gt;
+</code></pre>
+</noscript></p>
+
+<p>On froobles/index outputs:</p>
+
+<p><script src="http://gist.github.com/498861.js?file=gistfile4.html"></script><noscript>
+<pre><code>&lt;ul id=&quot;main<em>navigation&quot; class=&quot;clearfix&quot;&gt;
+  &lt;li class=&quot;home</em>tab&quot;&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;heading active&quot;&gt;&lt;span&gt;Froobles Heading&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/froobles&quot; target=&quot;_blank&quot; rel=&quot;<a href="http://foo.bar/%22&amp;gt;Froobles&amp;lt;/a&amp;gt;&amp;lt;/li">http://foo.bar/&quot;&amp;gt;Froobles&amp;lt;/a&amp;gt;&amp;lt;/li</a>&gt;
+&lt;/ul&gt;
+</code></pre>
+</noscript></p>
+
+<p>and if that&rsquo;s not enough for you, you can even specify your own partial to be used to render the tab contents.</p>
+
+<p>Check out the <a href="http://github.com/unboxed/tabnav">github project page</a> for full documentation etc. For feature requests or bug reports use the <a href="http://github.com/unboxed/tabnav/issues">github issue tracker</a>.</p>
+
+<p>Enjoy.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/announcing-tabnav';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/this-week-in-ruby-19th-october/">This Week in Ruby, 19th October</a></li>
+
+            <li class="blog-related__links"><a href="/blog/waterfall-syndrome/">Waterfall Syndrome</a></li>
+
+            <li class="blog-related__links"><a href="/blog/a-brand-spanking-new-website/">A Brand Spanking New Website!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/three-common-misconceptions-about-agile-in-the-public-sector/">Three common misconceptions about Agile in the public sector </a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

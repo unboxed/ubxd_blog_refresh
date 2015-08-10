@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Boomboxed</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_boomboxed blog_boomboxed_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Robert Pataki
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-09-21 15:04:00 UTC">
+              <span>
+                21 Sep 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Boomboxed
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Bender thought it&rsquo;d be funny to pick me, so here is the news for this week.</p>
+
+<h2>A funny quote (TTT)</h2>
+
+<p>Just a funny quote I ran across on the internets:</p>
+
+<blockquote>
+<p>Some people, when confronted with a problem, think &ldquo;I know, I&rsquo;ll use multithreading.&rdquo; Now have they problems two.</p>
+</blockquote>
+
+<h2>Explaining Focused Controller (Murray S)</h2>
+
+<p>Jon Leighton released a gem called focused controller a while back. With FocusedController you have a single class per action and use inheritance to share behaviour instead of doing everything in one class and using before_filters with :only / :except. He gave a talk about his initial ideas for it at RailsBerry <a href="http://www.youtube.com/watch?v=C7KdY2M5l5Q&amp;feature=BFa&amp;list=PL036AC827C6995617">http://www.youtube.com/watch?v=C7KdY2M5l5Q&amp;feature=BFa&amp;list=PL036AC827C6995617</a>. This article accompanies the 1.0 release of the gem and gives a good introduction to why you might want to try it out (he admits that the talk is a bit ranty and focuses on the wrong aspects). Anyway, I want to introduce people to it because I think it looks really interesting and I&rsquo;m keen to try it out on our next new project.</p>
+
+<p><strong>Article:</strong>  </p>
+
+<p><a href="http://jonathanleighton.com/articles/2012/explaining-focused-controller/">http://jonathanleighton.com/articles/2012/explaining-focused-controller/</a></p>
+
+<h2>Flick Scroll (Rob P)</h2>
+
+<p>Apparently Simurai is not a developer, he just uses jQuery and other libraries (well, at least he said that). From time to time he comes up with some trivial but brilliant solution to problems we don&rsquo;t even realise they are problems until we see a great solution to them. Get your phones and tablets and give it a go!</p>
+
+<p><strong>Article:</strong>  </p>
+
+<p><a href="http://simurai.com/blog/2012/09/13/flick-scrolling/">http://simurai.com/blog/2012/09/13/flick-scrolling/</a></p>
+
+<p><strong>Demos:</strong>  </p>
+
+<p><a href="http://simurai.com/blog/2012/09/13/flick-scrolling/">http://simurai.com/blog/2012/09/13/flick-scrolling/</a>  </p>
+
+<p><a href="http://archive.simurai.com/lab/flick-scroll/book/">http://archive.simurai.com/lab/flick-scroll/book/</a></p>
+
+<h2>XOR Cursor patent (Matt P)</h2>
+
+<p>I generally have a disdain for software patents. One of the most well known ones in the developer community is the XOR cursor patent <a href="http://www.google.com/patents/US4197590">http://www.google.com/patents/US4197590</a> awarded to CadTrak in 1980. Lesser known but arguably wider-impacting as the series of software patents relating to password management.</p>
+
+<p><strong>Read for yourself at:</strong>  </p>
+
+<p><a href="https://xato.net/passwords/want-to-block-common-passwords-sorry-that-is-patented/">https://xato.net/passwords/want-to-block-common-passwords-sorry-that-is-patented/</a></p>
+
+<h2>USAToday.com Beta (Rob P)</h2>
+
+<p>The now 30 years old USA Today revamped their newspaper recently, and very soon they will release their new site. The site was designed and built by Fantasy Interactive. They haven&rsquo;t finished with everything, but there is a teaser demo, that actually looks pretty impressive with those sleek turning boxes and flipping pages.</p>
+
+<p><strong>Teaser video:</strong>  </p>
+
+<p><a href="http://www.facebook.com/video/video.php?v=10151250080289923&amp;saved">http://www.facebook.com/video/video.php?v=10151250080289923&amp;saved</a></p>
+
+<p><strong>USAToday Beta:</strong>  </p>
+
+<p><a href="http://beta.usatoday.com/">http://beta.usatoday.com/</a></p>
+
+<h2>S3 Pricing chart (Pawel J)</h2>
+
+<p>Amazon S3 pricing calculator (according to its author Amazon&rsquo;s solution is ass LOL):</p>
+
+<p><a href="http://s3pricing.herokuapp.com/">http://s3pricing.herokuapp.com/</a></p>
+
+<h2>Redis tutorial (Pawel J)</h2>
+
+<p>A redis tutorial you can get through before your tea is done:  </p>
+
+<p><a href="http://simonwillison.net/static/2010/redis-tutorial/">http://simonwillison.net/static/2010/redis-tutorial/</a></p>
+
+<h2>What the new iPhone 5 and iOS 6 promises for HTML5 developers (Rob P)</h2>
+
+<p>This is a great in-depth article about the features of the new iPhone 5. Definitely recommended. </p>
+
+<p><strong>Article:</strong>  </p>
+
+<p><a href="http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers">http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/boomboxed';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/sending-smime-encrypted-emails-with-action-mailer/">Sending S/MIME encrypted emails with Action Mailer</a></li>
+
+            <li class="blog-related__links"><a href="/blog/what-car-is-your-website-2/">What car is your website?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-1st-decemnber-2014/">Unboxed Roundup: our links for w/c 1st December 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/developer-newsletter-of-hope-1-feb-2013/">A New Hope</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

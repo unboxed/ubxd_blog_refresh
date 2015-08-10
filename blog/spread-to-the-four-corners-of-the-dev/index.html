@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Spread to the four corners of the dev</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_spread-to-the-four-corners-of-the-dev blog_spread-to-the-four-corners-of-the-dev_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-06-27 12:30:00 UTC">
+              <span>
+                27 Jun 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Spread to the four corners of the dev
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Understanding strong parameters - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://patshaughnessy.net/2014/6/16/a-rule-of-thumb-for-strong-parameters">http://patshaughnessy.net/2014/6/16/a-rule-of-thumb-for-strong-parameters</a></p>
+
+<p>Rails 4 has been around for a while now, so we should all be pretty familiar with the ins-and-outs of the &ldquo;strong parameters&rdquo; approach to avoiding mass-assignment security problems. However, I know I can&rsquo;t be the only one that finds it a little confusing when to permit params that are structured in a more complex manner, so it&rsquo;s really good to have this rule of thumb from <a href="http://patshaughnessy.net">Pat Shaugnessy</a>, even if it is pretty silly:</p>
+
+<blockquote>
+<p>_To Permit a Hash, Pass an Array_</p>
+
+<p>_To Permit an Array, Pass a Hash_</p>
+</blockquote>
+
+<p>The blog also goes into some of the detail of how the parameter permission code works, so there&rsquo;s something for everyone. I must admit I found it surprising that it&rsquo;s not the params object itself that complains, but that <a href="https://github.com/rails/rails/blob/master/activemodel/lib/active_model/forbidden_attributes_protection.rb#L19-24"><code>ActiveModel</code> instances that will raise the error</a>.</p>
+
+<h2><code>git</code>, open-source projects, &amp; pull requests - <a href="http://www.unboxedconsutling.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://blog.spreedly.com/2014/06/24/merge-pull-request-considered-harmful/">http://blog.spreedly.com/2014/06/24/merge-pull-request-considered-harmful/</a></p>
+
+<p>I&rsquo;ve seen quite a few open source maintainers complaining about the pull-request model in the past but none have explained exactly why. This is a really good article from the point of view of a maintainer of <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> ( <a href="https://github.com/ntalbott">Nathanial Talbott</a>) that goes into why they don&rsquo;t really like pull-requests, but also how they deal with them when things do go awry. There&rsquo;s lots of really good stuff in here:</p>
+
+<ul>
+<li>tips for using <code>git</code> subcommands you might not be aware of</li>
+<li>how to contribute to an OSS project</li>
+<li>how to maintain one if you have lots of dead pull requests</li>
+</ul>
+
+<p>Something for everyone!</p>
+
+<h2>jQuery plugin: input masks - <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom S</a></h2>
+
+<p><a href="http://igorescobar.github.io/jQuery-Mask-Plugin/">jQuery Mask Plugin</a>: a nice plugin for input fields, it can be used for masking and binding events for completion/change/key press. I have used this in two circumstances so far, one for a postcode input, and the other for day-month-year text fields.</p>
+
+<p>Text fields are the <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html#memorable-dates">recommended option for users to input dates</a>, however, I find that having to tab to the next field is just too much work, so you should make the browser do it for you instead! This is super easy to do. Assume you have 3 input fields; one for the day, another for the month and lastly one for the year. Now you can use something similar to the following snippet of code:</p>
+
+<p>var day = $(&rsquo;#date_day&rsquo;),
+ month = $(&rsquo;#date_month&rsquo;),
+ year = $(&rsquo;#date_year&rsquo;);</p>
+
+<p>day.mask(&lsquo;AA&rsquo;, {
+ onComplete: function () {
+ month.focus();
+ }
+ });</p>
+
+<p>month.mask(&#39;AA&rsquo;, {
+ onComplete: function () {
+ year.focus();
+ }
+ });</p>
+
+<p>Voilà.</p>
+
+<p>Moving onto our postcodes example, we can mask UK postcodes in any of the following formats:</p>
+
+<ul>
+<li><code>AAAA AAA</code>
+
+<ul>
+<li><code>AAA AAA</code></li>
+<li><code>AA AAA</code></li>
+</ul></li>
+</ul>
+
+<p>In order to do this using the jQuery plugin, the following snippet seems to work well: <code>$(&#39;#postcode&#39;).mask(&#39;AAAA AAA&#39;, { reverse: true });</code>.</p>
+
+<p>My only comment about this plugin, however, is when you go to select all characters, e.g. using the keyboard shortcut.<strong>Sometimes</strong> it breaks out of the selection to move the cursor to after the first character. Weird.</p>
+
+<h2>The Simpsons in CSS - <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom S</a></h2>
+
+<p>Some Simpsons characters made purely from CSS: <a href="http://pattle.github.io/simpsons-in-css/">http://pattle.github.io/simpsons-in-css/</a></p>
+
+<h2>Functional Composability - <a href="http://www.unboxedconsulting.com/people/patrick-vine">Patrick V</a></h2>
+
+<p><a href="https://michaelfeathers.silvrback.com/literate-chains-for-functional-programming">https://michaelfeathers.silvrback.com/literate-chains-for-functional-programming</a></p>
+
+<p>I always enjoy Michael Feather&rsquo;s posts as they are generally
+ practical and interesting. This one is about functional composability and
+ is an interesting idea for increasing readability.</p>
+
+<h2>ActiveRecord Spec Helper - <a href="http://www.unboxedconsulting.com/people/patrick-vine">Patrick V</a></h2>
+
+<p><a href="http://articles.coreyhaines.com/posts/active-record-spec-helper/">http://articles.coreyhaines.com/posts/active-record-spec-helper/</a></p>
+
+<p>Corey Haines&rsquo; <code>active\_record\_spec\_helper</code> is
+ helpful in speeding up your TDD cycle for Active Record objects. We&rsquo;ve
+ been using it when developing on Rails 2 and it is a joy.</p>
+
+<h2>A selection of links inspired by <a href="http://www.frontendlondon.co.uk/">FEL</a> - <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom S</a></h2>
+
+<p>I went to the <a href="http://lanyrd.com/2014/front-end-london-june/">June Front End London meetup</a> last night, and came away full of new ideas and things to look into. I&rsquo;ve collected some of them below:</p>
+
+<blockquote>
+<h3>Top Codepens of 2013</h3>
+
+<p><a href="http://codepen.io/2013/popular/">http://codepen.io/2013/popular/</a></p>
+
+<p>Great selection of what the combination of HTML, CSS and JS can do. Far too many to goggle at.</p>
+
+<h3>Effeckt.css</h3>
+
+<p><a href="http://h5bp.github.io/Effeckt.css">http://h5bp.github.io/Effeckt.css</a></p>
+
+<p>A library for performant CSS transitions and animations , still in development.</p>
+
+<h3>Can haz ur cursor?</h3>
+
+<p><a href="http://simurai.com/projects/cursor-monster/">http://simurai.com/projects/cursor-monster/</a></p>
+
+<p>Feed the monster your cursor.</p>
+
+<h3>We Are Data (Watchdogs)</h3>
+
+<p><a href="http://wearedata.watchdogs.com/start.php?locale=en-EN&amp;city=london">http://wearedata.watchdogs.com/</a></p>
+
+<p>Visualise a bunch of open data on an interactive map:</p>
+
+<p><img alt="image" src="https://dl.dropboxusercontent.com/u/2217931/dev-newsletter-wearedata.png" /></p>
+
+<ul>
+<li>Social posts (tweets/instagram/foursquare/flickr)</li>
+<li>CCTV cameras, traffic lights, ATMs</li>
+<li>London Underground stations, positions of tubes</li>
+</ul>
+</blockquote>
+
+<h2>The Art of Organizational Manipulation - <a href="http://www.unboxedconsulting.com/people/karl-entwistle">Karl</a></h2>
+
+<p><a href="https://www.youtube.com/watch?v=OTCuYzAw31Y">https://www.youtube.com/watch?v=OTCuYzAw31Y</a></p>
+
+<p><a href="http://www.red-bean.com/fitz/">Brian Fitzpatrick</a> and <a href="http://www.red-bean.com/sussman/">Ben Collins-Sussman</a> help you understand the human element of navigating companies both big and small. I found the criteria listed at the beginning of the video, ‘the perfect company’, particularly interesting.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/spread-to-the-four-corners-of-the-dev';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/dev_toolboxpack/">dev_toolbox.pack()</a></li>
+
+            <li class="blog-related__links"><a href="/blog/five-cardinal-sins-of-agile-that-the-public-sector-can-learn-from/">Five Cardinal Sins of Agile that the public sector can learn from</a></li>
+
+            <li class="blog-related__links"><a href="/blog/recipe-for-a-cape-town-office/">Recipe for a Cape Town office</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-13th-april-2015/">Unboxed Roundup: our links for w/c 13th April 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

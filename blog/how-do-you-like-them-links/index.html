@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>How do you like them links?!</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_how-do-you-like-them-links blog_how-do-you-like-them-links_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-10-25 10:33:00 UTC">
+              <span>
+                25 Oct 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            How do you like them links?!
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Getting to know pluck and select - MattP</h2>
+
+<p><a href="http://gavinmiller.io/2013/getting-to-know-pluck-and-select/">http://gavinmiller.io/2013/getting-to-know-pluck-and-select/</a></p>
+
+<p><code>ActiveRecord#select</code> is well known, and added in version rails 3.2 is its similar cousin <code>pluck</code>. How do the two compare? This blog goes into some detail, but the tl;dr version is that <code>pluck</code> is more efficient if you&rsquo;re not using the whole object.</p>
+
+<h2>Upgrading to rails 4 - MattP</h2>
+
+<p><a href="https://github.com/alindeman/upgradingtorails4">https://github.com/alindeman/upgradingtorails4</a></p>
+
+<p>This book, originally written by Andy Lindeman, has now been released under CC BY 3.0. It covers the deprecations, new features and common upgrading scenarios facing developers upgrading from Rails 3 to Rails 4.</p>
+
+<h2>RVM 2? - MattP</h2>
+
+<p><a href="https://www.bountysource.com/fundraisers/489">https://www.bountysource.com/fundraisers/489</a></p>
+
+<p>RVM is 5 years old. It started off being written in shell - and it still is now. It now amounts to 20k lines of code. This fundraiser is to allow the development of a native-ruby replacement.</p>
+
+<h2>Ruby&rsquo;s === operator - MattP</h2>
+
+<p><a href="https://coderwall.com/p/53xawg">https://coderwall.com/p/53xawg</a></p>
+
+<p>Who knew that ruby had a === operator? it&rsquo;s not like the triple-equals operator of JavaScript or PHP - instead of identity, this ruby operator can be considered to be a kind of match operator. What&rsquo;s meant by this is up to the object class to decide, but there are a couple of examples in the article.</p>
+
+<h2>Software Archaeology Conference - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://www.ticosa.org/">The First International Conference on Software Archaeology</a> looks like an interesting conference coming to London early next year. This appeals to me because: </p>
+
+<ol>
+<li>I generally refer to digging into external code as archaeology, 
+
+<ol>
+<li>It&rsquo;s not a conference about a specific technology; it&rsquo;s good to be exposed to approaches used by other people working with other tech-stacks and in different fields,</li>
+<li>One of my close friends is an<em>actual</em> archaeologist and I&rsquo;d like to blow his mind by saying I&rsquo;m going to an archaeology conference</li>
+</ol></li>
+</ol>
+
+<h2>Better BDD with RSpec Best Practice - <a href="http://www.unboxedconsulting.com/people/richard-stobart">Richard Stobart</a></h2>
+
+<p>The <a href="http://betterspecs.org">Better Specs</a> site gives us a handy best practice set of rules for writing better RSpec that concentrates on the &ldquo;How&rdquo; rather than the &ldquo;What&rdquo;. It&rsquo;s a nicely presented site. We would be interested in whether you agree with all their best practices.</p>
+
+<h2>ES 6 features and their impact on existing JS frameworks - Veronika Hillebrand</h2>
+
+<p><a href="http://bengillies.tiddlyspace.com/bags/bengillies_public/tiddlers/The%20Evolution%20of%20Web%20Frameworks_%20ES6%20and%20Beyond.pdf">Here are the slides for an interesting talk</a> on the upcoming ES6 additions. Sadly you&rsquo;ll miss out on very funny grumpy delivery of the live talk, but the slides are full of exciting features that make you eagerly anticipate the advent of ES6 until you realise you will never be able to fully embrace ES6 because you have to support legacy browsers. </p>
+
+<p>This talk was part of a JavaScript meet up called <a href="http://www.meetup.com/JSChannel-London/">jsChannel</a></p>
+
+<h2>Standing &gt; Sitting - Jim Riordan</h2>
+
+<p>Much has been said before about the drawbacks of sitting down all day - but <a href="http://www.bbc.co.uk/news/magazine-24532996">here are the results of an interesting study</a> undertaken as part of Michael Mosley&rsquo;s &ldquo;Trust Me I&rsquo;m A Doctor&rdquo; series. You can <a href="http://www.bbc.co.uk/iplayer/episode/b03dwmf1/Trust_Me_Im_A_Doctor_Episode_2/">watch the show itself</a> while it&rsquo;s still available on iPlayer.</p>
+
+<p>As for actually practising this at work, it&rsquo;s true that purpose-built standup desks can be prohibitively expensive, but there are plenty of DIY routes - it turns out Java books are actually good for something!</p>
+
+<h2>The Fourth Dimension - Karl Entwistle</h2>
+
+<p>By now we&rsquo;re all pretty familiar with the first three dimensions but lets try to <a href="http://www.youtube.com/watch?v=UnURElCzGc0">conceptualise a fourth dimension with Carl Sagan</a>.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/how-do-you-like-them-links';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-23rd-february-2015/">Unboxed Roundup: our links for w/c 23rd February 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-90-days-to-transform-a-stuck-digital-product-that-has-to-succeed-9c47e9a9-2a9b-4bf5-83ab-b96fe13e1908/">Webinar: 90 days to transform a ‘stuck’ digital product that HAS to succeed...</a></li>
+
+            <li class="blog-related__links"><a href="/blog/filling-gaps/">Filling Gaps</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unstick-your-digital-products/">Unstick your digital products</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

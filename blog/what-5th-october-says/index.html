@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>What 5th October says</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_what-5th-october-says blog_what-5th-october-says_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Grant Speelman
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-05 15:00:00 UTC">
+              <span>
+                 5 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            What 5th October says
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>ActiveSupport Method Of The Week : <a href="http://as.rubyonrails.org/classes/Enumerable.html#M000498">group_by</a></h2>
+
+<p>Collect an enumerable into sets, grouped by the result of a block. Useful, for example, for grouping records by date.
+ Example:</p>
+
+<p>latest_transcripts.group_by(&amp;:day).each do |day, transcripts|
+ p &ldquo;#{day} -&gt; #{transcripts.map(&amp;:class).join(&rsquo;, &rsquo;)}&rdquo;
+ end
+ &ldquo;2006-03-01 -&gt; Transcript&rdquo;
+ &ldquo;2006-02-28 -&gt; Transcript&rdquo;
+ &ldquo;2006-02-27 -&gt; Transcript, Transcript&rdquo;
+ &ldquo;2006-02-26 -&gt; Transcript, Transcript&rdquo;
+ &ldquo;2006-02-25 -&gt; Transcript&rdquo;
+ &ldquo;2006-02-24 -&gt; Transcript, Transcript&rdquo;
+ &ldquo;2006-02-23 -&gt; Transcript&rdquo;</p>
+
+<h1>Soundcloud</h1>
+
+<p>A good writeup from Soundcloud about how they grew their stack to cope with demand as and when they needed to. Rather than going for a super scalable solution from the outset, they iterated on their app to add scalability as they went. I think it&rsquo;s a nice continuation of the Songkick article from last week about not over testing in your automated build. It&rsquo;s all about pragmatism.</p>
+
+<p><a href="http://backstage.soundcloud.com/2012/08/evolution-of-soundclouds-architecture/">http://backstage.soundcloud.com/2012/08/evolution-of-soundclouds-architecture/</a></p>
+
+<h1>Caltrava is a new open source JavaScript-based</h1>
+
+<p>Caltrava is a new open source JavaScript-based framework for developing cross-platform mobile applications. It&rsquo;s been built by a couple of Thoughtworkers. I think it looks rather promising&hellip;<a href="http://overwatering.org/blog/2012/10/announcing-calatrava/">have a look and decide for yourself:</a></p>
+
+<h1>Follow snoopdogg on Instagram</h1>
+
+<p><a href="http://instagram.com/p/QZdeooS82k/">why you should follow snoopdogg on Instagram</a></p>
+
+<h1>Wait, DevTools could do THAT?</h1>
+
+<p><a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">tips and tricks for performance minded&hellip;</a></p>
+
+<h1>Fontier extension for Chrome (Robert Pataki)</h1>
+
+<p>Everything is about the responsive web these days. When testing em and percentage based responsive websites I found it quite annoying that changing the default font size in Chrome is an annoyingly click-and-scroll-heavy task.
+ I created Fontier that I used myself for a couple of weeks now, but I couldn&rsquo;t put it on the Google Web Store, as it used the experimental API. Google did a sneaky Chrome update the other day, and bless them - they moved the fontSettings from the experimental package to the core package!</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/fontier/dkbamaalakfhckcidgiigdinhcncaeae">Check out my first Chrome extension on the Chrome Web Store, and give a good test to those responsive grids :)</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/what-5th-october-says';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/question-what-do-wags-dutch-total-football-and-agile-have-to-teach-us-about-effective-software-development-and-delivery/">Question: What do WAGs, Dutch "total" football, and Agile have to teach us about effective software development and delivery?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/innovation-days-developing-in-meteor/">Innovation days - developing in Meteor</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-the-newsletter-almost-became-purple/">The Week The Newsletter Almost Became Purple</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-in-dev/">The Week In Dev</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

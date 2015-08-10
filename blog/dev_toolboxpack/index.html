@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>dev_toolbox.pack()</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_dev_toolboxpack blog_dev_toolboxpack_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Tom Sabin
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-05-20 11:58:00 UTC">
+              <span>
+                20 May 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            dev_toolbox.pack()
+          </h1>
+
+          <div class="blog-article__content">
+            <p><a href="http://www.unboxedconsulting.com/people/chris-carter">Chris C</a> and I recently attended a workshop at jQuery 2014 to learn more about a <a href="http://presentboldly.com/appendtotraining/web-developers-toolbox-jquery-uk">web developer&rsquo;s toolbox</a>, lead by <a href="https://twitter.com/jakerella">Jordan Kasper</a>. Predominantly this workshop taught us <a href="http://gruntjs.com/">Grunt</a> and the many plugins that exist. Grunt is a JavaScript task runner which allows us to automate numerous tasks that would otherwise be cumbersome to repeat, repeat<em>and</em> repeat during development or deployment.</p>
+
+<p>In Ruby we have Rake, and therefore in JavaScript we have Grunt. But comparing the two is difficult as Grunt relies purely on plugins. Tasks are built up using <a href="http://gruntjs.com/plugins">the numerous available plugins</a> to create the best workflow for you (and your team). Here is a very simple example that uses <a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a> and <a href="http://livereload.com/">LiveReload</a> to refresh the browser when any <code>.html</code> files are changed:</p>
+
+<p>module.exports = function (grunt) {
+ grunt.loadNpmTasks(&ldquo;grunt-contrib-watch&rdquo;);</p>
+
+<p>grunt.initConfig({
+ watch: {
+ html: {
+ files: &ldquo;*.html&rdquo;,
+ options: {
+ livereload: true
+ }
+ }
+ }
+ });</p>
+
+<p>grunt.registerTask( &ldquo;default&rdquo;, [&ldquo;watch:html&rdquo;] );
+ };</p>
+
+<p>It&rsquo;s worth mentioning that any packages that start with <code>grunt-contrib</code> are officially maintained by the team behind Grunt. Their documentation is sound and they provide useful examples to get you started.</p>
+
+<p>We also took a look over JSLint and JSHint; two tools to check JavaScript code quality. <a href="http://www.jshint.com/about/">JSHint</a> was the preferred one in our workshop because it meant we could be more flexible with our rules. These tools exist to prevent one of the biggest bugbears with JavaScript: forgetting one semi-colon in your code might consequently break all the things.</p>
+
+<p>Now here&rsquo;s a question for you; do you think JavaScript code is ugly or beautiful? If you think the latter, then lets make it ugly with <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a>. If you thought the former, then we&rsquo;ll make it even uglier, also with <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a>. There is a reason to be using this tool however as it concatenates, minifies and consequently reduces the file size of your JavaScripts, so that it can be sent over the interwebs quicker. Automate it with <a href="https://github.com/gruntjs/grunt-contrib-uglify"><code>grunt-contrib-uglify</code></a>.</p>
+
+<p><a href="http://bower.io/">Bower</a> was another tool introduced to us. It&rsquo;s a package manager, installed by a package manager, to manage other packages. The only requirement is just a <code>bower.json</code> file to specify what packages you want installed. It&rsquo;s a great way to manage your dependencies such as Underscore, jQuery, D3, etc. in your project.</p>
+
+<p>The final thing on the workshop agenda was <a href="http://qunitjs.com/">QUnit</a>, jQuery&rsquo;s take on JavaScript unit testing. The framework uses PhantomJS, a headless browser, so it&rsquo;s pretty nippy. Automate it with <a href="https://github.com/gruntjs/grunt-contrib-qunit"><code>grunt-contrib-qunit</code></a>.</p>
+
+<p>At the conference, the day after this workshop, I attended a talk by <a href="http://twitter.com/andismith">Andi Smith</a>. It was titled &rsquo;<a href="http://www.andismith.com/blog/2014/05/the-perfect-workflow/">Searching for the Perfect Workflow</a>&rsquo;. It&rsquo;s almost impossible to have a one-size-fits-all workflow for every project, every team member. Instead, Andi Smith provided numerous useful tips and tricks about how to improve your workflow:</p>
+
+<ul>
+<li><a href="https://github.com/addyosmani/grunt-uncss">grunt-uncss</a>: remove any unused CSS from your stylesheets.</li>
+<li><a href="https://github.com/sindresorhus/grunt-concurrent">grunt-concurrent</a>: speed up your build time by running tasks concurrently. Obviously you&rsquo;d want to do this on tasks that do not depend on each other.</li>
+<li><a href="https://github.com/nDmitry/grunt-autoprefixer">grunt-autoprefixer</a>: uses the <a href="http://caniuse.com/">Can I Use</a> database to prefix vendor specific properties to CSS.</li>
+<li><a href="https://github.com/sindresorhus/load-grunt-tasks">load-grunt-tasks</a>: if you have many Grunt plugins, the Gruntfile soon becomes polluted with declaring each plugin, one by one, at the top of the file. By using this module you can remove this cumbersome task and depend purely on your project&rsquo;s <code>package.json</code> file.* </li>
+<li><a href="https://www.npmjs.org/doc/cli/npm-shrinkwrap.html">shrinkwrap</a>: lock down dependency versions.</li>
+</ul>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/dev_toolboxpack';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/better-late-than-never/">Better Late Than Never</a></li>
+
+            <li class="blog-related__links"><a href="/blog/this-week-in-ruby-19th-october/">This Week in Ruby, 19th October</a></li>
+
+            <li class="blog-related__links"><a href="/blog/kanban-in-the-cape-part-2/">Kanban in the Cape - Part 2</a></li>
+
+            <li class="blog-related__links"><a href="/blog/post-halloween-developer-newsletter-4th-october/">Post Halloween Developer Newsletter - 4th October</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

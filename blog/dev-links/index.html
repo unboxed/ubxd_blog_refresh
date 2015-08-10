@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dev Links</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_dev-links blog_dev-links_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Grant Speelman
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-04-12 13:40:00 UTC">
+              <span>
+                12 Apr 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Dev Links
+          </h1>
+
+          <div class="blog-article__content">
+            <h2><a href="/people/matt-peperell">Matt Peperell</a></h2>
+
+<p>### wysiwyg for responsive sites
+ This week&rsquo;s work on Apps for Good has been challenging in a number of ways. One of the largest time-sinks has been the responsive design. Here&rsquo;s <a href="http://webflow.com/">a WYSIWYG editor for responsive design</a>.</p>
+
+<h3>Growing a Language</h3>
+
+<p>Here&rsquo;s one from the archives that recently surfaced on Twitter. It&rsquo;s a talk by Guy Steele on designing a programming language which can easily be grown and extended by the userbase.
+ <a href="http://www.youtube.com/watch?v=%5C_ahvzDzKdB0">http://www.youtube.com/watch?v=\_ahvzDzKdB0</a></p>
+
+<h3>Geocities meet bootstrap</h3>
+
+<p>Who remembers geocities? Here&rsquo;s a link to remind you of those days. 
+ <a href="http://divshot.github.io/geo-bootstrap/">http://divshot.github.io/geo-bootstrap/</a> - a geocities-like theme applied to the <a href="http://twitter.github.io/bootstrap/">twitter bootstrap library</a></p>
+
+<h2><a href="/people/joerg-diekmann">Joerg Diekmann</a></h2>
+
+<p>### Forecast-cli
+ forecast-cli (<a href="https://npmjs.org/package/forecast-cli">https://npmjs.org/package/forecast-cli</a>)
+ Get a weather forecast in your terminal - written by Joerg.
+ ### Memorizing a programming language
+ Memorizing a programming language using spaced repetition software (<a href="http://sivers.org/srs">http://sivers.org/srs</a>)</p>
+
+<h2><a href="/people/richard-archer">Richard Archer</a></h2>
+
+<p>### JavaScript Inheritance
+ There are plenty of ways to explain the concepts of JavaScript Inheritance - it&rsquo;s just a case of finding the right one to suit your audience at the time. In this post Alex Sexton puts most of them together in one post; just choose the one that works best for you.
+ <a href="http://alexsexton.com/blog/2013/04/understanding-javascript-inheritance/">http://alexsexton.com/blog/2013/04/understanding-javascript-inheritance/</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/dev-links';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/sa-ux-forum-mobile-ux/">SA UX Forum: Mobile UX</a></li>
+
+            <li class="blog-related__links"><a href="/blog/insert-your-own-punny-title-for-the-developer-newsletter-here/">[Insert your own punny title for the Developer newsletter here]</a></li>
+
+            <li class="blog-related__links"><a href="/blog/three-times-a-dev/">Three times a dev</a></li>
+
+            <li class="blog-related__links"><a href="/blog/to-have-dev-over-the-eight/">To have dev over the eight</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

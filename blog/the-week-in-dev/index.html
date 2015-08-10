@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The Week In Dev</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-week-in-dev blog_the-week-in-dev_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Carl Whittaker
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-06-21 23:00:00 UTC">
+              <span>
+                21 Jun 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The Week In Dev
+          </h1>
+
+          <div class="blog-article__content">
+            <p>This week&rsquo;s tasty dev morsels for your delectation.</p>
+
+<h2>Removing config.threadsafe! (Leo)</h2>
+
+<p><a href="http://tenderlovemaking.com/2012/06/18/removing-config-threadsafe.html">http://tenderlovemaking.com/2012/06/18/removing-config-threadsafe.html</a></p>
+
+<p>Aaron Patterson (@tenderlove) wrote an excellent article on the debate around the config.threadsafe! option in Rails, taking the side of those who would want to see it enabled in production by default. I found it a very interesting overview of the current state of concurrency and multithreaded execution in Rails, and I guarantee that it will teach you something new about Rails.</p>
+
+<h2>RSpec&rsquo;s new expectation syntax (Lee)</h2>
+
+<p><a href="http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax">http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax</a></p>
+
+<p>##/reFiddle+/ (Carl)
+ <a href="http://refiddle.com/">http://refiddle.com/</a></p>
+
+<p>A fiddle tool for building and testing those tricky regex&rsquo;s.</p>
+
+<h2>My algorithm for finding self-enumerating pangrams found its first solution after 250 CPU hours (Chris P)</h2>
+
+<p>This pangram was built by cpatuzzo and it has no more than nine a&rsquo;s, three b&rsquo;s, two c&rsquo;s, three d&rsquo;s, thirty-four e&rsquo;s, five f&rsquo;s, two g&rsquo;s, twelve h&rsquo;s, sixteen i&rsquo;s, two j&rsquo;s, one k, four l&rsquo;s, three m&rsquo;s, nineteen n&rsquo;s, eleven o&rsquo;s, three p&rsquo;s, one q, thirteen r&rsquo;s, thirty-six s&rsquo;s, twenty-six t&rsquo;s, six u&rsquo;s, seven v&rsquo;s, seven w&rsquo;s, six x&rsquo;s, five y&rsquo;s and just three z&rsquo;s.</p>
+
+<h3>How it works:</h3>
+
+<p>I turned the problem into error minimisation. Each attempt is an array of character frequencies, which is evaluated (using a lookup table) to determine the error magnitude. The &lsquo;closest&rsquo; solutions are selected for mutation. New attempts are ordered for evaluation according to the distribution of characters in the lookup table (language). The pool of attempts is pruned to ensure it doesn&rsquo;t memory leak and slow everything down at the trade off of occasionally choosing a sub-optimal attempt for mutation. Very few sentence seeds actually have solutions, so there&rsquo;s some code that randomises seeds on occasion.</p>
+
+<p>It&rsquo;s slow and probably not so elegant, but it works. It also makes the naive assumption that attempts with fewer errors will be closer to a solution, which is probably a flawed assumption due to the volatility and chaos of the problem.</p>
+
+<p><a href="https://github.com/tuzz/pangram">https://github.com/tuzz/pangram</a>
+ <a href="http://en.wikipedia.org/wiki/Pangram#Self-enumerating_pangrams">http://en.wikipedia.org/wiki/Pangram#Self-enumerating_pangrams</a></p>
+
+<h2>Parameter Chain (Chris P)</h2>
+
+<p>As some of you may know, I&rsquo;ve been experimenting with finding a general solution to parameter chains in Ruby and chaining Arel scopes through collections. Some progress on both fronts by digging through ActiveRecord::Relation and Delegation. If anyone has insight, let me know. Thanks.</p>
+
+<p><a href="https://github.com/tuzz/parameter_chain">https://github.com/tuzz/parameter_chain</a>
+ <a href="https://gist.github.com/2911869">https://gist.github.com/2911869</a></p>
+
+<h2>Talk to the Phone (Rich A)</h2>
+
+<p><a href="http://www.chromeexperiments.com/detail/talk-to-the-phone/">http://www.chromeexperiments.com/detail/talk-to-the-phone/</a></p>
+
+<p>Is your life a joyless void of malaise and depression?
+ Need the comfort of human interaction but have no friends?
+ Experience the delight of uttering those magical words: &#39;I love you&rsquo; into Chrome and receiving a response - any sort of response - from your beloved browser.</p>
+
+<p>(Man alive, I should be in Marketing or something. I&rsquo;m clearly a genius at this sort of stuff.)</p>
+
+<h2>CSS3 comedy (Matt P)</h2>
+
+<p>tr { transform: rotate(180deg); } It seems the tables have been turned.</p>
+
+<h2>A history of IE from version 1 to 9 (Matt P)</h2>
+
+<p><a href="http://www.techrepublic.com/photos/a-visual-history-of-internet-explorer-from-1-to-9/63758">http://www.techrepublic.com/photos/a-visual-history-of-internet-explorer-from-1-to-9/63758</a></p>
+
+<h2>FLAC.js (Matt P)</h2>
+
+<p>a fully Javascript-based FLAC decoder. 8.5% CPU usage on a Core 2 Duo. Crazy.
+ <a href="http://tumblr.dave.io/post/25228910532/flac-js-a-fully-javascript-based-flac-decoder">http://tumblr.dave.io/post/25228910532/flac-js-a-fully-javascript-based-flac-decoder</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-week-in-dev';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unstick-your-digital-products/">Unstick your digital products</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-3-6/">UBXDDEV Vol. 3.6</a></li>
+
+            <li class="blog-related__links"><a href="/blog/five-cardinal-sins-of-agile-that-the-public-sector-can-learn-from/">Five Cardinal Sins of Agile that the public sector can learn from</a></li>
+
+            <li class="blog-related__links"><a href="/blog/baselines/">Using baselines for effective planning</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

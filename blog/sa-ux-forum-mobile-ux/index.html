@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>SA UX Forum: Mobile UX</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_sa-ux-forum-mobile-ux blog_sa-ux-forum-mobile-ux_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Steve Barnett
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-02-28 09:31:00 UTC">
+              <span>
+                28 Feb 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            SA UX Forum: Mobile UX
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Last night in Cape Town, Phil Barrett of <a href="http://www.userexperience.co.za/">Flow</a> and <a href="http://simon.co.za/">Simon Dingle</a> of <a href="https://www.22seven.com/">22seven</a> gave short talks about mobile UX for the <a href="https://groups.google.com/forum/?fromgroups#!forum/sa-ux-forum">SA UX Forum</a>. <a href="http://www.unboxedconsulting.com/people/steve-barnett">Myself</a>, <a href="http://www.unboxedconsulting.com/people/richard-archer">Rich</a>, <a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel</a>, <a href="http://www.unboxedconsulting.com/people/joerg-diekmann">Joerg</a>, and <a href="http://www.unboxedconsulting.com/people/sebastian-jacobs">Seb</a> (visiting from our London office) were there to soak up some knowledge and chat about mobile, UX, and more. Below are some brief notes that I took.</p>
+
+<h2>Phil&rsquo;s talk</h2>
+
+<p>Phil began by discussing how rapidly the mobile space is changing. He compared it to the Wild West: no rules, and lots of fights. The main thrust of his talk was about two big mysteries of Mobile UX: Native app vs Responsive web site and how (<a href="http://www.sensible.com/">Steve Krug</a>&rsquo;s) trunk test doesn&rsquo;t apply.</p>
+
+<p>Have a look at <a href="http://readlists.com/b4e06725/">Phil&rsquo;s readlist for his talk</a> for some useful articles.</p>
+
+<h3>Native app vs Responsive web site</h3>
+
+<p>Mobile context has changed: it&rsquo;s no longer about rushed, distracted, users. Now it&rsquo;s &ldquo;no feature left behind&rdquo;: mobile users want everything desktop users do. See <a href="http://globalmoxie.com/jhc/prez/mobile-myths.pdf">Josh Clark&rsquo;s &ldquo;Seven Deadly Mobile Myths&rdquo; presentation</a> (PDF, 6.4MB) for more on this. </p>
+
+<p>Responsive design is great, but still has some challenges. One of the biggest is images: how we deal with sending appropriately sized images to all the different devices, especially lower end ones. The <a href="http://responsiveimages.org/">Responsive Images Community Group</a> is a great place to keep up with development in this area.</p>
+
+<p>Phil suggests thinking about user context to determine your choice. Two axes to consider: frequency of use; timing context. Native apps can be good for high frequency use, and for situations where tight OS integration is needed. Web sites or apps can be good for lower frequency, but still critical, use.</p>
+
+<h3>The trunk test doesn&rsquo;t apply</h3>
+
+<p>Phil asked why apps still work without the signposting that the trunk test says that users need to resume interaction after interruption. He suggests that it&rsquo;s because mobile use is very focused and intense. He gave the example of someone taking a phone call during dinner. Their concentration goes completely to the call: they miss whatever happens in the meantime.</p>
+
+<h2>Simon&rsquo;s talk</h2>
+
+<p>Although &ldquo;there is no mobile web&rdquo; (there&rsquo;s just The Web) is clear to many in the tech space, it&rsquo;s still not clear to many corporates, and it&rsquo;s up to us to educate them about it.</p>
+
+<p>Smartphones are amazing because they are truly personal, and private, computers. For most people, it&rsquo;s the first computer they use every day, and it&rsquo;s their primary engagement device.</p>
+
+<p>Another area to guide your choice of Native app vs Responsive web site is traffic source: a Responsive web site is your best choice if a lot of your traffic is from social media or aggregator services.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/sa-ux-forum-mobile-ux';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/what-s-there-to-know-about-outsourcing/">What is there to know about outsourcing?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/forcing-facebook-to-update-your-site-s-metadata/">Forcing Facebook to Update Your Site's Metadata</a></li>
+
+            <li class="blog-related__links"><a href="/blog/what-car-is-your-website-2/">What car is your website?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/new-apprentice-luke-ben/">New Apprentices - Luke & Ben</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>All this has happened before, and all this will happen again</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_all-this-has-happened-before-and-all-this-will-happen-again blog_all-this-has-happened-before-and-all-this-will-happen-again_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-06-21 13:45:00 UTC">
+              <span>
+                21 Jun 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            All this has happened before, and all this will happen again
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Understanding 3D Transforms - <a href="http://www.unboxedconsulting.com/people/carl-whittaker">Carl</a></h2>
+
+<p><a href="http://dev.opera.com/articles/view/understanding-3d-transforms/">http://dev.opera.com/articles/view/understanding-3d-transforms/</a></p>
+
+<p>A nifty primer on transforms in CSS. It explains how transforms are cumulative and how to adjust perspective in a straightforward manner. Matrices still melt my face.</p>
+
+<h2>New HTML5 Template element - <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andy</a></h2>
+
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/templating.html">http://www.w3.org/html/wg/drafts/html/master/templating.html</a></p>
+
+<p>From the W3 blurb: The template element can be placed anywhere within the head, body, and frameset elements, and its contents be any content which could otherwise occur at any location within the head, body, and frameset elements. The content of templates are not a part of the document (they do not display, are not matched by querySelector, etc.) and are inactive (e.g. do not cause resources to load, scripts to run, media to play, etc.)… handy!</p>
+
+<h2>Search engine optimisation support for your JS heavy app - <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andy</a></h2>
+
+<p><a href="http://eviltrout.com/2013/06/19/adding-support-for-search-engines-to-your-javascript-applications.html">http://eviltrout.com/2013/06/19/adding-support-for-search-engines-to-your-javascript-applications.html</a></p>
+
+<p>This is an interesting take on how to make javascript heavy client side applications better optimized for search engines.</p>
+
+<h2>Building Rails APIs - <a href="http://unboxedconsulting.com/people/lee-richmond">Lee</a></h2>
+
+<p>Part 1 of a series of blog posts from <a href="http://collectiveidea.com/">Collective Idea</a>, providing some tips for <a href="http://collectiveidea.com/blog/archives/2013/06/13/building-awesome-rails-apis-part-1/">building good APIs in Rails</a></p>
+
+<h2>Academic research into pair programming - <a href="http://unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://salfreudenberg.wordpress.com/">http://salfreudenberg.wordpress.com/</a></p>
+
+<p>A lot of our industry &ldquo;best practices&rdquo; seem to be built around anecdote (and as we all know <a href="http://en.wikipedia.org/wiki/Anecdotal_evidence">the plural of anecdote is not data</a>) so it&rsquo;s good to read some actual studies with real measured data around this sort of thing. There&rsquo;s only a couple of blog posts so far, linking to published papers, but I&rsquo;m hopeful for more.</p>
+
+<h2>Nobody understands the GIL - <a href="http://unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p>A series of blog posts by <a href="http://www.jstorimer.com/">Jesse Storimer</a> about the GIL (Global Interpreter Lock) in Ruby. Specifically we&rsquo;re talking about MRI Ruby as neither JRuby nor Rubinius have one. Published so far are <a href="http://www.jstorimer.com/blogs/workingwithcode/8085491-nobody-understands-the-gil">part 1</a> where he explains what the GIL is, and <a href="http://www.jstorimer.com/blogs/workingwithcode/8100871-nobody-understands-the-gil-part-2-implementation">part 2</a> about the MRI implementation. Part 3, coming soon I hope, promises to explain what the GIL actually means when it comes to thread-safe programming.</p>
+
+<h2>Browser-side handling of markdown - <a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt</a></h2>
+
+<p><a href="http://markdown-here.com/">http://markdown-here.com/</a></p>
+
+<p>Compose in markdown, toggle an option and then have it rendered.</p>
+
+<h2>Mind the gap! - <a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt</a></h2>
+
+<p><a href="http://thelayout.cc/mind-the-gap/">http://thelayout.cc/mind-the-gap/</a></p>
+
+<p>An article on discussing the causes of and attempting to minimise the divergence between graphic designs and final implementations.</p>
+
+<h2>Yet another infographic - <a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt</a></h2>
+
+<p><a href="http://visual.ly/history-programming-languages">http://visual.ly/history-programming-languages</a></p>
+
+<p>Another infographic visualisation - this one on focussing on some commonly used programming languages.</p>
+
+<p>Be honest: how many of you knew that Ada is 130 years old?</p>
+
+<h2>A &ldquo;Heads up!&rdquo; to heroku users - <a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt</a></h2>
+
+<p><a href="https://blog.heroku.com/archives/2013/6/17/ruby-2-default-new-aps">https://blog.heroku.com/archives/2013/6/17/ruby-2-default-new-aps</a></p>
+
+<p>As of Tuesday, the wellknown Rails-friendly cloud service now defaults to Ruby version 2 for new deploys. (Older versions of ruby will be preserved for exisiting apps)</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/all-this-has-happened-before-and-all-this-will-happen-again';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/native-chrome-apps-on-mobile/">Native Chrome apps on mobile</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-32/">UBXDDEV Vol. 3.2</a></li>
+
+            <li class="blog-related__links"><a href="/blog/happy-2013-dev-newletter/">Happy 2013 Dev Newletter</a></li>
+
+            <li class="blog-related__links"><a href="/blog/three-times-a-dev/">Three times a dev</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

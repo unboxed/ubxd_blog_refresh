@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Happy New Year Unboxedians and commiserations on the ashes</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_happy-new-year-unboxedians blog_happy-new-year-unboxedians_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Tyrone Toplis
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-01-10 12:25:00 UTC">
+              <span>
+                10 Jan 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Happy New Year Unboxedians and commiserations on the ashes
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Git commit messages again - <a href="http://www.unboxedconsulting.com/people/murray-steele/">Murray</a></h2>
+
+<p>You’ve probably thought about writing better commit messages, but have you ever thought about <a href="http://arialdomartini.wordpress.com/2012/09/03/pre-emptive-commit-comments/">writing the commit messages before you write the code</a>? I&rsquo;m not really sold on the idea as I’m quite a messy developer; I tend to write a bunch of code then use git add -p to tidy that up into a series of atomic commits and repeat the process with some git rebase for good measure. I also think the “if we write tests before the code, why not commit messages too” argument is a bit of a stretch.</p>
+
+<p>That said, there’s lots of good stuff about writing better messages in this article, and I can’t quite dismiss it outright. I think because it reminds me of the kinds of <a href="http://coderetreat.org/facilitating/activity-catalog">constraint-based coding exercises you run through at a code-retreat</a>. The constraints can force you to think more about something you normally do without thinking, and that can reveal new approaches. Maybe I’ll just try it and see what happens.</p>
+
+<h2>Logging with Node.js - <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andy M</a></h2>
+
+<p>For a long time now I have been stuck in the world of using a simply console.log in my Node applications. Often though its simply not enough for a production application where log files and levels are required. This article covers how to use Winston as a more featured logger in your node applications.</p>
+
+<p><a href="http://devgigs.blogspot.co.uk/2014/01/mastering-nodejs-logging.html">http://devgigs.blogspot.co.uk/2014/01/mastering-nodejs-logging.html</a></p>
+
+<h2>Interesting Video we watched regarding Test boundaries - <a href="http://www.unboxedconsulting.com/people/tyrone-toplis">Tyrone</a></h2>
+
+<p><a href="https://www.youtube.com/watch?v=yTkzNHF6rMs">https://www.youtube.com/watch?v=yTkzNHF6rMs</a></p>
+
+<h2>Code Reviews vs. Pairing - <a href="http://www.unboxedconsulting.com/people/murray-steele/">Murray</a></h2>
+
+<p><a href="http://phinze.github.io/2013/12/08/pairing-vs-code-review.html">An excellent article about code-reviews and pairing</a> by <a href="https://twitter.com/phinze">Paul Hinze</a> that makes a reasoned case for the drawbacks and benefits to both approaches. I happen to prefer a code-review culture to a pairing one, but it’s good to be reminded of the things I’m giving up on with that preference. The article also suggests that Paul will be writing more on these themes and I’m looking forward to hearing what else he has to say.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/happy-new-year-unboxedians';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/rspec-sitemap-matchers-for-your-seo-goodness/">RSpec Sitemap matchers for your SEO goodness</a></li>
+
+            <li class="blog-related__links"><a href="/blog/dev-newsletter-for-the-week/">Dev Newsletter for the week</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-outsourcing-dilemma/">The Outsourcing Dilemma </a></li>
+
+            <li class="blog-related__links"><a href="/blog/a-brand-spanking-new-website/">A Brand Spanking New Website!</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

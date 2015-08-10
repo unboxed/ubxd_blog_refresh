@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>It's life, Jim, but not as we know it</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_its-life-jim-but-not-as-we-know-it blog_its-life-jim-but-not-as-we-know-it_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Jolyon Pawlyn
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-05-10 16:55:00 UTC">
+              <span>
+                10 May 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            It's life, Jim, but not as we know it
+          </h1>
+
+          <div class="blog-article__content">
+            <p><a href="http://ariejan.net/2011/09/24/rspec-speed-up-by-tweaking-ruby-garbage-collection/">Go faster tip of the week</a> is an old one but has had such a major impact on speeding up tests in a current project (by 50%!) that I think it&rsquo;s worth a plug. And here&rsquo;s a pick of some of the juiciest jalapeños from around the web&hellip;</p>
+
+<h2><a href="http://adamsanderson.github.io/railsconf_2013/">Postgres: the best tool you&rsquo;re already using</a> - <a href="/people/murray-steele">Murray</a></h2>
+
+<p>Slides from railsconf about postgres. Not very aptly named as of course, many people<em>aren&rsquo;t</em> using it. After reading it I&rsquo;m more and more convinced that we should be. I&rsquo;d normally shy away from embedding soo much logic or functionality in the SQL layer, but I suspect that&rsquo;s because I&rsquo;ve been burned by MySQL and MS SQL (the db engines I&rsquo;ve used in anger in the past) being too weird. The flip side of that is that when I use a NoSQL db the features discussed in this talk are exactly the sort of things I&rsquo;d be happy to leave up to the storage engine I&rsquo;m using. Feels like it might be time to embrace them in a SQL db too.</p>
+
+<h2>Git - Jim</h2>
+
+<p>I&rsquo;ve been using Atlassian&rsquo;s SourceTree successfully for a while, it&rsquo;s got a nice interface for the visual stuff.</p>
+
+<p><a href="http://www.atlassian.com/software/sourcetree/overview">http://www.atlassian.com/software/sourcetree/overview</a></p>
+
+<p>They&rsquo;ve also just released a very interesting-looking command line tool called tig</p>
+
+<p><a href="http://blogs.atlassian.com/2013/05/git-tig/">http://blogs.atlassian.com/2013/05/git-tig/</a></p>
+
+<h2>Video codec in JS and Git tig II - <a href="/people/matt-peperell">Matt</a></h2>
+
+<p><a href="http://www.unboxedconsulting.com/blog/improve-your-week-with-this-1-weird-old-tip">A couple of months ago</a> my submissions to the UBXD Dev blog showcased some nifty Javascript displays. The bar has been raised with a new video codec capable of HD quality written entirely in javascript. The press release from last week is at <a href="http://www.otoy.com/130501%5C_OTOY%5C_release%5C_FINAL.pdf">http://www.otoy.com/130501\_OTOY\_release\_FINAL.pdf</a> and an analysis of these codecs can be found <a href="http://arstechnica.com/information-technology/2013/05/are-video-codecs-written-in-javascript-really-the-future/">here</a></p>
+
+<p>Prefer the command line to gui? Here&rsquo;s a command-line git client which provides interactive operations normally found only in the more heavy-weight GUI counterparts. It&rsquo;s also available via homebrew for the Mac users. Details at <a href="http://blogs.atlassian.com/2013/05/git-tig/">http://blogs.atlassian.com/2013/05/git-tig/</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/its-life-jim-but-not-as-we-know-it';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/kanban-in-the-cape-part-2/">Kanban in the Cape - Part 2</a></li>
+
+            <li class="blog-related__links"><a href="/blog/migrating-data-games-on-the-web-platform-better-calendars-and-active-record-relation-counting/">Migrating data, games on the web platform, better calendars and active record relation counting.</a></li>
+
+            <li class="blog-related__links"><a href="/blog/how-do-i-make-them-more-self-organising/">How do I make my Agile Team more self-organising?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/cognitive-bias-product-management-and-you/">Cognitive Bias, Product Management and you</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

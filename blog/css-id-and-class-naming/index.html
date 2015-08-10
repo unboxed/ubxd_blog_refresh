@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>CSS id and class naming</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_css-id-and-class-naming blog_css-id-and-class-naming_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Simon Rentzke
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-05-30 00:00:00 UTC">
+              <span>
+                30 May 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            CSS id and class naming
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I&rsquo;m a developer, I like structure, I like clean code, I like DRY code. I find writing CSS incredibly painful.</p>
+
+<p>CSS1 was first published in December 1996, so I ask, why in 2010 does it feel like CSS is just as painful as it was 14 years ago?</p>
+
+<p><a href="http://www.flickr.com/photos/popandshorty/"><img src="http://farm3.static.flickr.com/2461/3970138375_3e68095deb_o.jpg" /></a></p>
+
+<p>A few great CSS tools exist to make the process of defining layout and structures much easier. &nbsp;A few different examples include; <a href="http://baselinecss.com">Baseline</a>, <a href="http://sass-lang.com/">Sass</a>, <a href="http://lesscss.org">Less</a>, <a href="http://960.gs">960</a>, <a href="http://developer.yahoo.com/yui/grids/">Yahoo! grids</a>&nbsp;and <a href="http://blueprintcss.org">Blueprint</a>. Unfortunately nothing quite cuts the mustard. &nbsp;We&rsquo;ve tried a few of these at Unboxed, but they still fail to some degree on the bigger projects.</p>
+
+<p>Where are the standards? &nbsp;You can&rsquo;t lay all the blame on IE6 can you? Recently Jason Cale dedicated a fairly lengthy blog post to&nbsp; <a href="http://jasoncale.com/articles/5-dont-format-your-css-onto-one-line">why you should hit return whilst writing your CSS</a>.</p>
+
+<p>A very simple problem I often find is what I should name different elements, and if I should use ids or classes. After often hearing the two <a href="http://twitter.com/ubxd">@ubxd</a> CSS heroes Attila and Will have lengthy debates on the best way of doing things, &nbsp;I think the real answer is that there isn&rsquo;t one.</p>
+
+<p>So I decided to look around the web, see what other people are doing, see what the top websites of the world were doing. &nbsp;I downloaded the top 1 million websites from <a href="http://www.alexa.com/topsites">Alexa</a>, and wrote a quick app that scrapes these sites, and tracks the top names used for ids and classes.</p>
+
+<p>So here are the results (I stopped at 20000 results):</p>
+
+<p>| 
+ Top class results |
+| 
+ # | 
+ Class |
+| &mdash; | &mdash; |
+| 
+ 3090 | 
+ clear |
+| 
+ 1946 | 
+ logo |
+| 
+ 1879 | 
+ title |
+| 
+ 1818 | 
+ content |
+| 
+ 1743 | 
+ last |
+| 
+ 1613 | 
+ footer |
+| 
+ 1582 | 
+ right |
+| 
+ 1582 | 
+ text |
+| 
+ 1562 | 
+ left |
+| 
+ 1471 | 
+ first |
+| 
+ 1467 | 
+ button |
+| 
+ 1331 | 
+ header |
+| 
+ 1187 | 
+ more |
+| 
+ 1179 | 
+ search |
+| 
+ 1131 | 
+ copyright |
+| 
+ 1124 | 
+ menu |
+| 
+ 1098 | 
+ clearfix |
+| 
+ 1000 | 
+ active |
+| 
+ &nbsp; | 
+ &nbsp; |</p>
+
+<p>| 
+ Top id results |
+| 
+ # | 
+ ID |
+| &mdash; | &mdash; |
+| 
+ 5789 | 
+ footer |
+| 
+ 4622 | 
+ header |
+| 
+ 3170 | 
+ content |
+| 
+ 2555 | 
+ logo |
+| 
+ 2019 | 
+ container |
+| 
+ 1640 | 
+ main |
+| 
+ 1640 | 
+ search |
+| 
+ 1367 | 
+ wrapper |
+| 
+ 1268 | 
+ nav |
+| 
+ 1146 | 
+ menu |
+| 
+ 867 | 
+ login |
+| 
+ 865 | 
+ top |
+| 
+ 858 | 
+ sidebar |
+| 
+ 851 | 
+ cse-search-box |
+| 
+ 842 | 
+ page |
+| 
+ 817 | 
+ copyright |
+| 
+ 700 | 
+ __VIEWSTATE |
+| 
+ 628 | 
+ navigation |
+| 
+ &nbsp; | 
+ &nbsp; |</p>
+
+<p>&nbsp;</p>
+
+<p><a href="http://www.flickr.com/photos/stephenhackett/"><img src="http://farm2.static.flickr.com/1296/3424929417_b83f4bd2f8.jpg" /></a></p>
+
+<p>So, not that interesting I&rsquo;m afraid. &nbsp;But what is interesting?</p>
+
+<ul>
+<li>Some of top ids are elements in HTML5 for example &ldquo;footer&rdquo;, &ldquo;header&rdquo; and &ldquo;nav&rdquo; so we&rsquo;re making some progression in standards.</li>
+<li>The use of <em>id</em> and <em>class</em> seems to be used interchangeably, there really is <em>no</em> common standard.</li>
+<li>We see heaps of sites using &ldquo;footer&rdquo; and &ldquo;header&rdquo; as a class name. Is that ok?</li>
+</ul>
+
+<p>So even though the results are not too interesting, I think they serve as a little reference guide, so that in the future I can name things similarly to other people, so that other developers will be able to&nbsp;easily&nbsp;read my code.</p>
+
+<p>&nbsp;</p>
+
+<p>For more results check it out&nbsp; <a href="http://severe-mist-97.heroku.com">here</a>, thanks to the heroes at <a href="http://heroku.com">heroku</a> for their servers that did all the grunt work.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/css-id-and-class-naming';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-24th-november-2014/">Unboxed Roundup: our links for w/c 24th November 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/investigating-a-cms-toolset/">Investigating a CMS Toolset</a></li>
+
+            <li class="blog-related__links"><a href="/blog/how-do-i-make-them-more-self-organising/">How do I make my Agile Team more self-organising?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxedis10-anniversary-song-countdown/">Unboxedis10 anniversary song countdown</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

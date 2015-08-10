@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Prioritising production bugs</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_prioritising-production-bugs blog_prioritising-production-bugs_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Austin Fagan
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-12 14:46:00 UTC">
+              <span>
+                12 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Prioritising production bugs
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Everything is jogging along swimmingly in the real world, orders coming in thick and fast, the business is booming. World-wide recession, hah! In the development bullpen, velocity is faster than a speeding bullet, they&rsquo;re playing office boules most of the day. But hark! The sound of over five thousand orders plummeting down through the depths of the system sends shudders through the department. Time to down boules and fix the problem. Suddenly the CEO&rsquo;s door opens and the dev manager is summoned. He knows what&rsquo;s coming but is a bit taken aback when he discovers its not the five thousand customers in limbo that has lit the coals he&rsquo;s being dragged over but the issue that is holding up the order belonging to the CEO&rsquo;s chihuahua-sitter. He points out the devs are working on a solution for the five thousand stuck orders but the CEO is not having any of it. &ldquo;The order of priority is obvious!&rdquo; booms the CEO.</p>
+
+<p>Prioritising issues</p>
+
+<p>Most teams will work prioritise with the following categories:</p>
+
+<p>Blocker: An immediate fix is needed in production.</p>
+
+<p>Critical: Needs an imminent fix. Can be deployed in next release.</p>
+
+<p>Major: Its not critical, its not minor. </p>
+
+<p>The lowest orders will be minor and then trivial.</p>
+
+<p>Prioritising issues is always challenging and to ensure the right decision is made, the right people need to be involved in making that decision. For me there are 3 factors that should be considered when setting the priority:</p>
+
+<p>Business impact</p>
+
+<p>What is the issue costing the business? When it comes down to it it may be a person playing the role of the business representative who acts as stakeholder in the prioritisation process but its vitally important that the decision is made clear to the business and kept visible. Its likely the issue would come through the Service Desk and its here where the business can check the progress of the issue. If the Service Desk is separate from the defect management system and both systems have different priority classifications, they should map to the appropriate level. If an issue, with the highest level of priority in the Service Desk, has a medium level priority in the defect management system something is truly rotten in the state of Denmark. If both systems are separate there should be a mechanism to keep them in sync, either manual reporting or automated syncing. </p>
+
+<p>System robustness</p>
+
+<p>Building functionality on top of existing bugs is asking for trouble. In order to avoid compounding the known problems the developers should be kept abreast of known issues. If the support team are keeping their bug cards on a task board then this is a good starting point for maintaining visibility to the devs. To make it easier it&rsquo;s a good idea to keep the cards grouped by component. Before planning sessions the devs can get together with support and get their top bugbears together and make a case for their inclusion in the next sprint. </p>
+
+<p>Workaround viability</p>
+
+<p>Once an issue has been identified and it is affecting customers a workaround needs to be put in place where possible. So when it comes to the prioritising of the issue the team who own the workaround (ie. the team who carries out the effort involved) must be involved in the discussion. Their input will enable those involved in the prioritisation to assess the viability of the workaround and ascertain whether the cost of fixing the issue outweighs the cost of maintaining it.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/prioritising-production-bugs';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/media-roundtable-session-20th-may/">Media Roundtable Session - 20th May</a></li>
+
+            <li class="blog-related__links"><a href="/blog/agile-is-just-another-way-of-saying-let-s-use-common-sense/">Agile is just another way of saying – let’s use common sense!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/announcing-tabnav/">Announcing: Tabnav</a></li>
+
+            <li class="blog-related__links"><a href="/blog/baselines/">Using baselines for effective planning</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

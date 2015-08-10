@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Can You Digg It</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_can-you-digg-it blog_can-you-digg-it_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Christopher Patuzzo
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-07-12 23:00:00 UTC">
+              <span>
+                12 Jul 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Can You Digg It
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Are you ready for this week&rsquo;s feature filled fiasco? I know I am! So fasten your seat belts, tie your hair back and prepare for an emotional roller coaster of developer developments.</p>
+
+<h2>Diggsaster (Chris P)</h2>
+
+<p>Digg sells for half a million dollars (reportedly). They should have cashed in on the $200 million Google offered them in 2008.</p>
+
+<p><a href="http://gizmodo.com/5925586/digg-sells-itself-for-pathetic-pocketchange-500000">http://gizmodo.com/5925586/digg-sells-itself-for-pathetic-pocketchange-500000</a></p>
+
+<h2>Clandestine communication (Chris P)</h2>
+
+<p>&ldquo;I bumped into a raggedy dressed man as we got on [the subway] and he shot me a quick smile. I [thought] nothing of it until he went to get off at 14th street and he handed me a $50 bill along with a note. Before I could even open my mouth to ask him a question, he was gone.&rdquo;</p>
+
+<p><a href="http://mashable.com/2012/07/11/reddit-subway-code">http://mashable.com/2012/07/11/reddit-subway-code</a></p>
+
+<h2>Bender, bend to my will (Chris P)</h2>
+
+<p>Our friendly campfire bot has been misbehaving this week. I wrote some (hacky) code that allows arbitrary chunks of ruby to evaluated. This has led to a very noisy developer room (apologies for that).</p>
+
+<p>If you&rsquo;re interested in how this works, or would like to get an idea of how to add new actions to our bot, this commit might be of interest.</p>
+
+<p><a href="https://github.com/unboxed/unbot/commit/3f008d232b4330a0bbff9414d64f291884c540cf">https://github.com/unboxed/unbot/commit/3f008d232b4330a0bbff9414d64f291884c540cf</a></p>
+
+<h2>Retinafying websites (Murray)</h2>
+
+<p>A flowchart about how to retinafy websites (not just images). Seems comprehensive and probably useful.</p>
+
+<p><a href="http://mir.aculo.us/2012/06/26/flowchart-how-to-retinafy-your-website/">http://mir.aculo.us/2012/06/26/flowchart-how-to-retinafy-your-website/</a></p>
+
+<h2>Audio Experimentation (Robert F)</h2>
+
+<p>I&rsquo;ve been dabbling in low level audio processing for iOS and stumbled upon this: <a href="https://github.com/alexbw/novocaine">https://github.com/alexbw/novocaine</a></p>
+
+<p>It&rsquo;s a wrapper around Audio Unit Hosting using Core Audio. Essentially, it makes getting raw audio from the microphone simple and FAST!</p>
+
+<p>Also, I&rsquo;ve been very prolific with regards to speaking at events recently, so I have two slid decks to punt.</p>
+
+<p>A story about the ethos of Resque and when to use it: <a href="https://speakerdeck.com/robertfall/resque-the-journey">https://speakerdeck.com/robertfall/resque-the-journey</a></p>
+
+<p>As well as:</p>
+
+<p>iOS Web Apps and how to make them look native: <a href="https://speakerdeck.com/robertfall/ios-web-apps-the-journey">https://speakerdeck.com/robertfall/ios-web-apps-the-journey</a></p>
+
+<p>You&rsquo;ll see common thread between the two talks. Perhaps I should expand it into a series of &ldquo;The Journey&rdquo;.</p>
+
+<p>Another thing: <a href="https://github.com/petejkim/underscore.objc/">https://github.com/petejkim/underscore.objc/</a></p>
+
+<p>It&rsquo;s a port of the underscore.js library to Obj-C. It&rsquo;s particularly useful in iOS development where you have to do almost everything by hand.</p>
+
+<h2>HTML5 Sortable (Robert P)</h2>
+
+<p><a href="https://github.com/farhadi/html5sortable">https://github.com/farhadi/html5sortable</a></p>
+
+<p>Nice and easy to use sorting jQuery plugin with IE8 support</p>
+
+<h2>Bootstrap Tour (Robert P)</h2>
+
+<p><a href="https://github.com/pushly/bootstrap-tour">https://github.com/pushly/bootstrap-tour</a></p>
+
+<p>With some nice animations it could be very powerful and useful - even for cookie notifications.</p>
+
+<h2>CSS Transforms and IndexedDB unprefixed in Firefox (Robert P)</h2>
+
+<p>The unprefixing starts and it&rsquo;s great, because it means that the css3 transform implementations are now in a final stage. They also removed the prefix from indexedDB, which is quite cool and shows that they want to stick with it..</p>
+
+<p><a href="http://paulrouget.com/e/transformsunprefixed/">http://paulrouget.com/e/transformsunprefixed/</a></p>
+
+<h2>Adobe Shadow (Robert P)</h2>
+
+<p>This is another tool from Adobe (boo), which actually makes sense. Download the app, get the iPhone (or Android) app and the Chrome extension. The apps make a bridge across your phone and the computer and whatever you&rsquo;re browsing in Chrome you instantly see it on your phone. Very promising stuff if you&rsquo;re into mobile optimisation and responsive testing.</p>
+
+<p><a href="http://labs.adobe.com/technologies/shadow/">http://labs.adobe.com/technologies/shadow/</a></p>
+
+<h2>That&rsquo;s it&hellip;</h2>
+
+<p>Not the longest newsletter this week, probably due to this developer day. Have a great weekend guys.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/can-you-digg-it';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/daring-snowball/">Daring Snowball</a></li>
+
+            <li class="blog-related__links"><a href="/blog/cognitive-bias-product-management-and-you/">Cognitive Bias, Product Management and you</a></li>
+
+            <li class="blog-related__links"><a href="/blog/pivotal-tracker-workflow/">Pivotal Tracker Workflow</a></li>
+
+            <li class="blog-related__links"><a href="/blog/road-trip/">Road Trip</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

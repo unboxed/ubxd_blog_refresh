@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>New version of Rails, a new patch level of Ruby 1.9.3 and kittens, oh my!</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_new-version-of-rails-a-new-patch-level-of-ruby-193-and-kittens-oh-my blog_new-version-of-rails-a-new-patch-level-of-ruby-193-and-kittens-oh-my_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Attila Gyorffy
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-11-16 18:19:00 UTC">
+              <span>
+                16 Nov 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            New version of Rails, a new patch level of Ruby 1.9.3 and kittens, oh my!
+          </h1>
+
+          <div class="blog-article__content">
+            <h1>Highlights of the week:</h1>
+
+<h3><a href="http://www.ruby-lang.org/en/news/2012/11/09/ruby-1-9-3-p327-is-released/">Ruby 1.9.3-p327 released</a></h3>
+
+<p>NOTE: It includes an important security fix for Hash-flooding DoS vulnerability for Ruby 1.9. In case you are using earlier versions of Ruby 1.9 in production systems, it&rsquo;s highly recommended that you upgrade. Rails applications may be vulnerable to an attacker sending a specially-crafted HTTP request to exploit this.</p>
+
+<p>Linux based package managers are known to be good at keeping up to date. You can also install it via RVM, or if you prefer using Sam Stephenson&rsquo;s rbenv ad ruby-build, then you can use the HEAD version of ruby-build that has a definition file. On Mac OS X you;&rsquo;d better use Homebrew for this:</p>
+
+<p>$ brew install ruby-build &ndash;HEAD
+ $ rbenv install 1.9.3-p327</p>
+
+<p>The Rails guys over on the blog also explain how to limit the effectiveness of potential attacks. Go on, <a href="http://weblog.rubyonrails.org/2012/11/12/ann-rails-3-2-9-has-been-released/">read it</a>. You might learn a thing or two.</p>
+
+<h3><a href="http://weblog.rubyonrails.org/2012/11/12/ann-rails-3-2-9-has-been-released/">Rails 3.2.9 is out</a>, <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links">Rails 4 is coming strong</a></h3>
+
+<p>Well, this week Rails 3.2.9 has ben released. This might not be too exciting for most of us as I reckon many of us are waiting for Rails 4 to arrive. WAT?! U DUNNO RAILS 4?! Go on and <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">find out more about it</a>. It&rsquo;s a useful list of things that are changing in Rails 4, along with links to relevant blog posts, gems, railscasts, pull requests etc. <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a> reckons it&rsquo;s a living document, so it&rsquo;ll get updated as things change or more content is added.</p>
+
+<h3><a href="http://musicmachinery.com/2012/11/12/the-infinite-jukebox/">Infinite Jukebox</a></h3>
+
+<p>With the Infinite Jukebox, you can create a never-ending and ever changing version of any song. Using <a href="http://developer.echonest.com/">The Echo Nest</a>, the application breaks down any song into individual beats, so that it can play it infinitely. Awesome stuff, after seeing this our Rob feels super inspired to go to the <a href="https://www.hackerleague.org/hackathons/music-hack-day-london/hacks">Music Hackday London</a> tomorrow!</p>
+
+<h3><a href="http://heartcode.github.com/blog/2012/11/15/fixing-the-trailing-slash-issue-in-the-invalid-chrome-extension-manifest-file">Resurrecting broken Chrome extensions</a></h3>
+
+<p>aka &lsquo;How to make your broken Chrome extension work again&rsquo;. Rob explains it briefly:</p>
+
+<blockquote>
+<p>After an update my <a href="http://goo.gl/EmA52">Chrome extension</a> didn&rsquo;t want to install in Chrome anymore. After spending long hours of debugging and fixing the issue, which was caused by the Chrome team updating the browser without documenting changes that effect quite some extensions in the Chrome Web Store, I wrote a post about the issue with <a href="http://heartcode.github.com/blog/2012/11/15/fixing-the-trailing-slash-issue-in-the-invalid-chrome-extension-manifest-file">my findings</a>.</p>
+</blockquote>
+
+<h3><a href="http://confreaks.com/videos/1229-aloharuby2012-git-and-github-secrets">Git and GitHub Secrets</a></h3>
+
+<p>Zach Holman&rsquo;s presentation from the Aloha Ruby Conf 2012 about the &#39;secrets&rsquo; behind Git and GitHub. There are things that we all know and use every day, but there are also things, that I personally didn&rsquo;t have a clue about and look super useful. Check out the video, you might find a real secret yourself :)</p>
+
+<p>Also, let&rsquo;s be honest: Sometimes Git can be a bit frustrating. Check out &rsquo;<a href="http://wheningit.tumblr.com/">When in Git</a>&rsquo; and you will know what we mean. (Thanks Matt for posting this)</p>
+
+<h3><a href="http://new.livestream.com/accounts/398160/events/1594566/player_pop_up">Last but not least: Kitten cam</a></h3>
+
+<p>Best thing I&rsquo;ve seen all week:</p>
+
+<blockquote>
+<p>… because an uninterrupted stream of kittens is the only thing that can generate enough relax with things going on.</p>
+</blockquote>
+
+<p>Thank you <a href="http://www.unboxedconsulting.com/people/tom-ten-thij">Tom ten Thij</a> for posting this. Made my day and made it worth having a second monitor for real.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/new-version-of-rails-a-new-patch-level-of-ruby-193-and-kittens-oh-my';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/monitising-mobile-apps/">Monetising mobile apps</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-offshoring-agile-make-it-work-in-practice/">Webinar – ‘Offshoring Agile: Make it work in practice’</a></li>
+
+            <li class="blog-related__links"><a href="/blog/by-george-a-newsletter-what-ho/">By George! A newsletter! What-ho!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/road-trip/">Road Trip</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Three times a dev</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_three-times-a-dev blog_three-times-a-dev_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-06-20 13:30:00 UTC">
+              <span>
+                20 Jun 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Three times a dev
+          </h1>
+
+          <div class="blog-article__content">
+            <h3>A discussion of Swift - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h3>
+
+<p><a href="https://medium.com/swift-programming/swift-d3c212c35fd8">https://medium.com/swift-programming/swift-d3c212c35fd8</a></p>
+
+<p>It&rsquo;s early days for Apple&rsquo;s new programming language, Swift. Technically, it&rsquo;s not even really shipped 1.0 yet (we have to wait for &ldquo;fall&rdquo;), but that doesn&rsquo;t mean people aren&rsquo;t writing lots of articles about it. Most that I&rsquo;ve read have been very positive and excited, so it&rsquo;s good to read something that&rsquo;s a bit more muted in it&rsquo;s response.</p>
+
+<h3>What even is utf-8 - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h3>
+
+<p><a href="https://blog.jcoglan.com/2014/06/17/utf-8-its-what-strings-are-made-of/">https://blog.jcoglan.com/2014/06/17/utf-8-its-what-strings-are-made-of/</a></p>
+
+<p>Despite dealing with utf-8 throughout most of my programming career I don&rsquo;t think I&rsquo;ve ever really known how it worked. I knew that it was a variable width byte encoding, and that meant it was backwards-compatible with ASCII, but I&rsquo;d never thought about how those multiple byte characters were encoded. Thankfully, <a href="http://jcoglan.com/">James Coglan</a> knows this stuff really well and has written up a pretty straightforward explanation, so now we can all know it too!</p>
+
+<h3>GSS - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h3>
+
+<p><a href="http://gridstylesheets.org/">http://gridstylesheets.org/</a></p>
+
+<p>CSS can often feel like an inelegant tool, especially if you&rsquo;ve ever tried to vertically align something. Often the only way to really understand what the selector and rules are trying to do is to open it up in a browser and see how they&rsquo;re interpreted. Grid Style Sheets is a attempt to provide an alternative way of describing where elements will live on a page using <a href="http://www.cs.washington.edu/research/constraints/web/ccss-uwtr.pdf">a constraints based approach</a>, rather than the explicit approach of traditional CSS. It&rsquo;s quite a new project, and right now it relies on a JS engine to actually layout the elements on the page, but it seems like an interesting approach and worth investigating.</p>
+
+<h3>PageLayers - <a href="http://www.unboxedconsulting.com/people/andrew-white">Andrew White</a></h3>
+
+<p><a href="http://www.pagelayers.com">http://www.pagelayers.com</a></p>
+
+<p>This seems a useful tool for web designers: </p>
+
+<blockquote>
+<p>Page Layers is a website screenshot app for Mac OS X. It converts web pages to 
+Photoshop files with separate layers for all page elements. It enables you to open 
+web pages in Photoshop and saves you lots of time when re-designing or improving
+existing web page designs. Just open any page in the embedded browser and save 
+the page as PSD with layers or as plain PNG image. Every web page element (every
+image, link, block, &hellip;) will be rendered as separate, named layer. Layer groups will be
+created according to the site structure. It is the only Mac OS X browser screenshot 
+app you will ever need, unique in its capability to capture web pages with layers.</p>
+</blockquote>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/three-times-a-dev';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/digital-leaders-webinar-getting-to-beta/">Digital Leaders Webinar: Getting to Beta</a></li>
+
+            <li class="blog-related__links"><a href="/blog/news-of-the-week/">News Of The Week</a></li>
+
+            <li class="blog-related__links"><a href="/blog/return-of-the-activesupport-method-of-the-week-mark-morrison-style/">Return Of The ActiveSupport method of the week (Mark Morrison style)</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-27th-july-2015/">Unboxed Roundup: Our links for w/c 27th July 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

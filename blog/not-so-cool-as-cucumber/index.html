@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Not so cool as cucumber</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_not-so-cool-as-cucumber blog_not-so-cool-as-cucumber_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Jolyon Pawlyn
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-11-22 00:00:00 UTC">
+              <span>
+                22 Nov 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Not so cool as cucumber
+          </h1>
+
+          <div class="blog-article__content">
+            <p><strong>The problem</strong></p>
+
+<p>There&rsquo;s just one tiny validation to add to a user model. The impact on the application code is small whereas the impact on the test code is enormous. The change takes a day to implement.</p>
+
+<p><strong>The context</strong></p>
+
+<p>A large code base, Rails 2.3.2, Test::Unit, Cucumber and an unhealthily long test suite execution courtesy of Cucumber.</p>
+
+<p><strong>Possible solutions</strong></p>
+
+<ol>
+<li>Decide that tests are so last year and scrap the lot.</li>
+<li>Decide that Cucumber is too dangerous to handle and is best left for crudités, salad and Pimms.</li>
+<li>Decide that Rails ain&rsquo;t cut out for building large web sites and start over with PHP or Python.</li>
+<li>Decide that you have more <a href="https://github.com/cavalle/steak">carnivorous</a> tastes with regards to testing.</li>
+<li>Decide to jettison Cucumber in favour of Webrat, Test::Unit and Shoulda.</li>
+<li>Accept that whenever Cucumber is used to comprehensively test a complex and large web site, problems of maintainability are inevitable and decide to address the problem with judicious use of Cucumber.</li>
+</ol>
+
+<p>Against the interests of impartiality, I&rsquo;m only considering solution 6 except to say that solution 5 addresses test execution speed and is quicker for developers to write than Cucumber (thanks to <a href="../../../people/simon-rentzke">Simon</a> for pointing this out). Assuming RSpec or Test::Unit coverage is comprehensive then Cucumber should be used sparingly in such a way that you maximise the bang for your buck. Although <a href="http://37signals.com/svn/posts/2555-podcast-episode-20-programming-roundtable-part-1-of-3">37signals</a> don&rsquo;t use Cucumber and <a href="http://rubypond.com/blog/you-dont-win-friends-with-salad">others</a> are sceptical, Unboxed has found it invaluable and this difference may be in part due to the type of web sites we build and who we build them for.  </p>
+
+<p>If the time it takes to run a test suite can sensibly be reduced by refactoring or running tests in parallel then this is the best option. If not or it only yields limited time savings then every line of Cucumber should be treated as a valuable and scarce resource. <a href="/people/ben-wong">Ben</a>&rsquo;s suggestion is to limit the number of feature files or total number of lines so that a new product owner can realistically read through the feature files and gain a good understanding of an apps functionality. When the limit has been reached, any new Cucumber has to be matched by removing less consequential Cucumber scenarios.  </p>
+
+<p>&nbsp;  </p>
+
+<p>One final point to consider. A lot of Rails development involves working on a new app or enhancing existing sites that are not large scale hence it may seem irrelevant to constrain your use of Cucumber. However if your site increases in size and complexity and technology improvements do not decrease test execution time at the same rate as lines of Cucumber increase, then sooner or later pain will creep up on you. Where&rsquo;s the pain threshold? Well <a href="http://martinfowler.com/articles/continuousIntegration.html#KeepTheBuildFast">a ten minute build</a> is a good goal to aim for.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/not-so-cool-as-cucumber';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/innovation-days-developing-in-meteor/">Innovation days - developing in Meteor</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-future-of-digital-products-and-how-we-ll-design-them-in-the-future/">The future of digital products and how we’ll design them in the future</a></li>
+
+            <li class="blog-related__links"><a href="/blog/7-reasons-why-pair-programming-works/">7 reasons why pair programming works</a></li>
+
+            <li class="blog-related__links"><a href="/blog/digital-leaders-webinar-getting-to-beta/">Digital Leaders Webinar: Getting to Beta</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

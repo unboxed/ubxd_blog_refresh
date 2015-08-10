@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>First steps with Cordova / PhoneGap</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_first-steps-with-cordova-phonegap blog_first-steps-with-cordova-phonegap_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Veronika Hillebrand
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-05-19 13:51:00 UTC">
+              <span>
+                19 May 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            First steps with Cordova / PhoneGap
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Fast and Native-Like Hybrid Applications with PhoneGap</h2>
+
+<p>Here is a short summary of a really good workshop I went to. It was part of the <a href="http://jqueryuk.com">JQuery 2014 Conference</a> in Oxford.</p>
+
+<h3>About the workshop</h3>
+
+<p>The workshop was held by <a href="http://coenraets.org/">Christophe Coenraets</a>, who used to work for Adobe as a <a href="http://phonegap.com/">PhoneGap</a> developer advocate. Now he works for Salesforce. 
+ The workshop consisted of two parts. The setup part, where we built a <a href="https://github.com/ccoenraets/phonegap-workshop-jquk2014/wiki/PhoneGap-Workshop">small starter app</a> from scratch, and a second part where we built <a href="https://github.com/ccoenraets/phonegap-workshop-jquk2014/wiki/Building-an-Application-with-AngularJS-and-Ionic">a more advanced app</a> using Ionic. <a href="http://ionicframework.com/">Ionic</a> is a framework based on <a href="https://angularjs.org/">Angular.js</a> which helps you set up very nice looking apps very quickly.</p>
+
+<h3>What is PhoneGap?</h3>
+
+<p>PhoneGap provides a thin, lightweight wrapper on the mobile platform, with a web view that loads your HTML, CSS, JavaScript code.
+ It also &ldquo;translates&rdquo; certain JavaScript commands so they interface with native functions of your phone, like the camera or your contacts.</p>
+
+<h3>Why Cordova/PhoneGap?</h3>
+
+<p>When developing apps for phones you have several choices&hellip; you can build native apps, you can build a responsive website or you can build a hybrid app using PhoneGap/Cordova or similar frameworks.</p>
+
+<p>The relative benefits of PhoneGap apps and native apps are pretty clear - native apps look, perform and feel better than PhoneGap apps, but with PhoneGap you only have one codebase for all your phone apps.</p>
+
+<p>What wasn&rsquo;t clear to me was why you wouldn&rsquo;t just let people bookmark your responsive website.</p>
+
+<p>Here&rsquo;s why:</p>
+
+<ol>
+<li><p>PhoneGap lets you package your app for distribution in the app stores. Note that if you don&rsquo;t add something to your packaged app which sets it apart from a web app, the app store may reject it.</p></li>
+<li><p>PhoneGap lets you interface with functions on the phone that you couldn&rsquo;t access otherwise, for example:</p></li>
+</ol>
+
+<ul>
+<li><p>camera</p></li>
+<li><p>contacts</p></li>
+<li><p>notifications</p></li>
+<li><p>more here: <a href="http://docs.appery.io/documentation/using-native-device-features-phonegap/">PhoneGap native features</a></p></li>
+</ul>
+
+<h3>What&rsquo;s the difference between Cordova and PhoneGap?</h3>
+
+<p><a href="http://cordova.apache.org/">Cordova</a> is the open source core of PhoneGap. In the words of <a href="https://twitter.com/mwbrooks">Michael Brooks (Adobe)</a> &ldquo;Cordova is to PhoneGap as WebKit is to Chrome&rdquo;. PhoneGap belongs to Adobe who package up Cordova and add on other stuff around it like compiling in the cloud. 
+ Since Cordova is an open source project, it gets updated and improved upon all the time. It then takes PhoneGap a while to package the latest version up again. That&rsquo;s why Cordova is - at times - about 2 weeks ahead of PhoneGap. In our tutorial, we used Cordova.</p>
+
+<h3>Less talk, more action!</h3>
+
+<p>If you can&rsquo;t wait to get your hands dirty building a PhoneGap application, this is the material we worked through in the workshop. Let me know if you have any questions. I can&rsquo;t promise I can answer them, but I&rsquo;ll try ;)</p>
+
+<p>Step 1: Download the source files for the workshop:
+ <a href="https://github.com/ccoenraets/phonegap-workshop-jquk2014">Source Files</a></p>
+
+<p>Step 2: Follow along with this tutorial to get set up and take your first steps with PhoneGap:
+ <a href="https://github.com/ccoenraets/phonegap-workshop-jquk2014/wiki/PhoneGap-Workshop">Wiki - Basic app</a></p>
+
+<p>Step 3: Try your hand at something more involved and follow the tutorial on Ionic mobile app development:
+ <a href="https://github.com/ccoenraets/phonegap-workshop-jquk2014/wiki/Building-an-Application-with-AngularJS-and-Ionic">Wiki - Ionic / Angular app</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/first-steps-with-cordova-phonegap';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/almost-first-of-mays-newsletter/">Almost April's last newsletter</a></li>
+
+            <li class="blog-related__links"><a href="/blog/less-is-more/">Less is More</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-22nd-june-2015/">Unboxed Roundup: Our links for w/c 22nd June 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-agile-lego-village/">The Agile LEGO village</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

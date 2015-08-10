@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Investigating a CMS Toolset</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_investigating-a-cms-toolset blog_investigating-a-cms-toolset_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Christopher Patuzzo
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-08-16 15:39:00 UTC">
+              <span>
+                16 Aug 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Investigating a CMS Toolset
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Here at Unboxed, we&rsquo;re constantly building content management systems. As the web becomes more dynamic and user-driven, it&rsquo;s important to provide the necessary tools for clients to control content on their sites.</p>
+
+<p>One of our ambitions is to use the latest and greatest technologies, whilst ensuring our customers&rsquo; sites are of a high quality and well-supported. To meet this demand, <a href="http://www.unboxedconsulting.com/people/chris-carter">Chris Carter</a> and myself have spent the last week exploring CMS-oriented technologies to help streamline this process.</p>
+
+<h2><a href="http://activeadmin.info/">ActiveAdmin</a></h2>
+
+<p>We began by looking at ActiveAdmin. To evaluate its usefulness, we attempted to &lsquo;plug it in&rsquo; to an existing internal project.</p>
+
+<p>ActiveAdmin is a Rails plugin that does a lot of the heavy lifting for you regarding administering your models. After a straightforward install, you can visit /admin and manipulate your models through a comprehensive feature set.</p>
+
+<h3>Things we liked</h3>
+
+<ul>
+<li>Looks great - intuitive controls, great UX</li>
+<li>Sortable columns by default</li>
+<li>Searching/filtering of data that automatically detects the appropriate controls to use</li>
+</ul>
+
+<h3>Things we didn&rsquo;t like</h3>
+
+<ul>
+<li>Customisation - ActiveAdmin<em>is</em> customisable, but it requires knowledge of their approaches in doing so</li>
+<li>Documentation - we felt it was lacking, making it difficult to develop with</li>
+</ul>
+
+<h3>Summary</h3>
+
+<p>In general, it was easy to set up and seemed like a great out-of-the-box solution. However, we found its limitation in customisation to be too restrictive for our needs. If a &#39;developer&rsquo; or technical individual is looking for a direct view onto the database, it would be a useful tool to achieve that. Our criteria differ in that our CMS is to be client facing and therefore requires a more abstract layer for content control.</p>
+
+<h2><a href="http://jejacks0n.github.com/mercury/">Mercury</a></h2>
+
+<p>Our search for CMS tools led us to look into WYSIWYG editors, as they bridge the gap between low-level database content manipulation and higher-level controls. We stumbled upon Mercury during this search and were pleasantly surprised.</p>
+
+<p>Mercury is a tool for modifying content<em>in-place</em> on a website. To edit /my_page, you simply visit /editor/my_page. It allows you to edit any elements marked with HTML5&rsquo;s &#39;contentEditable&rsquo; feature.</p>
+
+<h3>Things we liked</h3>
+
+<ul>
+<li>Excellent UI - in comparison to similar products (CK Editor), this looks and feels a lot better</li>
+<li>No assumptions about back-end - modifications are sent to a controller in JSON format, leaving the next steps up to you</li>
+</ul>
+
+<h3>Things we didn&rsquo;t like</h3>
+
+<ul>
+<li>Limited control over page structure - as far as we can tell, you can&rsquo;t swap two columns around, for example</li>
+<li>Compatibility - it doesn&rsquo;t work with non-HTML5 compliant browsers (IE)</li>
+</ul>
+
+<h3>Summary</h3>
+
+<p>We think Mercury would fit into our toolset quite well for sites that don&rsquo;t require layout changes. We&rsquo;re advocates of new technology and HTML5 and it seems to fit that bill well. Most clients we work with are using newer browsers, so the compatibility issue shouldn&rsquo;t be too much of a problem.</p>
+
+<h2><a href="http://harvesthq.github.com/chosen/">Chosen</a></h2>
+
+<p>We&rsquo;ve been using Chosen on projects for a while now, so we thought we&rsquo;d be critical of it.</p>
+
+<p>Chosen is a replacement for HTML&rsquo;s standard select boxes. Rather than having a large list of choices, you can start typing specific names instead.</p>
+
+<h3>Things we liked</h3>
+
+<ul>
+<li>Straightforward to set up, many gems and plugins that make this even easier</li>
+<li>Has support for filtering on the backend - this means that you don&rsquo;t have to load 10,000 options into a select on page load</li>
+</ul>
+
+<h3>Things we didn&rsquo;t like</h3>
+
+<ul>
+<li>Default themes - quite limited, it would have been nice to see a few more out of the box</li>
+</ul>
+
+<h3>Summary</h3>
+
+<p>We&rsquo;re big fans of Chosen and it will definitely be making it into our toolset. It&rsquo;s a shame that the default themes are a little restrictive, but with some work, we&rsquo;re confident we could style them to suit our clients&rsquo; needs.</p>
+
+<h2><a href="https://github.com/ryanb/cancan/">CanCan</a></h2>
+
+<p>Next on the list was CanCan, another gem we&rsquo;ve used before.</p>
+
+<p>CanCan is a permission system for Rails built by <a href="https://twitter.com/rbates">Ryan Bates</a>, the producer of <a href="http://railscasts.com/about">RailsCasts</a>. It allows you to assign &#39;Abilities&rsquo; to users, granting access to different actions in your controllers and display the associated links in your views.</p>
+
+<h3>Things we liked</h3>
+
+<ul>
+<li>Permission logic extraction - it&rsquo;s (mostly) managed in one place as opposed to being scattered around your application</li>
+<li>DSL - The domain-specific language it uses feels intuitive and readable</li>
+<li>Ryan Bates</li>
+</ul>
+
+<h3>Things we didn&rsquo;t like</h3>
+
+<ul>
+<li>Very little</li>
+</ul>
+
+<h3>Summary</h3>
+
+<p>We can&rsquo;t think of a reason why we wouldn&rsquo;t want to use CanCan in our CMS. It&rsquo;s easy to set up and most projects will need some concept of a permission system.</p>
+
+<h2><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></h2>
+
+<p>Finally, we thought we&rsquo;d explore Twitter Bootstrap a little.</p>
+
+<p>Twitter Bootstrap has becomes very popular recently. It provides a default set of styles, helping you &#39;bootstrap&rsquo; your application into life - making it presentable without a huge amount of effort.</p>
+
+<h3>Things we liked</h3>
+
+<ul>
+<li>Very easy to set up - there are Rails generators available to make this super easy</li>
+<li>Compatibility - support for less, sass and plain old css</li>
+<li>Grid layout - this helps to keep things simple and makes responsive design much easier</li>
+</ul>
+
+<h3>Things we didn&rsquo;t like</h3>
+
+<ul>
+<li>Customisation - having used this on an internal project, we found it restricting when bespoke styles were required</li>
+</ul>
+
+<h3>Summary</h3>
+
+<p>On the surface, we were fans of bootstrap. It&rsquo;s easy to set up and is great for build sites without prior front-end experience. We soon went off it when we tried to customise extensively and hence we won&rsquo;t be including it in our toolset.</p>
+
+<h2>Next Steps</h2>
+
+<p>So what next? We had a few options available to us.</p>
+
+<p><em>**Build an app -</em>* something that new projects could be forked from with our recommendations set up and configured
+<em>**Build a gem -</em>* that runs a script that &#39;bootstraps&rsquo; a project with our recommendations
+<em>**Provide guidelines -</em>* simply provide some documentation that could be adhered to on new project creation</p>
+
+<p>We began by creating a new Rails app and installed/configured our preferred set of tools for it. This meant we had to make assumptions about how these tools were going to be used, such as the names of models in the database. This was far from ideal as clients use very different terminology when referring to the same sets of ideas. It is usually a good idea to keep code nomenclature in-line with that of the view-level, presented to users of the system.</p>
+
+<p>Our next step was to investigate if we could write a gem that was some sort of amalgamation of tools. In practice, this is what a Gemfile gives us. This approach could be a little fragile due to dependency inconsistencies between different versions of gems.</p>
+
+<p>Finally, we decided to produce a set of documentation that could be used as a reference as to which tools to use when building a new CMS for a client. That set of guidelines is, in fact, this blog post.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/investigating-a-cms-toolset';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/what-car-is-your-website-2/">What car is your website?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-17th-november-2014/">Unboxed Roundup: our links for w/c 17th November 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-15th-june-2015/">Unboxed Roundup: Our links for w/c 15th June 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/icon-or-ican-t-be-bothered/">Icon or Ican't be bothered.</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

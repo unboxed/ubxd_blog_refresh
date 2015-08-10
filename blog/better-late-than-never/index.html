@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Better Late Than Never</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_better-late-than-never blog_better-late-than-never_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Seb Jacobs
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-07-08 23:00:00 UTC">
+              <span>
+                 8 Jul 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Better Late Than Never
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>jQuery - Use it but don&rsquo;t host it! (Matt P)</h2>
+
+<p>Don&rsquo;t copy jQuery onto your website - let Google host it for you. Here are 3 reasons why:
+ <a href="http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/">http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/</a></p>
+
+<p>## Dooms<s>day</s>weekend (Matt P)
+ Last weekend there were huge outages on various parts of the internet. Two primary causes, independent of one another, were responsible.</p>
+
+<h1>Issue 1:</h1>
+
+<p>the Leap Second which happened at 23:59:60 June 30th caused lockup or load to skyrocket in a large number of Linux machines. This caused a few of our machines to keel over, but was also quite a wide-impacting bug; companies affected include Twitter, LinkedIn, AWS, Pinterest, Instagram, Stumbleon and Reddit. For those who care, technical information (including Kernel internals) can be found at 
+ <a href="http://serverfault.com/questions/403732/anyone-else-experiencing-high-rates-of-linux-server-crashes-during-a-leap-second">http://serverfault.com/questions/403732/anyone-else-experiencing-high-rates-of-linux-server-crashes-during-a-leap-second</a></p>
+
+<h1>Issue 2:</h1>
+
+<p>Power issues in the Amazon Cloud meant that one of their 10% availability zones failed. Dramatically. Full details at <a href="http://aws.amazon.com/message/67457/">http://aws.amazon.com/message/67457/</a></p>
+
+<p>## It&rsquo;s time for Skype (Rob P)
+ A very nice Skype microsite by B-Reel. I love the user interaction bits and bobs! Lovely, seamless animations and sexy interactive demos.
+ One thing about the site is Facebook connect: it has absolutely no benefit to the user, only some fetched-in images, and you can facebook-mail your friends about the website (hurraay), that&rsquo;s fantastic, NOT.</p>
+
+<p><a href="http://itstimefor.skype.com">http://itstimefor.skype.com</a></p>
+
+<h2>Try Git In Your Browser (Seb)</h2>
+
+<p>Last week Github launched their CodeSchool style service for teaching people Git.
+ <a href="http://try.github.com">http://try.github.com</a></p>
+
+<h2>CocoaPods (Seb)</h2>
+
+<p>I have recently been playing around with iOS, and came across a package dependency manager for Cocoa, no longer do you have to deal with linking external libaries with your xcode project.</p>
+
+<p><a href="http://cocoapods.org/#get_started">http://cocoapods.org/#get_started</a></p>
+
+<p>anyone fancy updating iCuke and packing it up as a CocoaPod?</p>
+
+<p><a href="https://github.com/unboxed/icuke">https://github.com/unboxed/icuke</a></p>
+
+<p>## Hatchet (Joerg)
+ We are extremely excited to share a new product with you:</p>
+
+<p><a href="https://hatchetapp.net">hatchetapp.net</a></p>
+
+<p>Hatchet is an online planning poker app - yes, another one - a speciality of our little purple company it seems. Myself and Rich A tenderly developed it in the last two weeks. It makes use of Nodejs, Angularjs, Socket.io, Bootstrap, and responsive design. All kinds of good stuff, basically.</p>
+
+<p>Please send us any feedback to make this thing so badass so that you will want to use it at your next planning session, and also would want to tell your partners about it.</p>
+
+<p>Be kind - Hatchet is currently in beta of course, and any feedback you could send us would be greatly appreciated.</p>
+
+<h2>Stasis (Seb)</h2>
+
+<p>I came across this the other day, it&rsquo;s a ruby framework for serving static content.</p>
+
+<p><a href="http://stasis.me/">stasis.me</a></p>
+
+<h2>Music Hackday(Barcelona) - A late update(Seb)</h2>
+
+<p>This was my second music hackday, and unlike the back in March, I actually presented something.
+ Here&rsquo;s a list of the hacks
+ <a href="http://wiki.musichackday.org/index.php?title=Barcelona_Hacks_2012">wiki.musichackday.org/index.php?title=Barcelona_Hacks_2012</a></p>
+
+<p>If you want to hear me talking about my hack you can hear me on this bbc podcast, 10 minutes in.
+ <a href="http://downloads.bbc.co.uk/podcasts/fivelive/pods/pods_20120619-0515a.mp3">BBC Outriders Podcast</a></p>
+
+<p>There are 3 upcoming hackdays which are soon to be revealed, will let you know more when more details are available.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/better-late-than-never';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-26th-january-2015/">Unboxed Roundup: our links for w/c 26th January 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-90-days-to-transform-a-stuck-digital-product-that-has-to-succeed-9c47e9a9-2a9b-4bf5-83ab-b96fe13e1908/">Webinar: 90 days to transform a ‘stuck’ digital product that HAS to succeed...</a></li>
+
+            <li class="blog-related__links"><a href="/blog/being-lean-in-the-nhs/">Being lean in the NHS</a></li>
+
+            <li class="blog-related__links"><a href="/blog/why-a-ux-er-and-a-developer-trumps-system-and-business-analysts/">Why a UX-er and a Developer trumps System and Business Analysts</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

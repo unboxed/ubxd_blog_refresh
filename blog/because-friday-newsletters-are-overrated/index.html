@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Because Friday newsletters are overrated</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_because-friday-newsletters-are-overrated blog_because-friday-newsletters-are-overrated_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Richard Archer
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-03-10 07:21:00 UTC">
+              <span>
+                10 Mar 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Because Friday newsletters are overrated
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>I’ve been <code>git</code>-ing it wrong! - <a href="https://www.unboxedconsulting.com/people/murray-steele">Murray Steele</a></h2>
+
+<p>I was helping someone on my team prepare a deploy recently and noticed they tagged the release with <code>git -a tag &lt;sha&gt; -m “tagging for release”</code>. I was mostly confused by the <code>-m</code>, as I didn’t know you could add a message to a tag, but I couldn’t recall seeing the <code>-a</code> either. I did some research, and it turns out <a href="http://www.rockstarprogrammer.org/post/2008/oct/16/git-tag-does-wrong-thing-default/">I’ve been creating lightweight tags</a> all along. How embarrassing!</p>
+
+<h2>Plain Javascript - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray Steele</a></h2>
+
+<p>There’s definitely a push back on using jQuery for everything in JS. I’ve been aware of the idea, but I’ve never really thought about it much, so found <a href="http://blog.adtile.me/2014/01/16/a-dive-into-plain-javascript/">this article about plain javascript alternatives to jQuery methods</a> really useful. New DOM APIs are supported in most modern browsers, but of course, modern browsers aren’t the problem. Libraries like jQuery provide standard APIs and polyfills for old browsers too, but if we use a site like <a href="http://caniuse.com/">Can I Use</a> we can find out the full range of browsers that support an API and can decide if we want the overhead of using jQuery or not for a particular project.</p>
+
+<h2>On stupid classes - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray Steele</a></h2>
+
+<p>I can’t remember how I found <a href="http://me.veekun.com/blog/2013/03/03/the-controller-pattern-is-awful-and-other-oo-heresy/">this article about controller patterns and stupid classes</a>, but the arguments about object design, and MVC controllers in particular, are very interesting. Some of the stuff is particular to Python (e.g. method annotations, which we don’t have in Ruby, although there’s <a href="https://www.google.co.uk/search?q=ruby+method+annotations">plenty of discussion if you’re interested</a>), but the main point is that objects should have state and behaviour and from that you can talk about what they are. Controllers are stupid classes because they’re don’t really represent anything other than the mechanics of MVC. My <em>tl;dr</em> isn’t very good, so you should just read it.</p>
+
+<h2>Ruby implementation of Bitcoin - <a href="http://www.unboxedconsulting.com/people/henry-turner">Henry Turner</a></h2>
+
+<p>It’s just a Gist… But it’s a Ruby implementation of <a href="https://gist.github.com/thehenster/9368139">Bitcoin’s proof of work concept</a>. Proof of work is what Bitcoin is based on and mining is often described as ‘solving mathematical problems’ when it’s little more than a coin toss.</p>
+
+<h2>ECMAScript 6 Roundup - Gavin van Lelyveld</h2>
+
+<p>&ldquo;<a href="https://github.com/lukehoban/es6features">This standard is targetting ratification in December 2014</a>. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009&rdquo;</p>
+
+<h2>Git automation - Gavin van Lelyveld</h2>
+
+<p>Cape Town newbie Gavin is a big fan of automation - so much so he&rsquo;s decided to educate us all in configuring our git configs to make the default behaviours work betterer.</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/948354/git-push-default-behavior/948397#948397">Configuring the default behaviour of <code>git push</code></a></li>
+<li><a href="http://stackoverflow.com/questions/18308535/automatic-prune-with-git-fetch-or-pull/18718936#18718936">Always be <code>git fetch --prune</code>-ing</a></li>
+</ul>
+
+<h2>Things I learned when stuff went wrong - <a href="http://www.unboxedconsulting.com/people/sven-agnew">Sven Agnew</a></h2>
+
+<p>We recently had a sprint which was very heavy on system administration and command line work as opposed to development work and I thought I&rsquo;d share a few of the links I hit during my frantic Googling in the face of downtime clock increments.</p>
+
+<h3>Tools to test load</h3>
+
+<p>We used <a href="https://www.hospitalrecords.com/shop/release/various-artists/nhs243-hospital-we-are-18">the excellent httperf</a> to pre-test load management on a web cluster by replaying production nginx log file data with various concurrency and step-increment models.</p>
+
+<p>The vast and powerful <a href="https://jmeter.apache.org">Apache Jmeter</a> is a massive multi-protocol load and performance testing application. Not good for emergencies. Excellent for planning and research.</p>
+
+<h3>Tools to debug with</h3>
+
+<p>Spelunking into 3rd-party libraries and system code is impossible without a solid understanding of <a href="http://sourceware.org/gdb/onlinedocs/gdb/Running.html#Running">this ubiquitous tool</a>. Probably you won&rsquo;t need to use it often. When you do, you <em>really</em> do.</p>
+
+<p>The <a href="http://vimeo.com/45923773">Enterprise version of Passenger</a> has some debugging and resource management facilities which really make digging into live code much simpler. In the case of a production system, that alone is probably worth the license fee.</p>
+
+<h3>Tools to stay focussed with</h3>
+
+<p><a href="https://www.hospitalrecords.com/shop/release/hospital-records/nhs243-hospital-we-are-18">Hospital Records</a> - simply brilliant Drum n Bass to while away those 8pm debugging sessions ;)</p>
+
+<p></sha></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/because-friday-newsletters-are-overrated';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-squish-of-the-week/">The squish of the week</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-that-went-better-than-the-last/">The Week That Went Better Than The Last</a></li>
+
+            <li class="blog-related__links"><a href="/blog/wikileaks-war-logs-on-rails/">Wikileaks war logs on rails</a></li>
+
+            <li class="blog-related__links"><a href="/blog/recipe-for-a-cape-town-office/">Recipe for a Cape Town office</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

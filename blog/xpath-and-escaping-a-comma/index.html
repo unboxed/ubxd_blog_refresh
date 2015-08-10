@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>XPath and escaping a comma</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_xpath-and-escaping-a-comma blog_xpath-and-escaping-a-comma_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Jolyon Pawlyn
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2011-08-30 09:00:00 UTC">
+              <span>
+                30 Aug 2011
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            XPath and escaping a comma
+          </h1>
+
+          <div class="blog-article__content">
+            <p>For those of you looking for the answer to how to escape a comma in an XPath text match, I&rsquo;m sorry but I just don&rsquo;t know it. But if you are using Capybara, have no fear, there is a way round.</p>
+
+<p>It was Friday afternoon and I was cleaning up some tests, and had the XPath:</p>
+
+<p><code>//ul[@id=&#39;stories_page&#39;]/li[@class=&#39;story_headline&#39;][1]//p[2][text()=&#39;Posted by Clint Eastwood on Wednesday, 9 September 2009&#39;]</code></p>
+
+<p>The comma appearing after &lsquo;Wednesday&rsquo; was causing all manner of havoc. Using the <a href="https://addons.mozilla.org/en-US/firefox/addon/xpath-checker/">XPath Checker</a> Firefox add-on, I tried escaping it with backslashes, ampersands, a forty-four magnum (I was desperate) but no go. It was only when I can across this <a href="https://github.com/jnicklas/capybara/blob/master/lib/capybara/spec/session/has_xpath_spec.rb">capybara spec test for has_xpath</a> that the solution became apparent:</p>
+
+<p><code>have_xpath(&quot;//ul[@id=&#39;stories_page&#39;]/li[@class=&#39;story_headline&#39;][1]//p[2]&quot;, :text =&gt;</code><code>&#39;Posted by Clint Eastwood on Wednesday, 9 September 2009&#39;</code><code>)</code></p>
+
+<p>Although there was the <a href="http://www.unboxedconsulting.com/blog/steak-vs-cucumber-as-bdd-tools">same solution</a> much closer to home. If anybody knows the answer to escaping a comma without Capybara, then please let us know. For once, Google failed me.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/xpath-and-escaping-a-comma';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/five-facilitation-techniques-for-promoting-agile-for-government/">Five facilitation techniques for promoting Agile for government</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-25th-may-2015/">Unboxed Roundup: Our links for w/c 25th May 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-speed-up-stakeholder-communication-and-sign-off/">Webinar: Speed up stakeholder communication and sign off</a></li>
+
+            <li class="blog-related__links"><a href="/blog/kanban-in-the-cape-part-2/">Kanban in the Cape - Part 2</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

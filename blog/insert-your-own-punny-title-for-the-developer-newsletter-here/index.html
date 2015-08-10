@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>[Insert your own punny title for the Developer newsletter here]</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_insert-your-own-punny-title-for-the-developer-newsletter-here blog_insert-your-own-punny-title-for-the-developer-newsletter-here_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Richard Archer
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-03-22 14:56:00 UTC">
+              <span>
+                22 Mar 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            [Insert your own punny title for the Developer newsletter here]
+          </h1>
+
+          <div class="blog-article__content">
+            <p>[Snappy introduction and witty segue]</p>
+
+<p>Here are this week&rsquo;s links - enjoy the weekend!</p>
+
+<p>Event Aggregator And/Or/vs Mediator: A Tale of Two Patterns - Jörg D
+ ==</p>
+
+<p><a href="http://lostechies.com/derickbailey/2013/03/18/event-aggregator-andorvs-mediator-a-tale-of-two-patterns/">http://lostechies.com/derickbailey/2013/03/18/event-aggregator-andorvs-mediator-a-tale-of-two-patterns/</a></p>
+
+<p>Clearly written article on explaining the difference between the Event Aggregator and the Mediator patterns.</p>
+
+<p>You are watching your DNS logs, right? - Tom TT
+ ==</p>
+
+<p><a href="http://blog.safeinstance.com/2013/03/18/dns/">http://blog.safeinstance.com/2013/03/18/dns/</a></p>
+
+<p>How Facebook discovered a compromise in their network by looking at DNS logs and how you can do the same.</p>
+
+<p>Here are some IRB customisations - Pawel J
+ ==</p>
+
+<p><a href="http://rakeroutes.com/blog/customize-your-irb/">http://rakeroutes.com/blog/customize-your-irb/</a></p>
+
+<p>Imagine, if you will, an article with the title - &ldquo;Customize your IRB&rdquo;. This link fulfills all you could possibly imagine about such a dream.</p>
+
+<p>Testing your database backups: the test environment database refresh pattern - Murray S
+ ==</p>
+
+<p><a href="http://www.songkick.com/devblog/2013/03/20/testing-your-database-backups-the-test-environment-database-refresh-pattern/">http://www.songkick.com/devblog/2013/03/20/testing-your-database-backups-the-test-environment-database-refresh-pattern/</a></p>
+
+<p>A good article from one of the songkick devops about how to do db backups properly. Crucially it&rsquo;s not enough to backup the data, you need to test that you can restore it. He also covers the kinds of data sanitization they do on these backups so that their test servers have real data, but not real account details. I&rsquo;d have liked a bit more detail on how they do that bit as it&rsquo;s something I&rsquo;ve done a few times, but never been happy with the solution. I&rsquo;ve used raw SQL, bash scripts, and even looked at some higher-level tooling like <a href="https://github.com/sunitparekh/data-anonymization">https://github.com/sunitparekh/data-anonymization</a>, but nothing I&rsquo;ve done has sat that comfortably with me yet.</p>
+
+<p>Barcelona Music Hack Day - Andrew M
+ ==</p>
+
+<p><a href="http://bcn.musichackday.org/2013/index.php?page=Main+page">http://bcn.musichackday.org/2013/index.php?page=Main+page</a></p>
+
+<p>Barcelona is holding its 4th Music Hack Day on the 13th and 14th of June. Some of the developers here went last year. They are making a special call to this year for people interested in neuroscience and music and are looking into APIs for interacting with music using the brain.</p>
+
+<p>Awesome!</p>
+
+<p>When Enterprise software goes too far. - Matt P
+ ==</p>
+
+<p><a href="https://github.com/Mikkeren/FizzBuzzEnterpriseEdition/">https://github.com/Mikkeren/FizzBuzzEnterpriseEdition/</a></p>
+
+<p>FizzBuzz is often used to filter out programmer novices. But at the other end of the scale of programming complexity, there&rsquo;s this github project which takes Enterprise methodologies to an extreme.</p>
+
+<p>Collection of cheatsheets / mini references - Matt P
+ ==</p>
+
+<p><a href="http://www.overapi.com/">http://www.overapi.com/</a></p>
+
+<p>As developers working on multiple projects (as opposed to environments where one product is developed continuously) we get exposed to lots of different technologies and software products. Here&rsquo;s a useful page which has reference guides for lots of tools that we use, for use as a reminder of those which we&rsquo;ve forgotten due to not having used in a while.</p>
+
+<p>Action Cost - Matt P
+ ==</p>
+
+<p><a href="https://github.com/plerohellec/action_cost">https://github.com/plerohellec/action_cost</a></p>
+
+<p>Quoting directly from the README file, &ldquo;ActionCost is a Rails 3 engine implemented as a gem. It hooks into ActiveRecord (and RecordCache if used) and counts the number of SQL queries per controller action and per table.&rdquo;</p>
+
+<p>Making Front-end development a team sport - Rich A
+ ==</p>
+
+<p><a href="http://cognition.happycog.com/article/making-front-end-development-a-team-sport">http://cognition.happycog.com/article/making-front-end-development-a-team-sport</a></p>
+
+<p>Great overview from HappyCog&rsquo;s Jenn Lukas about the various approaches we can all take to make front-end development as easy-to-collaborate-upon-able as possible.</p>
+
+<p>MailChimp UX Newsletter - Rich A
+ ==</p>
+
+<p><a href="http://us5.campaign-archive1.com/?u=7e093c5cf4&amp;id=24a1198f78">http://us5.campaign-archive1.com/?u=7e093c5cf4&amp;id=24a1198f78</a></p>
+
+<p>MailChimp are incredibly transparent about their UX processes - to the point that they&rsquo;ve now started a UX-themed newsletter for your weekly edification.</p>
+
+<p>Flash vs. HTML - Rob P
+ ==</p>
+
+<p><a href="http://flashvhtml.com">http://flashvhtml.com</a></p>
+
+<p>We&rsquo;ve read and seen a lot of sites, articles and debates about the end of Flash and the uprising of HTML5. The guys at Waste know both platforms pretty well and after creating Waste Invaders for iOS using Adobe AIR (stage3D) they managed to make the same game using HTML5 technologies. Now they rolled out a sweet WebGL microsite to share their thoughts about the two platforms and their findings.</p>
+
+<p>&ldquo;Fun&rdquo; Stuff : Chrome Maze - Rich A
+ ==</p>
+
+<p><a href="http://chrome.com/maze">http://chrome.com/maze</a></p>
+
+<p>Hey there, folks over 27 years of age - remember Marble Madness? Recreate all the fun of shouting &ldquo;<strong>NO! THAT WAY! THAT WA</strong>oooh damn&rdquo; but with your mobile Chrome browser magically co-operating with your desktop equivalent. The Future is here, folks, and it&rsquo;s really difficult to control.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/insert-your-own-punny-title-for-the-developer-newsletter-here';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/two-months-at-unboxed/">Two Months at Unboxed!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/don-t-let-the-train-make-you-strain/">Don't let the Train make you Strain</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-20th-july-2015/">Unboxed Roundup: Our links for w/c 20th July 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-in-bitesize-chunks/">The Week In Bitesize Chunks</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title> On Feedback Loops and Agile</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_on-feedback-loops-and-agile blog_on-feedback-loops-and-agile_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Ben Wong
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-11-19 00:00:00 UTC">
+              <span>
+                19 Nov 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+             On Feedback Loops and Agile
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I was talking to <a href="http://www.unboxedconsulting.com/people/matt-frank">Matt Frank</a> the other day and he mentioned something important - agile is all about feedback loops. I&rsquo;ve been thinking and <a href="http://www.vanderburg.org/Writing/xpannealed.pdf">reading</a> over this concept for a while now and I&rsquo;ve come to the conclusion that feedback loops are a good way of explaining agile and a quick way of measuring the quality of an agile process.  </p>
+
+<p>If we think about a developer view of XP, he/she has many feedback loops to encourage higher quality work: pair programming, TDD, story demo with the customer, task boards, morning stand ups, the XP coach (or scrum master if you insist), testers, continuous build, iterations, frequent releases, retrospectives, and of course end user feedback (and there&rsquo;s still more - trust me). This rather large list of things we do just to help the developers deliver value is at the heart of why agile can deliver quickly and efficiently over time - the sheer amount of feedback helps to ensure developers write functionality that is consistent with what has come before and provides the required value demanded by the customer now.  </p>
+
+<p>Now, we don&rsquo;t always have all of these things, but for any agile process we may have either just left them out or replaced them with something else - but by simply counting the number of things we do for feedback we can get a nice little quality measure of how hard our process is working to aid our developers.  </p>
+
+<p>Thinking in terms of feedback loops also shows up a large gap in the agile processes that I&rsquo;ve worked on - what about everyone else on the team? Customers get to write stories, choose what is built, see it being built, demoed and may even get to test it. So customers have it pretty good too. Testers, well testers are an odd bunch, a developer left gibbering in the corner may be all they need. But actually testers have a fairly fast feedback loop in terms of submitting bugs and seeing them fixed and may also participate in the creation of acceptance criteria, see those criteria implemented in automated acceptance tests and eventually see those tests keep the developers on target.  </p>
+
+<p>So, who&rsquo;s been left out? Well those poor BA&rsquo;s, you know the ones who have never had a real role in agile but are called in as &lsquo;translators&rsquo; or &#39;mediators&rsquo; or even worse: second rate substitute for a disinterested customer who doesn&rsquo;t care enough to participate in the development process themselves. I&rsquo;ll have to get back to you on this one, I&rsquo;ve been meaning to ask our in-house BA experts <a href="http://www.unboxedconsulting.com/people/matt-frank">Matt Frank</a> and <a href="http://www.unboxedconsulting.com/people/steve-lennon">Steve Lennon</a> about this, and I&rsquo;m sure there&rsquo;s a chap at <a href="http://xpday-london.editme.com/eXtremeTuesdayClub">XTC</a> who has some thoughts on this.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/on-feedback-loops-and-agile';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/scrum-ban-aka-common-sense-in-agile/">Scrum-ban aka common sense in Agile</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unit-testing-on-the-iphone-sorry-what/">Unit testing on the iPhone</a></li>
+
+            <li class="blog-related__links"><a href="/blog/because-friday-newsletters-are-overrated/">Because Friday newsletters are overrated</a></li>
+
+            <li class="blog-related__links"><a href="/blog/november-newsletter/">November Newsletter</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

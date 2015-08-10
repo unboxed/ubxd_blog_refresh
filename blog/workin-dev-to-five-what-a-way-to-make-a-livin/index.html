@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Workin' dev to five, what a way to make a livin'</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_workin-dev-to-five-what-a-way-to-make-a-livin blog_workin-dev-to-five-what-a-way-to-make-a-livin_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-07-04 12:30:00 UTC">
+              <span>
+                 4 Jul 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Workin' dev to five, what a way to make a livin'
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Patterns - <a href="http://www.unboxedconsulting.com/people/henry-turner">Henry</a></h2>
+
+<p><a href="http://library.uniteddiversity.coop/Ecological_Building/A_Pattern_Language.pdf">http://library.uniteddiversity.coop/Ecological\_Building/A\_Pattern\_Language.pdf</a> (warning - 45 MB PDF)</p>
+
+<p>My Dad, a town planner and landscape architect, often bemoans how the software industry has utilised the concept of patterns better than his own from which the term came. If you haven’t seen <a href="http://library.uniteddiversity.coop/Ecological_Building/A_Pattern_Language.pdf">A Pattern Language by Christopher Alexander</a> it’s pretty interesting to flick through and see what he was trying to achieve. </p>
+
+<h2>Rails 404 pages - <a href="http://www.unboxedconsulting.com/people/andrew-white">Andrew W</a></h2>
+
+<p><a href="http://blog.jerodsanto.net/2014/06/a-step-by-step-guide-to-bulletproof-404s-on-rails/">http://blog.jerodsanto.net/2014/06/a-step-by-step-guide-to-bulletproof-404s-on-rails/</a></p>
+
+<p>Despite what this article suggests, it&rsquo;s a seriously bad idea to set your routes as the failure app - don&rsquo;t do it! When your application is handling an exception, you don&rsquo;t want to run it through the stack again. For example: if a <code>before\_filter</code> in the <code>ApplicationController</code> raises an exception feeding it back into the routes will just raise the exception again! Rails will protect you from shooting yourself in the foot by <a href="https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb#L41-51">capturing an exception from the failure app</a> and <a href="https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb#L18-L22">rendering a simple text string</a>, but otherwise you could end up putting yourself into an exception loop.</p>
+
+<p>If what you want is to have 404 pages rendered from an ERb template, you can do this by just having the catch-all route without setting the failure app (his step 1).</p>
+
+<p>If you want to write a custom failure app that&rsquo;s okay - just don&rsquo;t use <a href="https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/routing/route_set.rb"><code>ActionDispatch::Routing::RouteSet</code></a> as it&rsquo;s not designed for it!</p>
+
+<h2>Google Design - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://www.google.com/design/spec/">http://www.google.com/design/spec/</a></p>
+
+<p>One of the things announced at Google IO this year was <a href="http://www.google.com/design/spec/">Material Design</a> which is Google&rsquo;s design documentation for what their applications will look like. You can already see hints of it in the <a href="https://www.google.co.uk/maps/preview">new maps interface</a>, and the <a href="https://itunes.apple.com/app/gmail/id422689480?mt=8">gmail client on iOS</a>, but I expect that <a href="https://en.wikipedia.org/wiki/Android_L">Android L</a> will be the real unveiling. There&rsquo;s lots of good stuff, particularly at the start of the document where it&rsquo;s more general about how objects and controls should react to each other. As it progresses it becomes less generally useful as it goes into specifics for how to layout the padding on text-boxes, and other controls to make them fit in with Material Design. Even if you aren&rsquo;t writing applications that you want to fit in with Material Design it would be worth reading this document to get a feel for some current thinking in UX.</p>
+
+<h2>Homebrew wrapper around launchctl - <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andrew M</a></h2>
+
+<p><a href="http://robots.thoughtbot.com/starting-and-stopping-background-services-with-homebrew">http://robots.thoughtbot.com/starting-and-stopping-background-services-with-homebrew</a></p>
+
+<p>If you’re anything like me you probably keep forgetting the command to <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html">launchctl</a> that thing you need to start up. Make life easier on yourself! <a href="http://brew.sh">Homebrew</a> provides a nice service wrapper around launchctl to make it easier to start and stop services you require to be running.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/workin-dev-to-five-what-a-way-to-make-a-livin';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/html5-validation-that-does-not-hurt/">HTML5 validation that does not hurt</a></li>
+
+            <li class="blog-related__links"><a href="/blog/how-do-i-make-them-more-self-organising/">How do I make my Agile Team more self-organising?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-27th-july-2015/">Unboxed Roundup: Our links for w/c 27th July 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/workin-dev-to-five-what-a-way-to-make-a-livin/">Workin' dev to five, what a way to make a livin'</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

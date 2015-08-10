@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Why should you have a zero-defect strategy?</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_why-should-you-have-a-zero-defect-strategy blog_why-should-you-have-a-zero-defect-strategy_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Richard Stobart
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2015-07-28 13:36:00 UTC">
+              <span>
+                28 Jul 2015
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Why should you have a zero-defect strategy?
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Part of the logic of a <a href="https://en.wikipedia.org/wiki/Zero_Defects">zero-defect strategy</a> is about psychology: specifically, the psychology of the developer working on code that they know is flawed. The other part of it is just good business practice&hellip;  </p>
+
+<p>We’ve all heard many times that the cost of identifying a bug in production is exponentially more expensive than identifying a bug in development.  </p>
+
+<p>If you take an approach of <em>“some bugs are acceptable to roll into production”</em> then effectively what you’re saying is <em>“I’d rather spend more money later than less money now fixing this problem”</em>. If you do that more than once or twice then you start to build your house on sand.</p>
+
+<h2>In practice</h2>
+
+<p>Imagine a developer working on a feature, relying on other components that have some well-known defects in them. They’re relying on these components to get their feature working. The developer thinks long and hard about their feature. They implement the code. They run the tests. Something breaks.  </p>
+
+<p>The natural reaction is to think that the known problems in the dependent components are more likely to be the problem, rather than an unknown problem in the developer’s code. They’ve spent a long time on that code. They’ve thought it all through. It should work.  </p>
+
+<p>The developer knows that the component they’re depending on is flaky, so go ahead and commit this code, knowing there’s a bug in the other feature. That’s not their problem.  </p>
+
+<p><img alt="Zero-defect strategy" src="http://bit.ly/1gUUeg3" /></p>
+
+<p>This problem becomes exacerbated. The developer is not being absolutely 100% pure in their implementation. Buggy code is being delivered, whether it’s in their feature or another feature. The whole problem then multiplies. The next developer comes along thinking they’re relying on the feature they know is buggy. They’re also relying on a feature that doesn’t work because that developer is relying on a feature that’s buggy. They’re going to take more time to fix the feature. It’s been a long time since the original bug was identified. No one seems to care. They won’t waste their time fixing that.  </p>
+
+<p>Their bit of code will work in <strong>certain</strong> scenarios, but not in <strong>this</strong> scenario because it’s know there’s a problem. So the code isn’t actually tested for that scenario, even though it’s been written so that one day - if that feature is fixed - that code will probably work (or it may not).  </p>
+
+<h2>The situation</h2>
+
+<p>Eventually the whole code base, over time, becomes riddled with holes. Everyone has justified that these holes are acceptable. Every time a new feature is built, it’s being built on a very fragile code base. Only the well-travelled code base paths are bug-free. All other paths are full of pit holes that aren’t understood.  </p>
+
+<p>Maintaining a huge code base, full of pit holes, is very expensive.  </p>
+
+<h2>The solution</h2>
+
+<p>The buggy code should be removed. Either fixed or acknowledged that it’s not going to use a feature and remove it. Otherwise a whole load of &lsquo;debt&rsquo; is built up. Not even technical debt, just feature debt.  </p>
+
+<p>The easiest thing to do is nip it in the bud. You should be saying:  </p>
+
+<ul>
+<li><p>_We are going for zero-defect code  </p></li>
+<li><p>Each feature we build will have zero-known defects  </p></li>
+<li><p>As soon as we discover a defect, we will remove it/fix it/stub out that bit of code, we don’t need it anymore  </p></li>
+<li><p>We should invest the time in making sure there are no problems in the code_    </p></li>
+</ul>
+
+<p>Malcolm Gladwell talks about the Broken Window Syndrome - the then Major of New York&rsquo;s approach to zero-tolerance of small crimes, like broken windows in disused factories, that tolerate ever-larger crimes. This is exactly that. Manifestation in code.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/why-should-you-have-a-zero-defect-strategy';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/cucumber-iphone-icuke/">Cucumber + iPhone = iCuke</a></li>
+
+            <li class="blog-related__links"><a href="/blog/rspec-sitemap-matchers-for-your-seo-goodness/">RSpec Sitemap matchers for your SEO goodness</a></li>
+
+            <li class="blog-related__links"><a href="/blog/investigating-a-cms-toolset/">Investigating a CMS Toolset</a></li>
+
+            <li class="blog-related__links"><a href="/blog/on-being-a-remote-worker/">On being a remote worker</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

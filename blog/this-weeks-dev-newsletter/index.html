@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>This week's Dev Newsletter</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_this-weeks-dev-newsletter blog_this-weeks-dev-newsletter_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Leo Cassarani
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-12-17 15:58:00 UTC">
+              <span>
+                17 Dec 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            This week's Dev Newsletter
+          </h1>
+
+          <div class="blog-article__content">
+            <p>A shorter than usual dev newsletter this week, in no way related to its coinciding with the Unboxed Christmas party.</p>
+
+<h3>Fast Rails Tests Through Behavior Verification (Pawel)</h3>
+
+<p>A goodly amount of hints and tips about getting your Rails tests to run faster; mostly through changing the design of your code.
+ <a href="http://chill.manilla.com/2012/11/15/fast-rails-tests/">http://chill.manilla.com/2012/11/15/fast-rails-tests/</a></p>
+
+<h3>A Ruby Design Process</h3>
+
+<p>Brian Ford aka brixen, one of the creators of <a href="http://rubini.us">Rubinius</a> talks about his proposal for a Ruby design process. Well worth reading if you have the future of the language at heart.</p>
+
+<p><a href="http://brixen.io/2012/12/11/a-ruby-design-process">http://brixen.io/2012/12/11/a-ruby-design-process</a></p>
+
+<h3>Elnode - an Emacs version of node.js (Matt F)</h3>
+
+<p>Elnode is an asynchronous web server written in Emacs LISP. Why not.</p>
+
+<p><a href="http://nic.ferrier.me.uk/blog/2010%5C_10/elnode">http://nic.ferrier.me.uk/blog/2010\_10/elnode</a></p>
+
+<h3>Removal of <code>like</code> and <code>not_like</code> from Rails 4 (Murray)</h3>
+
+<p>As a follow up to <a href="http://www.unboxedconsulting.com/blog/cucumbers-missed-high-fives-dancing-hungarians-and-more">our previous newsletter</a>:</p>
+
+<p>They&rsquo;ve removed the like and not_like operators from Rails 4 because of . Oh well. There&rsquo;s always gems like <a href="https://github.com/ernie/squeel">Squeel</a>, shame we can&rsquo;t have a richer API exposed directly in ActiveRecord in core though (even if it is probably available by dropping down to Arel).</p>
+
+<p><a href="https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805">https://github.com/rails/rails/commit/8d02afeaee8993bd0fde69687fdd9bf30921e805</a></p>
+
+<h2>Steve B sends in his usual &ldquo;wodge of links&rdquo;:</h2>
+
+<ul>
+<li><p><a href="https://blog.twitter.com/2012/implementing-pushstate-for-twittercom">Implementing pushState for twitter.com</a></p></li>
+<li><p><a href="https://github.com/Huddle/PhantomCSS">PhantomCSS: automated visual regression testing</a></p></li>
+<li><p><a href="http://craigmod.com/satellite/subcompact_round_up/">Subcompact round up and The Daily</a></p></li>
+<li><p><a href="http://mobiletestingfordummies.tumblr.com/post/37629799816/testing-front-end-changes-quickly-and-easily">Testing Front End Changes Quickly and Easily</a></p></li>
+<li><p><a href="http://lorempixel.com/">lorempixel: placeholder images for every case</a></p></li>
+<li><p><a href="http://www.designstaff.org/">Design Staff: Helping startups design great products</a></p></li>
+<li><p><a href="http://www.aktifmag.com/top-20-of-2012-famous-thinkers-quoting-herald-sun-readers/">Famous Thinkers Quoting Herald Sun Readers</a></p></li>
+<li><p><a href="http://branch.com/b/what-can-we-do-to-stop-sincerity">What can we do to stop sincerity?</a></p></li>
+<li><p><a href="http://responsiveurl.co.uk/while/were/making/everything/responsive/lets/not/forget/the/url/">Responsive URLs</a></p></li>
+<li><p><a href="http://uglybelgianhouses.tumblr.com/">Ugly Belgian Houses</a></p></li>
+</ul>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/this-weeks-dev-newsletter';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/new-apprentice-luke-ben/">New Apprentices - Luke & Ben</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-take-developers-up-the-foodchain-why-how-to-include-developers-in-business-design-meetings-for-better-ideation/">Webinar - Take developers up the foodchain: Why & how to include developers in business & design meetings for better ideation</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-27th-april-2015/">Unboxed Roundup: our links for w/c 27th April 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/html5-validation-that-does-not-hurt/">HTML5 validation that does not hurt</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

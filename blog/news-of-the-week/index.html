@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>News Of The Week</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_news-of-the-week blog_news-of-the-week_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Will Tomlins
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-05-31 23:00:00 UTC">
+              <span>
+                31 May 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            News Of The Week
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>MS-provided IE testing VMs (Muz)</h2>
+
+<p><a href="https://github.com/xdissent/ievms">https://github.com/xdissent/ievms</a></p>
+
+<p>Simple scripts to slap some of those MS-provided IE testing VMs together and avoid the Windows Genuine Advantage thing timing them out after 30 days. I&rsquo;ve not tried it, because I have one of our Windows XP licenses installed in VirtualBox and MultiIE installed to give me 6, 7, &amp; 8. However activating that XP license did mean I had to phone MS and convince them I wasn&rsquo;t a scammer, so this might be easier than that. And certainly easier than hunting down the vms someone else in the company has already prepared.</p>
+
+<p>Also has the phrase &ldquo;comically large files&rdquo; in the README. WHAT IS NOT TO LIKE?</p>
+
+<p>##Modifier keys and pushState (Carl)##
+ A common pattern is to intercept clicks on anchors and pass them through xhr. This can lead to some pretty frustrating usability issues with tabbed browsing among other things. This article suggests how to properly intercept anchors.</p>
+
+<p><a href="http://dev.tenfarms.com/posts/proper-link-handling">http://dev.tenfarms.com/posts/proper-link-handling</a></p>
+
+<h2>Sinon.JS (Carl)</h2>
+
+<p>I&rsquo;ve been using this for a while and it&rsquo;s simply the best way i&rsquo;ve found to test async javascript. If you haven&rsquo;t seen it before give it look.</p>
+
+<p><a href="http://sinonjs.org/">http://sinonjs.org/</a></p>
+
+<h2>D3 (Carl)</h2>
+
+<p>We&rsquo;re using this on storyweb to create visualisations of user metrics. It&rsquo;s pretty damned awesome (check out the demos). When coupled with Raphael to do the rendering we&rsquo;ve even got it running in IE7.</p>
+
+<p><a href="http://d3js.org/">http://d3js.org/</a></p>
+
+<h2>Zeroes (Carl)</h2>
+
+<p>###Ohh javascript###</p>
+
+<p><a href="http://zero.milosz.ca/">http://zero.milosz.ca/</a></p>
+
+<p>##Vanity A/B testing (Andy)##</p>
+
+<p>So after doing a lot of prototype based work with Reevoo of late i have been looking into ways which we could carry out A/B tests on our projects. Unfortunately &lsquo;Limited Exposure&rsquo;, an app created here at Reevoo by Tom, is currently not available publicly and requires a little thought towards making this open source (it&rsquo;s in the pipeline though!). So instead i&rsquo;ll l;et you all take a look at this which seems to be a better implementation in ruby land (unlike LE which uses an api which can be hit using js.
+ <a href="http://vanity.labnotes.org/#intro">http://vanity.labnotes.org/#intro</a></p>
+
+<p>##be_valid_asset update (Jolyon)##</p>
+
+<p><a href="https://github.com/unboxed/be_valid_asset">be_valid_asset</a> has been updated and released as version 1.2.1. Version 1.2.0 was an unfortunate dogs dinner. Tests now run using rspec2 and the be_valid_xhtml matcher has been deprecated and replaced by the more generic and html5 friendly be_valid_markup.</p>
+
+<p>##Chris&rsquo; Rack (Chris)##</p>
+
+<p>I built a rack extension for serving highlighted source code that uses GitHub&rsquo;s Pygments gem. It might be of use.</p>
+
+<p><a href="https://github.com/tuzz/rack-source">https://github.com/tuzz/rack-source</a></p>
+
+<p>##Rails updates (Leo)##</p>
+
+<p><a href="http://weblog.rubyonrails.org/2012/5/31/ann-rails-3-2-4-has-been-released/">http://weblog.rubyonrails.org/2012/5/31/ann-rails-3-2-4-has-been-released/</a></p>
+
+<p>Rails 3.2.4 has been released. Most notably, it provides fixes for two separate SQL injection bugs.</p>
+
+<p>I encourage you all to read through the two security announcements and perhaps consider applying the patch to all our Rails 3 projects (in situations where upgrading to 3.2.4 is impossible, of course). Neither of them are incredibly serious vulnerabilities, but naturally it&rsquo;s best to err on the side of caution.</p>
+
+<p>On that note, 3.2.5 was also released, as a regression was discovered in 3.2.4. So if we want to upgrade some of our newer apps (e.g. Apps for Good), then 3.2.5 is where it&rsquo;s at.</p>
+
+<p>##The Long one (Attila)##</p>
+
+<h3>Meteor. Yet another JS framework? Not quite&hellip;</h3>
+
+<p><a href="http://meteor.com">http://meteor.com</a></p>
+
+<p>I&rsquo;ve seen quite a few JS frameworks, there&rsquo;s Express, Mojito (<a href="http://developer.yahoo.com/cocktails/mojito/">http://developer.yahoo.com/cocktails/mojito/</a>) and about another gazillion different MVC, MVVM and MMVVCXYZ frameworks and such. Most of them look nice and promising for the first sight, then turn out to be a pain to work with.</p>
+
+<p>And there&rsquo;s Meteor. &ldquo;Meteor is a set of new technologies for building top-quality web apps in a fraction of the time&rdquo;. That is supposed to be the same rapid prototyping that Rails became famous for.</p>
+
+<p>But anyway, it&rsquo;s not just another framework on top of Node. To me it is more interesting, mainly because of the following reasons:</p>
+
+<ul>
+<li>Meteor is &ldquo;just&rdquo; a framework that intelligently glues &ldquo;smart packages&rdquo; together</li>
+<li>It is supposed to be highly modular</li>
+<li>You are not restricted to use CoffeeScript or MongoDB or Backbone, but you can if you want to. Anything that you can wrap within a &ldquo;smart package&rdquo;.</li>
+<li>Smart packages wrap up additional functionality and can hook into the stack</li>
+<li>You can use the same API on both client- and server-side devices, meaning you write non-repetative code</li>
+</ul>
+
+<p>What really blew me away is when I&rsquo;ve seen how you can use Mongo commands within the browser to work with &ldquo;models&rdquo; and it all gets synchronised automatically with the server and other connected clients.
+ This is a very interesting new approach if you think about it, that&rsquo;s probably the reason why they got $9M in funding recently. <a href="http://gigaom.com/cloud/scoop-meteor-gets-9m-in-funding/">http://gigaom.com/cloud/scoop-meteor-gets-9m-in-funding/</a></p>
+
+<ul>
+<li>You should totally watch the screencast: <a href="http://meteor.com/screencast">http://meteor.com/screencast</a></li>
+<li>You should read what is the mission of the project: <a href="http://meteor.com/about/mission">http://meteor.com/about/mission</a></li>
+<li>You should totally download it and fiddle around with it</li>
+</ul>
+
+<h3>Up to date ubxd-ruby1.9.3 debian package</h3>
+
+<p>You may not know but we have our own Debian package that we use to install Ruby on our servers. Alex has started it, currently it has 1.9.3-p125 packaged in it. As of today, version 1.9.3-p194 is the latest production release of Ruby so therefore our package is outdated. Now, I like up-to-date software and given that Alex is not here anymore, I decided to pick this up where he left it. In the past I&rsquo;ve done no debian packaging but I learned all the basics in 2 days during my holiday recently. I am going to try upgrading the package but it would be great to know if anybody else has done something similar to this before and could potentially collaborate with me on this.</p>
+
+<p>Funnily enough I&rsquo;ve found no up-to-date version on Ubuntu&rsquo;s Launchpad so it&rsquo;s time to make one. For a fact I know that other (non-ubxd) people are using our publicly available APT repository too, here&rsquo;s a gist on how to make use of it:
+ <a href="https://gist.github.com/1472705">https://gist.github.com/1472705</a></p>
+
+<p>I am also planning on applying some of the available performance and improved garbage collection patches taht are available.</p>
+
+<p>Hit me up if you are interested in helping out.</p>
+
+<p>##New Rails spell (Will)##</p>
+
+<p>I just love it when you think to yourself &#39;I reckon there&rsquo;s probably a method which does this&rsquo;, and there is. Here&rsquo;s one I I recently discovered which clears up a commonly seen and somewhat ugly pattern.</p>
+
+<p>Lets say you have a model, &#39;Cindy&rsquo;, and Cindy has\_many AnnoyingFriends. Lets also say you have a form to edit Cindy (a bit like plastic surgery). That form must contain a multiple select where you can choose which annoying\_freinds are associated with Cindy. Additionally when an annoying\_friendship is broken, that annoying\_friend must be DESTROYED. Your form posts an array of annoying\_friend\_ids which should be associated with Cindy.</p>
+
+<p>Typically you will have a nasty block of code in you controller somewhere which does something along the lines of this:</p>
+
+<ul>
+<li>Find all annoying\<em>friends attached to Cindy which are not in `params[:annoying</em>friend_ids]` and DESTROY them.</li>
+<li>Throw out all ids in <code>params[:annoying_friend_ids]</code> which are already attached to Cindy</li>
+<li>Create new friendships for the remaining ids.</li>
+</ul>
+
+<p>_Happily we don&rsquo;t need to do this again&hellip; ever&hellip;_</p>
+
+<p>Maybe everyone else already knows about this, but rails generates a couple of methods for you.</p>
+
+<p>This works:</p>
+
+<p><code>cindy.update_attribute(:annoying_friend_ids, params[:annoying_friend_ids])</code></p>
+
+<p>or</p>
+
+<p><code>cindy.annoying_friend_ids = params[:annoying_friend_ids]</code></p>
+
+<p>and rails will take care of the rest of the mess. Rails does make sure that actual records exist for each of the ids passed in. Additionally there&rsquo;s a getter which is useful for pre-populating form input values.</p>
+
+<p>I&rsquo;ve got no idea how long these magic methods have been there since I can&rsquo;t find any documentation on them.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/news-of-the-week';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/corporate-to-unboxed-a-project-manager-s-journey-to-scrum-master-part-1/">Corporate to Unboxed, a Project Manager’s journey to Scrum Master - Part 1</a></li>
+
+            <li class="blog-related__links"><a href="/blog/media-roundtable-session-20th-may/">Media Roundtable Session - 20th May</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-16th-march-2015/">Unboxed Roundup: our links for w/c 16th March 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/this-week-faster-rails-tests-interactive-video-lovely-interfaces-and-the-history-of-bbc-news-online/">This week: Faster Rails tests, Interactive Video,  Lovely Interfaces and the history of BBC News online</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

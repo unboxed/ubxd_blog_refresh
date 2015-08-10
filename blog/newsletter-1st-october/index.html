@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Newsletter, 1st October</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_newsletter-1st-october blog_newsletter-1st-october_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Attila Gyorffy
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-01 10:22:00 UTC">
+              <span>
+                 1 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Newsletter, 1st October
+          </h1>
+
+          <div class="blog-article__content">
+            <p>This week the newsletter has been slightly delayed due to other slightly more important assignments. Sorry about that. Anyway, as they say it&rsquo;s better late then never, so here we go.</p>
+
+<h1>Great little-used features in Rails</h1>
+
+<p><a href="http://www.unboxedconsulting.com/people/joerg-diekmann">Jörg</a> mentions some <a href="http://blog.mitchcrowe.com/blog/2012/04/14/10-most-underused-activerecord-relation-methods">great little-used features in Rails</a>. Some of them are only really applicable to Rails 4 - but there are some good ones there that we can already use, especially the <code>first_or_create</code> and <code>first_or_initialize</code> methods in <code>ActiveRecord</code>. I think it&rsquo;s definitely worth having a look at these.</p>
+
+<h1>Things that are sick and wrong</h1>
+
+<p><a href="http://www.unboxedconsulting.com/people/matt-peperell">Matt P</a> is apparently a fan of things that are sick and wrong, but don&rsquo;t worry: in a work-safe way. Here&rsquo;s a couple of his recent finds:</p>
+
+<ul>
+<li>A Real Time communication library <a href="http://github.com/videlalvaro/gifsockets">using Animated Gifs As a Transport</a>™. GifSockets! This can come handy when WebSockets are not an option, for example in old browsers. And Internet Explorer too.</li>
+<li>A <a href="http://code.google.com/p/php-py/source/browse/trunk/src/php/php.py">PHP abstraction layer in Python</a>.</li>
+</ul>
+
+<h1>Pivotal in Chrome</h1>
+
+<p>About two weeks ago I found out about <a href="http://pivotalbooster.com/">Pivotal Booster</a> that is being advertised as the best Pivotal Tracker client for Mac OS X. This week <a href="http://www.unboxedconsulting.com/people/elizabeth-curson">Elizabeth</a> has submitted yet another tool for Agile and Scrum lovers:</p>
+
+<p>There&rsquo;s a <a href="http://chrome.google.com/webstore/detail/iegbkljacgfochoondhgibofiijnedjd">Chrome extension</a> that lets you view Pivotal Tracker stories in a taskboard layout. Not good for much other than a top level overview of where things are in the current sprint since the cards aren&rsquo;t interactive, but certainly OK for using at Stand up for projects without a physical board.</p>
+
+<h1>Run the right tests at the right time</h1>
+
+<p><a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a> wants you to read <a href="http://www.songkick.com/devblog/2012/09/27/run-the-right-tests-at-the-right-time/">Run the right tests at the right time</a>. It&rsquo;s an article from the generally excellent <a href="http://www.songkick.com/devblog/">Songkick developer blog</a> about testing the right things at the right time. The basic gist is that they don&rsquo;t have automated tests for things that they wouldn&rsquo;t care if it was broken and they shipped. They have other post-deploy tools to catch the breaks and help them prioritise fixes. I don&rsquo;t know how much of this is applicable to the work you do in case you are not in the position of…</p>
+
+<ul>
+<li>Working constantly on a project for a long period of time,
+Necessarily being able to setup those &ldquo;post-deploy&rdquo; tools that would require attention once you might have left the client,</li>
+<li>Set up with continuous deployment, you still pretty much deploy at the end of an iteration.</li>
+</ul>
+
+<p>Still I think it&rsquo;s interesting, maybe on some projects where you have a longer term engagement it might be worth pruning the build, or having 2 builds - the core / current features build and the everything build.</p>
+
+<h1>Upside-Down-Ternet</h1>
+
+<p>Your neighbours are stealing your wireless internet access? What? Well, before you would fire up your router administration UI to change your wifi password, you might think twice and <a href="http://www.ex-parrot.com/pete/upside-down-ternet.html">troll the thieves for a little bit</a>. Go on and read a bit. It&rsquo;s brilliant. Thanks to <a href="http://www.unboxedconsulting.com/people/matt-frank">Matt</a> for sending this in. (Also, credit needs to go to <a href="http://twitter.com/TomBeresfordUK">@TomBeresfordUK</a> whom he found this via.)</p>
+
+<h1>ActiveSupport &ldquo;method&rdquo; of the week: OrderedHash</h1>
+
+<p>We occassionally talk about useful methods that live in ActiveSupport. This week I decided to pick a whole class. We&rsquo;ve talked about little or less known features of Rails that are less known to people because they are usually limited to internals of the framework. This does not mean though that you cannot make good use of them in anywhere else in a Rails project. This week I&rsquo;d like to have your attention on <a href="http://rubydoc.info/docs/rails/ActiveSupport/OrderedHash"><code>ActiveSupport::OrderedHash</code></a>.</p>
+
+<p>It is a subclass of Array but it preserves the means of hash access, as well as the keys and values methods:</p>
+
+<p>oh = ActiveSupport::OrderedHash.new
+ oh[:a] = 1
+ oh[:b] = 2
+ oh.keys # =&gt; [:a, :b], this order is guaranteed</p>
+
+<p>Funnily enough as far as I know this is not used in many places in the Rails internals but can come very useful when you code. Think about it when you need to enforce persisted sorting on a hash.</p>
+
+<p>One thing to note, though: Hashes are ordered by default in Ruby 1.9. This means with the future release of Rails 4 this class is very likely to disappear given that Rails 4 will drop Ruby 1.8 support.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/newsletter-1st-october';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-week-in-links/">The Week In Links</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-of-winning/">The Week Of Winning</a></li>
+
+            <li class="blog-related__links"><a href="/blog/this-weeks-developer-newsletter-cats-conferences-and-cascading-style-sheets/">This week's developer newsletter - cats, conferences, and cascading style sheets</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-22nd-june-2015/">Unboxed Roundup: Our links for w/c 22nd June 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

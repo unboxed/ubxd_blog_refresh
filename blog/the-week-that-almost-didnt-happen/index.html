@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The week that almost didn't happen</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-week-that-almost-didnt-happen blog_the-week-that-almost-didnt-happen_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Tom ten Thij
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-08-24 15:10:00 UTC">
+              <span>
+                24 Aug 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The week that almost didn't happen
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>ActiveSupport Method of the Week: <a href="http://api.rubyonrails.org/classes/Hash.html#method-i-diff">diff</a></h2>
+
+<p>This week just a brief mention of a useful core extension on Hash objects:</p>
+
+<p>Returns a hash that represents the difference between two hashes.</p>
+
+<p>Examples:</p>
+
+<p>{1 =&gt; 2}.diff(1 =&gt; 2) # =&gt; {}
+ {1 =&gt; 2}.diff(1 =&gt; 3) # =&gt; {1 =&gt; 2}
+ {}.diff(1 =&gt; 2) # =&gt; {1 =&gt; 2}
+ {1 =&gt; 2, 3 =&gt; 4}.diff(1 =&gt; 2) # =&gt; {3 =&gt; 4}</p>
+
+<p>##A github use case for a Wikipedia of rap lyrics (Pawel J)
+ <a href="http://success.heroku.com/rapgenius">http://success.heroku.com/rapgenius</a></p>
+
+<h2>Goliath is a non-blocking Ruby web server framework and has just hit 1.0.0 (Lee R)</h2>
+
+<p><a href="https://github.com/postrank-labs/goliath">https://github.com/postrank-labs/goliath</a></p>
+
+<h2>Backburner is a simple and reliable beansktalkd job queue for Ruby (Lee R)</h2>
+
+<p><a href="http://nesquena.github.com/backburner/">http://nesquena.github.com/backburner/</a></p>
+
+<h2>Checker gem for Ruby &amp; Rails development (Lee R)</h2>
+
+<p><a href="http://pewniak747.info/2012/08/04/Checker-gem-for-ruby-rails-development/">http://pewniak747.info/2012/08/04/Checker-gem-for-ruby-rails-development/</a></p>
+
+<h2>Rubular (Matt P)</h2>
+
+<p><code>Some people, when confronted with a problem, think
+ “I know, I&#39;ll use regular expressions.” Now they have two problems.</code></p>
+
+<p>These words are often <a href="http://regex.info/blog/2006-09-15/247">attributed to Jamie Zawinski</a>, former Netscape programmer. Quips aside, if you&rsquo;re using regular expressions in your Ruby project, there is a useful tool to help with the regular expression side of things:
+ <a href="http://rubular.com/">http://rubular.com/</a></p>
+
+<h2>Corkamix (Matt P)</h2>
+
+<p>Yet another file which is valid in multiple formats. This one is interesting compared to the others because it centers around binary file formats rather than plain-text source code. The project is located at 
+ <a href="http://code.google.com/p/corkami/downloads/detail?name=CorkaMIX.zip">http://code.google.com/p/corkami/downloads/detail?name=CorkaMIX.zip</a> - it&rsquo;s simultaneously a valid:
+* Windows Portable Executable binary
+* Adobe Reader PDF document
+* Oracle Java JAR (a CLASS inside a ZIP)/Python script
+* HTML page</p>
+
+<h2>Cool code (Murray S)</h2>
+
+<p>This video is quite good: <a href="http://vimeo.com/44792649">http://vimeo.com/44792649</a></p>
+
+<p>It&rsquo;s the keynote from GeeCON - a Java fringe conference I think, don&rsquo;t worry though as there&rsquo;s not much java in it. It&rsquo;s really quite a general programmer talk.</p>
+
+<p>The central thesis is that we should read code but not the boring code for libraries and work stuff, but fun code to see just what can be done. Sort of in the vein of that Beautiful Code book (indeed it&rsquo;s name checked very early on). Some code examples are historical, some are brain-melting all are interesting. It&rsquo;s perhaps a bit long-winded at just under an hour in length, but it&rsquo;s pretty easy to dip in and out of as he shows lots of examples.</p>
+
+<h2>Functional composition (Murray S)</h2>
+
+<p>Another good video is this: <a href="http://skillsmatter.com/podcast/home/functional-composition">http://skillsmatter.com/podcast/home/functional-composition</a></p>
+
+<p>It&rsquo;s a talk about using functional programming (well it is about clojure so what did you expect). He walks the audience through building up a program that can play some bach. It&rsquo;s really impressive and along the way you get to learn about harmonics and music and all that. It is also about an hour long, but it&rsquo;s well worth the time just to see the simple beginnings and how layering the functions on top of each other ends up with a really expressive program all the way from the top to the bottom, and each layer is very small.</p>
+
+<h2>RFC for the 7XX Range of HTTP Status codes - Developer Errors (Matt F)</h2>
+
+<p><a href="https://github.com/joho/7XX-rfc/">Error 748: Confounded by Ponies</a></p>
+
+<p>Feliz Carnaval!</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-week-that-almost-didnt-happen';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/corporate-to-unboxed-a-project-manager-s-journey-to-scrum-master-part-1/">Corporate to Unboxed, a Project Manager’s journey to Scrum Master - Part 1</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-devmas-newsletter/">The Devmas Newsletter </a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-4th-may-2015/">Unboxed Roundup: our links for w/c 4th May 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-30th-march-2015/">Unboxed Roundup: our links for w/c 30th March 2015</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

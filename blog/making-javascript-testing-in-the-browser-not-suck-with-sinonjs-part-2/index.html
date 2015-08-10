@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Making JavaScript testing in the browser not suck with Sinon.js (Part 2)</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_making-javascript-testing-in-the-browser-not-suck-with-sinonjs-part-2 blog_making-javascript-testing-in-the-browser-not-suck-with-sinonjs-part-2_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Carl Whittaker
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-22 14:06:00 UTC">
+              <span>
+                22 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Making JavaScript testing in the browser not suck with Sinon.js (Part 2)
+          </h1>
+
+          <div class="blog-article__content">
+            <p>This is the continuation of my post on Sinon.js, the first part can be found here <a href="http://www.unboxedconsulting.com/blog/making-javascript-testing-in-the-browser-not-suck-with-sinon-js-part-1">http://www.unboxedconsulting.com/blog/making-javascript-testing-in-the-browser-not-suck-with-sinon-js-part-1</a>.</p>
+
+<p>I&rsquo;m going to describe the basic usage of Sinon&rsquo;s mocks, spies, and stubs.</p>
+
+<h2>Getting started</h2>
+
+<p>I&rsquo;m going to assume you&rsquo;re familiar with TDD and if you&rsquo;ve read the first part you should already have a test suite up and running with your framework of choice. So i&rsquo;ll just get right into it.</p>
+
+<h2>Mocks</h2>
+
+<p>Mocks replace APIs with fake methods. We can use mocks to make expectations. Expectations allow us to ensure that methods on our API are called correctly.</p>
+
+<h3>Benefits:</h3>
+
+<ul>
+<li>Tests run more quickly</li>
+<li>Bugs can be traced more easily</li>
+<li>Tests are easier to read</li>
+</ul>
+
+<p>Heres an example test utilising a mock:</p>
+
+<p>module(&lsquo;TeaBreak&rsquo;);</p>
+
+<p>test(&#39;enjoy should save data&rsquo;, 1, function () {
+ var mock = sinon.mock(Network);
+ mock.expects(&#39;save&rsquo;)
+ .once()
+ .withArgs({cuppa: &#39;lovely&rsquo;});</p>
+
+<p>new TeaBreak({cuppa: &#39;lovely&rsquo;}).enjoy();</p>
+
+<p>mock.verify();
+ });</p>
+
+<p>Here we&rsquo;re setting an expectation. We&rsquo;re expecting the &ldquo;save&rdquo; method on the &ldquo;Network&rdquo; object to be called with the correct arguments.</p>
+
+<p>Lets run the test and watch it fail.</p>
+
+<p><img alt="Failing test with a mock expectation" src="http://carlmw.github.com/articles/failing_mock.png" /></p>
+
+<p>Now we&rsquo;ll write some code to make it pass.</p>
+
+<p>var TeaBreak = function (data) {
+ this.data = data;
+ };</p>
+
+<p>TeaBreak.prototype = {
+ enjoy: function () {
+ Network.save(this.data);
+ }
+ };</p>
+
+<p>And run the tests.</p>
+
+<p><img alt="Passing test with a mock" src="http://carlmw.github.com/articles/passing_mock.png" /></p>
+
+<p>Perfect.</p>
+
+<p>The Sinon expectation API is chainable and features everything you need to specify the state in which a method should be called. More options can be found in the Sinon documentation here <a href="http://sinonjs.org/docs/#expectations">http://sinonjs.org/docs/#expectations</a>.</p>
+
+<h2>Stubs</h2>
+
+<p>Like mocks stubs can be used to replace methods on an API. We can use stubs to force our code down a particular path. This allows us to test how our code responds to errors and different return values in isolation.</p>
+
+<p>Heres an example of a stub in action.</p>
+
+<p>test(&#39;enjoy should generate an error message when save fails&rsquo;, 2, function () {
+ sinon.stub(Network, &#39;save&rsquo;).returns(false);</p>
+
+<p>var elevenses = new TeaBreak({cuppa: &#39;lovely&rsquo;});
+ elevenses.enjoy();</p>
+
+<p>equal(elevenses.errors.length, 1, &#39;One error should be generated&rsquo;);
+ equal(elevenses.errors[0], &#39;No break for you :(&rsquo;);</p>
+
+<p>Network.save.restore();
+ });</p>
+
+<p>Here we&rsquo;re creating a stub for &ldquo;save&rdquo; on our Network API. We&rsquo;re telling it to return &ldquo;false&rdquo; when it&rsquo;s called. We&rsquo;re then asserting that an error message has been added to our instance.</p>
+
+<p>If we run our tests we should see one failure.</p>
+
+<p><img alt="Failing test with a stub" src="http://carlmw.github.com/articles/failing_stub.png" /></p>
+
+<p>And if we write some code to make it pass.</p>
+
+<p>var TeaBreak = function (data) {
+ this.errors = [];
+ this.data = data;
+ };</p>
+
+<p>TeaBreak.prototype = {
+ enjoy: function () {
+ if (false === Network.save(this.data)) {
+ this.errors.push(&#39;No break for you :(&rsquo;);
+ }
+ }
+ };</p>
+
+<p>Then run our tests.</p>
+
+<p><img alt="Passing test with a stub" src="http://carlmw.github.com/articles/passing_stub.png" /></p>
+
+<p>Done.</p>
+
+<p>The Sinon stub API gives us a comprehensive framework to simulate the behaviour of an external dependency. Sinon stubs are immensely flexible. We can instruct them to perform many complex actions; such as automatically triggering callbacks with predefined arguments. The full stub API can be found here <a href="http://sinonjs.org/docs/#stubs-api">http://sinonjs.org/docs/#stubs-api</a></p>
+
+<h2>Spies</h2>
+
+<p>Spies are great for testing the conditions around which a callback is called. They can be used to ensure that events are triggered as expected.</p>
+
+<p>Heres an example of a spy in action</p>
+
+<p>test(&#39;callback is triggered&rsquo;, function () {
+ var callback = sinon.spy();</p>
+
+<p>var elevenses = new TeaBreak({cuppa: &#39;lovely&rsquo;});
+ elevenses.on(&#39;enjoyed&rsquo;, callback);
+ elevenses.enjoy();</p>
+
+<p>ok(callback.calledOnce);
+ });</p>
+
+<p>We&rsquo;re creating a spy and subscribing it to an event on our subject. We then exercise our subject and assert that the callback was called once.</p>
+
+<p>Lets watch the test fail.</p>
+
+<p><img alt="Failing test with a spy" src="http://carlmw.github.com/articles/failing_spy.png" /></p>
+
+<p>Now lets write some code to make it pass.</p>
+
+<p>var TeaBreak = function (data) {
+ this.errors = [];
+ this.topics = {};
+ this.data = data;
+ };</p>
+
+<p>TeaBreak.prototype = {
+ enjoy: function () {
+ if (false === Network.save(this.data)) {
+ this.errors.push(&#39;No break for you :(&rsquo;);
+ } else {
+ this.publish(&#39;enjoyed&rsquo;);
+ }
+ },
+ on: function(topic, fn) {
+ this.topics[topic] = fn;
+ },
+ publish: function(topic) {
+ if (this.topics[topic]) this.topics<a href="#">topic</a>;
+ }
+ };</p>
+
+<p>Run the tests</p>
+
+<p><img alt="Passing test with a spy" src="http://carlmw.github.com/articles/passing_spy.png" /></p>
+
+<p>Spot on.</p>
+
+<p>Spies are a great way of peeking into the inner workings of your code without replacing a method. A spy can wrap an existing method allowing you to make assertions around how it was called while still allowing it to function as normal. Documentation for the Stub API can be found here <a href="http://sinonjs.org/docs/#spies-api">http://sinonjs.org/docs/#spies-api</a></p>
+
+<p>Hopefully this has served as a brief but useful introduction to the mocking features of Sinon.</p>
+
+<p>Happy testing.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/making-javascript-testing-in-the-browser-not-suck-with-sinonjs-part-2';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-3-11/">UBXDDEV Vol. 3.11</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-37/">UBXDDEV Vol. 3.7</a></li>
+
+            <li class="blog-related__links"><a href="/blog/happy-new-year-unboxedians/">Happy New Year Unboxedians and commiserations on the ashes</a></li>
+
+            <li class="blog-related__links"><a href="/blog/cognitive-bias-product-management-and-you/">Cognitive Bias, Product Management and you</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

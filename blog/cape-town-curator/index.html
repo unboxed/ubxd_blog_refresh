@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Happy Ashes!</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_cape-town-curator blog_cape-town-curator_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Tyrone Toplis
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-07-19 14:00:00 UTC">
+              <span>
+                19 Jul 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Happy Ashes!
+          </h1>
+
+          <div class="blog-article__content">
+            <h2><a href="/people/andrew-mitchell">Andrew Mitchell</a></h2>
+
+<h4>Audio components for Javascript</h4>
+
+<p>When working with fully fledged audio software we often deal with multiple software instruments which can be used via a common interface with our audio software. I have been thinking a lot recently about an ecosystem of open source instruments being distributed around the internet with a common interface for working with audio processing in a browser environment. This week I found <a href="http://component.fm/">component.fm</a> which is a library of different filters, oscillators and other audio components to use in your html5 audio apps. It&rsquo;s not quite Stienberg&rsquo;s VST (Virtual Studio Instruments) standard&hellip;. yet!</p>
+
+<h2><a href="/people/grant-speelman">Grant Speelman</a></h2>
+
+<h4>Nice little write up on the Visitor Pattern in Ruby</h4>
+
+<p><a href="http://blog.bigbinary.com//2013/07/07/visitor-pattern-and-double-dispatch.html">http://blog.bigbinary.com//2013/07/07/visitor-pattern-and-double-dispatch.html</a></p>
+
+<h3>New Features coming soon to Rubymine</h3>
+
+<p><a href="http://blog.jetbrains.com/ruby/2013/07/rubymine-momiji-roadmap/">http://blog.jetbrains.com/ruby/2013/07/rubymine-momiji-roadmap/</a></p>
+
+<p>##<a href="/people/ben-janecke">Ben Janecke</a></p>
+
+<h4>This a bit of cool javascript trivia</h4>
+
+<p><a href="http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme/">http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme/</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/cape-town-curator';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/new-version-of-rails-a-new-patch-level-of-ruby-193-and-kittens-oh-my/">New version of Rails, a new patch level of Ruby 1.9.3 and kittens, oh my!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/national-apprenticeship-week-2/">National Apprenticeship Week</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-the-newsletter-almost-became-purple/">The Week The Newsletter Almost Became Purple</a></li>
+
+            <li class="blog-related__links"><a href="/blog/one-week-iterations-rock/">One Week Iterations Rock</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

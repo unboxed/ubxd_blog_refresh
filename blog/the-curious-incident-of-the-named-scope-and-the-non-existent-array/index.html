@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The curious incident of the named scope and the non-existent array</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-curious-incident-of-the-named-scope-and-the-non-existent-array blog_the-curious-incident-of-the-named-scope-and-the-non-existent-array_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Jolyon Pawlyn
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2009-11-23 00:00:00 UTC">
+              <span>
+                23 Nov 2009
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The curious incident of the named scope and the non-existent array
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Rails performance tuning is often a matter of SQL tuning but we recently stumbled upon code involving a named scope that caused more SQL to run than expected.</p>
+
+<p>We were looking at an SQL trace in <a href="http://www.newrelic.com/">New Relic RPM</a> for one of our apps when Nige and myself noticed what appeared to be duplicate SQL. The query was a monster (a monster in this case being a beast of over 20ft in height and over 2 seconds in length) so having it run twice was pretty ruinous even with fragment caching in use. To identify the cause, we used the <a href="http://code.google.com/p/query-reviewer/">query reviewer</a> plugin which is fantastic and enables you to see the SQL being run for an individual page request in the browser window. As well as identifying inefficient SQL, it also shows at what point in the code SQL is fired.</p>
+
+<p>The apparent duplicate SQL was running from a partial where there was a <code>products</code> variable set to a named scope. The partial contained:</p>
+
+<p><code>product = products.first
+...
+products[1..2].each_with_index do |product, index|
+  ...
+end</code></p>
+
+<p>At first glance it looks innocuous as <code>products.first</code> is meant as an alternative to <code>products[0]</code>. If <code>products</code> was an array the two statements would be equivalent but in this example, <a href="http://api.rubyonrails.org/classes/ActiveRecord/NamedScope/Scope.html"><code>first</code></a> is a named scope. It is chained together with the the named scope defined by <code>products</code> and has the affect of adding <code>LIMIT 1</code> to the executed SQL since <code>products</code> is yet to be populated. When <code>products[1..2]</code> runs, the same SQL is executed without the <code>LIMIT 1</code>.</p>
+
+<p>To ensure that the SQL runs once, we used <code>products[0]</code> instead of <code>products.first</code>. By calling <code>products[0]</code>, the named scope is populated and subsequent calls including a call to <code>first</code> does not result in any SQL.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-curious-incident-of-the-named-scope-and-the-non-existent-array';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-37/">UBXDDEV Vol. 3.7</a></li>
+
+            <li class="blog-related__links"><a href="/blog/road-trip/">Road Trip</a></li>
+
+            <li class="blog-related__links"><a href="/blog/developer-newsletter-of-hope-1-feb-2013/">A New Hope</a></li>
+
+            <li class="blog-related__links"><a href="/blog/filling-gaps/">Filling Gaps</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

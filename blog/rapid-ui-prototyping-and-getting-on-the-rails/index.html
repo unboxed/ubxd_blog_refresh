@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Rapid UI prototyping and getting on the Rails</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_rapid-ui-prototyping-and-getting-on-the-rails blog_rapid-ui-prototyping-and-getting-on-the-rails_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Martyn Evans
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-09-26 15:33:00 UTC">
+              <span>
+                26 Sep 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Rapid UI prototyping and getting on the Rails
+          </h1>
+
+          <div class="blog-article__content">
+            <p><img alt="UI prototype on phone" src="http://i.imgur.com/qQs8Xcu.jpg" /></p>
+
+<p>Having only been in my current position for ten months, there are many members of the Unboxed team I haven’t had the pleasure to work with yet, <a href="https://www.unboxedconsulting.com/people/chris-carter">Chris (Crystal) Carter</a> being one of them. When we both found ourselves &ldquo;on the bench” a couple of weeks ago, we decided to take some innovation days together.</p>
+
+<p>At the beginning of day one we took a moment to identify a few things we each hoped to get out of the time. Chris was keen to explore some lean product development methods following on from his experience at <a href="http://www.unboxedconsulting.com/blog/lean-machine">The Lean Startup Machine</a> and also look at using some third-party UI libraries to speed up product prototyping. I too was keen to explore rapid UI prototyping but I also wanted to learn some Ruby on Rails. Whilst I no longer need to cut code in anger, I really want to feel I could contribute should I ever need to.</p>
+
+<p>During our internal Unboxed product incubator in April I&rsquo;d pitched an idea that was universally rejected but the itch remained and this seemed like a perfect opportunity to give it a scratch. I had an early working Rails prototype but it was massively limited by the fact that it was practically useless on mobile phones. I&rsquo;ll explain more about the product idea in a future blog post but in previous user testing sessions it had become perfectly clear that access on the go would be a major factor in the successful use of the product and I really wanted to give it to a few people to try out.</p>
+
+<p>Chris and I looked at a number of UI libraries that go beyond the basics of <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a>. <a href="http://goratchet.com/">Ratchet</a> and <a href="http://semantic-ui.com/">Semantic UI</a> were considered but we settled on the pro version of <a href="http://designmodo.com/flat/">Flat UI</a> due to the comprehensive set of components and their general look and feel - it seemed to fit well with our target users.</p>
+
+<p>We selected a few critical sections of the application and found that we could very quickly implement the Flat UI elements such that the application started to look usable. The designs are far from polished and we tried not to get too bogged down in the detail. We took out some features that weren’t essential to the overall functionality and focussed on getting it up to a standard that was “good enough” to do some real world testing.</p>
+
+<p>At the end of the two days, I was in a position to make changes to the Rails application AND deploy to Heroku - this is a major win for me as it means I can make changes and test new things in my spare time based on learnings from real users. Chris can step in when it gets tricky and be confident he can add new features that will look consistent using the UI library without the need for too much “design” time.</p>
+
+<p>This ability to prototype quickly and test with real users in real situations is really vital and we hope to continue to nibble away at this product. Once we’ve proved the concept and perhaps tested a few business models, then we might invest in a complete redesign and rebuild but for the time being it seems like two days really well spent.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/rapid-ui-prototyping-and-getting-on-the-rails';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-30th-march-2015/">Unboxed Roundup: our links for w/c 30th March 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-18th-may-2015/">Unboxed Roundup: Our links for w/c 18th May 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/boomboxed/">Boomboxed</a></li>
+
+            <li class="blog-related__links"><a href="/blog/plenty-more-fish-in-the-sea/">Plenty more fish in the sea...</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

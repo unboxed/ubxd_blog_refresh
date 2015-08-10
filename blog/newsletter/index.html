@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Newsletter</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_newsletter blog_newsletter_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Grant Speelman
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-07-19 23:00:00 UTC">
+              <span>
+                19 Jul 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Newsletter
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>ActiveSupport Method Of The Week : <a href="http://as.rubyonrails.org/classes/ActiveSupport/CoreExtensions/Hash/ReverseMerge.html">ReverseMerge</a></h2>
+
+<p>Allows for reverse merging where its the keys in the calling hash that wins over those in the other_hash. This is particularly useful for initializing an incoming option hash with default values:</p>
+
+<p>def setup(options = {})
+ options.reverse_merge! :size =&gt; 25, :velocity =&gt; 10
+ end</p>
+
+<p>The default :size and :velocity is only set if the options passed in doesn‘t already have those keys set.</p>
+
+<p>## Innovation Days &amp; Conferences</p>
+
+<p>If there&rsquo;s some technical itch you want to scratch but don&rsquo;t get to in your day-to-day client work, book an innovation day and get cracking on it. At our last dev afternoon in the London office we identified <a href="https://wiki.unboxedconsulting.com/wiki/Dev_Day#Not_Done">a bunch of tasks that would be perfect for an innovation day</a>. Please remember to book them!</p>
+
+<p>We&rsquo;re keen that Unboxed developers get on stage and talk about things. We&rsquo;re also aware the client work means you might not have the time, but that&rsquo;s another use for innovation days are for! If you have a topic idea, book an innovation day or two to prepare it and then submit it to all the conferences you can. A good resource for ruby conferences is <a href="http://rubythere.com/">rubythere.com</a>, but there are plenty of other conferences out there to try out at. Even if you don&rsquo;t get through the CFP Unboxed is likely to pay for the ticket to the conf.</p>
+
+<p>You&rsquo;ve got up to 10 innovation days, so don&rsquo;t be afraid to use them!</p>
+
+<h2>Dev Submissions</h2>
+
+<h3>Pawel J</h3>
+
+<p><a href="http://blog.greweb.fr/2012/07/how-i-learned-backbone-js-three-js-glsl-in-one-week/?utm_source=javascriptweekly&amp;utm_medium=email">How I learned Backbone.js, Three.js &amp; GLSL in one week • @GreWeb</a></p>
+
+<p><a href="http://legitimatesounding.com/blog/building_a_mongodb_clone_in_postgres_part_1.html">Building a MongoDB Clone in Postgres: Part 1 - LegitimateSounding.com</a></p>
+
+<p><a href="http://hackersays.com/2f2a78">Hacker Says quotes - awesome quotes</a></p>
+
+<h3>Grant S</h3>
+
+<p>The <a href="http://ruby-toolbox.com/">Ruby Toolbox</a> is another invaluable resource for Ruby and Rails developers</p>
+
+<h3>Attila G</h3>
+
+<h4>Firefox 15 plugs the add-on leaks</h4>
+
+<p><a href="http://blog.mozilla.org/nnethercote/2012/07/19/firefox-15-plugs-the-add-on-leaks/">http://blog.mozilla.org/nnethercote/2012/07/19/firefox-15-plugs-the-add-on-leaks/</a></p>
+
+<p>I remember when I&rsquo;ve seen Firefox cheekily swollowing about 2GBs of memory on my Mac. That was the time I decided to give up on it and turn to the alternative browsers when it comes down to development. Let&rsquo;s be honest, Firefox is not the only browser with a decent inspector anymore, in fact Google Chrome&rsquo;s web inspector and development tools of the upcoming Safari 6 seem to be pretty decent. Honestly I don&rsquo;t have much hope for Firefox, but at least it&rsquo;s good to see that there&rsquo;s been some efforts towards fixing its biggest issue. (At least that&rsquo;s the way I see it.)</p>
+
+<p>Firefox 15 is expecterd to be released on 28th of August.</p>
+
+<h4>Are we playing yet?</h4>
+
+<p>Have you checked your browser&rsquo;s HTML5 audio implementation recently? Thanks to <a href="http://areweplayingyet.org/">SoundCloud&rsquo;s initiative</a> to bring more harmony into HTML5 Audio implementations, it started to look like HTML5 audio is actually getting widely accepted and getting closer to be feature complete across multiple browsers. It&rsquo;s looking pretty good. <a href="https://tools.google.com/dlpage/chromesxs/">Chrome Canary</a> scores 41/44 as of today and there&rsquo;s a burndown of all other browsers&rsquo; scores too.</p>
+
+<h4>OAuth 2 drafts</h4>
+
+<p>You must be familiar with Github or Facebook authentication. But do you know how that actually works?</p>
+
+<p>Go, scan through the draft to get a better understanding what the security implications are and how this protocol solves the most common problems. You would be amazed how much traffic goes between clients and servers Go, <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-30">read it</a>. I did it earlier this week and now it makes much more sense. It&rsquo;s not too difficult, really.</p>
+
+<h4>Video to watch this week</h4>
+
+<p><a href="http://www.youtube.com/watch?v=WpkDN78P884">Keynote: Architecture the Lost Years by Robert Martin</a></p>
+
+<h2>That&rsquo;s it&hellip;</h2>
+
+<p>Have a great weekend guys.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/newsletter';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/are-you-managing-the-right-risks/">Are you managing the right risks?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxd-event-kicking-the-cobwebs-out-of-your-stuck-digital-product-pipeline/">UBXD Event: Kicking the cobwebs out of your stuck digital product pipeline</a></li>
+
+            <li class="blog-related__links"><a href="/blog/newsletter/">Newsletter</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-32/">UBXDDEV Vol. 3.2</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

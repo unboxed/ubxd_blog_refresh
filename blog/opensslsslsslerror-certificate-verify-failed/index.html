@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>OpenSSL::SSL::SSLError: certificate verify failed </title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_opensslsslsslerror-certificate-verify-failed blog_opensslsslsslerror-certificate-verify-failed_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Karl Entwistle
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-04-15 14:28:00 UTC">
+              <span>
+                15 Apr 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            OpenSSL::SSL::SSLError: certificate verify failed 
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Sometimes you will inherit a ‘legacy system’. This particular system was running Ubuntu 8.04 LTS and Rails 2.3.18. Due to the recent Heartbleed security hole, the applications OAuth provider had updated their security certificates. This meant I was now getting an error and stacktrace, with the rescue message: ‘OpenSSL::SSL::SSLError: certificate verify failed’.</p>
+
+<h2>Reproduce the error</h2>
+
+<p>You can use the <a href="http://raw.githubusercontent.com/mislav/ssl-tools/8b3dec4bedcc725a142fa9bc297610f8d09f5d9d/doctor.rb">doctor.rb</a> script by issuing the following commands ‘ruby doctor hostname’.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=Using%20the%20doctor%20script"></script>
+
+<p>On the client&rsquo;s server <a href="https://google.com">https://google.com</a> is working but <a href="https://facebook.com">https://facebook.com</a> is returning a very strange error.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=Output%20from%20doctor"></script>
+
+<h2>Attempt to upgrade</h2>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=Update%20install%20packages"></script>
+
+<p>Normally this would utilise the package manager ‘apt’ to fix the issue. However, if you’re running Ubuntu 8.04 LTS you’re quickly going to find that the ‘Long Term Support’ is over. And all the packages are returning a 404. </p>
+
+<p>You&rsquo;re on your own now&hellip;</p>
+
+<p>Take a moment to contemplate your predicament.</p>
+
+<h2>Remove Ruby from the equation</h2>
+
+<p>At this point I want to establish if the error is limited to my installation of Ruby or whether it&rsquo;s a deeper problem. So I drop out the entire Ruby stack and use another application. &lsquo;wget&rsquo; or &#39;curl&rsquo; will do. I used curl.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=curl%20facebook"></script>
+
+<h2>Figure out what certificates you’re missing</h2>
+
+<p>In order to find out exactly which certificates are missing you&rsquo;ll want to utilize OpenSSL’s <a href="http://www.openssl.org/docs/apps/s_client.html">s_client</a>. You’ll see the chain of certificates (or lack of them, in my case) back to the original certificate authority.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=openssl%20s_client%20-connect%20facebook"></script>
+
+<p>From this output you can see I&rsquo;m missing the following certificates:</p>
+
+<p>i:/C=US/O=DigiCert Inc/OU=<a href="http://www.digicert.com/CN=DigiCert">www.digicert.com/CN=DigiCert</a> High Assurance CA-3
+ i:/C=US/O=DigiCert Inc/OU=<a href="http://www.digicert.com/CN=DigiCert">www.digicert.com/CN=DigiCert</a> High Assurance EV Root CA</p>
+
+<h2>Install the certificates</h2>
+
+<p>For this client the digicerts are out of date. A Google search later and I’d found them: <a href="https://www.digicert.com/digicert-root-certificates.htm">https://www.digicert.com/digicert-root-certificates.htm</a></p>
+
+<p>I grabbed the certificates required.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=grab%20the%20certs"></script>
+
+<p>Unfortunately these are encoded and need to be converted into text.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=convert%20encoded%20.crt%20to%20plaintext%20.crt"></script>
+
+<p>Now move these ca-certificates into your trusted /usr/share/ca-certificates folder.</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=move%20the%20certs"></script>
+
+<p>In order to let Ubuntu know where to find the new certificates I add the &rsquo;.crt&rsquo; file&rsquo;s path relative to /usr/share/ca-certificates to /etc/ca-certificates.conf</p>
+
+<p>With this in mind I append the contents of /etc/ca-certificates.conf with:</p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=append%20crt"></script>
+
+<p>The final step is running <a href="http://www.tin.org/bin/man.cgi?section=1&amp;topic=c_rehash">c_rehash</a> within /etc/ssl/certs to scan directories and take a hash value of each &rsquo;.pem&rsquo; and &rsquo;.crt&rsquo; file in the directory. It then creates symbolic links for each of the files named by the hash value. Programs on the system (like curl or wget) expect to find the certificates they require in this c_rehash&#39;ed format. </p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=rehash"></script>
+
+<h2>Test</h2>
+
+<p>I go back to the doctor.rb and run it again.</p>
+
+<p>Success! We have the updated certificates available! </p>
+
+<script src="https://gist.github.com/karlentwistle/10739717.js?file=successful%20ruby%20doctor"></script>
+
+<p>If you&rsquo;re reading this blog post and have a similar issue with a different certificate, this askubuntu post may also help: <a href="http://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate">http://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate</a></p>
+
+<p>Happy Heartbleed!</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/opensslsslsslerror-certificate-verify-failed';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/open-device-lab-in-cape-town/">Open Device Lab in Cape Town</a></li>
+
+            <li class="blog-related__links"><a href="/blog/bootstrap-skepticism-and-a-git-tool/">Bootstrap, skepticism and a git tool</a></li>
+
+            <li class="blog-related__links"><a href="/blog/october-is-all-about-speed/">October is all about speed</a></li>
+
+            <li class="blog-related__links"><a href="/blog/sharing-your-local-development-server/">Sharing your local development server and setting up a local mail server</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

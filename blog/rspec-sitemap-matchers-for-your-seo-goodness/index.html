@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>RSpec Sitemap matchers for your SEO goodness</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_rspec-sitemap-matchers-for-your-seo-goodness blog_rspec-sitemap-matchers-for-your-seo-goodness_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Attila Gyorffy
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-09-28 11:47:00 UTC">
+              <span>
+                28 Sep 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            RSpec Sitemap matchers for your SEO goodness
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Not that long ago we <a href="http://www.unboxedconsulting.com">released our new website at Unboxed</a>. We took the time to carefully think about how our new site was going to be structured, how our URIs were going to look. We introduced new pages and deprecated or merged others.</p>
+
+<p>Needless to say that we also had to rework our URL structure, our unique URIs, etc. In order not to lose our previous SEO scores and to make sure Google will pick the new URIs up as quickly as possible, we made use of the <a href="http://www.sitemaps.org/protocol.html">Sitemap protocol</a>.</p>
+
+<p>A sitemap is essentially nothing more than an XML file in your domain&rsquo;s root that helps informing search engines about the available pages on your site for crawling. This data is then processed by search giants like <a href="http://google.com">Google</a>, <a href="http://search.yahoo.com/">Yahoo!</a> or even Microsoft&rsquo;s <a href="http://www.bing.com/">Bing</a>.</p>
+
+<p>Let me pull in the description from the official sitemap domain:</p>
+
+<p>&ldquo;In its simplest form, a Sitemap is an XML file that lists URLs for a site along with additional metadata about each URL (when it was last updated, how often it usually changes, and how important it is, relative to other URLs in the site) so that search engines can more intelligently crawl the site&rdquo;.</p>
+
+<p>We took a TDD approach to drive out our method to generate our sitemap dynamically. Our sitemap incorporates our main pages, such as the homepage, case studies and many more. Go on, have a look at <a href="http://www.unboxedconsulting.com/sitemap.xml">it</a> yourself.</p>
+
+<p>Now, in order to not need to fiddle around much with Nokogiri when testing our sitemap&rsquo;s XML data, I felt the need of a simpler way to write my tests in RSpec.</p>
+
+<p>The end result is a new gem that can help you write meaningful and more semantic code when you are testing your sitemaps:</p>
+
+<p><a href="http://rubygems.org/gems/rspec-sitemap-matchers">http://rubygems.org/gems/rspec-sitemap-matchers</a></p>
+
+<pre><code> it { should include_url(&#39;http://www.example.com&#39;).priority(0.5) }
+</code></pre>
+
+<p>The project is not fully feature complete but is already usable and it is under development. Please see the documentation on the project&rsquo;s <a href="https://github.com/unboxed/rspec-sitemap-matchers">github page</a>, fork, write tests and contribute with code.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/rspec-sitemap-matchers-for-your-seo-goodness';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/insert-your-own-punny-title-for-the-developer-newsletter-here/">[Insert your own punny title for the Developer newsletter here]</a></li>
+
+            <li class="blog-related__links"><a href="/blog/five-facilitation-techniques-for-promoting-agile-for-government/">Five facilitation techniques for promoting Agile for government</a></li>
+
+            <li class="blog-related__links"><a href="/blog/better-late-than-never/">Better Late Than Never</a></li>
+
+            <li class="blog-related__links"><a href="/blog/haskell-at-the-london-code-dojo/">Haskell at the London Code Dojo</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>UBXDDEV Vol. 3.10</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_ubxddev-vol-3-10 blog_ubxddev-vol-3-10_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-10-24 13:30:00 UTC">
+              <span>
+                24 Oct 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            UBXDDEV Vol. 3.10
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>Breaking things small - <a href="http://www.unboxedconsulting.com/people/patrick-vine/">Patrick V</a></h2>
+
+<p>I&rsquo;ve been spending some time thinking about breaking things small. Micro
+ services are one of the buzzes at the moment for doing that. As a result
+ getting some feedback on people&rsquo;s experiences and learning while doing a
+ micro service implementation is really useful. One good example of that
+ sharing is 
+ <a href="http://techblog.realestate.com.au/a-microservices-implementation-retrospect">http://techblog.realestate.com.au/a-microservices-implementation-retrospect</a>
+ ive/.</p>
+
+<p>The one of the drivers for me thinking about breaking things small is
+ articulated nicely in Martin Fowler&rsquo;s <a href="http://martinfowler.com/bliki/SacrificialArchitecture.html">recent bliki on sacrificial
+ architectures</a>. Assuming
+ longevity of the code base / solution - how will you easily replace what
+ you&rsquo;re doing now with something new in 5 years time?</p>
+
+<h2>Interview about the mobile web - <a href="http://www.unboxedconsulting.com/people/neil-van-beinum">Neil</a></h2>
+
+<p><a href="http://www.infoq.com/interviews/andrew-betts-mobile-web">http://www.infoq.com/interviews/andrew-betts-mobile-web</a></p>
+
+<p>The Financial Times mobile web app is regarded as one of the best examples of how HTML5 can be used to create a native mobile app experience. In this interview, director Andrew Betts outlines their approach and some of the challenges that they face including older browsers, multiple devices and competing with native UIs.</p>
+
+<h2>Geometrical Art in JS - <a href="http://www.unboxedconsulting.com/people/neil-van-beinum">Neil</a></h2>
+
+<p><a href="http://vart.institute/mondrian/">http://vart.institute/mondrian/</a></p>
+
+<p>Fun article about the process of creating geometrical art through Javascript. The author starts with a hard-coded design and then builds up a recursive program to mimic a famous piece by Mondrian, randomly generated each time.</p>
+
+<h2>Surviving Big Rewrites - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="http://onstartups.com/tabid/3339/bid/97052/How-To-Survive-a-Ground-Up-Rewrite-Without-Losing-Your-Sanity.aspx">http://onstartups.com/tabid/3339/bid/97052/How-To-Survive-a-Ground-Up-Rewrite-Without-Losing-Your-Sanity.aspx</a></p>
+
+<p>Our natural instinct as developers when encountering old code is often &ldquo;this is terrible, we must re-write&rdquo;. Harking back to our <a href="http://www.unboxedconsulting.com/blog/ubxddev-vol-38">boring developers links from a couple of weeks back</a> we often overcome that instinct by thinking about how much work a full rewrite will be and how much we&rsquo;ve forgotten that is encoded in the old software. Sometimes though weighing up the pros and cons it might just be that a rewrite might be the correct approach. This article gives some advice on how to approach a rewrite, and how to survive.</p>
+
+<h2>Creating a type style guide - <a href="http://www.unboxedconsulting.com/people/neil-van-beinum">Neil</a></h2>
+
+<p><a href="http://blog.typekit.com/2014/10/22/creating-a-type-style-guide/">http://blog.typekit.com/2014/10/22/creating-a-type-style-guide/</a></p>
+
+<p>Susan Robertson outlines her approach to refactoring the typography styling of a website to make it more reusable. She starts by creating an inventory of existing styles (using a neat browser add-on that produces JSON reports) and making a test page to compare the type side-by-side to see similarities. She then creates mixins for those types and gradually adds them to individual pages of the site, modifying as needed. The resulting type style guide lists each type element along with how to use it.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/ubxddev-vol-3-10';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/one-week-iterations-rock/">One Week Iterations Rock</a></li>
+
+            <li class="blog-related__links"><a href="/blog/all-this-has-happened-before-and-all-this-will-happen-again/">All this has happened before, and all this will happen again</a></li>
+
+            <li class="blog-related__links"><a href="/blog/digital-webinar-series-communication-ceremonies/">Digital Webinar Series: Communication Ceremonies</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-speed-up-problem-and-customer-validation/">Webinar: Speed up problem and customer validation</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The problem with software</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-problem-with-software blog_the-problem-with-software_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Borja Arias
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2010-11-18 00:00:00 UTC">
+              <span>
+                18 Nov 2010
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The problem with software
+          </h1>
+
+          <div class="blog-article__content">
+            <p>&nbsp;It is well known that about 50 years ago the first real computer programs started crawling out of the oceans&hellip; Even with all the improvements and accumulated knowledge that we have nowadays in our computer-based civilization, users have been mistreated so badly that they almost expect software applications to contain flaws and eventually crash.</p>
+
+<p>There have been huge efforts to make software development an engineering discipline. Specifications, formalizations, design patterns and other techniques have been thrown at developers&rsquo; faces to make them do things right. But nothing has really changed. Crazy computer-controlled radiation therapy machines overdosed and killed three patients between 1985 and 1987 when started with weird input values that developers didn&rsquo;t expect. Also, when one the versions of probably the most used operating system was released, a parade of patches followed it the same day. And these are just two of countless legendary disasters.</p>
+
+<p>Is it that different from other disciplines? Doesn&rsquo;t an architect have to deal with abstract calculations in which flaws could be lurking?&nbsp;However, buildings don&rsquo;t usually collapse as often as computer programs, do they?&nbsp;They&rsquo;ve got standard processes for building houses and they&rsquo;ve got standard components to use in each possible situation. You can&rsquo;t say the same for the software industry, though. That&rsquo;s one of the catches. There are loads and loads of libraries, that depend on each other. They might not be well documented, nor bug free. Also, the fact that requirements change and don&rsquo;t usually stop doing it was the cause of failure for lots of waterfall-based projects, but this is something that agile methodologies seem to have mitigated.</p>
+
+<p>In addition to those problems, and what I believe is the root of all evil is that a developer constantly faces logical challenges where the way they implement the solution makes a big difference efficiency wise. These little decisions always aggregate &nbsp;their effects to the final solution but tracking back a specific effect can be quite hard. Developers always find ourselves using common sense, or the so called best practices, meaning that there&rsquo;s not a standard way. Once a developer starts writing code to fulfill a particular specification, knock on wood or pray to your deity of choice because he or she is painting on a blank canvas ready to be filled with their multitasking thoughts.</p>
+
+<p>Unfortunately, there&rsquo;s no easy solution to making software work as reliably as a mechanical component. However, I believe that Behaviour Driven Development (BDD) is a good move in order to write more reliable software. In this approach, that is one of agile methodologies techniques, tests that state how your application will behave in a specific context, are written first. Then, developers write as little code as possible to make those tests pass. This whole approach focuses the developer&rsquo;s mind. Avoiding erratic thinking that will most likely end up doing something not desired.</p>
+
+<p>I agree, you will probably never be able to write enough tests to assure that your application will not be exposed to the unexpected in a sea of interconnected systems, but most bugs are due to a lack of thinking and therefore testing.</p>
+
+<p>As a conclusion, and as part of the lessons learnt, &nbsp;it is true that in some critical areas, i.e. aeronautical engineering, software systems are exhaustively verified (components are systematically exposed to inputs and checked for the right outputs). But this does not happen in most commercial web-like applications, where there is a tradeoff between speed of development and reliability. It is probably not worthwhile spending months of formal verification for your brand new 2.0 web site. But we need to aim for doing things better and this will have happened the day automated testing is as common as air.&nbsp;</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-problem-with-software';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/cucumbers-missed-high-fives-dancing-hungarians-and-more/">Cucumbers, Missed High Fives, Dancing Hungarians and more...</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-20th-april-2015/">Unboxed Roundup: our links for w/c 20th April 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/how-does-agile-development-fit-with-budgets-and-financial-controls/">How does agile development fit with budgets and financial controls?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/prioritising-production-bugs/">Prioritising production bugs</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

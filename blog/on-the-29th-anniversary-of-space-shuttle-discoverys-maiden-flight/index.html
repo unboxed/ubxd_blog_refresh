@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>On the 29th anniversary of Space Shuttle Discovery's maiden flight</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_on-the-29th-anniversary-of-space-shuttle-discoverys-maiden-flight blog_on-the-29th-anniversary-of-space-shuttle-discoverys-maiden-flight_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Matt Peperell
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-08-30 10:00:00 UTC">
+              <span>
+                30 Aug 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            On the 29th anniversary of Space Shuttle Discovery's maiden flight
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>ECMAScript Internationalisation API - Carl</h2>
+
+<p>Internationalisation and localisation has always been an impossible minefield of implementation headaches. The i18n API aims to provide an interface for accurately tailoring numbers, dates and strings to local contexts. The following article gives a run through of what is available and the state of browser implementations.</p>
+
+<p><a href="http://generatedcontent.org/post/59403168016/esintlapi">http://generatedcontent.org/post/59403168016/esintlapi</a></p>
+
+<h2>The Klingon Forehead Problem - Ben J</h2>
+
+<p>Not really anything to do with dev but still a very interesting article.
+ <a href="http://www.ex-astris-scientia.org/inconsistencies/klingon-foreheads.htm">http://www.ex-astris-scientia.org/inconsistencies/klingon-foreheads.htm</a></p>
+
+<h2>Cloudflare&rsquo;s DNS - Sven</h2>
+
+<p>Cloudflare are now running their own DNS server having moved away from PowerDNS.</p>
+
+<p>In a recent blog post they talk a little bit about RRDNS - their new tool designed to mitigate ( amongst other things ) DNS reflection attacks.</p>
+
+<p><a href="http://blog.cloudflare.com/the-story-of-a-little-dns-easter-egg">http://blog.cloudflare.com/the-story-of-a-little-dns-easter-egg</a></p>
+
+<p>## Retr-o-mat - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></p>
+
+<p>It&rsquo;s always nice to mix thing up a bit when doing a retrospective. In recent retrospectives we&rsquo;ve tried having a theme to focus what you think about for our happy/sad/puzzle post-its (we tried &ldquo;distraction&rdquo;), we also ditched happy/sad/puzzle for placing our post-its on a quadrant graph with technology on the x axis and meh on the y axis. Both were interesting approaches and gave us different actions to the ones we normally expect. However, it&rsquo;s hard to come up with new ideas for a retrospective every time; thankfully <a href="http://www.plans-for-retrospectives.com/">Retr-o-mat</a> exists to solve that problem!</p>
+
+<p>## Vimsnake - MattP
+ It&rsquo;s time for another Vim link! <a href="http://www.vimsnake.com/">http://www.vimsnake.com/</a> - a version of the old favourite snake game using vim keys. It&rsquo;s harder than it sounds.</p>
+
+<h2>Are you really doing BDD - Ben J</h2>
+
+<p><a href="http://wekeroad.com/2013/08/28/how-behavioral-is-your-bdd?utm%5C_source=feedburner&amp;utm%5C_medium=feed&amp;utm%5C_campaign=Feed%3A+wekeroad%2FEeKc+%28Rob+Conery%29">http://wekeroad.com/2013/08/28/how-behavioral-is-your-bdd?utm\_source=feedburner&amp;utm\_medium=feed&amp;utm\_campaign=Feed%3A+wekeroad%2FEeKc+%28Rob+Conery%29</a></p>
+
+<h2>Qor Test - MattP</h2>
+
+<p>Does your app require specific but old versions of Ruby, Rails or gems? Are you putting off upgrading because of the testing complexity? <a href="https://github.com/qor/qor_test/tree/master">Qor test</a> to the rescue! Quoting from the github project page:
+ The tool to test your library against different versions of gem dependencies and rubies, make it easy to discovery compatibility issues!</p>
+
+<h2>Decoupling Your HTML, CSS, and JavaScript - MattP</h2>
+
+<p>Preventing unintended consequences is not an easy problem to solve, especially since HTML, CSS, and JavaScript are, by their nature, co-dependent. But what can we do about it? Read more here: <a href="http://philipwalton.com/articles/decoupling-html-css-and-javascript/">http://philipwalton.com/articles/decoupling-html-css-and-javascript/</a></p>
+
+<h2>SourceTree commit message guide - <a href="http://www.unboxedconsulting.com/people/tom-sabin">Tom Sabin</a></h2>
+
+<p>We all know about <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>, but wouldn&rsquo;t it be useful if <a href="http://www.sourcetreeapp.com/">SourceTree</a> could also give us a helping hand? Turns out, it can. In the preferences (and under the General tab), toggle the following two settings to add a column guide to the commit message dialog:</p>
+
+<ul>
+<li>Use fixed-width font for commit messages
+
+<ul>
+<li>Display column guide in commit message at character: 72</li>
+</ul></li>
+</ul>
+
+<p>When you next hit the commit button, you&rsquo;ll see a faint grey vertical line in the message box.</p>
+
+<h2>Last minute additions - Lee Richmond</h2>
+
+<p><a href="http://www.backbonerails.com/">http://www.backbonerails.com/</a> A series of useful backbone js tutorials that I have been using to help start to get to grips with the framework</p>
+
+<p><a href="https://www.bloc.io/ruby-warrior#/">https://www.bloc.io/ruby-warrior#/</a> program your warrior to get through the game</p>
+
+<p>Just for fun:</p>
+
+<p><a href="http://jalopnik.com/google-maps-has-an-incredible-dr-who-easter-egg-1121878011">http://jalopnik.com/google-maps-has-an-incredible-dr-who-easter-egg-1121878011</a> Google maps Doctor Who Tardis easter egg</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/on-the-29th-anniversary-of-space-shuttle-discoverys-maiden-flight';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-34/">UBXDDEV Vol. 3.4</a></li>
+
+            <li class="blog-related__links"><a href="/blog/categorising-workarounds/">Categorising Workarounds</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-that-almost-didnt-happen/">The week that almost didn't happen</a></li>
+
+            <li class="blog-related__links"><a href="/blog/post-end-of-the-world-newsletter-yay-were-still-here/">Post-end-of-the-world newsletter - yay we're still here </a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

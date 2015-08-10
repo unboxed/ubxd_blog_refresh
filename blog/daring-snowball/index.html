@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Daring Snowball</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_daring-snowball blog_daring-snowball_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Pawel Janiak
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-03-16 07:13:00 UTC">
+              <span>
+                16 Mar 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Daring Snowball
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Long Error messages - Matt P
+ ==
+ Error handling notwithstanding, usually developers try not to have our code generate error messages if we can at all help it. But turning that tenet on its head is <a href="http://codegolf.stackexchange.com/questions/1956/generate-the-longest-error-message-in-c">this stackoverflow post</a> which explores a few attempts at generating intentionally long error messages.</p>
+
+<p>Vagrant 1.1 available with a VMware Fusion provider - Attila
+ ==
+ <a href="http://www.hashicorp.com/blog/vagrant-1-1-and-vmware.html">http://www.hashicorp.com/blog/vagrant-1-1-and-vmware.html</a></p>
+
+<p>I have been waiting for the new Vagrant release for quite a while, mostly because of the hugely anticipated VMWare Fuison compatibility.
+ Yesterday HashiCorp have announced the new release, as soon as I&rsquo;ve seen <a href="https://twitter.com/hashicorp/status/312235310564114434">the tweet</a> I was thinking: Yesssss, finally I get to automate my Fusion VMs with ease.</p>
+
+<p>Clicking through the link, reading through the announcement and BANG! Vagrant&rsquo;s still open source and free (as it should be), however if you want to <a href="http://www.vagrantup.com/vmware">use it with Fusion</a>, you&rsquo;d need to pay a significant amount of money. A single seat costs $79 which means that provider is ironically more expensive than Fusion itself.
+ On top of that unfortunately it only supports Fusion version 5, which means people who are still using version 4 would need to upgrade to version 5 first, then purchase the Vagrant provider, which means that this solution can get quite expensive very quickly.</p>
+
+<p>I understand that the development costs of Vargant shomehow need to be covered, but honestly I&rsquo;m a little bit disappointed with the price itself.</p>
+
+<p>On the other hand however, Vagrant core is still free and the provider interface is fully open source and <a href="http://docs.vagrantup.com/v2/plugins/providers.html">documented</a>, allowing for plugins to implement new providers.</p>
+
+<p>Node 0.10.0 is out - Pawel
+ ==</p>
+
+<p>A new version of Node.js is out with a new <a href="http://blog.nodejs.org/2013/03/11/node-v0-10-0-stable">stable release</a>. Version 0.10.0 has quite a few API fixes and tweaks and general polishing up, and is geared towards ease of use, and backwards compatibility. </p>
+
+<p>Rebuilding Rails - Pawel
+ ==
+ It looks like the final version of the <a href="http://rebuilding-rails.com/">Rebuilding Rails</a> book is out. The book guides you through building your own MVC ruby web framework. There are 2 free chapters available.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/daring-snowball';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-15th-december-2014/">Unboxed Roundup: our links for w/c 15th December 2014</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-with-no-activesupport-favourite-method/">The week with no ActiveSupport favourite method</a></li>
+
+            <li class="blog-related__links"><a href="/blog/new-version-of-rails-a-new-patch-level-of-ruby-193-and-kittens-oh-my/">New version of Rails, a new patch level of Ruby 1.9.3 and kittens, oh my!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-week-in-bitesize-chunks/">The Week In Bitesize Chunks</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

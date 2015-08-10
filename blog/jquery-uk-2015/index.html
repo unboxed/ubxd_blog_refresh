@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>jQuery UK 2015</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_jquery-uk-2015 blog_jquery-uk-2015_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Neil Van Beinum
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2015-04-03 12:40:00 UTC">
+              <span>
+                 3 Apr 2015
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            jQuery UK 2015
+          </h1>
+
+          <div class="blog-article__content">
+            <p>On the first Friday of March, I jumped onto an early train from Paddington, got out at Oxford and followed the trail of blue ‘j’s painted on a path along the Thames. I was led to the King’s Centre with about 700 others for the 2015 jQuery UK conference.</p>
+
+<p>The talks at this two-track conference covered a range of front end topics and I often had a hard time choosing which talk to attend. Fortunately all of the videos are now online. Here are three talks that stood out:</p>
+
+<h3>Mark Otto (<a href="https://twitter.com/mdo">@mdo</a>) - <a href="http://jqueryuk.com/2015/videos.php?s=mdo-ular-css">Mdo-ular CSS</a></h3>
+
+<p>The emphasis of this talk was that ’simplicity conquers all’ when working with CSS. Mark recommends the use of a simple ‘component-subcomponent-modifer’ syntax when naming classes, flexible classes that can be applied to different elements, liberal use of comments giving context, and limited use of chained selectors and nested CSS via preprocessors. He notes that CSS naturally encourages inheritance and cascading and yet if you can resist overuse of these features and instead create modules that are independent and reusable, your styling will be much easier to work with.</p>
+
+<h3>Alice Barlett (<a href="https://twitter.com/alicebartlett">@alicebartlett</a>) - <a href="http://jqueryuk.com/2015/videos.php?s=bin-your-">Bin Your <select></a></h3>
+
+<p>This talk acted as a warning about some of our basic assumptions about usability on the web. Alice works at the UK’s Government Digital Services whose sites have a huge range of users, who sign up for key services such as a Carer’s Allowance. We were shown some quite moving videos of less technically confident users attempting - and failing - to input their birthday via select boxes on a web form. All users were, however, able to successfully input their data via keyboard. Following this research, GDS replaced these select boxes with large, simple text fields, which are analogous to what you’d see on a paper form.</p>
+
+<h3>Andy Hume (<a href="https://twitter.com/andyhume">@andyhume</a>) - <a href="http://jqueryuk.com/2015/videos.php?s=architecting-resilient-front-ends">Architecting Resilient Front-Ends</a></h3>
+
+<p>Companies invest heavily in server infrastructure to keep their sites as reliable as possible. Yet, missing content due to a network outage during the browser’s parsing and rendering of your pages is equally as bad for business. Many aspects of the web are designed to be resilient (such as browsers dealing with various forms of invalid HTML) and the front end code for your site should be the same. Andy picks several points of potential blocking behaviour in the front end and suggests techniques you might consider to avoid them, including asynchronous loading of scripts, placing “critical CSS&quot; in the head, and a way to ensure that text is displayed on your page when your fonts fail to load.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/jquery-uk-2015';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-r-in-lean/">The "r" in lean</a></li>
+
+            <li class="blog-related__links"><a href="/blog/webinar-90-days-to-transform-a-stuck-digital-product-that-has-to-succeed-9c47e9a9-2a9b-4bf5-83ab-b96fe13e1908/">Webinar: 90 days to transform a ‘stuck’ digital product that HAS to succeed...</a></li>
+
+            <li class="blog-related__links"><a href="/blog/this-week-in-dev/">This Week In Dev</a></li>
+
+            <li class="blog-related__links"><a href="/blog/people-matter-most/">People Matter Most!</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

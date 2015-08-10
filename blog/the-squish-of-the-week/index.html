@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>The squish of the week</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_the-squish-of-the-week blog_the-squish-of-the-week_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Jolyon Pawlyn
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-09-07 09:48:00 UTC">
+              <span>
+                 7 Sep 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            The squish of the week
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>ActiveSupport Method of the Week: <a href="http://api.rubyonrails.org/classes/String.html#method-i-squish">squish</a></h2>
+
+<p>I am guilty of writing:</p>
+
+<p>&rsquo; some string &rsquo;.split(&rsquo; &rsquo;).join(&rsquo; &rsquo;)
+ to enforce single spacing between words but clearly a bit of squishing would be far better.</p>
+
+<h2><a href="https://tech.dropbox.com/?p=345">dropbox.js</a> Murray</h2>
+
+<p>dropbox.js - a library for accessing dropbox securely in js. Makes it easy to write static js-only applications that have secure storage of files and can be hosted directly from your dropbox account. The write-up is a bit long winded, being a discussion of they why and the how of the library and a description of an app built using it and the api design. Interesting though if you have the time.</p>
+
+<h2><a href="https://chrome.google.com/webstore/detail/geddoclleiomckbhadiaipdggiiccfje">JavaScript switcher extension for Chrome</a> Rob</h2>
+
+<p>Yep, it does what it says. With one single click on the extension on the Chrome toolbar it switches on/off JavaScript, and automatically reloads the page. No more getting-lost-in-Chrome-Settings for ubxd!</p>
+
+<h2><a href="http://layervault.tumblr.com/post/30932219739/rails-in-realtime">Rails in Realtime</a> Pawel</h2>
+
+<p>Using memcached, Socket.IO, and Russian doll caching to make Rails near real-time without having to bother with frameworks like Backbone or Ember</p>
+
+<h2><a href="http://screenqueri.es/">Responsive Design testing with Screenqueries</a> Rob</h2>
+
+<p>Great free tool for testing responsible sites. There is a lot of different devices (mobiles and tablets), screen dimensions and screen orientations to choose from.</p>
+
+<h2><a href="http://mediaqueri.es/">Media Queries</a> Rob</h2>
+
+<p>A nice list of inspirational websites using media queries.</p>
+
+<h2><a href="https://github.com/versapay/bundler-auto-update">Bundler auto update</a> Murray</h2>
+
+<p>&lsquo;bundler-auto-update is a ruby gem that updates all gems of your Gemfile to the most recent version that does not break your tests&rsquo;. Probably useful only if you have confidence in your test suite, but if you do, it could definitely be worth running this if you&rsquo;ve spent a few months ignoring a project. Of course, it&rsquo;s one thing to say that your app is running on the latest version of some-gem, quite another to investigate how you were using that gem and see if you should change your app to use a newer / better API, etc.</p>
+
+<p>I imagine this would be particularly useful for gems that you are using github HEAD for (or your own fork) because of a bug. It&rsquo;s good practice to write a test describing the bug in your app when you change your gemfile to point at git. If you do that then this tool could try changing git gems to released gems as well as just upgrading released gems. Maybe worth looking at as an extension if it doesn&rsquo;t already do it.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/the-squish-of-the-week';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/in-white-space-no-one-can-hear-you-scream/">In White Space... No One Can Hear You Scream!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/pair-programming-with-your-mind/">Pair programming with your mind</a></li>
+
+            <li class="blog-related__links"><a href="/blog/cucumbers-missed-high-fives-dancing-hungarians-and-more/">Cucumbers, Missed High Fives, Dancing Hungarians and more...</a></li>
+
+            <li class="blog-related__links"><a href="/blog/must-read-dev-newsletter/">Must Read Dev Newsletter</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

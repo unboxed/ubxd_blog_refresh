@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>This Week in Ruby, 19th October</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_this-week-in-ruby-19th-october blog_this-week-in-ruby-19th-october_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Leo Cassarani
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-19 15:12:00 UTC">
+              <span>
+                19 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            This Week in Ruby, 19th October
+          </h1>
+
+          <div class="blog-article__content">
+            <h1>ActiveSupport Method of the Week: <a href="http://api.rubyonrails.org/classes/String.html#method-i-inquiry">String#inquiry</a></h1>
+
+<p>Wraps the current string in the <code>ActiveSupport::StringInquirer</code> class, which gives you a prettier way to test for equality. Example:</p>
+
+<p>env = &ldquo;production&rdquo;.inquiry
+ env.production? # =&gt; true
+ env.development? # =&gt; false</p>
+
+<p>For the record, this is actually how Rails implements things like <code>Rails.env.production?</code> behind the scenes.</p>
+
+<h1>7 Patterns to Refactor Fat ActiveRecord Models (Murray)</h1>
+
+<p>An interesting article about how to take the next step from Skinny Controller, Fat Model towards Skinny Everything. Rather than just suggesting pulling everything out into Modules, which just hides the issues it actually gives some good suggestions of alternatives. I think the article would benefit from before and after code snippets, as the &ldquo;this is how I do it&rdquo; snippets don&rsquo;t really tell the whole story; it&rsquo;s not clear how they are used in context, nor how, for want of a better word, weird a rails app would look using these approaches. Still, it&rsquo;s a good article and the approaches seem sane.</p>
+
+<p><a href="http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/">http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/</a></p>
+
+<h1>RubyTapas: Short screencasts of gourmet Ruby code (Leo)</h1>
+
+<p>A new screencast series from Avdi Grimm (who needs no introductions). Personally I love the focus on short, simple nuggets of Ruby information, and I have found the series very enjoyable so far. Four free episodes have been published already, and you get eight more (and counting) when you subscribe.</p>
+
+<p><a href="http://devblog.avdi.org/rubytapas/">http://devblog.avdi.org/rubytapas/</a></p>
+
+<h1>Responsivator (Rob)</h1>
+
+<p>Another great tool for testing responsive layouts. This one looks a bit better, then the others (<a href="http://screenqueri.es/">http://screenqueri.es/</a> for instance) because you can see all the &lsquo;device&rsquo; resolutions on one page. You also can specify what device resolutions you want to use.</p>
+
+<p><a href="http://dfcb.github.com/Responsivator/">http://dfcb.github.com/Responsivator/</a></p>
+
+<h1>GreenSock JS Tutorial (Rob)</h1>
+
+<p>Greensock is a fantastic JavaScript animation framework that performs above and beyond everything else currently available to those of us working with web design.
+ Though only few people know of it in the JavaScript world it’s got a huge audience in the world Flash, where it’s about as widely used as jQuery is among JavaScript-folks.</p>
+
+<p><a href="http://ahrengot.com/tutorials/greensock-javascript-animation/">http://ahrengot.com/tutorials/greensock-javascript-animation/</a></p>
+
+<h1>My new favourite Rails trick: <code>:disable_with</code> (Andrew)</h1>
+
+<p>Using remote js forms? You will find simply disabling the button on click will likely disable the button before submitting the form, which is well… annoying but reasonable. Instead use the following to force your submit to disable the link until the form is submitted.</p>
+
+<p>:disable_with =&gt; &#39;Please wait..&rsquo;</p>
+
+<p># Javascript, does it require classes? (Andrew)</p>
+
+<p><a href="http://www.nczonline.net/blog/2012/10/16/does-javascript-need-classes/">http://www.nczonline.net/blog/2012/10/16/does-javascript-need-classes/</a></p>
+
+<h1>Rails 4 Whirlwind Tour (Jolyon)</h1>
+
+<p><a href="http://vimeo.com/51181496">Good overview of Rails 4 features</a> by Andy Lindeman at the <a href="https://twitter.com/atlrug">Atlanta Ruby User Group</a>.</p>
+
+<h1>XPDay 2012 (Ben)</h1>
+
+<p>Ben wants you to go to XPDay London. 26-27th November.</p>
+
+<p><a href="http://xpday.wordpress.com/">http://xpday.wordpress.com/</a></p>
+
+<h1>A thought on the minutiae of European law (Matt Frank)</h1>
+
+<p>The provisions of the United Kingdom&rsquo;s Data Protection Act apply to data stored or transmitted in the UK, right? Wrong. Oh, so it&rsquo;s the EU then? Wrong again. They&rsquo;re applicable to all countries within the European Economic Area which is distinct from the European Union: <a href="http://script-ed.org/?p=324">http://script-ed.org/?p=324</a></p>
+
+<p>Can&rsquo;t tell your EEA from your EFTA or your CoE? Help is at hand: <a href="http://bit.ly/eu-venn">http://bit.ly/eu-venn</a></p>
+
+<h1>Lightning captured at 7,207 images per second (Ben)</h1>
+
+<p>Ben sends in this pretty impressive high-speed camera video of lightning striking Earth. If you want to know more, be sure to also check out the <a href="http://what-if.xkcd.com/16/">&ldquo;What If?&rdquo; article on lightning</a>.</p>
+
+<p><a href="http://www.youtube.com/watch?v=%5C_1mB5rM8WHU">http://www.youtube.com/watch?v=\_1mB5rM8WHU</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/this-week-in-ruby-19th-october';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-short-and-late-one/">The short and late one</a></li>
+
+            <li class="blog-related__links"><a href="/blog/pair-programming-luxury-or-necessity/">Pair Programming - Luxury or Necessity?</a></li>
+
+            <li class="blog-related__links"><a href="/blog/daring-snowball/">Daring Snowball</a></li>
+
+            <li class="blog-related__links"><a href="/blog/insert-your-own-punny-title-for-the-developer-newsletter-here/">[Insert your own punny title for the Developer newsletter here]</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

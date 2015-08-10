@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Sharing your local development server and setting up a local mail server</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_sharing-your-local-development-server blog_sharing-your-local-development-server_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Alan Thomas
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2015-05-19 12:31:00 UTC">
+              <span>
+                19 May 2015
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Sharing your local development server and setting up a local mail server
+          </h1>
+
+          <div class="blog-article__content">
+            <p>I’ve recently been on a project, where for various reasons, we didn’t have a test/staging/QA server available. The lack of this environment caused a slight blocker for QA and UAT/sign off. I decided to configure my own local development server to be available to the rest of the team, whilst we waited for the test environment to become available. Please note that this guide is for a Ruby on Rails project and assumes your local machine is a Mac.</p>
+
+<h2>Sharing your server locally</h2>
+
+<p>When you run your server, you probably use the command:</p>
+
+<blockquote>
+<p><code>bundle exec rails s</code></p>
+</blockquote>
+
+<p>With the above command if you try and share that with someone else via your local IP address, e.g. <code>http://192.168.0.6:3000</code>, you’ll find that they are blocked.</p>
+
+<p>Instead you need to use:</p>
+
+<blockquote>
+<p><code>bundle exec rails s -b 0.0.0.0</code></p>
+</blockquote>
+
+<p>This happens, as of Rails 4, by default it only binds to localhost, asking it to bind to <code>0.0.0.0</code> means listen on all network interfaces.</p>
+
+<h2>Sharing your server over the internet</h2>
+
+<p>The above solution works just fine if you and everybody who needs to see the server are on the same network. This is clearly not often the case, and therefore you probably want to have your server available over the internet.</p>
+
+<p>If you do share your local machine over the internet, you probably only want to do this as a temporary solution. A laptop doesn&rsquo;t make for the best infrastructure&hellip;.</p>
+
+<p>Firstly, you’ll need to ascertain your external IP address (<a href="http://www.whatsmyip.org/">http://www.whatsmyip.org/</a> should work just fine) and then you need to setup port forwarding on the router you’re connected to. The majority of routers are accessible via <code>http://192.168.0.1</code>, but that may not be the case and if you are in a managed environment you might need to ask someone.</p>
+
+<p>Once you are in the router configuration, you can update the settings for port forwarding. The settings for this are commonly found in firewall rules. Set port <code>3000</code> to direct to your local IP (the <code>192.168</code> one) and then you can access the website externally, e.g. <code>http://&lt;external-ip&gt;:3000</code></p>
+
+<p>If you can&rsquo;t change router settings, then you may want to consider a service such as <a href="https://ngrok.com">https://ngrok.com</a></p>
+
+<h2>Managing your site remotely</h2>
+
+<p>You may also want to manage your site remotely, i.e. update it with the latest code, run migrations etc. In order to do this you will need to setup another port forwarding rule, but this time for port <code>22</code>.</p>
+
+<p>Then you can ssh to your server with an already existing username on your machine:</p>
+
+<p>&gt; <code>ssh username@external-ip-address</code></p>
+
+<p>You’ll find that you probably won’t be able to do all the things you want, e.g. pull from github. In order to do this, you’ll need to make sure you have your private ssh key on your remote machine and use the <code>–A</code> parameter to use that:</p>
+
+<p>&gt; <code>ssh –A username@external-ip-address</code></p>
+
+<h2>Setting up a local mail server</h2>
+
+<p>The site I needed to share happened to use a lot of email. This was fine for me, as I could see any emails being sent and their links in my local logs, but wasn’t very useful for external folks.</p>
+
+<p>If you are using a Mac, then helpfully it comes with a (unconfigured) Postfix server ready for you to use. Setting it up is pretty straight forward, assuming you’ve not touched it already.</p>
+
+<p>Create a file to store your credentials:</p>
+
+<p>&gt; <code>sudo vim /etc/postfix/sasl_passwd</code></p>
+
+<p>Then add inside something like this:</p>
+
+<p>&gt; <code>smtp.gmail.com:587 username@gmail.com:password</code></p>
+
+<p>If you are using Google Apps, replace <code>gmail.com</code> for your own domain.</p>
+
+<p>Now run:</p>
+
+<p>&gt; <code>sudo postmap /etc/postfix/sasl_passwd</code></p>
+
+<p>And finally prepare the postfix main configuration file:</p>
+
+<p>&gt; <code>sudo vim /etc/postfix/main.cf</code></p>
+
+<p>And add these lines:</p>
+
+<p>&gt; <code>mydomain_fallback = localhost mail_owner = postfix setgid_group = postdrop relayhost=smtp.gmail.com:587 smtp_sasl_auth_enable=yes smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd smtp_use_tls=yes smtp_tls_security_level=encrypt tls_random_source=dev:/dev/urandom</code></p>
+
+<h2>Start the Service</h2>
+
+<p>&gt; <code>sudo postfix start</code></p>
+
+<p>You will probably want any email links to go out with your external IP address, so that others can just click on them, I found my settings in <code>config.action_mailer.default_url_options</code></external-ip></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/sharing-your-local-development-server';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/happy-2013-dev-newletter/">Happy 2013 Dev Newletter</a></li>
+
+            <li class="blog-related__links"><a href="/blog/shameless-plug/">Shameless Plug</a></li>
+
+            <li class="blog-related__links"><a href="/blog/new-apprentice-luke-ben/">New Apprentices - Luke & Ben</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-cat-experience/">The CAT experience</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

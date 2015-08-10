@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Happy 2013 Dev Newletter</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_happy-2013-dev-newletter blog_happy-2013-dev-newletter_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Elizabeth Curson
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-01-11 15:47:00 UTC">
+              <span>
+                11 Jan 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Happy 2013 Dev Newletter
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Goodafternoon and a very happy New Year to you all.</p>
+
+<p>###Automatic Generation and Evaluation of Recombination Games (Lizard)
+ A dissertation I stumpled upon recently which details, mathematically, what makes a game fun. Very interesting read if you have the time
+ <a href="http://dev.pubs.doc.ic.ac.uk/phd-game-design/phd-game-design.pdf">http://dev.pubs.doc.ic.ac.uk/phd-game-design/phd-game-design.pdf</a></p>
+
+<p>### Rails app security (Murray)
+ Over the festive break I saw some people talking about the secret token that rails apps use to secure their sessions, and how most apps check that into source control and use the same one for all environments. </p>
+
+<p>This gist is a good start on describing the problem and describing potential solutions: <a href="https://gist.github.com/59b8b18bdcfe0af63e3b">https://gist.github.com/59b8b18bdcfe0af63e3b</a></p>
+
+<p>Most of the apps we work on won&rsquo;t be hugely exploitable by this as they&rsquo;re not in public repos, but I don&rsquo;t think we should have to think about it as a special case for apps that are public. It&rsquo;s not as if we don&rsquo;t already have processes for managing this; we don&rsquo;t commit other, more obvious, secrets like database.yml or API keys, instead we leave it up to our deployment process to set up the correct production copy. We should extend that process to cover session secrets too.</p>
+
+<p>### Song of github (Murray)</p>
+
+<p>This is amazing: <a href="http://song-of-github.herokuapp.com">http://song-of-github.herokuapp.com</a> - it takes your github contributions chart and converts it to piano noises. Sort of like those <a href="http://en.wikipedia.org/wiki/Piano_rolls">piano rolls</a> used in <a href="http://en.wikipedia.org/wiki/Player_piano">player pianos</a>. Full disclosure - I have a history of liking software that converts data in one format into data in another format - <a href="https://github.com/h-lame/stegosaurus">https://github.com/h-lame/stegosaurus</a>.</p>
+
+<p>## Animatable pseudo-elements land in WebKit (Carl)
+ You don&rsquo;t know how happy this makes me
+ <a href="http://peter.sh/2013/01/animatable-pseudo-elements-seamless-iframe-fixes-and-happy-2013/">http://peter.sh/2013/01/animatable-pseudo-elements-seamless-iframe-fixes-and-happy-2013/</a></p>
+
+<p>## Initial support for flexbox lands in Firefox 18 (Carl)
+ This will change everything
+ <a href="https://developer.mozilla.org/en-US/docs/Firefox%5C_18%5C_for%5C_developers">https://developer.mozilla.org/en-US/docs/Firefox\_18\_for\_developers</a></p>
+
+<p>##&ldquo;Beyond Media Queries: An Anatomy of an Adaptive Web Experience&rdquo; (Tom S)
+ Just watched this conference on vimeo about adaptive web experience which was quite interesting - <a href="http://vimeo.com/55076713">http://vimeo.com/55076713</a></p>
+
+<h2>Nice visualisation of complex numbers and Julia Fractals: (TtT)</h2>
+
+<p><a href="http://acko.net/blog/how-to-fold-a-julia-fractal/">http://acko.net/blog/how-to-fold-a-julia-fractal/</a></p>
+
+<h2>Approximately 1 Million links (Steve)</h2>
+
+<p>You suck at Powerpoint: 5 shocking design mistakes you need to avoid
+ <a href="http://www.slideshare.net/jessedee/you-suck-at-powerpoint-2">http://www.slideshare.net/jessedee/you-suck-at-powerpoint-2</a></p>
+
+<p>A typographic dating game
+ <a href="http://www.typeconnection.com/">http://www.typeconnection.com/</a></p>
+
+<p>Drag and drop screenshots to see screenshots of them being used on real devices.
+ <a href="http://placeit.breezi.com/">http://placeit.breezi.com/</a></p>
+
+<p>Click the Bookmarklet and Find the Tweetable Sentences On Any Web Page (When it works.)
+ <a href="http://www.savepublishing.com/">http://www.savepublishing.com/</a></p>
+
+<p>jwalk provides an easy way to inspect the object tree created by a JSON file via the command line.
+ <a href="https://github.com/nkohari/jwalk">https://github.com/nkohari/jwalk</a></p>
+
+<p>Star Trek Next Generation-flavoured Lorem Ipsum
+ <a href="http://www.rikeripsum.com/">http://www.rikeripsum.com/</a></p>
+
+<p>Front-end London is a free event hosted by Made by Many that&rsquo;s dedicated to all aspects of front-end development.
+ <a href="http://www.frontendlondon.co.uk/">http://www.frontendlondon.co.uk/</a></p>
+
+<p>HTML5 Bones is a template that goes back to basics and provides you with the bare minimum required to get going with HTML5.
+ <a href="http://html5bones.com/">http://html5bones.com/</a></p>
+
+<p>Emoji emoticons are supported on Campfire, GitHub, Basecamp, Turntable.fm, Teambox, Trac and Flowdock.
+ <a href="http://www.emoji-cheat-sheet.com/">http://www.emoji-cheat-sheet.com/</a></p>
+
+<p>Build curated lists of related links.
+ <a href="http://www.makesets.com/">http://www.makesets.com/</a></p>
+
+<p>Visualising user flows to help you find great mobile design patterns.
+ <a href="http://uxarchive.com/">http://uxarchive.com/</a></p>
+
+<p>Why conference diversity matters
+ <a href="http://www.netmagazine.com/opinions/why-conference-diversity-matters">http://www.netmagazine.com/opinions/why-conference-diversity-matters</a></p>
+
+<p>Submitting a Talk Proposal to a UX Conference This Year? Read This.
+ <a href="http://www.90percentofeverything.com/2013/01/10/submitting-a-talk-proposal-to-a-ux-conference-this-year-read-this/">http://www.90percentofeverything.com/2013/01/10/submitting-a-talk-proposal-to-a-ux-conference-this-year-read-this/</a></p>
+
+<p>Meet The Happiest Animal In The World
+ <a href="http://www.buzzfeed.com/mattbellassai/meet-the-happiest-animal-in-the-world-6z51">http://www.buzzfeed.com/mattbellassai/meet-the-happiest-animal-in-the-world-6z51</a></p>
+
+<p>howdoi - a command line code search tool
+ <a href="https://github.com/gleitz/howdoi">https://github.com/gleitz/howdoi</a></p>
+
+<p>SVG sparklines, bars, and circles
+ <a href="https://github.com/phuu/sparksvg">https://github.com/phuu/sparksvg</a></p>
+
+<hr>
+
+<p>Finally, as <s>threatened</s> promised</p>
+
+<h2>Some of my personal favourite memes of 2012 (Lizard)</h2>
+
+<p>Fruit:
+ <a href="http://i.imgur.com/C4ZLz.jpg">http://i.imgur.com/C4ZLz.jpg</a></p>
+
+<p>Free samsung galaxy:
+ <a href="http://25.media.tumblr.com/tumblr%5C_m9j8khGPDV1rwutrpo1%5C_1280.png">http://25.media.tumblr.com/tumblr\_m9j8khGPDV1rwutrpo1\_1280.png</a>
+ <a href="http://24.media.tumblr.com/tumblr%5C_m9j8khGPDV1rwutrpo2%5C_1280.jpg">http://24.media.tumblr.com/tumblr\_m9j8khGPDV1rwutrpo2\_1280.jpg</a>
+ <a href="http://24.media.tumblr.com/tumblr%5C_m9j8khGPDV1rwutrpo3%5C_1280.jpg">http://24.media.tumblr.com/tumblr\_m9j8khGPDV1rwutrpo3\_1280.jpg</a>
+ <a href="http://24.media.tumblr.com/tumblr%5C_m9j8khGPDV1rwutrpo4%5C_1280.jpg">http://24.media.tumblr.com/tumblr\_m9j8khGPDV1rwutrpo4\_1280.jpg</a></p>
+
+<p>Adobe:
+ <a href="http://benisawesome.files.wordpress.com/2012/09/tumblr%5C_m9vglnlbzc1r3s5n0o1%5C_500.jpg">http://benisawesome.files.wordpress.com/2012/09/tumblr\_m9vglnlbzc1r3s5n0o1\_500.jpg</a></p>
+
+<p>People and statues:
+ <a href="http://25.media.tumblr.com/tumblr%5C_lyihwiG0yU1qlsf5co10%5C_500.jpg">http://25.media.tumblr.com/tumblr\_lyihwiG0yU1qlsf5co10\_500.jpg</a>
+ <a href="http://29.media.tumblr.com/tumblr%5C_lyihwiG0yU1qlsf5co1%5C_500.jpg">http://29.media.tumblr.com/tumblr\_lyihwiG0yU1qlsf5co1\_500.jpg</a>
+ <a href="http://29.media.tumblr.com/tumblr%5C_lyihwiG0yU1qlsf5co4%5C_400.jpg">http://29.media.tumblr.com/tumblr\_lyihwiG0yU1qlsf5co4\_400.jpg</a>
+ <a href="http://28.media.tumblr.com/tumblr%5C_lyihwiG0yU1qlsf5co7%5C_500.jpg">http://28.media.tumblr.com/tumblr\_lyihwiG0yU1qlsf5co7\_500.jpg</a>
+ <a href="http://26.media.tumblr.com/tumblr%5C_lyihwiG0yU1qlsf5co9%5C_500.jpg">http://26.media.tumblr.com/tumblr\_lyihwiG0yU1qlsf5co9\_500.jpg</a></p>
+
+<p>Mary Jane Pose
+ <a href="http://stayinbedgrowyourhair.tumblr.com/post/9711869259/panasonicyouth-belgianbollocks">http://stayinbedgrowyourhair.tumblr.com/post/9711869259/panasonicyouth-belgianbollocks</a></p>
+
+<p>and lastly</p>
+
+<p>Response to criticism of The Stanley Parable
+ <a href="http://www.youtube.com/watch?v=AZ-IcS7mRSk">http://www.youtube.com/watch?v=AZ-IcS7mRSk</a></p>
+
+<p>Have a fantastic weekend everyone ^_^</p>
+
+<blockquote>
+<p>^..^</p>
+</blockquote>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/happy-2013-dev-newletter';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/workin-dev-to-five-what-a-way-to-make-a-livin/">Workin' dev to five, what a way to make a livin'</a></li>
+
+            <li class="blog-related__links"><a href="/blog/ubxddev-vol-33/">UBXDDEV Vol. 3.3</a></li>
+
+            <li class="blog-related__links"><a href="/blog/unboxed-roundup-our-links-for-w-c-23rd-march-2015/">Unboxed Roundup: our links for w/c 23rd March 2015</a></li>
+
+            <li class="blog-related__links"><a href="/blog/cognitive-bias-product-management-and-you/">Cognitive Bias, Product Management and you</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Only fools rush in</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_only-fools-rush-in blog_only-fools-rush-in_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Pedro Moreira
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-09-02 09:44:00 UTC">
+              <span>
+                 2 Sep 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Only fools rush in
+          </h1>
+
+          <div class="blog-article__content">
+            <p>We recently had an interesting discussion in the internal Unboxed interwebs room regarding an example of inheritance.</p>
+
+<p><a href="http://www.unboxedconsulting.com/people/pawel-janiak">Pawel</a> put forth an example about how to guard against someone forgetting to call <code>super</code> in an inheritance chain.</p>
+
+<p>I jumped in to the discussion with the mantra of &ldquo;Composition over Inheritance&rdquo;. Admittedly, I didn&rsquo;t even give the example a good read: I saw a simple inheritance structure and gave an instinctive response.</p>
+
+<h3>Instincts and reflection</h3>
+
+<p>On my commute home, this lingered in the back of my mind. Recently, I have been writing/researching an article on how to continuously improve as a developer and my reaction went against the grain of my thinking on that.</p>
+
+<p>A much better approach would have been to consider all the angles and reflect on the code presented. Sounds pretty evident, right? One of those &ldquo;Monsieur de la Palice was alive fifteen minutes prior to his death&rdquo; deals.</p>
+
+<h3>Let us hear the facts</h3>
+
+<p>So, let&rsquo;s shift our perspective a bit and place ourselves as someone new to the team working on this codebase.</p>
+
+<p>A decision was made to use inheritance and our task for the moment is to guard against neglecting to call <code>super</code> in the initializer for one of subclasses.</p>
+
+<p>What should be our first port of call? Let&rsquo;s look at the test suite. Does the system have one? Is there a scenario to handle this situation? If not, our way forward is simple: we write one.</p>
+
+<p>Now that we have established a secure footing, we can consider whether we are in a position to refactor the inheritance structure. What trade offs would that imply and what benefits would it bring?</p>
+
+<h3>Jumping the gun, are we?</h3>
+
+<p>My response of &ldquo;Composition over Inheritance&rdquo; is a solution to a problem that hadn&rsquo;t yet presented itself.</p>
+
+<p>It betrays a<em>trigger happy</em> attitude by rushing to refactoring. As we are well aware of, refactoring does not happen without tests and without careful consideration of the system as a whole.</p>
+
+<p>Being a good developer is as much about writing good, clean code that is easy to change as it is about the perspective and<strong>attitude</strong> with which we approach a problem.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/only-fools-rush-in';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/boomboxed/">Boomboxed</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-blog-post-title/">The blog post title!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/tackling-the-unknown-with-subdivision/">Tackling the unknown with subdivision</a></li>
+
+            <li class="blog-related__links"><a href="/blog/workin-dev-to-five-what-a-way-to-make-a-livin/">Workin' dev to five, what a way to make a livin'</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

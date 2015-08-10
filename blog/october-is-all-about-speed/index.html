@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>October is all about speed</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_october-is-all-about-speed blog_october-is-all-about-speed_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Pawel Janiak
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2012-10-12 11:53:00 UTC">
+              <span>
+                12 Oct 2012
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            October is all about speed
+          </h1>
+
+          <div class="blog-article__content">
+            <p>This week is all about speed, efficiency, and mostly about cool things Ruby.
+ #Anvil</p>
+
+<p>If you use Pow, you should definitely get Anvil, which provides you with a super quick way to restart Pow apps or to shut them all down quickly without having to do it through the powder gem.</p>
+
+<p><a href="http://anvilformac.com/">http://anvilformac.com/</a></p>
+
+<h1>Ruby 1.9.3-p286</h1>
+
+<p>A new version of Ruby has been released. It contains mostly bug fixes and addresses a security issue. Check out the changelog.</p>
+
+<p><a href="http://svn.ruby-lang.org/repos/ruby/tags/v1%5C_9%5C_3%5C_286/ChangeLog">http://svn.ruby-lang.org/repos/ruby/tags/v1\_9\_3\_286/ChangeLog</a></p>
+
+<h1>Zeus</h1>
+
+<p>Zeus pre-loads your Rails app and when you run the console, generate or rspec tasks it loads WAY faster - less than a second! There&rsquo;s a quick screencast below, and note that it has Linux support.</p>
+
+<p><a href="http://vimeo.com/46795747">http://vimeo.com/46795747</a>
+ <a href="http://gistflow.com/posts/418-zeus-solves-long-rails-init-problem">http://gistflow.com/posts/418-zeus-solves-long-rails-init-problem</a></p>
+
+<h1>Rails 4</h1>
+
+<p>Have a look at the release notes for the next major version of Rails. Rails 4 will have turbolinks, a standardized queuing API, strong parameters and native support for storing Arrays in Postgres!</p>
+
+<p><a href="http://edgeguides.rubyonrails.org/4%5C_0%5C_release%5C_notes.html">http://edgeguides.rubyonrails.org/4\_0\_release\_notes.html</a></p>
+
+<h1>Ruby&rsquo;s IO buffering</h1>
+
+<p>Here&rsquo;s a good intro to Ruby&rsquo;s IO buffering and how it works in case you don&rsquo;t have in depth knowledge about it yet.</p>
+
+<p><a href="http://jstorimer.com/2012/09/25/ruby-io-buffers.html">http://jstorimer.com/2012/09/25/ruby-io-buffers.html</a></p>
+
+<h1>Programmer Competency Matrix</h1>
+
+<p>If you&rsquo;ve missed it earlier in the week, you should check out the Programmer Competency Matrix to see how you stack up as a programmer and to see where you should look to improve.</p>
+
+<p><a href="http://www.starling-software.com/employment/programmer-competency-matrix.html">http://www.starling-software.com/employment/programmer-competency-matrix.html</a></p>
+
+<h1>Basic rake</h1>
+
+<p>For the Ruby newbies, if you want to understand the basics of rake and how to use it, here&rsquo;s a not-too-long video going through the fundamentals.</p>
+
+<p><a href="http://www.confreaks.com/videos/899-railsconf2012-basic-rake">http://www.confreaks.com/videos/899-railsconf2012-basic-rake</a></p>
+
+<h1>Web Platform</h1>
+
+<p>You may have seen the new open community of developers trying to &ldquo;build resources for a better web&rdquo;. It&rsquo;s a new initiative convened by the W3C and is stewarded by behemoths like Microsoft, Apple, Facebook and Mozilla.</p>
+
+<p><a href="http://webplatform.org/">http://webplatform.org/</a></p>
+
+<h1>Better specs</h1>
+
+<p>Take a look at <a href="http://betterspecs.org/">http://betterspecs.org/</a> to ensure you&rsquo;re following the best practices around Rspec, or to dispute any you may think aren&rsquo;t up to scratch, and make the world a better place.</p>
+
+<h1>Redmon</h1>
+
+<p>If you use Redis, you may want to look into some kind of monitoring and management interface for it. Redmon is an awesome Sinatra-based dashboard for Redis (which is still seemingly in Alpha).</p>
+
+<p><a href="http://steelthread.github.com/redmon/">http://steelthread.github.com/redmon/</a></p>
+
+<h1>Coderwall</h1>
+
+<p>Coderwall, the site that lets you build up your developer profile and show off badges based on your Github activity now has company pages where companies like Shopify and Heroku have added their team credentials.</p>
+
+<p><a href="http://coderwall.com/">http://coderwall.com/</a></p>
+
+<h1>Booleans vs state machines</h1>
+
+<p>This week John Nunemaker (HTTParty gem maker) came out against using booleans as a form of state controller and went through using a state machine to do this instead. Check it out if you don&rsquo;t know much about state machines or want to argue against his claim (like Ryan Bates did).</p>
+
+<p><a href="http://railstips.org/blog/archives/2012/10/10/booleans-are-baaaaaaaaaad">http://railstips.org/blog/archives/2012/10/10/booleans-are-baaaaaaaaaad</a></p>
+
+<h1>JQuery UI 1.9</h1>
+
+<p>A new version of JQuery UI has been released. New features include an improved widget factory, some new widgets and a few API changes to Accordions, Tabs, and the Position utility.</p>
+
+<p><a href="http://blog.jqueryui.com/2012/10/jquery-ui-1-9-0">http://blog.jqueryui.com/2012/10/jquery-ui-1-9-0</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/october-is-all-about-speed';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/web-de-what-1-part-graphic-design-to-2-parts-user-interface-design/">Web De-What?! (1 Part Graphic Design to 2 Parts User-Interface Design). </a></li>
+
+            <li class="blog-related__links"><a href="/blog/undefined-local-variable-or-method-title/">Undefined local variable or method 'title'</a></li>
+
+            <li class="blog-related__links"><a href="/blog/on-the-29th-anniversary-of-space-shuttle-discoverys-maiden-flight/">On the 29th anniversary of Space Shuttle Discovery's maiden flight</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-blog-post-title/">The blog post title!</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

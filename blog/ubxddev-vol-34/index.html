@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>UBXDDEV Vol. 3.4</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_ubxddev-vol-34 blog_ubxddev-vol-34_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Murray Steele
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2014-09-12 13:30:00 UTC">
+              <span>
+                12 Sep 2014
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            UBXDDEV Vol. 3.4
+          </h1>
+
+          <div class="blog-article__content">
+            <h2>HTML5 flowchart - <a href="https://twitter.com/NeilvanBeinum">Neil</a></h2>
+
+<p><a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf</a></p>
+
+<p>A flowchart to help when choosing an appropriate HTML5 sectioning element.</p>
+
+<h2>Speed-up tests - <a href="http://www.unboxedconsulting.com/people/jolyon-pawlyn">Jolyon</a></h2>
+
+<p>As applications grow in size and complexity the need to minimise test execution time becomes critical. <a href="http://robots.thoughtbot.com/speed-up-tests-by-selectively-avoiding-factory-girl">Speed Up Tests by Selectively Avoiding Factory Girl</a> covers some useful techniques like using <code>FactoryGirl.build_stubbed</code> and warns that <code>FactoryGirl.build</code> still results in persisted associated models.</p>
+
+<h2>DRY article - <a href="http://www.unboxedconsulting.com/people/patrick-vine">Patrick V.</a></h2>
+
+<p><a href="http://verraes.net/2014/08/dry-is-about-knowledge/">http://verraes.net/2014/08/dry-is-about-knowledge/</a></p>
+
+<p>A great article on DRY and how you should focus on not repeating knowledge. It isn&rsquo;t too long, but nicely captures the idea of DRY being about knowledge not lines of code.</p>
+
+<h2>Bootstrap links - <a href="https://twitter.com/NeilvanBeinum">Neil</a></h2>
+
+<p>A couple of well written posts introducing the &lsquo;mobile first&rsquo; and grid layout concepts in Bootstrap 3.</p>
+
+<ol>
+<li><a href="http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works">http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works</a>
+
+<ol>
+<li><a href="http://www.helloerik.com/bootstrap-3-grid-introduction">http://www.helloerik.com/bootstrap-3-grid-introduction</a></li>
+</ol></li>
+</ol>
+
+<h2>Tech leadership - <a href="http://www.unboxedconsulting.com/people/murray-steele">Murray</a></h2>
+
+<p><a href="https://www.skillsmatter.com/skillscasts/5707-how-not-to-become-a-terrible-human-being-once-you-get-a-leadership-title">https://www.skillsmatter.com/skillscasts/5707-how-not-to-become-a-terrible-human-being-once-you-get-a-leadership-title</a></p>
+
+<p><a href="http://houseofmnowster.com/">Mazz Mosley</a> gave this excellent talk about tech leadership at the <a href="http://lrug.org/meetings/2014/08/27/september-2014-meeting/">September LRUG meeting</a>. It&rsquo;s a great talk about what leadership is, and how to get better at it; just because you&rsquo;re good at coding, doesn&rsquo;t mean you&rsquo;ll automatically be good at leading a team of coders. Even if you&rsquo;re not at the leadership stage of your career, I still think it&rsquo;s worth watching as it&rsquo;ll help you prepare for when you are, and help you understand where your current tech leaders might be struggling.</p>
+
+<h2>Collection pipeline - <a href="http://www.unboxedconsulting.com/people/patrick-vine">Patrick V.</a></h2>
+
+<p>I&rsquo;ve been enjoying programming with a collection pipeline style more and
+ more. Recently Martin Fowler published a bliki on the topic which is
+ rather long, but worth the read if you&rsquo;re interested in learning more. It
+ can be found at with <a href="http://martinfowler.com/articles/collection-pipeline/">http://martinfowler.com/articles/collection-pipeline/</a> examples in Ruby and Clojure.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/ubxddev-vol-34';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/our-applications-on-the-apple-app-store/">Our Applications on the Apple App Store</a></li>
+
+            <li class="blog-related__links"><a href="/blog/a-brand-spanking-new-website/">A Brand Spanking New Website!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/steak-vs-cucumber-as-bdd-tools/">Steak vs Cucumber as BDD tools</a></li>
+
+            <li class="blog-related__links"><a href="/blog/programmers-day-newsletter/">Programmers' day newsletter</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Dev Newsletter (Week 21, 2013)</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_dev-newsletter-week-21-2013 blog_dev-newsletter-week-21-2013_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Attila Gyorffy
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2013-05-24 16:59:00 UTC">
+              <span>
+                24 May 2013
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Dev Newsletter (Week 21, 2013)
+          </h1>
+
+          <div class="blog-article__content">
+            <p>The next instalment of the Unboxed Developer Newsletter is mainly focused on front-end development practices but I reckon these would be interesting to anybody who&rsquo;s a little bit keen to get a better understanding of web development in general.</p>
+
+<h2>Controlling lines of text in CSS</h2>
+
+<p>A collection of <a href="http://css-tricks.com/line-clampin/">handy techniques</a> to control text content by gracefully &lsquo;cutting off&rsquo; dynamic text.</p>
+
+<p>(submitted by <a href="http://www.unboxedconsulting.com/people/andrew-mitchell">Andrew Mitchell</a>)</p>
+
+<h2>Writing Testable JavaScript</h2>
+
+<p>This one totally nails the approach to modular development. A great primer to front end unit testing.</p>
+
+<p>See <a href="http://alistapart.com/article/writing-testable-javascript">the article</a> on A List Apart.</p>
+
+<p>(submitted by <a href="http://www.unboxedconsulting.com/people/carl-whittaker">Carl Whittaker</a>)</p>
+
+<h2>Yehuda&rsquo;s call to extend the web forward</h2>
+
+<p>The sad truth is that while some areas of the browser are extremely extensible, other areas are nearly impossible to extend. Yehuda is pointing out a couple of points about low and high level JavaScript APIs. <a href="http://yehudakatz.com/2013/05/21/extend-the-web-forward/">Interesting read</a>.</p>
+
+<p>(submitted by <a href="(http://www.unboxedconsulting.com/people/attila-gyorffy)">Attila Györffy</a></p>
+
+<h2>Getting the truth out of email addresses</h2>
+
+<p>Stop Validating Email Addresses With Your Complex Regex. <a href="http://davidcel.is/about/">David Celis</a> <a href="http://davidcel.is/blog/2012/09/06/stop-validating-email-addresses-with-regex/">points out</a> that validating the format of email addresses is a waste of time, as an address could be valid but still made up. The only way to know is to send a confirmation email.</p>
+
+<p>Leo agrees with the points raised by the author. However, validating the format of an email address will usually improve the input form&rsquo;s UX by catching accidental bad inputs (even if it&rsquo;s just a missing @ sign). Quite possibly the ideal setup would be client-side validation of whatever the user&rsquo;s put into a form field, and server-side validation by means of a confirmation email.</p>
+
+<p>(submitted by <a href="(http://www.unboxedconsulting.com/people/leo-cassarani)">Leo Cassarani</a></p>
+
+<h2>How to handle Git merge conflicts</h2>
+
+<p>Lately I&rsquo;ve been using feature branches exclusively and believe it or not, I ended up having a lot of merge conflicts. More than I was expecting initially, that&rsquo;s for sure. The problem is coming from the fact that I develop every story in its own feature branch exclusively and with the increased number of branches the number of merge conflicts also increase. A lot. So I started digging around the web looking for a set of sensible recommendations on how to write code that is less likely to conflict when merged into HEAD. Atomic commits are just one thing, but turns out there are a <a href="http://weblog.masukomi.org/2008/07/12/handling-and-avoiding-conflicts-in-git">coupe of nice and handy features of Git</a> that you can use when there&rsquo;s already trouble.</p>
+
+<p>(submitted by <a href="(http://www.unboxedconsulting.com/people/attila-gyorffy)">Attila Györffy</a></p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/dev-newsletter-week-21-2013';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/developer-newsletter-20th-september/">Developer Newsletter, 20th September</a></li>
+
+            <li class="blog-related__links"><a href="/blog/the-dev-o-nine-tails/">The dev o' nine tails</a></li>
+
+            <li class="blog-related__links"><a href="/blog/how-do-you-like-them-links/">How do you like them links?!</a></li>
+
+            <li class="blog-related__links"><a href="/blog/agile-newsletter-30-oct/">Agile Newsletter - 30 Oct</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

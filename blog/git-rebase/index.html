@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Git rebase</title>
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="../../assets/javascripts/application.js" type="text/javascript"></script>
+  </head>
+
+  <body class="blog blog_git-rebase blog_git-rebase_index">
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          Unboxed
+        </div>
+        <div class="site-header__page-title">
+          Blog
+        </div>
+      </div>
+    </header>
+
+    <div class="blog-wrap">
+      <div class="blog-article">
+        <article class="blog-article__container">
+          <div class="blog-article__header">
+            <p class="blog-article__author">
+              Tom ten Thij
+            </p>
+
+            <p class="blog-article__published-date" id="articlePublishedDate" data-date="2011-02-17 17:41:00 UTC">
+              <span>
+                17 Feb 2011
+              </span>
+            </p>
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+          </div>
+
+
+          <h1 class="blog-article__title">
+            Git rebase
+          </h1>
+
+          <div class="blog-article__content">
+            <p>Many people new to git wonder: &ldquo;what is rebasing?&rdquo; and &ldquo;why would I use rebase?&rdquo;. Following is my attempt at an answer to those questions.</p>
+
+<p>Git lets you easily mess around with branches. A branch is just a set of commits with a branch name pointer to the last one. Now if work done by another developer and your work share a common commit, at some point you&rsquo;ll need to bring the two together.</p>
+
+<p>One way is merging which creates an additional merge commit in which all the changes are incorporated with any conflicts resolved. Note that if you do this, the branching and merging will still be visible in the history of the repository.</p>
+
+<p>Another thing you can do is rebasing. My mental model for this is like a replay of commits: one by one your changes are applied, but instead of applying them to the original commit that you started from, it starts from the last commit of the other branch. At the end of that it is like there never was any branching and all the commits you made were done<em>after</em> the other dev&rsquo;s work.</p>
+
+<p>So one difference between merging and rebasing is that merging gives you a better overview of how code was produced, whereas rebasing results in a &lsquo;cleaner&rsquo; history.</p>
+
+<p>Because the parent of a commit determines its SHA1, if you rebase you also change all the SHA1s of your commits. This is why you should not rebase any commits that were already pushed to a shared repository.</p>
+
+<p>Why rebase? Sometimes I just like the cleaner history of my work. But also: it can be a very powerful tool to make a bunch of messy commits look like you knew what you were doing all along. The git rebase &ndash; interactive command allows you to rearrange, join up or edit commits to your heart&rsquo;s content.</p>
+
+          </div>
+
+          <div class="disqus-thread" id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'unboxedconsulting';
+            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+            var disqus_url = 'https://www.unboxedconsulting.com/blog/git-rebase';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </article>
+      </div>
+
+      <aside class="blog-info">
+        <section class="blog-info__section blog-author">
+          <div class="blog-author__header">
+            <img class="blog-author__image" src="/assets/images/caricatures/graeme-mccubbin.png" alt="blog author"/>
+            <p class="blog-author__name">
+              <span>About Graeme</span>
+            </p>
+          </div>
+          <div class="blog-author__bio">
+            I’m Graeme, the Marketing Co-ordinator here at Unboxed Consulting. I'm passionate about communication and all things digital. Never afraid to be creative - who knows where it might lead? In my free time, I love to explore and enjoy cooking up a storm in the kitchen.
+          </div>
+        </section>
+
+
+        <section class="blog-info__section blog-related">
+          <p class="blog-related__header">Related reading</p>
+          <ul>
+            <li class="blog-related__links"><a href="/blog/the-cat-experience/">The CAT experience</a></li>
+
+            <li class="blog-related__links"><a href="/blog/baselines/">Using baselines for effective planning</a></li>
+
+            <li class="blog-related__links"><a href="/blog/not-so-cool-as-cucumber/">Not so cool as cucumber</a></li>
+
+            <li class="blog-related__links"><a href="/blog/happy-friday/">Happy Friday!</a></li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
+  </body>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+</html>

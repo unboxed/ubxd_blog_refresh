@@ -84,8 +84,8 @@
 
         <% if current_page.data.tags %>
           <section class="blog-tags__list">posted in
-            <ul><% current_page.data.tags.each do |t| %>
-                <li class="blog-tags__links">#<%= t %></li>
+            <ul><% current_page.data.tags.each do |tag| %>
+                <li class="blog-tags__links">#<a href="tags/{tag}.html"><%= tag %></a></li>
               <% end %>
             </ul>
           </section>

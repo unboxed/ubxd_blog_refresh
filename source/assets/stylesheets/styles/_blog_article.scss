@@ -173,8 +173,12 @@
 
 .blog-tags__links {
   display: inline;
-  color: $tag-link-text-color;
   font-weight: bold;
+
+  a {
+    color: $tag-link-text-color;
+    text-decoration: none;
+  }
 }
 
 .blog-related__header {

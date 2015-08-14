@@ -14,7 +14,8 @@ activate :blog do |blog|
   blog.prefix = 'blog'
   blog.permalink = "{title}.html"
   blog.new_article_template = "source/templates/blog.md"
-  blog.taglink = "tags/{tag}.html"
+  blog.tag_template = "tag.html"
+  blog.taglink = "{tag}.html"
 end
 
 activate :directory_indexes

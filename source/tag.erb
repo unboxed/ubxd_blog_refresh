@@ -1,0 +1,20 @@
+<div class="tags-header">
+  <h2>Articles tagged #<%= tagname %></h2>
+</div>
+
+<div class="grid">
+  <% page_articles.each_with_index do |article| %>
+    <a class="grid-item" href="<%= article.url %>">
+      <div class="grid-item__type">
+        blog
+      </div>
+      <div class="grid-item__text">
+        <%= article.title %>
+      </div>
+      <span class="grid-item__date">
+        <%= Time.parse(article.data.date).strftime("%e %b %Y") %>
+      </span>
+    </a>
+  <% end %>
+</div>
+

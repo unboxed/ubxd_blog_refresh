@@ -9,10 +9,13 @@ $dark-gray: #999999;
 $light-gray: #E0E0E0;
 $white: #FFFFFF;
 
-$body-background-color: $light-gray;
+$article-header-border-color: $light-gray;
+$article-published-date: $dark-gray;
 $article-background-color: $white;
 $article-link-text-color: darken($blue, 10%);
-$aside-info-background-color: $white;
+$author-name-color: $purple;
+$blog-info-background-color: $light-gray;
+$blog-info-container-color: $white;
 $header-brand-color: $purple;
 $tag-link-text-color: $yellow;
 $tag-paragraph-color: $dark-gray;

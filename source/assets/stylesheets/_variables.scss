@@ -1,4 +1,6 @@
 $tablet-breakpoint: 660px;
+$mobile-breakpoint: 500px;
+
 
 $blue: #1BA4E9;
 $purple: #A0239B;
@@ -17,7 +19,7 @@ $author-name-color: $purple;
 $blog-info-background-color: $light-gray;
 $blog-info-container-color: $white;
 $header-brand-color: $purple;
-$tag-link-text-color: $yellow;
+$tag-link-text-color: $purple;
 $tag-paragraph-color: $dark-gray;
 $related-article-link: $black;
 $blockquote-background-color: lighten($light-gray, 5%);

@@ -18,30 +18,30 @@
           <h1 class="blog-article__title">
             <%= current_page.data.title %>
           </h1>
-        <a class="blog-article__author" href="">
-          <%= current_page.data.author %>
-        </a>
+          <a class="blog-article__author" href="">
+            <%= current_page.data.author %>
+          </a>
 
-        <p class="blog-article__published-date" id="articlePublishedDate" data-date="<%= current_page.data.date %>">
-          <span>
+          <p class="blog-article__published-date" id="articlePublishedDate" data-date="<%= current_page.data.date %>">
+            <span>
             <%= Time.parse(current_page.data.date).strftime("%e %b %Y") %>
           </span>
-        </p>
-        <script type="text/javascript">
+          </p>
+          <script type="text/javascript">
             date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
             document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
-        </script>
-        </div>
+          </script>
 
-        <% if current_page.data.tags %>
+          <% if current_page.data.tags %>
             <section class="blog-tags__list">posted in
-              <ul><% current_page.data.tags.each do |t| %>
-                  <li class="blog-tags__links">#<%= t %></li>
+              <ul>
+                <% current_page.data.tags.each do |tags| %>
+                  <li class="blog-tags__links">#Healthcare<%= tags %></li>
                 <% end %>
               </ul>
             </section>
-        <% end %>
-
+          <% end %>
+        </div>
       </div>
     </header>
 
@@ -74,8 +74,8 @@
           </aside>
         </section>
 
-      <div class="disqus-thread" id="disqus_thread"></div>
-      <script type="text/javascript">
+        <div class="disqus-thread" id="disqus_thread"></div>
+        <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES * * */
           var disqus_shortname = 'unboxedconsulting';
           // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
@@ -87,7 +87,7 @@
               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
           })();
-      </script>
+        </script>
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
         <section class="blog-info__section blog-related">

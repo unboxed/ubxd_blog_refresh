@@ -173,7 +173,9 @@
 
 .blog-tags__list {
   color: $tag-paragraph-color;
-  margin-bottom: 50px;
+  float: right;
+  font-size: 0.8em;
+  margin-top: 30px;
 }
 
 .blog-tags__list ul {
@@ -183,7 +185,6 @@
 .blog-tags__links {
   display: inline;
   color: $tag-link-text-color;
-  font-weight: bold;
 }
 
 .blog-related__header {
@@ -214,11 +215,15 @@
 
 @media (max-width: $tablet-breakpoint) {
   .blog-article__header {
-    padding: 20px;
+    padding: 50px;
   }
 
   .blog-article__title {
     padding-bottom: 20px;
+  }
+
+  .blog-tags__list {
+    padding-left: 30px;
   }
 
   .blog-wrap {
@@ -250,7 +255,25 @@
     width: auto;
   }
 
-  .blog-tags__list {
-    padding-left: 30px;
+  .blog-author__right {
+    margin-left: 30px;
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .blog-article__header {
+    padding: 20px;
+    line-height: 1.2;
+  }
+
+  .blog-tags__list {
+    float: none;
+    padding-left: 0;
+  }
+
+  .blog-author__right {
+    float: none;
+    width: 75%;
+  }
+}
+

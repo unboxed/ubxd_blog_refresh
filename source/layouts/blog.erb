@@ -36,7 +36,7 @@
             <section class="blog-tags__list">posted in
               <ul>
                 <% current_page.data.tags.each do |tags| %>
-                  <li class="blog-tags__links">#Healthcare<%= tags %></li>
+                  <li class="blog-tags__links"><%= tags %></li>
                 <% end %>
               </ul>
             </section>
@@ -45,35 +45,27 @@
       </div>
     </header>
 
-    <div class="blog-wrap">
-      <div class="blog-article">
-        <article class="blog-article__container">
-          <% if current_page.data.hero_image %>
-            <img class="blog-article__hero-image" src="<%= current_page.data.hero_image %>" alt="">
-          <% end %>
-          <div class="blog-article__content">
-            <%= yield %>
-          </div>
-        </article>
+    <section class="blog-article">
+      <article class="blog-article__container">
+        <div class="blog-article__content">
+          <%= yield %>
+        </div>
+      </article>
+      <div class="blog-article__author-image">
+        <img src="<%= data.people.graeme.image %>" alt="blog author"/>
       </div>
-    </div>
+      <aside class="blog-article__author-right">
+        <p class="blog-article__author-name">
+          <span><%= data.people.graeme.name %></span>
+        </p>
+        <div class="blog-article__author-bio">
+          <%= data.people.graeme.bio %>
+        </div>
+      </aside>
+    </section>
 
-    <div class="blog-info">
-      <div class="blog-info__container">
-        <section class="blog-author">
-          <div class="blog-author__image">
-            <img src="<%= data.people.graeme.image %>" alt="blog author"/>
-          </div>
-          <aside class="blog-author__right">
-            <p class="blog-author__name">
-              <span><%= data.people.graeme.name %></span>
-            </p>
-            <div class="blog-author__bio">
-             <%= data.people.graeme.bio %>
-            </div>
-          </aside>
-        </section>
-
+    <section class="blog-comments">
+      <div class="blog-comments__container">
         <div class="disqus-thread" id="disqus_thread"></div>
         <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES * * */
@@ -89,23 +81,25 @@
           })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </section>
 
-        <section class="blog-related">
-          <p class="blog-related__header">Related</p>
-            <% blog.articles.sample(3).each do |article| %>
-              <a class="blog-grid__item blog-related__links" href="<%= article.url %>">
-                <div class="blog-grid__item--type">
-                  blog
-                </div>
-                <div class="grid-item__text">
-                  <%= article.title %>
-                </div>
-              </a>
-            <% end %>
-          <div class="blog-grid__clear"></div>
-        </section>
-       </div>
-    </div>
+    <section class="blog-related">
+      <p class="blog-related__header">Related</p>
+      <div class="blog-related__grid">
+        <% blog.articles.sample(3).each do |article| %>
+          <a class="blog-grid__item blog-related__links" href="<%= article.url %>">
+            <div class="blog-grid__item--type">
+              blog
+            </div>
+            <div class="grid-item__text">
+              <%= article.title %>
+            </div>
+          </a>
+        <% end %>
+      </div>
+      <div class="blog-grid__clear"></div>
+    </section>
   </body>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>

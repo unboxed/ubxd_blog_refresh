@@ -59,3 +59,29 @@
   bottom: 16px;
   left: 16px;
 }
+
+.blog-grid__item {
+  @extend .grid-item;
+  padding: 16px;
+
+  &:before {
+    background-color: $purple;
+    height: 10px;
+  }
+}
+
+.blog-grid__item--type {
+  @extend .grid-item__type;
+  color: $purple;
+}
+
+.blog-grid__clear {
+  clear: both;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .blog-grid__item {
+    width: 100%;
+    margin: 0;
+  }
+}

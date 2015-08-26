@@ -88,14 +88,21 @@
               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
           })();
         </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
-        <section class="blog-info__section blog-related">
-          <p class="blog-related__header">Related reading</p>
-          <ul><% blog.articles.sample(4).each do |article| %>
-            <li class="blog-related__links"><a href="<%= article.url %>"><%= article.title %></a></li>
+        <section class="blog-related">
+          <p class="blog-related__header">Related</p>
+            <% blog.articles.sample(3).each do |article| %>
+              <a class="blog-grid__item blog-related__links" href="<%= article.url %>">
+                <div class="blog-grid__item--type">
+                  blog
+                </div>
+                <div class="grid-item__text">
+                  <%= article.title %>
+                </div>
+              </a>
             <% end %>
-          </ul>
+          <div class="blog-grid__clear"></div>
         </section>
        </div>
     </div>

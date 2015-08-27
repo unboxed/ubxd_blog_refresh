@@ -62,17 +62,22 @@
 
 .blog-grid__item {
   @extend .grid-item;
-  padding: 16px;
+  padding: 40px;
+  border-left: 5px solid deepskyblue;
+
+  &:first-child {
+    border-left: 5px solid red;
+  }
+
+  &:last-child {
+    border-left: 5px solid greenyellow;
+  }
+
 
   &:before {
-    background-color: $purple;
-    height: 10px;
+    background-color: $white;
+    height: 0px;
   }
-}
-
-.blog-grid__item--type {
-  @extend .grid-item__type;
-  color: $purple;
 }
 
 .blog-grid__clear {

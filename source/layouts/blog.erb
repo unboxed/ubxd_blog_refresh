@@ -47,17 +47,23 @@
           <%= yield %>
         </div>
       </article>
-      <div class="blog-article__author-image">
-        <img src="<%= data.people.graeme.image %>" alt="blog author"/>
-      </div>
-      <aside class="blog-article__author-right">
-        <p class="blog-article__author-name">
-          <span><%= data.people.graeme.name %></span>
-        </p>
-        <div class="blog-article__author-bio">
-          <%= data.people.graeme.bio %>
+    </section>
+
+    <section class="blog-author">
+      <div class="blog_author__container">
+        <div class="blog-author__image">
+          <img src="<%= data.people.graeme.image %>" alt="blog author"/>
         </div>
-      </aside>
+        <aside class="blog-author__right">
+          <p class="blog-author__name">
+            <span><%= data.people.graeme.name %></span>
+          </p>
+          <div class="blog-author__bio">
+            <%= data.people.graeme.bio %>
+          </div>
+        </aside>
+        <div class="blog-grid__clear"></div>
+      </div>
     </section>
 
     <section class="blog-comments">

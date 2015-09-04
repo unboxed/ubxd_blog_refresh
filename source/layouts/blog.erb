@@ -90,14 +90,26 @@
       <p class="blog-related__header">Related</p>
       <div class="blog-related__grid">
         <% blog.articles.sample(3).each do |article| %>
-          <a class="blog-grid__item blog-related__links" href="<%= article.url %>">
-            <div class="grid-item__text">
-              <%= article.title %>
+          <div class="blog-grid__item">
+            <div class="blog-grid__item-date" id="articlePublishedDate" data-date="<%= article.date %>">
+              <span>
+                <%= Time.parse(article.date.to_s).strftime("%e %b %Y") %>
+              </span>
             </div>
-          </a>
+            
+            <script type="text/javascript">
+              date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
+              document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
+            </script>
+
+            <a class="blog-grid__item-title" href="<%= article.url %>">
+              <div class="blog-grid__item-text">
+                <%= article.title %>
+              </div>
+            </a>
+          </div>
         <% end %>
       </div>
-      <div class="blog-grid__clear"></div>
     </section>
   </body>
 

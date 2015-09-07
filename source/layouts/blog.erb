@@ -91,6 +91,10 @@
       <div class="blog-related__grid">
         <% blog.articles.sample(3).each do |article| %>
           <div class="blog-grid__item">
+            <div class="blog-grid__item-tag">
+              <div class="blog-grid__item-tag-link"><a href="">agile</a></div>
+              <div class="blog-grid__item-tag-link"><a href="">rails</a></div>
+            </div>
             <div class="blog-grid__item-date" id="articlePublishedDate" data-date="<%= article.date %>">
               <span>
                 <%= Time.parse(article.date.to_s).strftime("%e %b %Y") %>

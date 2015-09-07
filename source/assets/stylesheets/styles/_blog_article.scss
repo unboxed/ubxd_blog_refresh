@@ -263,6 +263,13 @@
   }
 }
 
+@media (max-width: $tablet-breakpoint) {
+
+  .blog-related__header {
+    padding-left: 20px
+  }
+}
+
 @media (max-width: $mobile-breakpoint) {
 
   .blog-article__header {

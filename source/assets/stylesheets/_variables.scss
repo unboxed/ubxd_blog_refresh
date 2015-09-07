@@ -1,4 +1,6 @@
 $tablet-breakpoint: 660px;
+$mobile-breakpoint: 500px;
+
 
 $blue: #1BA4E9;
 $purple: #A0239B;
@@ -6,15 +8,16 @@ $yellow:  #FFBA05;
 
 $black: #000000;
 $dark-gray: #999999;
-$light-gray: #E0E0E0;
+$light-gray: #F7F7F7;
 $white: #FFFFFF;
 
-$body-background-color: $light-gray;
+$article-header-border-color: $light-gray;
+$article-published-date: $dark-gray;
 $article-background-color: $white;
 $article-link-text-color: darken($blue, 10%);
-$aside-info-background-color: $white;
+$author-name-color: $purple;
 $header-brand-color: $purple;
-$tag-link-text-color: $yellow;
+$tag-link-text-color: $purple;
 $tag-paragraph-color: $dark-gray;
 $related-article-link: $black;
 $blockquote-background-color: lighten($light-gray, 5%);

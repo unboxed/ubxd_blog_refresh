@@ -14,93 +14,107 @@
         <div class="site-header__brand">
           Unboxed
         </div>
-        <div class="site-header__page-title">
-          Blog
+        <div class="blog-article__header">
+          <h1 class="blog-article__title">
+            <%= current_page.data.title %>
+          </h1>
+          <a class="blog-article__author" href="">
+            <%= current_page.data.author %>
+          </a>
+
+          <p class="blog-article__published-date">
+            <span>
+            <%= Time.parse(current_page.data.date).strftime("%B %e, %Y") %>
+          </span>
+          </p>
+
+          <% if current_page.data.tags %>
+            <section class="blog-tags__list">Posted in
+              <ul>
+                <% current_page.data.tags.each do |tags| %>
+                  <li class="blog-tags__links">#<%= tags %></li>
+                <% end %>
+              </ul>
+            </section>
+          <% end %>
         </div>
       </div>
     </header>
 
-    <div class="blog-wrap">
-      <div class="blog-article">
-        <article class="blog-article__container">
-          <div class="blog-article__header">
-            <p class="blog-article__author">
-              <%= current_page.data.author %>
-            </p>
+    <section class="blog-article">
+      <article class="blog-article__container">
+        <div class="blog-article__content">
+          <%= yield %>
+        </div>
+      </article>
+    </section>
 
-            <p class="blog-article__published-date" id="articlePublishedDate" data-date="<%= current_page.data.date %>">
+    <section class="blog-author">
+      <div class="blog_author__container">
+        <div class="blog-author__image">
+          <img src="<%= data.people.graeme.image %>" alt="blog author"/>
+        </div>
+        <aside class="blog-author__right">
+          <p class="blog-author__name">
+            <span><%= data.people.graeme.name %></span>
+          </p>
+          <div class="blog-author__bio">
+            <%= data.people.graeme.bio %>
+          </div>
+        </aside>
+        <div class="blog-grid__clear"></div>
+      </div>
+    </section>
+
+    <section class="blog-comments">
+      <div class="blog-comments__container">
+        <div class="disqus-thread" id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES * * */
+          var disqus_shortname = 'unboxedconsulting';
+          // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
+          var disqus_url = 'https://www.unboxedconsulting.com/blog/<%= current_page.slug %>';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </section>
+
+    <section class="blog-related">
+      <p class="blog-related__header">Related</p>
+      <div class="blog-related__grid">
+        <% blog.articles.sample(3).each do |article| %>
+          <div class="blog-grid__item">
+            <div class="blog-grid__item-tag">
+              <div class="blog-grid__item-tag-link"><a href="">agile</a></div>
+              <div class="blog-grid__item-tag-link"><a href="">rails</a></div>
+            </div>
+            <div class="blog-grid__item-date" id="articlePublishedDate" data-date="<%= article.date %>">
               <span>
-                <%= Time.parse(current_page.data.date).strftime("%e %b %Y") %>
+                <%= Time.parse(article.date.to_s).strftime("%e %b %Y") %>
               </span>
-            </p>
+            </div>
+            
             <script type="text/javascript">
               date = document.querySelector('#articlePublishedDate').getAttribute('data-date');
               document.querySelector('#articlePublishedDate span').outerHTML = moment(new Date(date)).fromNow();
             </script>
+
+            <a class="blog-grid__item-title" href="<%= article.url %>">
+              <div class="blog-grid__item-text">
+                <%= article.title %>
+              </div>
+            </a>
           </div>
-
-          <% if current_page.data.hero_image %>
-            <img class="blog-article__hero-image" src="<%= current_page.data.hero_image %>" alt="">
-          <% end %>
-
-          <h1 class="blog-article__title">
-            <%= current_page.data.title %>
-          </h1>
-
-          <div class="blog-article__content">
-            <%= yield %>
-          </div>
-
-          <div class="disqus-thread" id="disqus_thread"></div>
-          <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES * * */
-            var disqus_shortname = 'unboxedconsulting';
-            // var disqus_identifier = '81b9f768-1dc6-466a-8a9c-fed33921e0a3'; // migration required to add this
-            var disqus_url = 'https://www.unboxedconsulting.com/blog/<%= current_page.slug %>';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </article>
-      </div>
-
-      <aside class="blog-info">
-        <section class="blog-info__section blog-author">
-          <div class="blog-author__header">
-            <img class="blog-author__image" src="<%= data.people.graeme.image %>" alt="blog author"/>
-            <p class="blog-author__name">
-              <span>About <%= data.people.graeme.name %></span>
-            </p>
-          </div>
-          <div class="blog-author__bio">
-            <%= data.people.graeme.bio %>
-          </div>
-        </section>
-
-        <% if current_page.data.tags %>
-          <section class="blog-tags__list">posted in
-            <ul><% current_page.data.tags.each do |t| %>
-                <li class="blog-tags__links">#<%= t %></li>
-              <% end %>
-            </ul>
-          </section>
         <% end %>
-
-        <section class="blog-info__section blog-related">
-          <p class="blog-related__header">Related reading</p>
-          <ul><% blog.articles.sample(4).each do |article| %>
-            <li class="blog-related__links"><a href="<%= article.url %>"><%= article.title %></a></li>
-            <% end %>
-          </ul>
-        </section>
-      </aside>
-
-    </div>
+      </div>
+    </section>
   </body>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
